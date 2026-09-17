@@ -82,6 +82,40 @@ export const EXAMS_CATALOG: CbtExamMeta[] = [
     ],
   },
   {
+    id: 'neet-physics-2024',
+    title: 'NEET (UG) 2024 — Physics Official Mock Examination',
+    stream: 'NEET',
+    totalQuestions: 50,
+    durationMinutes: 45,
+    maxMarks: 200,
+    markingScheme: {
+      correct: 4,
+      incorrect: -1,
+      unattempted: 0,
+    },
+    sections: [
+      { name: 'Physics Section A (Q1–35)', total: 35, compulsory: 35 },
+      { name: 'Physics Section B (Q36–50)', total: 15, compulsory: 10 },
+    ],
+  },
+  {
+    id: 'neet-chemistry-2024',
+    title: 'NEET (UG) 2024 — Chemistry Official Mock Examination',
+    stream: 'NEET',
+    totalQuestions: 50,
+    durationMinutes: 45,
+    maxMarks: 200,
+    markingScheme: {
+      correct: 4,
+      incorrect: -1,
+      unattempted: 0,
+    },
+    sections: [
+      { name: 'Chemistry Section A (Q1–35)', total: 35, compulsory: 35 },
+      { name: 'Chemistry Section B (Q36–50)', total: 15, compulsory: 10 },
+    ],
+  },
+  {
     id: 'defense-nda-mock',
     title: 'NDA & NA General Ability & Mathematics CBT Drill',
     stream: 'Defense',

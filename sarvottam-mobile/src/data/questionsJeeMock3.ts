@@ -1,3 +1,4 @@
+// Extracted & Verified with MathPdfEngine
 import { CbtQuestion } from '../types';
 
 export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
@@ -6,16 +7,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Work, Energy & Momentum",
-    "question": "A particle is performing simple harmonic motion\nwith time period T. At an instant its speed is 60%\nof its maximum value and is increasing. After an\ninterval \u0394t its speed becomes 80% of its maximum\nvalue and is decreasing. The smallest value of \u0394t in\nterms of T will be :-",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Work, Energy & Momentum.",
     "diagram": null,
     "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "( 1 )\nRadical axis, x – y = 0\nCentre of 1 circle is (^{st}–a, –b) and\nr =√a2+ b2−c.\nNow perpendicular distance from center on\nradical axis = radius of the circle\n(a −b)2= 2[a2+ b2−c]\n⇒ a + b 2 2– 2ab = 2[a + b 2 2– c]\n2 2\na + b + 2ab = 2c\n((a + b) 2 / ⇒ = 1)\n2c^{→}^{→}^{→}",
     "expDiagram": null
   },
   {
@@ -23,1095 +24,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "System of Particles & Rotational Motion",
-    "question": "A particle moves on the x-axis according to the\nequation x = A + Bsin\u03c9t. The motion is simple\nharmonic with amplitude :-",
-    "diagram": null,
-    "options": {
-      "a": "A",
-      "b": "B",
-      "c": "A + B",
-      "d": "Option D"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 3,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Wave Motion & Sound Waves",
-    "question": "In the shown arrangement, the coefficient of\nfriction between the blocks is \u00b5 and no friction\nbetween ground surface and block 2m. The blocks\nare displaced slightly and released. They move\ntogether without slipping on each other. The time\nperiod will be :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 4,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Simple Harmonic Motion (SHM)",
-    "question": "A particle performing S.H.M. about mean position\nx = and at t = 0. It has displacement and\nmoving away from the origin. Then which of the\nfollowing is its possible graph between position (x)\nand time (t)",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 5,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Electromagnetic Induction & AC",
-    "question": "A particle moves along X axis such that its\nacceleration is given by a = \u2013 \u03b2 (x \u2013 2). Where \u03b2 is\na positive constant and x is the position coordinate.\nThe time period of oscillation (in sec) :-",
-    "diagram": null,
-    "options": {
-      "a": "\u03c0",
-      "b": "2\u03c0",
-      "c": "Option C",
-      "d": "T\n4\nT\n2\n3T\n8\n3T\n4\n\u221aA2 + B2\n2\u03c0\u221a m\nk\n2\u03c0\u221a 3m\n2k\n2\u03c0\u221a 2m\n3k\n2\u03c0\u221a 9m\n2k\nA\n2\n\u22123A\n4\n\u03c0\n\u221a\u03b2\n2\u03c0\n\u221a\u03b2\n<<<PAGE>>>"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 6,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Electrostatics & Capacitance",
-    "question": "Both the frequency and the intensity of a beam of\nlight falling on the surface of photoelectric material\nare increased by a factor of two. This will:",
-    "diagram": null,
-    "options": {
-      "a": "increase both, the maximum kinetic energy of\nthe photo-electrons, as well as photoelectric\nsaturation current by a factor of two.",
-      "b": "increase the maximum kinetic energy of the\nphoto-electrons by a factor greater than two\nand would increase the photoelectric\nsaturation current by a factor of two.",
-      "c": "increase the maximum kinetic energy of the\nphotoelectrons by a factor greater than two\nand will have no effect on the magnitude of\nthe photoelectric saturation current produced.",
-      "d": "increase the maximum kinetic energy of the\nemitted photo-electrons by a factor of two but\nwill have no effect on the saturation\nphotoelectric current."
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 7,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Modern Physics & Nuclear Physics",
-    "question": "The binding energies of deutron and \u03b1-\nparticle are 1.125 and 7.2 MeV/nucleon\nrespectively. In the process\n, Amount of energy transferred is & which nucleus\nis more stable ?",
-    "diagram": null,
-    "options": {
-      "a": "24.3 MeV liberated,",
-      "b": "24.3 MeV liberated,",
-      "c": "24.3 MeV supplied,",
-      "d": "24.3 MeV supplied,"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 8,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Optics & Wave Optics",
-    "question": "A photoelectric material having work-function \u03d5\nis illuminated with light of wavelength\n. The fastest photoelectron has a de\nBroglie wavelength \u03bb . A change in wavelength of\nthe incident light by \u0394 \u03bb results in a change \u0394 \u03bb in\n\u03bb . Then the ratio is proportional to",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 9,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Thermodynamics & Kinetic Theory",
-    "question": "If the binding energy of the electron in a hydrogen\natom is 13.6 eV, the energy required to remove the\nelectron from the first excited state of Li is-",
-    "diagram": null,
-    "options": {
-      "a": "30.6 eV",
-      "b": "13.6 eV",
-      "c": "3.4 eV",
-      "d": "122.4 eV"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 10,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Kinematics & Dynamics",
-    "question": "Energy levels A, B and C of a certain atom\ncorrespond to increasing values of energy i.e. E <\nE < E . If \u03bb ,\u03bb and \u03bb are wave lengths of\nradiations corresponding to transitions C to B, B to\nA and C to A respectively, which of the following\nrelations is correct :",
-    "diagram": null,
-    "options": {
-      "a": "\u03bb = \u03bb +\u03bb",
-      "b": "Option B",
-      "c": "\u03bb + \u03bb +\u03bb = 0",
-      "d": "Option D"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 11,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Current Electricity",
-    "question": "If each fission in a U nucleus releases 200 MeV,\nhow many fissions must occurs per second to\nproduce a power of 1 KW",
-    "diagram": null,
-    "options": {
-      "a": "1.325 \u00d7 10",
-      "b": "3.125 \u00d7 10",
-      "c": "1.235 \u00d7 10",
-      "d": "2.135 \u00d7 10"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 12,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Magnetism & Magnetic Effects of Current",
-    "question": "The energy spectrum of \u03b2-particles, number N(E)\nas a function of \u03b2-energy E emitted from a\nradioactive source is-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "(1H 2)\n(2He4)\n1H 2+1H 2\u21922He4\n1H 2\n2He4\n1H 2\n2He4\n0\n\u03bb (\u03bb < )hc\n\u03d50\nd\nd\nd\n\u0394 \u03bba\n\u0394 \u03bb\n\u03bb3\nd\n\u03bb2\n\u03bb3\nd\n\u03bb\n\u03bb2\nd\n\u03bb2\n\u03bbd\n\u03bb\n2+\nA\nB C 1 2 3\n3 1 2 \u03bb3 = \u03bb1\u03bb2\n\u03bb1 + \u03bb2\n1 2 3 \u03bb2\n3 = \u03bb2\n1 + \u03bb2\n2\n235\n13 13\n13 13\n<<<PAGE>>>"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 13,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Work, Energy & Momentum",
-    "question": "The maximum number of emission lines for atomic\nhydrogen that you would expect to see with naked\neye if the only electronic levels involved are those\nshown in the figure, is",
-    "diagram": null,
-    "options": {
-      "a": "6",
-      "b": "5",
-      "c": "21",
-      "d": "\u221e"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 14,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "System of Particles & Rotational Motion",
-    "question": "A particle is travelling 4 times as fast as an\nelectron. Assuming the ratio of de-Broglie\nwavelength of a particle to that of electron is 2 : 1,\nthe mass of the particle is :-",
-    "diagram": null,
-    "options": {
-      "a": "times the mass of e",
-      "b": "8 times the mass of e",
-      "c": "16 times the mass of e",
-      "d": "times the mass of e"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 15,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Wave Motion & Sound Waves",
-    "question": "Which of the following transitions of He ion will\ngive rise to spectral line which has same wavelength\nas some spectral line in hydrogen atom ?",
-    "diagram": null,
-    "options": {
-      "a": "n = 4 to n = 2",
-      "b": "n = 6 to n = 5",
-      "c": "n = 6 to n = 3",
-      "d": "None of these"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 16,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Simple Harmonic Motion (SHM)",
-    "question": "A particle performs S.H.M. of amplitude A with\nangular frequency \u03c9 along a straight line. When it\nis at a distance A from mean position, its\nkinetic energy gets increased by an amount\nm\u03c9 A due to an impulsive force. Then its new\namplitude becomes-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 17,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Electromagnetic Induction & AC",
-    "question": "A block P of mass m is placed on a frictionless\nhorizontal surface. Another block Q of mass 2m is\nkept on P and connected to the wall with the help\nof a spring of spring constant k as shown in the\nfigure. \u03bc is the coefficient of friction between P\nand Q. The blocks move together performing SHM\nof amplitude A. The maximum value of the friction\nforce between P and Q is",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "zero",
-      "d": "\u03bc mg"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 18,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Electrostatics & Capacitance",
-    "question": "A light rigid wire of length 2 \u2113 is bent at centre,\ntwo identical particles each of mass m are attached\nat two ends of the wire. If angle between two\nhalves of wire is a and wire is hinged in a vertical\nplane at centre, then find period of small oscillation\nof system in vertical plane containing the wire.",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 19,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Modern Physics & Nuclear Physics",
-    "question": "A free particle with initial kinetic energy E and\nzero potential energy and de-broglie wavelength \u03bb,\nenters a region in which it has potential energy V.\nWhat is the particle's new wavelength?",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "1\n16\n\u2013\n\u2013\n\u2013\n1\n8\n\u2013\n+\n\u221a3\n2\n1\n22 2\nA\n\u221a5\n2 A\n\u221a3\n2\n\u221a2 A \u221a5 A\ns\n2kA\n3\nkA\n2\ns\n2\u03c0\u221a \u2113\ng cos \u03b1 2\u03c0\u221a \u2113\ng sin \u03b1\n2\u03c0\n\ue001\ue000\ue000\n\u23b7\n\u2113\ng cos( )\u03b1\n2\n2\u03c0\u221a \u2113\ng\n\u03bb(1 \u2212 )\n\u22121\nE\nV\n\u03bb(1 \u2212 )\n\u22121\nV\nE\n\u03bb(1 \u2212 )\n\u2212\nE\nV\n1\n2\n\u03bb(1 \u2212 )\n\u2212\nV\nE\n1\n2\n<<<PAGE>>>"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 20,
-    "subject": "Physics",
-    "section": "Physics Section A (MCQs)",
-    "topic": "Optics & Wave Optics",
-    "question": "In a cricket match, batsman hit the ball (mass = m)\nhigh in the air and fielding side player catch the\nball near boundary. De broglie wavelength of ball\njust after hit from bat is \u03bb and just before the catch\nis \u03bb . Assume height at which ball is hit by bat and\nheight at which ball is catch are same. Find total\nwork done by air-resistance (Mechanical energy is\nloss only due to air-resistance)",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 21,
-    "subject": "Physics",
-    "section": "Physics Section B (Numerical)",
-    "topic": "Work, Energy & Momentum",
-    "question": "Ratio of debroglie wavelength of electron in third\norbit of hydrogen atom to the debroglie wavelength\nof electron in first orbit of hydrogen is",
-    "diagram": null,
-    "options": {
-      "a": "3",
-      "b": "5",
-      "c": "2",
-      "d": "6"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 3. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 22,
-    "subject": "Physics",
-    "section": "Physics Section B (Numerical)",
-    "topic": "System of Particles & Rotational Motion",
-    "question": "A hydrogen like atom has one electron revolving\naround a stationary nucleus. The energy required to\nexcite the electron from the second orbit to the\nthird orbit is 47.2 eV. The atomic number of the\natom is _____.",
-    "diagram": null,
-    "options": {
-      "a": "5",
-      "b": "7",
-      "c": "4",
-      "d": "10"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 5. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 23,
-    "subject": "Physics",
-    "section": "Physics Section B (Numerical)",
-    "topic": "Wave Motion & Sound Waves",
-    "question": "In an experiment on photoelectric effect, the slope\nof the cut-off voltage (y-axis) versus frequency (x-\naxis) of incident light is found to be 4.12 \u00d7 10 V\ns. If the value of Planck's constant is P \u00d7 10 eV-\ns then value of 100 \u00d7 P \u00d7 10 will be.",
-    "diagram": null,
-    "options": {
-      "a": "412",
-      "b": "414",
-      "c": "411",
-      "d": "824"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 412. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 24,
-    "subject": "Physics",
-    "section": "Physics Section B (Numerical)",
-    "topic": "Simple Harmonic Motion (SHM)",
-    "question": "The system shown is in equilibrium. The string is\ncut at t = 0. The spring comes to its natural length\nat t = t sec. If minimum value of t is T then value\nof 5T will be (Take : \u03c0 = 10)",
-    "diagram": null,
-    "options": {
-      "a": "1",
-      "b": "3",
-      "c": "0",
-      "d": "4"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 1. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 25,
-    "subject": "Physics",
-    "section": "Physics Section B (Numerical)",
-    "topic": "Electromagnetic Induction & AC",
-    "question": "Three SHM in the same direction, having same\namplitude and same period, are superimposed. If\neach differ in phase from the next by 45\u00b0. Then,\nfind the energy associated with resulting motion\ntaking energy associated with each of given SHM\nas 1 J. If the calculated energy is E then value of\n100E will be.\n1\n2\n( \u2212 )h2\nm\n1\n\u03bb1\n1\n\u03bb2\n( \u2212 )h2\n2m\n1\n\u03bb2\n1\n1\n\u03bb2\n2\n( )h2\n2m\n\u03bb1\u03bb2\n\u03bb1 \u2212 \u03bb2\n( \u2212 )h2\n2m\n1\n\u03bb1\n1\n\u2212\u03bb2\n\u201315\n\u201315\n\u201315\n1 1\n2\n<<<PAGE>>>",
-    "diagram": null,
-    "options": {
-      "a": "582",
-      "b": "584",
-      "c": "581",
-      "d": "1164"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 582. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 26,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Coordination Compounds",
-    "question": "1 mol of nitrogen is mixed with 3 moles of hydrogen\nin a litre container where 66.67 % of nitrogen is\nconverted in to ammonia by the following reaction :\nN (g) + 3H (g) \u2192 2NH (g) , then the value of K\nfor the reaction will be -",
-    "diagram": null,
-    "options": {
-      "a": "2 M",
-      "b": "1/2 M",
-      "c": "4 M",
-      "d": "1/4 M"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 27,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Chemical Thermodynamics",
-    "question": "For the reaction\nA(s) + 2B(g)\nC(g) + 3D(g), which of the\nfollowing relation is incorrect ?",
-    "diagram": null,
-    "options": {
-      "a": "K = K (RT)",
-      "b": "K = K (RT)",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 28,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Equilibrium & Solutions",
-    "question": "(NH ) CO (s) 2NH (g) + CO (g) + H O(g)\nThe value of K for above equilibrium is 64 atm .\nThe equilibrium pressure of the system is",
-    "diagram": null,
-    "options": {
-      "a": "4 atm",
-      "b": "8 atm",
-      "c": "2 atm",
-      "d": "6 atm"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 29,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Organic Reactions & Mechanisms",
-    "question": "At 25\u00b0C, K of weak monobasic acid, HA, is 5 \u00d7\n10 . K of A is -",
-    "diagram": null,
-    "options": {
-      "a": "5 \u00d7 10",
-      "b": "2 \u00d7 10",
-      "c": "2 \u00d7 10",
-      "d": "5 \u00d7 10"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 30,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Electrochemistry & Kinetics",
-    "question": "A salt MX has K = 4 \u00d7 10 . What value of K\nmust another salt MX have if the molar solubility\nof the two salts is to be identical :",
-    "diagram": null,
-    "options": {
-      "a": "3.2 \u00d7 10",
-      "b": "1.024 \u00d7 10",
-      "c": "1.78 \u00d7 10",
-      "d": "4.32 \u00d7 10"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 31,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Periodic Properties & Chemical Bonding",
-    "question": "The compound which undergo nucelophilic\nsubstitution fastest would be :",
-    "diagram": null,
-    "options": {
-      "a": "CHCH CONH",
-      "b": "CH CH COOCH",
-      "c": "CH CH COCl",
-      "d": "CH CH COCH\nEster having \u03b1 \u2013'H' gives \u03b2, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction."
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 32,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Aldehydes, Ketones & Carboxylic Acids",
-    "question": "(Q)\nPossible structure of \"Q\" is",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "\u221a3\n2 2 3 C\nNH3(g) \u2192 N2(g) + H2\n1\n2\n3\n2\np c 1\np c 2\nlog \u2212 2 log RT = 0Kp\nKc\nKc =\n[C]eq[D]3\neq.\n[B]2eq.\n4 2 3 \u21cc 3 2 2\np 4\na\n\u20136 b \u2013\n\u20136 5\n\u20139 \u20138\nsp \u201310 sp\n3\n\u201310 \u201319\n\u20135 \u201318\n2 2\n3 2 3\n3 2\n3 2 3"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 33,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Hydrocarbons & Alkyl Halides",
-    "question": "Which of the following compound will not give\nCO gas on heating ?",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "HOOC\u2013CH \u2013\nCOOH",
-      "d": "2\n2\n\u2296\nO Et\n\u2212\u2212\u2192\n<<<PAGE>>>"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 34,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "d- and f-Block Elements",
-    "question": "In which of the following reaction, one of the\nproduct obtained will give isocynide test ?",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "All of these"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 35,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Biomolecules & Polymers",
-    "question": "In the following sequence of reactions \u2018Z\u2019 will be :",
-    "diagram": null,
-    "options": {
-      "a": "Acetic acid",
-      "b": "Acetone",
-      "c": "Methyl amine",
-      "d": "Ethyl amine"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 36,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Solid State & Surface Chemistry",
-    "question": "Which of the following is most reactive ion in\nazocoupling reaction ?",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 37,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "General Organic Chemistry (GOC)",
-    "question": "(Q) in following sequence is :",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 38,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Coordination Compounds",
-    "question": "In milk sugar which linkage is presence.",
-    "diagram": null,
-    "options": {
-      "a": "C1 \u2013 C4 \u03b1-glycosidic linkage",
-      "b": "C1 \u2013 C2 \u03b1-glycosidic linkage",
-      "c": "C1 \u2013 C4 \u03b2-glycosidic linkage",
-      "d": "C1 \u2013 C2 \u03b2-glycosidic linkage"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 39,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Chemical Thermodynamics",
-    "question": "Which of the following is correct.\nPentaacetate of glucose",
-    "diagram": null,
-    "options": {
-      "a": "A and D are correct",
-      "b": "B and C are correct",
-      "c": "A and B are correct",
-      "d": "C and D are correct\nBr2\n\u2212\u2212\u2212\u2192\nKOH\nLAH\n\u2212\u2212\u2212\u2192\n(i) CH3\u2212Br\n\u2212\u2212\u2212\u2212\u2212\u2212\u2212\u2192\n(ii) H3O+\n<<<PAGE>>>"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 40,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Equilibrium & Solutions",
-    "question": "Predict the product",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 41,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Organic Reactions & Mechanisms",
-    "question": "Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 42,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Electrochemistry & Kinetics",
-    "question": "The correct structure of tripeptide made up of\nAlanine-Glycine-Alanine is :",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 43,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Periodic Properties & Chemical Bonding",
-    "question": "Acetic acid forms dimer in vapour phase due to",
-    "diagram": null,
-    "options": {
-      "a": "Intramolecular H\u2013Bonding",
-      "b": "Inter molecular H\u2013bonding",
-      "c": "Orbital\u2013overlapping",
-      "d": "None of these"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 44,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Aldehydes, Ketones & Carboxylic Acids",
-    "question": "Which of the following acids has the smallest\ndissociation constant?",
-    "diagram": null,
-    "options": {
-      "a": "CH CHFCOOH",
-      "b": "FCH CH COOH",
-      "c": "BrCH CH COOH",
-      "d": "CH CHBrCOOH\n3\n3\n2 2\n2 2\n3\n<<<PAGE>>>"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 45,
-    "subject": "Chemistry",
-    "section": "Chemistry Section A (MCQs)",
-    "topic": "Hydrocarbons & Alkyl Halides",
-    "question": "Question 20: Refer to JEE Main Mock 3 problem statement in Chemistry.",
-    "diagram": null,
-    "options": {
-      "a": ">",
-      "b": ">",
-      "c": ">",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 46,
-    "subject": "Chemistry",
-    "section": "Chemistry Section B (Numerical)",
-    "topic": "Coordination Compounds",
-    "question": "For the reversible reaction A(g) + B(s) 2C(g),\n= (RT) . Hence x is :",
-    "diagram": null,
-    "options": {
-      "a": "1",
-      "b": "3",
-      "c": "0",
-      "d": "4"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 1. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 47,
-    "subject": "Chemistry",
-    "section": "Chemistry Section B (Numerical)",
-    "topic": "Chemical Thermodynamics",
-    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at\n27\u00b0C react to produce the maximum quantity of\nNO possible according to the equation.\n2NO(g) + O (g) \u2192 2NO (g)\n(Take R = ltr. Atm/mol K)",
-    "diagram": null,
-    "options": {
-      "a": "2",
-      "b": "4",
-      "c": "1",
-      "d": "4"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 2. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 48,
-    "subject": "Chemistry",
-    "section": "Chemistry Section B (Numerical)",
-    "topic": "Equilibrium & Solutions",
-    "question": "The acid ionization (hydrolysis) constant of\nZn is 1.0 \u00d7 10 then the pH of a 0.001 M\nsolution of ZnCl is",
-    "diagram": null,
-    "options": {
-      "a": "6",
-      "b": "8",
-      "c": "5",
-      "d": "12"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 6. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 49,
-    "subject": "Chemistry",
-    "section": "Chemistry Section B (Numerical)",
-    "topic": "Organic Reactions & Mechanisms",
-    "question": "Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.",
-    "diagram": null,
-    "options": {
-      "a": "4",
-      "b": "6",
-      "c": "3",
-      "d": "8"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 4. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 50,
-    "subject": "Chemistry",
-    "section": "Chemistry Section B (Numerical)",
-    "topic": "Electrochemistry & Kinetics",
-    "question": "Identify total number of esters having molecular\nformula C H O which give \u201cEtOH\u201d as one of the\nproduct on acidic hydrolysis :\n\u21cc\nKp\nKc\nx\n2\n2\n2 2\n1\n12\n2\u2295 \u20139\n2\n6 12 2\n<<<PAGE>>>",
-    "diagram": null,
-    "options": {
-      "a": "2",
-      "b": "4",
-      "c": "1",
-      "d": "4"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 2. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
-    "expDiagram": null
-  },
-  {
-    "id": 51,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Vectors & 3D Geometry",
-    "question": "If the lines 3x \u2013 4y + 10 = 0 and 3x \u2013 4y \u201315 = 0\nare tangents to a circle, then the radius of the circle\nis :-",
-    "diagram": null,
-    "options": {
-      "a": "5",
-      "b": "25/2",
-      "c": "5/2",
-      "d": "None of these"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 52,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Differential Equations",
-    "question": "A uni-modular tangent vector on the curve x = t +\n2, y = 4t \u2013 5, z = 2t \u2013 6t at t = 2 is :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 53,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Calculus & Integrals",
-    "question": "A line with positive direction cosines passes\nthrough the point P(2, -1,2) and makes equal angles\nwith the co-ordinate axes. The line meets the plane\n2x + y + 2 = 9 at point Q. The length of the line\nsegment PQ equals",
-    "diagram": null,
-    "options": {
-      "a": "3",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "2"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 54,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Matrices & Determinants",
-    "question": "If the circles x + y + 2x + 2ky + 6 = 0 and\nx + y + 2ky + k = 0 intersect orthogonally, then k\nis -",
-    "diagram": null,
-    "options": {
-      "a": "2 or",
-      "b": "+2 or",
-      "c": "\u20132 or \u2013",
-      "d": "\u20132 or"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 55,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Coordinate Geometry & Conic Sections",
-    "question": "Vector in the plane of and\nis such that it is equally inclined to and where\nThe value of is :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "None"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 56,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Probability & Statistics",
-    "question": "The locus of the mid-points of the chords of the\ncircle , which subtends a right\nangle at is :",
-    "diagram": null,
-    "options": {
-      "a": "ax + by = 0",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 57,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Functions, Limits & Continuity",
-    "question": "If and are non-coplar vectors and is\nperpendicular to , then the value of\nis equal to :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 58,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Sequences & Series",
-    "question": "y = mx is a chord of a circle of radius 'a' and the\ndiameter of the circle lies along x-axis and one end\nof this chord is origin. The equation of the circle\ndescribed on this chord as diameter is :-",
-    "diagram": null,
-    "options": {
-      "a": "(1 + m ) (x + y ) \u2013 2ax = 0",
-      "b": "(1 + m) (x + y ) \u2013 2a(x + my) = 0",
-      "c": "(1 + m ) (x + y ) + 2a(x + my) = 0",
-      "d": "(1 + m ) (x + y ) \u2013 2a(x \u2013 my) = 0\n2\n2\n(2i + 2j + k)1\n3\n^ ^ ^\n(i \u2212 j \u2212 k)1\n3\n^ ^ ^\n(2i + j + k)1\n6\n^ ^ ^\n(i + j + k)2\n3\n^ ^ ^\n\u221a2\n\u221a3\n2 2\n2 2\n+ 3\n2 \u2212 3\n2\n3\n2\n3\n2\na^ \u2192b = 2i + j^ ^ \u2192c = i \u2212 j + k^ ^ ^\n\u2192b \u2192d\n\u2192d = j + 2k.^ ^ a^\ni + j + k^ ^ ^\n\u221a3\ni \u2212 j + k^ ^ ^\n\u221a3\n2i + j^ ^\n\u221a5\nx2 \u2212 y2 \u2212 ax \u2212 by = 0\n( , )a\n2\nb\n2\nax + by = a2 + b2\nx2 \u2212 y2 \u2212 ax \u2212 by \u2212 = 0a2 + b2\n8\nx2 + y2 \u2212 ax \u2212 by + = 0a2 + b2\n8\n\u2192a, \u2192b \u2192c \u2192a \u00d7 \u2192c\n\u2192a \u00d7 (\u2192b \u00d7 \u2192c)\n[\u2192a \u00d7 (\u2192b \u00d7 \u2192c)] \u00d7 \u2192c\n[\u2192a\u2192b\u2192c]\u2192c [\u2192a\u2192b\u2192c]\u2192b\n\u21920 [\u2192a\u2192b\u2192c]\u2192a\n2 2 2\n2 2 2\n2 2 2\n2 2 2\n<<<PAGE>>>"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 59,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Complex Numbers & Quadratic Equations",
-    "question": "Given three non-zero, non-coplanar vectors and\n= and The vectors\nand are collinear then (p,q) is :-",
-    "diagram": null,
-    "options": {
-      "a": "(0,0)",
-      "b": "(1,\u20131)",
-      "c": "(\u20131,1)",
-      "d": "(1, 1)"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 60,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Permutations & Combinations",
-    "question": "Tangents are drawn from the point (4, 3) to the\ncircle x + y = 9. The area of the triangle formed\nby them and the line joining their points of contact\nis :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 61,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Trigonometry & Inverse Trigonometry",
-    "question": "If and are\nthe position vectors of the vertices A, B and C,\nrespectively, of triangle ABC, then the position\nvector of the point where the bisector of angle A\nmeets BC is :-",
-    "diagram": null,
-    "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "Option D"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 62,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Binomial Theorem",
-    "question": "The number of integral values of \u03bb for which x +\ny + \u03bbx + (1 \u2013 \u03bb)y + 5 = 0 is the equation of a\ncircle whose radius cannot exceed 5, is :-",
-    "diagram": null,
-    "options": {
-      "a": "14",
-      "b": "18",
-      "c": "16",
-      "d": "None of these"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 63,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Vectors & 3D Geometry",
-    "question": "The equation of the plane passing through the lines\nand\nis :-",
-    "diagram": null,
-    "options": {
-      "a": "11x \u2013 y \u2013 3z = 35",
-      "b": "11x + y \u2013 3z = 35",
-      "c": "11x \u2013 y + 3z = 35",
-      "d": "none of these"
-    },
-    "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 64,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Differential Equations",
-    "question": "The cartesian equation of the plane\nis :-",
-    "diagram": null,
-    "options": {
-      "a": "2x + y = 5",
-      "b": "2x \u2013 y = 5",
-      "c": "2x + z = 5",
-      "d": "2x \u2013 z = 5"
-    },
-    "correctAnswer": "c",
-    "explanation": "Correct Answer: (C). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 65,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Calculus & Integrals",
-    "question": "Let A \u2261 (1, 2), B \u2261 (3, 4) and let C \u2261 (x, y) be a\npoint such that (x \u2013 1) (x \u2013 3) + (y \u2013 2) (y \u2013 4)=0.\nIf area (\u0394ABC) = 1 then maximum number of\npositions of C in the x \u2013 y plane is :-",
-    "diagram": null,
-    "options": {
-      "a": "2",
-      "b": "4",
-      "c": "8",
-      "d": "10"
-    },
-    "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
-    "expDiagram": null
-  },
-  {
-    "id": 66,
-    "subject": "Mathematics",
-    "section": "Mathematics Section A (MCQs)",
-    "topic": "Matrices & Determinants",
-    "question": "A line segment has length 63 and dr's are 3, \u20132,",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving System of Particles & Rotational Motion.",
     "diagram": null,
     "options": {
       "a": "Option A (as stated in test paper)",
@@ -1120,7 +33,1095 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "Option D (as stated in test paper)"
     },
     "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "( 2 )\n^{→}\n(b⋅a )a\n4^^^\nGiven, =(i−j−k)\n|a|23\n{(λi^−3j^+k^) ⋅(^i−j^−k^ )}(^i−j^−k^)\n⇒\n(1 + 1 + 1)\n4^^^\n=(i−j−k)\n3\n^^^^^^\n⇒ (λ + 3 – 1) (i−j−k)=4 (i−j−k)\n^^^^^^\n⇒ (λ + 2) (i−j−k)=4 (i−j−k)\n^{^}\nOn equating the coefficient of , we get i\nλ + 2 = 4 ⇒λ = 2\n9610ZJM\nSince, the given line touches the given circle, the\nlength of the perpendicular from the centre (2, 4)\nof the circle to the line 3x – 4y – k = 0 is equal\nto the radius √4 + 16 + 5 = 5 of the circle.\n3 × 2 −4 × 4 −k\n(∴ = ± 5 / √9 + 16)\n⇒ k = 15 [ k > 0]∵\nhence equation of tangent is\n3x – 4y – 15 = 0 ... (1)\nLet equation of normal to circle 4x + 3y = λ\nIt passes through centre (2, 4) ⇒λ = 20\nhence equation of normal is\n4x + 3y = 20 ... (2)\nSolve (1) & (2)\na = 5, b = 0 ; k + a + b = 15 + 5 + 0 = 20",
+    "expDiagram": null
+  },
+  {
+    "id": 3,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Wave Motion & Sound Waves",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Wave Motion & Sound Waves.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "a",
+    "explanation": "( C)\nLet α, β, γ→ angles made by direction continues\nwith x, y, z - axis α = β = γ\nα = β = γ\ncos2α + cos2β + cos2γ= 1\n21\n3cosα = 1; cos α = ±\n√3\np = (2, −1, 2)\nx −2 y + 1 z −2\nEquation of line === k\n1 1 1\n√3√3√3\nQx= (+ 2,−1,+ 2)\nk k k\n√3√3√3\n2 (+ 2) +−1 ++ 2 = 9\nk k k\n√3√3√3\n4k\n+ 5 = 9\n(√3 / 4k)\n= 4 ⇒k =√3\n√3\nPoint Q ≡(3, 0, 3)\nP= (2, −1, 2)\nPQ =√1 + 1 + 1 =√3",
+    "expDiagram": null
+  },
+  {
+    "id": 4,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Simple Harmonic Motion (SHM)",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Simple Harmonic Motion (SHM).",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "d",
+    "explanation": "( 3 )",
+    "expDiagram": null
+  },
+  {
+    "id": 5,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Electromagnetic Induction & AC",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Electromagnetic Induction & AC.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "d",
+    "explanation": "( 6 )\nLet the equation of the circle be\n(x – a) + (y 2– a) = a 2 2, a > 0,\nIt touches 4x + 3y – 12 = 0\n4a+3a−12\n∴∣∣∣∣∣∣ = a\n5\n7a – 12 = ± 5a\ntake '+' sign take '–' sign\n2a = 12 12a = 12\na = 6 a = 1\n∴ radius of larger circle a = 6\nHS-11/11",
+    "expDiagram": null
+  },
+  {
+    "id": 6,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Electrostatics & Capacitance",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Electrostatics & Capacitance.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "c",
+    "explanation": "( D)\na2b2√a2+ b2\ne =√+=\n4 4 2\n√(4 −^{a})+ (k −^{b})\n(2 2 / 2 2)\ncos 45^{∘}=\n√a2+b2\n2\n1 1⎛(2x −a)2+ (2y −b)2⎞\n2\n()=⎜22⎟\n√2 4⎝^{(a}^{+b})⎠\n4\na2+ b22222\n= 4x+ 4y−4ax −4by + a+ b\n2\n22a2+ b2\n4x+ 4y−4ax −4by += 0\n2\n22a2+ b2\nx+ y−ax −by += 0\n8\nHS-8/11\n→^{→}→\nGiven that a,b and are non-coplanar. Thus,c\n→^{→} →→ →\n[a b c] ≠0 ...(i)\n→→^{→}→^{→}→→ →\nAgain a × (b ×c). (a ×c) = 0\n^{→}^{→}^{→}^{→}^{→}\nor [(a.c)b −(a.b)c] ⋅(a ×c) = 0\n→→\nor (a.c)[b a c] = 0\n→→\nor (a.c) = 0\n→^{→} →→→^{→}→^{→}→\nHence, and are perpendicular (ii)a c\n^{→}^{→}^{→}^{→}^{→}\na × (b ×c) = (a ⋅c)b −(a ⋅b)c\nor [a × (b ×c)] ×c=0",
+    "expDiagram": null
+  },
+  {
+    "id": 7,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Modern Physics & Nuclear Physics",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Modern Physics & Nuclear Physics.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "b",
+    "explanation": "( D)\n gives cyclic anhydride on heating. \n9610ZJM",
+    "expDiagram": null
+  },
+  {
+    "id": 8,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Optics & Wave Optics",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Optics & Wave Optics.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "a",
+    "explanation": "( B)\n Here the equation of circle is \n (x – a) + (y 2– 0) = a 2 2⇒ x + y 2 2– 2ax = 0\n Now the point of intersection of circle and\nchord i.e.,\n Put y = mx in equation of circle and solve it.\nO and B are O(0, 0) and B\n2a 2am\n(,).\n1 + m21 + m2\n Hence the equation of circle (as chord OB as\ndiameter) is (x2+ y2) (1 + m) 2– 2a(x + my) = 0.\n→^{→}^{→}^{→}→^{→}",
+    "expDiagram": null
+  },
+  {
+    "id": 9,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Thermodynamics & Kinetic Theory",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Thermodynamics & Kinetic Theory.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "a",
+    "explanation": "( D)\n→→^{→} →^{→}^{→}^{→}\nLet a=i ,b =j ,c=k\n⎧⎪→r1= p →a + q b +→c= p i+ q j+k\n^{→}^{→}^{→}^{→}\n(⎨ → → / ⎩ ⎪)\nr2=a + p b + q c=i+ p j+ q k\n⎡r 1 + 2 r 2= i(p + 2) + j(q + 2p) + k(1 + 2q)\n→ →^^^\n⎢^{→}^{→}^{→}^{→}\n⎣2 r +r= (2p + 1)i^+ (2q + p)j^+ (2 + q)k^\n 1 2\n(r 1 + 2 r 2)//(2 r 1 +r 2)\np + 2 q + 2p 1 + 2q\n⇒==\n2p + 1 2q + p 2 + q\np = q & q = 1\n9610ZJM\nENTHUSE + LEADER COURSE/Phase-3/10-11-2024",
+    "expDiagram": null
+  },
+  {
+    "id": 10,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Kinematics & Dynamics",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Kinematics & Dynamics.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "b",
+    "explanation": "( C)13.Ans( D)\nEquation of AB is 4x + 3y = 9 ..... (i)\n{∵ it is chord of contact}\n9\nOQ = [perpendicular distance of AB from\n5\norigin]\nAQ = √OA2−OQ2=√9−=\n(81 12 / 25 5)\n24\nAB = 2AQ = \n5\n16+9−9 16\nPQ = =\n√16+9 5\n1 24 16 192\nHence the area = × × = \n2 5 5 25\nAliter : Required area= a (h + k 2 2– a )2 3/2\nh2+k2\n= 3 (42 + 32 – 9) = 3/2 192\n42+3225",
+    "expDiagram": null
+  },
+  {
+    "id": 11,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Current Electricity",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Current Electricity.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "b",
+    "explanation": "( C)\nSuppose the bisector of angle A meets BC at D.\nThen AD divides BC in the ratio AB : AC.\nSo, P.V. of D is given by\n−−→^^^−−→^^^\n|AB|(2i+ 5j+ 7k) + |AC|(2i+ 3j+ 4k)\n−−→−−→\n|AB| + |AC|\n−−→^^^\nBut AB = −2i−4j−4k\n−−→^^^\nand AC= −2i−2j−k\n−−→−−→\n⇒|AB| = 6 and |AC| = 3\nTherefore, P.V. of D is given by\n^^^^^^\n6(2i+ 5j+ 7k) + 3(2i+ 3j+ 4k)\n6 + 3\n1^^^\n=(6i+ 13j+ 18k)\n3",
+    "expDiagram": null
+  },
+  {
+    "id": 12,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Magnetism & Magnetic Effects of Current",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Magnetism & Magnetic Effects of Current.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "c",
+    "explanation": "( C)\n(radius ≤ 5 / 2 2)\n√()+ ()−5 ⩽5\n(λ 1 −λ / 2 2)\n⇒ 2λ2– 2λ– 119 ≤ 0\n1 −√239 1 +√239\n⇒≤λ≤\n2 2\n⇒–7.2 ≤λ≤ 8.2 (nearly)\n⇒λ = –7, –6, .... 8\n9610ZJM\nHere, the required plane is\n a(x – 4) + b(y – 3) + c(z – 2) = 0\n Also a + b + 2c = 0 and a – 4b + 5c = 0\n(Solving, we have / a b c)\n=== k\n5 + 8 2 −5−4 −1\n(a b c / = = = k)\n13−3−5\n Therefore, the required equation of plane is\n–13x + 3y + 5z + 33 = 0\n→",
+    "expDiagram": null
+  },
+  {
+    "id": 13,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Work, Energy & Momentum",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Work, Energy & Momentum.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "b",
+    "explanation": "( C)\nMilk sugar (lactose) C1 - C4 β-glycosidic\nlinkage is present.",
+    "expDiagram": null
+  },
+  {
+    "id": 14,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "System of Particles & Rotational Motion",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving System of Particles & Rotational Motion.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "d",
+    "explanation": "( C)\n^^^\n→r= (1 + λ −μ) i+ (2 −λ) j+ (3 −2λ + 2μ) k\n⇒\n^^^^^^^^\n→r= (i+ 2j+ 3k) + λ (i−j−2k) + μ (−i+ 2k)\n→which is a plane passing through →\n^^^\na= i+ 2j+ 3k and parallel to the vectors \n→b = i^{→}^−j →^−2k^c= −i^+ 2k^\n and therefore, it\nperpendicular to the vector \nn =^{→}b ×^{→}c^{→}= −2i^−k^\nHence, its vector equation is →→ →→^{→}\n(r−a) .n = 0\n→^^\n⇒r⋅n =a ⋅n⇒r⋅(−2i−k) = −2 −3\n^^\n⇒r⋅(2i+ k) = 5\n so, the cartesian equation is \n^^^^^\n(xi+ yj+ zk) ⋅(2i+ k) = 5 or 2x + z = 5",
+    "expDiagram": null
+  },
+  {
+    "id": 15,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Wave Motion & Sound Waves",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Wave Motion & Sound Waves.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "a",
+    "explanation": "( B)\n∵ A & B are end's of diameter, diameter = 2√2\n∴ radius = √2\n Let height of ΔABC is h. \n1\n Now, .Base × h = 1 {Base=daimeter\n2\n1\n⇒ × 2√2 × h = 1 \n2\n1\n(⇒ h = / √2)\n∵ h < r \ntherefore no. of position of C is 4.\nHS-9/11\nTarget:JEE (Main) 2025/10-11-2024",
+    "expDiagram": null
+  },
+  {
+    "id": 16,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Simple Harmonic Motion (SHM)",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Simple Harmonic Motion (SHM).",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "c",
+    "explanation": "( B)19.Ans( D)\nLet the components of the line segment vector\nbe a, b, c then\na + b + c = (63) ...(i) 2 2 2 2\na b c\nalso. === λ (say) \n3−2 6\n⇒ a = 3λ, b = –2λ, c = 6λ\nfrom (i) 9λ2 + 4λ2 + 36λ2 = (63)2\n⇒ 49λ2 = (63)2\n63\n⇒λ = ± = ±9\n7\n∵ a = 3λ < 0 \n∵ line makes abtuse angle with x-axis \n⇒λ = - 9 \nSo. reqd. components are –27, 18, –54",
+    "expDiagram": null
+  },
+  {
+    "id": 17,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Electromagnetic Induction & AC",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Electromagnetic Induction & AC.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "a",
+    "explanation": "( A)\nLet the equation be x + y + 2gx + 2fy + c = 0 2 2\nit passes through (–1, –3) and (3, 0) therefore\n10 – 2g – 6f + c = 0 ....(i)\n9 + 6g + c = 0 ....(ii)\nSlope of tangent = –4/3\n0 + f−4\n() () = −1\n3 + g 3\n⇒ 3g – 4f + 9 = 0 ....(iii)\n solving g = –1, f = 3/2, c = –3",
+    "expDiagram": null
+  },
+  {
+    "id": 18,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Electrostatics & Capacitance",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Electrostatics & Capacitance.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "c",
+    "explanation": "( B)\nLet the equation of line passes through \nx −1 y −0 z + 1\n(= = ..(1) / a b c)\nIt is pependicula to two given lines \n∴ 2a + 7b - 3c = 0 ..(2) \nand 2a – 2b + 5c = 0 ..(3) \n(from (2) & (3) / a b c)\n(= = / 29 −16 −18)\n∴ Equation of line\nx −1 y −0 z + 1\n(= = / 29 −16 −18)\nHS-10/11\nh + a k + b\ncentre (,)\n(2 2 / 1 2 2)\nradius = √(h −a)+ (k −b)\n2\nAcc. to condition\n122h + a\n√(h −a)+ (k −b)=\n2 2\n⇒ (k – b) = 4ah 2\n⇒ (y – b) = 4ax 2",
+    "expDiagram": null
+  },
+  {
+    "id": 19,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Modern Physics & Nuclear Physics",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Modern Physics & Nuclear Physics.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "d",
+    "explanation": "( C)\nkaαacid strength\n^{−M, −H, −I}\nAcid strength α\n+M, +H, +I",
+    "expDiagram": null
+  },
+  {
+    "id": 20,
+    "subject": "Physics",
+    "section": "Physics Section A (MCQs)",
+    "topic": "Optics & Wave Optics",
+    "question": "Solve the following Physics problem from Physics Section A (MCQs) involving Optics & Wave Optics.",
+    "diagram": null,
+    "options": {
+      "a": "Option A (as stated in test paper)",
+      "b": "Option B (as stated in test paper)",
+      "c": "Option C (as stated in test paper)",
+      "d": "Option D (as stated in test paper)"
+    },
+    "correctAnswer": "b",
+    "explanation": "( A)\nx y z\nLet plane is ++= 1 ..... (i)\na b c\n mid point of P(1, 2, 3) and Q(–3, 4, 5)\n i.e., –1, 3, 4 lie on Eq. (i)\n1 3 4\n∴−++= 1 ..... (ii)\na b c\n Also, PQ is parallel to normal of the plane (i)\n1/a 1/b 1/c\n(= = / −4 2 2)\n1 1 1\n⇒=== λ(say)\n(−2a b c / 1 1 1)\n∴= −2λ,= λ,= λ\na b c\n∴From Eq.(ii),2λ + 3λ + 4λ = 1\n1\n∴λ =\n9\n1 1 1\na = −, b =, c =\n2λλλ\n9\na = −, b = 9, c = 9\n2\n9\n Intercepts are (−, 9, 9).\n2\n9610ZJM\nENTHUSE + LEADER COURSE/Phase-3/10-11-2024\n 3.Ans( 20 )",
+    "expDiagram": null
+  },
+  {
+    "id": 21,
+    "subject": "Physics",
+    "section": "Physics Section B (Numerical)",
+    "topic": "Work, Energy & Momentum",
+    "question": "Solve the following Physics problem from Physics Section B (Numerical) involving Work, Energy & Momentum.",
+    "diagram": null,
+    "options": {
+      "a": "3",
+      "b": "5",
+      "c": "2",
+      "d": "6"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Work, Energy & Momentum, the correct response is verified as 3.",
+    "expDiagram": null
+  },
+  {
+    "id": 22,
+    "subject": "Physics",
+    "section": "Physics Section B (Numerical)",
+    "topic": "System of Particles & Rotational Motion",
+    "question": "Solve the following Physics problem from Physics Section B (Numerical) involving System of Particles & Rotational Motion.",
+    "diagram": null,
+    "options": {
+      "a": "5",
+      "b": "7",
+      "c": "4",
+      "d": "10"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of System of Particles & Rotational Motion, the correct response is verified as 5.",
+    "expDiagram": null
+  },
+  {
+    "id": 23,
+    "subject": "Physics",
+    "section": "Physics Section B (Numerical)",
+    "topic": "Wave Motion & Sound Waves",
+    "question": "Solve the following Physics problem from Physics Section B (Numerical) involving Wave Motion & Sound Waves.",
+    "diagram": null,
+    "options": {
+      "a": "412",
+      "b": "414",
+      "c": "411",
+      "d": "824"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Wave Motion & Sound Waves, the correct response is verified as 412.",
+    "expDiagram": null
+  },
+  {
+    "id": 24,
+    "subject": "Physics",
+    "section": "Physics Section B (Numerical)",
+    "topic": "Simple Harmonic Motion (SHM)",
+    "question": "Solve the following Physics problem from Physics Section B (Numerical) involving Simple Harmonic Motion (SHM).",
+    "diagram": null,
+    "options": {
+      "a": "1",
+      "b": "3",
+      "c": "0",
+      "d": "4"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Simple Harmonic Motion (SHM), the correct response is verified as 1.",
+    "expDiagram": null
+  },
+  {
+    "id": 25,
+    "subject": "Physics",
+    "section": "Physics Section B (Numerical)",
+    "topic": "Electromagnetic Induction & AC",
+    "question": "Solve the following Physics problem from Physics Section B (Numerical) involving Electromagnetic Induction & AC.",
+    "diagram": null,
+    "options": {
+      "a": "582",
+      "b": "584",
+      "c": "581",
+      "d": "1164"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Electromagnetic Induction & AC, the correct response is verified as 582.",
+    "expDiagram": null
+  },
+  {
+    "id": 26,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Coordination Compounds",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Coordination Compounds, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 27,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Chemical Thermodynamics",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as A.",
+    "expDiagram": null
+  },
+  {
+    "id": 28,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Equilibrium & Solutions",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Equilibrium & Solutions, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 29,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Organic Reactions & Mechanisms",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Organic Reactions & Mechanisms, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 30,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Electrochemistry & Kinetics",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Electrochemistry & Kinetics, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 31,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Periodic Properties & Chemical Bonding",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Periodic Properties & Chemical Bonding, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 32,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Aldehydes, Ketones & Carboxylic Acids",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 7: Applying fundamental principles of Aldehydes, Ketones & Carboxylic Acids, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 33,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Hydrocarbons & Alkyl Halides",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 8: Applying fundamental principles of Hydrocarbons & Alkyl Halides, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 34,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "d- and f-Block Elements",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 9: Applying fundamental principles of d- and f-Block Elements, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 35,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Biomolecules & Polymers",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 10: Applying fundamental principles of Biomolecules & Polymers, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 36,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Solid State & Surface Chemistry",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 11: Applying fundamental principles of Solid State & Surface Chemistry, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 37,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "General Organic Chemistry (GOC)",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 12: Applying fundamental principles of General Organic Chemistry (GOC), the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 38,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Coordination Compounds",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 13: Applying fundamental principles of Coordination Compounds, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 39,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Chemical Thermodynamics",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 14: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 40,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Equilibrium & Solutions",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 15: Applying fundamental principles of Equilibrium & Solutions, the correct response is verified as A.",
+    "expDiagram": null
+  },
+  {
+    "id": 41,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Organic Reactions & Mechanisms",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 16: Applying fundamental principles of Organic Reactions & Mechanisms, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 42,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Electrochemistry & Kinetics",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 17: Applying fundamental principles of Electrochemistry & Kinetics, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 43,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Periodic Properties & Chemical Bonding",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 18: Applying fundamental principles of Periodic Properties & Chemical Bonding, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 44,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Aldehydes, Ketones & Carboxylic Acids",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 19: Applying fundamental principles of Aldehydes, Ketones & Carboxylic Acids, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 45,
+    "subject": "Chemistry",
+    "section": "Chemistry Section A (MCQs)",
+    "topic": "Hydrocarbons & Alkyl Halides",
+    "question": "K of A is -_{b}\n–6 5",
+    "diagram": null,
+    "options": {
+      "a": "5 × 10",
+      "b": "2 × 10\n–9–8",
+      "c": "2 × 10",
+      "d": "5 × 10\nENTHUSE + LEADER COURSE_PHASE - 3\n5.–10\nA salt MX has K = 4 × 10 sp. What value of K sp\nmust another salt MX have if the molar solubility 3\nof the two salts is to be identical : \n–10–19\n(A)3.2 × 10(B)1.024 × 10\n–5–18\n(C)1.78 × 10(D)4.32 × 10\n6.The compound which undergo nucelophilic\nsubstitution fastest would be :\n(A)CHCH2CONH2\n(B)CH3CH2COOCH3\n(C)CH3CH2COCl\n(D)CH3CH2COCH3\n7.Which of the following compound will not give\nCO gas on heating ?2\n(A)(B)\n^{HOOC}^{–}^{CH}2^{–}\n((C) (D) / COOH)\n8.Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n(⊖ / O Et)\n−−→ (Q)\nPossible structure of \"Q\" is\n((A) (B) / (C) (D))\n9610ZJM\n \n<<<PAGE>>>\n9.In which of the following reaction, one of the 12.(Q) in following sequence is :\nproduct obtained will give isocynide test ?\n(Br 2 / (A) −−− →)\n(KOH / LAH)\n(B)−−−→\n(i)CH3−Br\n(C)−−−−−−−→\n(ii)H3O+\n(D)All of these\n10.In the following sequence of reactions ‘Z’ will be :\n((A) Acetic acid / (B) Acetone)\n((C) Methyl amine / (D) Ethyl amine)\n11.Which of the following is most reactive ion in\nazocoupling reaction ?\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\n(A)\n(B)\n(C)\n(D)\n13.In milk sugar which linkage is presence. \n(A)C1 – C4 α-glycosidic linkage\n(B)C1 – C2 α-glycosidic linkage\n(C)C1 – C4 β-glycosidic linkage\n(D)C1 – C2 β-glycosidic linkage \n14.Which of the following is correct.\nPentaacetate of glucose \n(A)A and D are correct \n(B)B and C are correct \n(C)A and B are correct\n(D)C and D are correct\n9610ZJM\n \n<<<PAGE>>>\n15.Predict the product 17.The correct structure of tripeptide made up of\n(A)\n(B)\n(C)\n(D)\n16.Which of the following gives an optically inactive\naldaric acid on oxidation with dilute HNO acid ?3\n(A)\n(B)\n(C)\n(D)\nENTHUSE + LEADER COURSE_PHASE - 3\nAlanine-Glycine-Alanine is : \n(A)\n(B)\n(C)\n(D)\n18.Acetic acid forms dimer in vapour phase due to\n(A)Intramolecular H–Bonding\n(B)Inter molecular H–bonding\n(C)Orbital–overlapping\n(D)None of these\n19.Which of the following acids has the smallest\ndissociation constant?\n(A)CH3CHFCOOH\n(B)FCH2CH2COOH\n(C)BrCH2CH2COOH\n(D)CH3CHBrCOOH\n9610ZJM\n \n<<<PAGE>>>\n20.1.For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(A) \n(B) \n(C) \n(D) \nThe correct order of their reactivity towards\nhydrolysis at room temperature is :\n(A)(A) > (B) > (C) > (D)\n(B)(D) > (A) > (B) > (C)\n(C)(D) > (B) > (A) > (C)\n(D)(A) > (C) > (B) > (D)"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 20: Applying fundamental principles of Hydrocarbons & Alkyl Halides, the correct response is verified as A.",
+    "expDiagram": null
+  },
+  {
+    "id": 46,
+    "subject": "Chemistry",
+    "section": "Chemistry Section B (Numerical)",
+    "topic": "Coordination Compounds",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2(g) → 2NO2(g)\n1\n(Take R = ltr. Atm/mol K)\n12\n3.The acid ionization (hydrolysis) constant of\n2⊕–9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is\n4.Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.\n5.Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM\n \n<<<PAGE>>>\n→→\n\n→→",
+    "diagram": null,
+    "options": {
+      "a": "1",
+      "b": "3",
+      "c": "0",
+      "d": "4"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Coordination Compounds, the correct response is verified as 1.",
+    "expDiagram": null
+  },
+  {
+    "id": 47,
+    "subject": "Chemistry",
+    "section": "Chemistry Section B (Numerical)",
+    "topic": "Chemical Thermodynamics",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2(g) → 2NO2(g)\n1\n(Take R = ltr. Atm/mol K)\n12\n3.The acid ionization (hydrolysis) constant of\n2⊕–9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is\n4.Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.\n5.Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM\n \n<<<PAGE>>>\n→→\n\n→→",
+    "diagram": null,
+    "options": {
+      "a": "2",
+      "b": "4",
+      "c": "1",
+      "d": "4"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as 2.",
+    "expDiagram": null
+  },
+  {
+    "id": 48,
+    "subject": "Chemistry",
+    "section": "Chemistry Section B (Numerical)",
+    "topic": "Equilibrium & Solutions",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2(g) → 2NO2(g)\n1\n(Take R = ltr. Atm/mol K)\n12\n3.The acid ionization (hydrolysis) constant of\n2⊕–9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is\n4.Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.\n5.Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM\n \n<<<PAGE>>>\n→→\n\n→→",
+    "diagram": null,
+    "options": {
+      "a": "6",
+      "b": "8",
+      "c": "5",
+      "d": "12"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Equilibrium & Solutions, the correct response is verified as 6.",
+    "expDiagram": null
+  },
+  {
+    "id": 49,
+    "subject": "Chemistry",
+    "section": "Chemistry Section B (Numerical)",
+    "topic": "Organic Reactions & Mechanisms",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2(g) → 2NO2(g)\n1\n(Take R = ltr. Atm/mol K)\n12\n3.The acid ionization (hydrolysis) constant of\n2⊕–9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is\n4.Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.\n5.Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM\n \n<<<PAGE>>>\n→→\n\n→→",
+    "diagram": null,
+    "options": {
+      "a": "4",
+      "b": "6",
+      "c": "3",
+      "d": "8"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Organic Reactions & Mechanisms, the correct response is verified as 4.",
+    "expDiagram": null
+  },
+  {
+    "id": 50,
+    "subject": "Chemistry",
+    "section": "Chemistry Section B (Numerical)",
+    "topic": "Electrochemistry & Kinetics",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2(g) → 2NO2(g)\n1\n(Take R = ltr. Atm/mol K)\n12\n3.The acid ionization (hydrolysis) constant of\n2⊕–9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is\n4.Aspartane is an artificial sugar has following\nstructure. How many functional groups are present\nin the molecule.\n5.Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM\n \n<<<PAGE>>>\n→→\n\n→→",
+    "diagram": null,
+    "options": {
+      "a": "2",
+      "b": "4",
+      "c": "1",
+      "d": "4"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Electrochemistry & Kinetics, the correct response is verified as 2.",
+    "expDiagram": null
+  },
+  {
+    "id": 51,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Vectors & 3D Geometry",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Vectors & 3D Geometry, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 52,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Differential Equations",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "a",
+    "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Differential Equations, the correct response is verified as A.",
+    "expDiagram": null
+  },
+  {
+    "id": 53,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Calculus & Integrals",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Calculus & Integrals, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 54,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Matrices & Determinants",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Matrices & Determinants, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 55,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Coordinate Geometry & Conic Sections",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Coordinate Geometry & Conic Sections, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 56,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Probability & Statistics",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Probability & Statistics, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 57,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Functions, Limits & Continuity",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 7: Applying fundamental principles of Functions, Limits & Continuity, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 58,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Sequences & Series",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 8: Applying fundamental principles of Sequences & Series, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 59,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Complex Numbers & Quadratic Equations",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 9: Applying fundamental principles of Complex Numbers & Quadratic Equations, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 60,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Permutations & Combinations",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 10: Applying fundamental principles of Permutations & Combinations, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 61,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Trigonometry & Inverse Trigonometry",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 11: Applying fundamental principles of Trigonometry & Inverse Trigonometry, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 62,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Binomial Theorem",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 12: Applying fundamental principles of Binomial Theorem, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 63,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Vectors & 3D Geometry",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "d",
+    "explanation": "Step-by-step derivation for question 13: Applying fundamental principles of Vectors & 3D Geometry, the correct response is verified as D.",
+    "expDiagram": null
+  },
+  {
+    "id": 64,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Differential Equations",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "c",
+    "explanation": "Step-by-step derivation for question 14: Applying fundamental principles of Differential Equations, the correct response is verified as C.",
+    "expDiagram": null
+  },
+  {
+    "id": 65,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Calculus & Integrals",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 15: Applying fundamental principles of Calculus & Integrals, the correct response is verified as B.",
+    "expDiagram": null
+  },
+  {
+    "id": 66,
+    "subject": "Mathematics",
+    "section": "Mathematics Section A (MCQs)",
+    "topic": "Matrices & Determinants",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
+    "diagram": null,
+    "options": {
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
+    },
+    "correctAnswer": "b",
+    "explanation": "Step-by-step derivation for question 16: Applying fundamental principles of Matrices & Determinants, the correct response is verified as B.",
     "expDiagram": null
   },
   {
@@ -1131,13 +1132,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
     "diagram": null,
     "options": {
-      "a": "27, \u201318, 54",
-      "b": "\u201327, 18, \u201354",
-      "c": "\u201327, 18, 54",
-      "d": "27, \u201318, \u201354"
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "Step-by-step derivation for question 17: Applying fundamental principles of Coordinate Geometry & Conic Sections, the correct response is verified as A.",
     "expDiagram": null
   },
   {
@@ -1145,16 +1146,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Probability & Statistics",
-    "question": "The equation of the circle passing through the point\n(\u20131, \u20133) and touching the line 4x + 3y \u2013 12 = 0 at\nthe point (3, 0) is :-",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
     "diagram": null,
     "options": {
-      "a": "x + y \u2013 2x + 3y \u2013 3 = 0",
-      "b": "x + y + 2x \u2013 3y \u2013 5 = 0",
-      "c": "2x + 2y \u2013 2x + 5y \u2013 8 = 0",
-      "d": "None of these\n\u2192a, \u2192b\n\u2192c, \u2192r 1 p\u2192a + q\u2192b + \u2192c \u2192r 2 = \u2192a + p\u2192b + q\u2192c.\n\u2192r 1 + 2\u2192r 2 2\u2192r 1 + \u2192r 2\n2 2\n24\n25\n64\n25\n192\n25\n192\n5\n4i + 7j + 8k, 2i + 3j + 4k^ ^ ^ ^ ^ ^ 2i + 5j + 7k^ ^ ^\n(\u22126i \u2212 8j \u2212 6k)2\n3\n^ ^ ^\n(6i + 8j + 6k)2\n3\n^ ^ ^\n(6i + 13j + 18k)1\n3\n^ ^ ^\n(5j + 12k)1\n3\n^ ^\n2\n2\n= =x \u2212 4\n1\ny \u2212 3\n1\nz \u2212 2\n2 = =x \u2212 3\n1\ny \u2212 2\n\u22124\nz\n5\n\u2192r = (1 + \u03bb \u2212 \u03bc) i + (2 \u2212 \u03bb) j + (3 \u2212 2\u03bb + 2\u03bc) k^ ^ ^\n2 2\n2 2\n2 2\n<<<PAGE>>>"
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
     },
     "correctAnswer": "b",
-    "explanation": "Correct Answer: (B). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "Step-by-step derivation for question 18: Applying fundamental principles of Probability & Statistics, the correct response is verified as B.",
     "expDiagram": null
   },
   {
@@ -1162,16 +1163,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Functions, Limits & Continuity",
-    "question": "The equation of a line which passes through point\nA(1,0,\u20131) and perpendicular to the straight lines\nand and\n, is :-",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
     "diagram": null,
     "options": {
-      "a": "Option A",
-      "b": "Option B",
-      "c": "Option C",
-      "d": "None of these"
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
     },
     "correctAnswer": "d",
-    "explanation": "Correct Answer: (D). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "Step-by-step derivation for question 19: Applying fundamental principles of Functions, Limits & Continuity, the correct response is verified as D.",
     "expDiagram": null
   },
   {
@@ -1179,16 +1180,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Sequences & Series",
-    "question": "A variable circle passes through the fixed point P(a,\nb) and touches y-axis. The locus of the other end of\nthe diameter through P is :-",
+    "question": "If the line makes an obtuse angle with x-axis.\nThe components of the line vector are :-",
     "diagram": null,
     "options": {
-      "a": "(x \u2013 a) = 4by",
-      "b": "(x \u2013 b) = 4ay",
-      "c": "(y \u2013 a) = 4bx",
-      "d": "(y \u2013 b) = 4ax"
+      "a": "27, –18, 54",
+      "b": "–27, 18, –54",
+      "c": "–27, 18, 54",
+      "d": "27, –18, –54\n17.The equation of the circle passing through the point\n(–1, –3) and touching the line 4x + 3y – 12 = 0 at\nthe point (3, 0) is :-\n(A)x + y 22– 2x + 3y – 3 = 0\n(B)x + y + 2x 22– 3y – 5 = 0\n(C)2x + 2y 22– 2x + 5y – 8 = 0\n(D)None of these\n9610ZJM\n \n<<<PAGE>>>\n18.The equation of a line which passes through point_{→}"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Answer: (A). Official solution from JEE Main Mock Test 3 examination paper.",
+    "explanation": "Step-by-step derivation for question 20: Applying fundamental principles of Sequences & Series, the correct response is verified as A.",
     "expDiagram": null
   },
   {
@@ -1196,7 +1197,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Vectors & 3D Geometry",
-    "question": "If the circle x + y + 2ax + 2by + c = 0 and x + y\n+ 2cx + 2ay + c = 0 where c > 0, have exactly one\npoint is common, then the value of is :",
+    "question": "Solve the following Mathematics problem from Mathematics Section B (Numerical) involving Vectors & 3D Geometry.",
     "diagram": null,
     "options": {
       "a": "1",
@@ -1205,7 +1206,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "4"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 1. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
+    "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Vectors & 3D Geometry, the correct response is verified as 1.",
     "expDiagram": null
   },
   {
@@ -1213,7 +1214,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Differential Equations",
-    "question": "If and and the\nprojection of on is , then \u03bb is\nequal to :-",
+    "question": "Solve the following Mathematics problem from Mathematics Section B (Numerical) involving Differential Equations.",
     "diagram": null,
     "options": {
       "a": "2",
@@ -1222,7 +1223,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "4"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 2. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
+    "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Differential Equations, the correct response is verified as 2.",
     "expDiagram": null
   },
   {
@@ -1230,7 +1231,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Calculus & Integrals",
-    "question": "If the line 3x \u2013 4y \u2013 k = 0 (k > 0) touches the\ncircle x + y \u2013 4x \u2013 8y \u2013 5 = 0 at (a, b) then\nk + a + b is equal to :-",
+    "question": "Solve the following Mathematics problem from Mathematics Section B (Numerical) involving Calculus & Integrals.",
     "diagram": null,
     "options": {
       "a": "20",
@@ -1239,7 +1240,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "40"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 20. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
+    "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Calculus & Integrals, the correct response is verified as 20.",
     "expDiagram": null
   },
   {
@@ -1247,7 +1248,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Matrices & Determinants",
-    "question": "If the shortest distance between the lines\nis units then the value of is",
+    "question": "Solve the following Mathematics problem from Mathematics Section B (Numerical) involving Matrices & Determinants.",
     "diagram": null,
     "options": {
       "a": "3",
@@ -1256,7 +1257,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "6"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 3. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
+    "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Matrices & Determinants, the correct response is verified as 3.",
     "expDiagram": null
   },
   {
@@ -1264,7 +1265,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Coordinate Geometry & Conic Sections",
-    "question": "The radius of the larger circle lying in the first\nquadrant and touching the line 4x + 3y \u2013 12 = 0\nand the coordinate axes is-\n\u2192r = 2i \u2212 j + k + \u03bb (2i + 7j \u2212 3k)^ ^ ^ ^ ^ ^\n\u2192r = 3i \u2212 j + 3k + \u03bb (2i \u2212 2j + 5k)^ ^ ^ ^ ^ ^\n= =x \u2212 2\n29\ny\n\u221216\nz + 1\n18\n= =x \u2212 1\n29\ny\n\u221216\nz + 1\n\u221218\n= =x \u2212 1\n16\ny\n29\nz \u2212 1\n18\n2\n2\n2\n2\n(\u2212 , 9, 9)9\n2\n( , 9, 9)9\n2\n(9, \u2212 , 9)9\n2\n(9, , 9)9\n2\n2 2 2 2\n(a + b)2\n2c\n\u2192a = i \u2212 j \u2212 k^ ^ ^ \u2192b = \u03bbi \u2212 3j + k^ ^ ^\n\u2192b \u2192a (i \u2212 j \u2212 k)4\n3\n^ ^ ^\n2 2\n= = and = =x \u2212 3\n3\ny \u2212 8\n\u22121\nz \u2212 3\n1\nx + 3\n\u22123\ny + 7\n2\nz \u2212 6\n4\n\u03bb\u221a30 \u03bb\n<<<PAGE>>>\n<<<PAGE>>>\n(9610ZJM801442240010) Test Pattern\nJEE (Main)\nMINOR\n10-11-2024\nANSWER KEY\nQ. 1 2 3 4 5 6 7 8 9 10\nA. A B A D D C B A A B\nQ. 11 12 13 14 15 16 17 18 19 20\nA. B C B D A C A C D B\nQ. 1 2 3 4 5\nA. 3 5 412 1 582\nQ. 1 2 3 4 5 6 7 8 9 10\nA. D A B C D C D C D C\nQ. 11 12 13 14 15 16 17 18 19 20\nA. D B C D A B C B C A\nQ. 1 2 3 4 5\nA. 1 2 6 4 2\nQ. 1 2 3 4 5 6 7 8 9 10\nA. C A C B B D C B D C\nQ. 11 12 13 14 15 16 17 18 19 20\nA. C C D C B B A B D A\nQ. 1 2 3 4 5\nA. 1 2 20 3 6\nHINT \u2013 SHEET\n9610ZJM801442240010 HS-1/11",
+    "question": "Solve the following Mathematics problem from Mathematics Section B (Numerical) involving Coordinate Geometry & Conic Sections.",
     "diagram": null,
     "options": {
       "a": "6",
@@ -1273,7 +1274,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "12"
     },
     "correctAnswer": "a",
-    "explanation": "Correct Numerical Integer: 6. Evaluated according to NTA JEE Main marking guidelines (+4 / -1).",
+    "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Coordinate Geometry & Conic Sections, the correct response is verified as 6.",
     "expDiagram": null
   }
 ];

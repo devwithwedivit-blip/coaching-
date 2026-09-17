@@ -174,9 +174,9 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
               paddingVertical: 6,
               paddingHorizontal: 12,
               borderRadius: 9999,
-              backgroundColor: streamFilter === s ? COLORS.primary : 'rgba(255, 255, 255, 0.08)',
+              backgroundColor: streamFilter === s ? COLORS.gold : 'rgba(255, 255, 255, 0.08)',
               borderWidth: 1,
-              borderColor: streamFilter === s ? COLORS.primary : 'rgba(255, 255, 255, 0.1)',
+              borderColor: streamFilter === s ? COLORS.gold : 'rgba(255, 255, 255, 0.1)',
             }}
           >
             <Text

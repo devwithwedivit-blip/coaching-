@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { CbtQuestion, CbtExamMeta, ExamResultSummary, QuestionStatus } from '../types';
 import { NEET_BOTANY_QUESTIONS } from '../data/questionsNeetBotany';
+import { NEET_PHYSICS_QUESTIONS } from '../data/questionsNeetPhysics';
+import { NEET_CHEMISTRY_QUESTIONS } from '../data/questionsNeetChemistry';
 import { JEE_MOCK_1_QUESTIONS } from '../data/questionsJeeMock1';
 import { JEE_MOCK_2_QUESTIONS } from '../data/questionsJeeMock2';
 import { JEE_MOCK_3_QUESTIONS } from '../data/questionsJeeMock3';
@@ -17,6 +19,10 @@ const getQuestionsForExam = (examId: string): CbtQuestion[] => {
       return JEE_MOCK_2_QUESTIONS;
     case 'jee-main-mock-3':
       return JEE_MOCK_3_QUESTIONS;
+    case 'neet-physics-2024':
+      return NEET_PHYSICS_QUESTIONS;
+    case 'neet-chemistry-2024':
+      return NEET_CHEMISTRY_QUESTIONS;
     case 'neet-botany-2024':
     default:
       return NEET_BOTANY_QUESTIONS;
