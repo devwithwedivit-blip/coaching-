@@ -1,6 +1,6 @@
 {
-  "relay_http_url": "http://127.0.0.1:5100",
-  "relay_ws_url": "ws://127.0.0.1:5100",
+  "relay_http_url": "https://coaching-1-0xeo.onrender.com",
+  "relay_ws_url": "wss://coaching-1-0xeo.onrender.com",
   "username": "sarvottam",
   "password": "sarvottam2026",
   "device_name": "Sarvottam Windows PC",

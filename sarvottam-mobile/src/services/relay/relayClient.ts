@@ -12,10 +12,7 @@ export function getDynamicRelayHost(): string {
       return host;
     }
   }
-  return '192.168.29.66';
-}
-
-const DEFAULT_RELAY_URL = `http://${getDynamicRelayHost()}:5100`;
+export const CLOUD_RELAY_URL = 'https://coaching-1-0xeo.onrender.com';
 
 type StatusCallback = (status: RelayDeviceStatus) => void;
 type FilesCallback = (files: RelayFile[]) => void;
@@ -54,7 +51,8 @@ class RelayClient {
   public async getBaseUrl(): Promise<string> {
     const custom = await storage.getItem('sarvottam_relay_url');
     if (custom && custom.trim()) return custom.trim();
-    return `http://${getDynamicRelayHost()}:5100`;
+    // Default to the 24/7 Global Cloud Relay on Render
+    return CLOUD_RELAY_URL;
   }
 
   public async setBaseUrl(url: string): Promise<void> {
@@ -64,7 +62,7 @@ class RelayClient {
 
   public async getWsUrl(): Promise<string> {
     const httpUrl = await this.getBaseUrl();
-    return httpUrl.replace(/^http/, 'ws');
+    return httpUrl.replace(/^https/, 'wss').replace(/^http/, 'ws');
   }
 
   // -------------------------------------------------------------
