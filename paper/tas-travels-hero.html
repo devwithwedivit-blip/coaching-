@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAS Travels — The road trip, handled</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt:#1a1d20;
+    --asphalt-2:#24282c;
+    --asphalt-3:#2e3338;
+    --paint:#f2ece0;
+    --paint-dim:#a49e93;
+    --signal:#f2a63d;
+    --signal-dim:#c07f2a;
+    --sign-green:#2f6b52;
+    --taillight:#c1443a;
+    --line: rgba(242,236,224,0.12);
+    --line-strong: rgba(242,236,224,0.24);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--asphalt);
+    color:var(--paint);
+    font-family:'Inter', sans-serif;
+    overflow-x:hidden;
+  }
+
+  a{ color:inherit; }
+
+  .display{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    letter-spacing:0.01em;
+  }
+
+  .mono{ font-family:'Share Tech Mono', monospace; }
+
+  :focus-visible{
+    outline:2px solid var(--signal);
+    outline-offset:3px;
+  }
+
+  /* ---------- Background: night highway ---------- */
+
+  .night{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:
+      radial-gradient(ellipse 55% 40% at 15% 0%, rgba(242,166,61,0.09), transparent 60%),
+      linear-gradient(180deg, #14171a 0%, var(--asphalt) 50%, #101314 100%);
+    pointer-events:none;
+    overflow:hidden;
+  }
+
+  .beam{
+    position:absolute;
+    width:60vw;
+    height:60vw;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(242,166,61,0.14), transparent 65%);
+    filter:blur(6px);
+    animation: drift 22s ease-in-out infinite;
+  }
+  .beam.b2{
+    background:radial-gradient(circle, rgba(242,236,224,0.06), transparent 65%);
+    animation-duration:28s;
+    animation-delay:-6s;
+  }
+
+  @keyframes drift{
+    0%{ transform:translate(-20%, -30%); }
+    50%{ transform:translate(30%, 10%); }
+    100%{ transform:translate(-20%, -30%); }
+  }
+
+  .lane-strip{
+    position:absolute;
+    left:0; right:0; bottom:14%;
+    height:3px;
+    background-image: repeating-linear-gradient(90deg, var(--paint-dim) 0 40px, transparent 40px 80px);
+    opacity:0.35;
+    animation: roll 1.6s linear infinite;
+  }
+
+  @keyframes roll{
+    from{ background-position-x:0; }
+    to{ background-position-x:-80px; }
+  }
+
+  header, main, footer{ position:relative; z-index:1; }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Nav ---------- */
+
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:28px;
+    padding-bottom:28px;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:0.03em;
+  }
+
+  .logo svg{ width:22px; height:22px; fill:var(--signal); flex-shrink:0; }
+
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    font-size:14.5px;
+    color:var(--paint-dim);
+  }
+
+  .nav-links a{
+    text-decoration:none;
+    padding:4px 2px;
+    border-bottom:1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nav-links a:hover, .nav-links a:focus-visible{
+    color:var(--paint);
+    border-color:var(--line-strong);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 20px;
+    border-radius:3px;
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn:active{ transform:translateY(1px); }
+
+  .btn-primary{ background:var(--signal); color:#221505; }
+  .btn-primary:hover{ background:#f5b45c; }
+
+  .btn-ghost{
+    background:transparent;
+    color:var(--paint);
+    border-color:var(--line-strong);
+  }
+  .btn-ghost:hover{ border-color:var(--signal-dim); }
+
+  /* ---------- Hero ---------- */
+
+  .hero{
+    position:relative;
+    min-height:86vh;
+    display:flex;
+    align-items:center;
+    padding-bottom:70px;
+  }
+
+  .hero-inner{
+    display:grid;
+    gap:34px;
+    max-width:740px;
+  }
+
+  .hero h1{
+    margin:0;
+    font-size:clamp(42px, 6.2vw, 74px);
+    line-height:0.96;
+    color:var(--paint);
+  }
+
+  .hero p.lede{
+    margin:0;
+    max-width:54ch;
+    font-size:17px;
+    line-height:1.65;
+    color:var(--paint-dim);
+  }
+
+  /* ---------- Odometer ---------- */
+
+  .odo-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .odo-label{
+    font-family:'Share Tech Mono', monospace;
+    font-size:12.5px;
+    color:var(--signal-dim);
+    letter-spacing:0.03em;
+  }
+
+  .odo{
+    display:inline-flex;
+    background:#101213;
+    border:1px solid var(--line-strong);
+    border-radius:5px;
+    padding:8px 10px;
+    gap:2px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+    width:fit-content;
+  }
+
+  .odo-digit{
+    position:relative;
+    width:26px;
+    height:44px;
+    overflow:hidden;
+    border-right:1px solid rgba(242,236,224,0.08);
+  }
+  .odo-digit:last-child{ border-right:none; }
+
+  .odo-strip{
+    display:flex;
+    flex-direction:column;
+    transition: transform 1.6s cubic-bezier(.2,.8,.25,1);
+    will-change: transform;
+  }
+
+  .odo-strip span{
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Share Tech Mono', monospace;
+    font-size:26px;
+    color:var(--signal);
+  }
+
+  .odo-suffix{
+    font-family:'Share Tech Mono', monospace;
+    font-size:12.5px;
+    color:var(--paint-dim);
+    align-self:center;
+    margin-left:4px;
+  }
+
+  .odo-row{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+
+  .hero-cta{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  /* ---------- Fleet section ---------- */
+
+  .fleet-section{
+    border-top:1px solid var(--line);
+    padding:60px 0 70px;
+  }
+
+  .fleet-head{ margin-bottom:34px; max-width:560px; }
+
+  .fleet-head h2{
+    margin:0 0 8px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:32px;
+  }
+
+  .fleet-head p{
+    margin:0;
+    color:var(--paint-dim);
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .fleet-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+
+  .sticker{
+    background:var(--paint);
+    color:#20201c;
+    border-radius:6px;
+    padding:22px 22px 20px;
+    border:1.5px dashed rgba(32,32,28,0.3);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .sticker-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid rgba(32,32,28,0.15);
+    padding-bottom:12px;
+  }
+
+  .sticker-head h3{
+    margin:0;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:22px;
+  }
+
+  .sticker-head .price{
+    text-align:right;
+    font-family:'Share Tech Mono', monospace;
+  }
+  .sticker-head .price b{ font-size:20px; display:block; }
+  .sticker-head .price small{ font-size:11px; color:#5c5850; }
+
+  .spec-list{
+    list-style:none;
+    margin:0; padding:0;
+    font-family:'Share Tech Mono', monospace;
+    font-size:12.5px;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+  }
+
+  .spec-list li{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px dotted rgba(32,32,28,0.2);
+    padding-bottom:6px;
+  }
+
+  .spec-list li span:first-child{ color:#6b675e; }
+
+  .best-for{
+    font-size:13px;
+    line-height:1.5;
+    color:#3a372f;
+    margin:0;
+  }
+
+  .sticker .btn-ghost{
+    color:#20201c;
+    border-color:rgba(32,32,28,0.3);
+    align-self:flex-start;
+    margin-top:2px;
+  }
+  .sticker .btn-ghost:hover{ border-color:var(--sign-green); color:var(--sign-green); }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 0 40px;
+  }
+
+  .foot-row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:13px;
+    color:var(--paint-dim);
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width: 860px){
+    .fleet-grid{ grid-template-columns:1fr; }
+  }
+
+  @media (max-width: 720px){
+    nav.wrap{ padding-top:20px; padding-bottom:20px; }
+    .nav-links{ display:none; }
+    .hero{ min-height:auto; padding-top:16px; padding-bottom:48px; }
+    .odo-digit{ width:20px; height:36px; }
+    .odo-strip span{ height:36px; font-size:20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .beam{ animation:none; }
+    .lane-strip{ animation:none; }
+    .odo-strip{ transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="night" aria-hidden="true">
+    <div class="beam"></div>
+    <div class="beam b2"></div>
+    <div class="lane-strip"></div>
+  </div>
+
+  <header>
+    <nav class="wrap">
+      <div class="logo">
+        <svg viewBox="0 0 24 24"><path d="M4 16v-3l1.6-4.5A2 2 0 0 1 7.5 7h9a2 2 0 0 1 1.9 1.5L20 13v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zm3.2-8L6 12h12l-1.2-4H7.2zM6.5 14.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm11 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+        TAS TRAVELS
+      </div>
+      <div class="nav-links">
+        <a href="#fleet">Fleet</a>
+        <a href="#fleet">Routes</a>
+        <a href="#footer">Reviews</a>
+      </div>
+      <a href="#fleet" class="btn btn-primary">Get a quote</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-inner">
+        <h1 class="display">The road trip, handled.</h1>
+
+        <p class="lede">
+          TAS Travels rents the vehicle that actually fits the trip —
+          something small for the coast run, a minivan when the whole
+          family and the cooler are coming too.
+        </p>
+
+        <div class="odo-wrap">
+          <div class="odo-label">miles our fleet has covered this year</div>
+          <div class="odo-row">
+            <div class="odo" id="odo"></div>
+            <span class="odo-suffix">MI</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#fleet" class="btn btn-primary">Reserve a vehicle</a>
+          <a href="#fleet" class="btn btn-ghost">See the fleet</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="fleet-section wrap" id="fleet">
+      <div class="fleet-head">
+        <h2 class="display">The fleet</h2>
+        <p>Three ways to fit everyone, and everything they're bringing.</p>
+      </div>
+
+      <div class="fleet-grid">
+
+        <div class="sticker">
+          <div class="sticker-head">
+            <h3>Compact Sedan</h3>
+            <div class="price"><b>$42</b><small>per day</small></div>
+          </div>
+          <ul class="spec-list">
+            <li><span>Seats</span><span>5</span></li>
+            <li><span>Luggage</span><span>2 bags</span></li>
+            <li><span>Transmission</span><span>Automatic</span></li>
+            <li><span>MPG (est.)</span><span>36 city</span></li>
+          </ul>
+          <p class="best-for">Best for solo trips, errands, and quick weekend runs.</p>
+          <a href="#" class="btn btn-ghost">Reserve this</a>
+        </div>
+
+        <div class="sticker">
+          <div class="sticker-head">
+            <h3>Mid-size SUV</h3>
+            <div class="price"><b>$58</b><small>per day</small></div>
+          </div>
+          <ul class="spec-list">
+            <li><span>Seats</span><span>5</span></li>
+            <li><span>Luggage</span><span>4 bags</span></li>
+            <li><span>Transmission</span><span>Automatic</span></li>
+            <li><span>Drive</span><span>AWD available</span></li>
+          </ul>
+          <p class="best-for">Best for small families, gear, and rougher roads.</p>
+          <a href="#" class="btn btn-ghost">Reserve this</a>
+        </div>
+
+        <div class="sticker">
+          <div class="sticker-head">
+            <h3>7-Seat Minivan</h3>
+            <div class="price"><b>$71</b><small>per day</small></div>
+          </div>
+          <ul class="spec-list">
+            <li><span>Seats</span><span>7</span></li>
+            <li><span>Luggage</span><span>6 bags</span></li>
+            <li><span>Transmission</span><span>Automatic</span></li>
+            <li><span>Extras</span><span>Sliding doors</span></li>
+          </ul>
+          <p class="best-for">Best for the whole crew, plus the strollers.</p>
+          <a href="#" class="btn btn-ghost">Reserve this</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="wrap foot-row">
+      <span>&copy; 2026 TAS Travels. Pick it up, plan the playlist, go.</span>
+      <span>Bareilly &middot; Delhi &middot; Anywhere the road goes</span>
+    </div>
+  </footer>
+
+<script>
+  (function(){
+    var target = "128406";
+    var digitsStrip = "0123456789".repeat(3);
+    var odo = document.getElementById("odo");
+    var strips = [];
+
+    for (var i = 0; i < target.length; i++){
+      var slot = document.createElement("div");
+      slot.className = "odo-digit";
+      var strip = document.createElement("div");
+      strip.className = "odo-strip";
+      for (var c = 0; c < digitsStrip.length; c++){
+        var span = document.createElement("span");
+        span.textContent = digitsStrip[c];
+        strip.appendChild(span);
+      }
+      slot.appendChild(strip);
+      odo.appendChild(slot);
+      strips.push(strip);
+    }
+
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function land(){
+      var digitHeight = strips[0].parentElement.getBoundingClientRect().height;
+      target.split("").forEach(function(d, i){
+        var targetIndex = 20 + parseInt(d, 10);
+        var delay = reduce ? 0 : (target.length - i) * 90;
+        setTimeout(function(){
+          strips[i].style.transform = "translateY(-" + (targetIndex * digitHeight) + "px)";
+        }, delay);
+      });
+    }
+
+    if (reduce){
+      strips.forEach(function(strip, i){
+        var digitHeight = strip.parentElement.getBoundingClientRect().height;
+        strip.style.transition = "none";
+        strip.style.transform = "translateY(-" + ((20 + parseInt(target[i],10)) * digitHeight) + "px)";
+      });
+    } else {
+      requestAnimationFrame(function(){ setTimeout(land, 300); });
+    }
+
+    window.addEventListener("resize", function(){
+      strips.forEach(function(strip, i){
+        var digitHeight = strip.parentElement.getBoundingClientRect().height;
+        var idx = 20 + parseInt(target[i], 10);
+        strip.style.transform = "translateY(-" + (idx * digitHeight) + "px)";
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

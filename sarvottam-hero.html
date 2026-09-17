@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNTRA Institutes — Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#050b17;
+    --navy:#0e1f3d;
+    --navy-mid:#16305c;
+    --gold:#c9982a;
+    --gold-bright:#e0ac3d;
+    --cream:#f6f2e9;
+    --ink:#0a0f1a;
+    --page-bg:#faf8f3;
+    --page-bg-alt:#f2ede2;
+    --body-text:#4a4f5c;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--page-bg);
+    color:var(--navy);
+    overflow-x:hidden;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px clamp(20px,5vw,64px);
+    transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+  }
+  .navbar.scrolled{
+    background:rgba(250,248,243,.92);
+    backdrop-filter:blur(10px);
+    padding:14px clamp(20px,5vw,64px);
+    box-shadow:0 4px 24px rgba(10,15,26,.08);
+  }
+  .navbar.scrolled .brand{color:var(--navy);}
+  .navbar.scrolled .nav-links a{color:var(--navy);}
+  .navbar.scrolled .nav-links a:hover{background:rgba(10,15,26,.06);}
+  .navbar.scrolled .nav-toggle{color:var(--navy);}
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Poppins',sans-serif; font-weight:800; font-size:1.15rem;
+    letter-spacing:.02em; color:var(--cream); text-decoration:none;
+    transition:color .35s ease;
+  }
+  .brand .mark{
+    width:38px; height:38px; border-radius:9px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold) 60%,#8a6417);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink); font-family:'Poppins',sans-serif; font-weight:900; font-size:1.1rem;
+    flex-shrink:0;
+  }
+  .brand .brand-text{display:flex; flex-direction:column; line-height:1.05;}
+  .brand .brand-text small{font-family:'Montserrat',sans-serif; font-weight:500; font-size:.6rem; letter-spacing:.14em; color:var(--gold-bright); opacity:.85;}
+
+  .nav-links{display:flex; gap:2px; list-style:none;}
+  .nav-links a{
+    color:var(--cream); text-decoration:none; font-size:.86rem; font-weight:600;
+    padding:10px 16px; border-radius:100px; opacity:.82; transition:opacity .25s, background .25s;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{opacity:1; background:rgba(255,255,255,.08);}
+
+  .nav-toggle{display:none; background:none; border:none; color:var(--cream); font-size:1.6rem; cursor:pointer;}
+
+  @media (max-width:920px){
+    .nav-links{
+      position:fixed; top:0; right:0; height:100vh; width:min(78vw,320px);
+      background:var(--page-bg); flex-direction:column; justify-content:center;
+      gap:6px; padding:40px; transform:translateX(100%); transition:transform .35s ease;
+      box-shadow:-10px 0 40px rgba(10,15,26,.15);
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{font-size:1.05rem; padding:14px 18px; color:var(--navy); opacity:.85;}
+    .nav-links a:hover{background:rgba(10,15,26,.06);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; width:100%; height:100vh; height:100dvh;
+    overflow:hidden; background:var(--ink);
+  }
+
+  .slide{
+    position:absolute; inset:0;
+    opacity:0; visibility:hidden;
+    transition:opacity 1s ease;
+    z-index:1;
+  }
+  .slide.active{opacity:1; visibility:visible; z-index:2;}
+
+  .slide .bg{
+    position:absolute; inset:-3%;
+    background-size:cover; background-position:center;
+    transform:scale(1);
+    animation:none;
+  }
+  .slide.active .bg{animation:kenburns 7s ease-out forwards;}
+  @keyframes kenburns{
+    from{transform:scale(1.06);}
+    to{transform:scale(1.16);}
+  }
+
+  .slide .overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(4,8,16,.72) 0%, rgba(4,8,16,.30) 42%, rgba(4,8,16,.62) 78%, rgba(4,8,16,.88) 100%);
+  }
+
+  .slide .content{
+    position:relative; z-index:3; height:100%;
+    display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+    padding:0 clamp(24px,7vw,90px);
+    max-width:1100px;
+  }
+
+  .slide .eyebrow{
+    font-size:.78rem; font-weight:600; letter-spacing:.28em;
+    color:var(--gold-bright); margin-bottom:18px;
+    opacity:0; transform:translateY(14px);
+  }
+  .slide .cutout{
+    font-family:'Poppins',sans-serif; font-weight:900;
+    font-size:clamp(3.4rem,11vw,9rem);
+    line-height:.94; letter-spacing:-.01em;
+    background-size:cover; background-position:center; background-attachment:fixed;
+    -webkit-background-clip:text; background-clip:text;
+    color:transparent;
+    -webkit-text-stroke:2px rgba(246,242,233,.92);
+    text-stroke:2px rgba(246,242,233,.92);
+    filter:drop-shadow(0 6px 30px rgba(0,0,0,.55));
+    opacity:0; transform:translateY(24px);
+    margin-bottom:20px;
+  }
+  .slide .tagline{
+    font-size:clamp(1rem,2vw,1.3rem); font-weight:500; color:var(--cream);
+    max-width:560px; margin-bottom:34px; opacity:.94;
+    opacity:0; transform:translateY(18px);
+  }
+  .slide .cta{
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    color:var(--ink); font-weight:700; font-size:.95rem;
+    padding:16px 32px; border-radius:100px; text-decoration:none;
+    box-shadow:0 10px 30px rgba(217,171,61,.35);
+    transition:transform .25s ease, box-shadow .25s ease;
+    opacity:0; transform:translateY(18px);
+  }
+  .slide .cta:hover{transform:translateY(-3px); box-shadow:0 14px 36px rgba(217,171,61,.5);}
+
+  .slide.active .eyebrow{animation:riseIn .7s ease .35s forwards;}
+  .slide.active .cutout{animation:riseIn .8s ease .5s forwards;}
+  .slide.active .tagline{animation:riseIn .7s ease .8s forwards;}
+  .slide.active .cta{animation:riseIn .7s ease 1.05s forwards;}
+  @keyframes riseIn{to{opacity:1; transform:translateY(0);}}
+
+  /* ---------- HERO CONTROLS ---------- */
+  .hero-controls{
+    position:absolute; left:0; right:0; bottom:34px; z-index:10;
+    display:flex; align-items:center; justify-content:center; gap:22px;
+    padding:0 clamp(20px,6vw,80px);
+  }
+  .arrow-btn{
+    width:44px; height:44px; border-radius:50%;
+    border:1px solid rgba(246,242,233,.35); background:rgba(5,11,23,.35);
+    backdrop-filter:blur(6px);
+    color:var(--cream); font-size:1.1rem; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .25s, border-color .25s;
+    flex-shrink:0;
+  }
+  .arrow-btn:hover{background:rgba(246,242,233,.14); border-color:var(--gold-bright);}
+
+  .dots-wrap{display:flex; flex-direction:column; align-items:center; gap:10px;}
+  .dots{display:flex; gap:10px;}
+  .dot{
+    width:34px; height:4px; border-radius:4px; background:rgba(246,242,233,.28);
+    border:none; cursor:pointer; position:relative; overflow:hidden;
+    transition:background .3s;
+  }
+  .dot .fill{
+    position:absolute; inset:0; background:var(--gold-bright); width:0%;
+  }
+  .dot.active .fill{animation:fillDot 5s linear forwards;}
+  @keyframes fillDot{from{width:0%;} to{width:100%;}}
+
+  .slide-counter{
+    font-family:'Poppins',sans-serif; font-size:.78rem; letter-spacing:.1em; color:var(--cream);
+    opacity:.75;
+  }
+
+  @media (max-width:640px){
+    .arrow-btn{display:none;}
+    .hero-controls{bottom:22px;}
+  }
+
+  /* ==========================================================================
+     SECTION: OUR COURSES (7 ACCORDION VERTICALS - WHITE & GOLDEN BORDER THEME)
+     ========================================================================== */
+  :root {
+    --coaching-gold: #c9982a;
+    --coaching-gold-bright: #e0ac3d;
+    --coaching-gold-border: rgba(201, 152, 42, 0.45);
+    --coaching-gold-light: rgba(201, 152, 42, 0.08);
+  }
+
+  .courses-section {
+    scroll-margin-top: 70px;
+    background: #faf8f3;
+    padding: 100px clamp(20px, 6vw, 80px) 110px;
+    position: relative;
+    border-top: 3px solid var(--coaching-gold);
+  }
+
+  .courses-header {
+    max-width: 760px;
+    margin: 0 auto 46px;
+    text-align: center;
+  }
+
+  .courses-header .kicker {
+    display: inline-block;
+    color: var(--coaching-gold);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    background: var(--coaching-gold-light);
+    padding: 6px 18px;
+    border-radius: 50px;
+    border: 1px solid var(--coaching-gold-border);
+  }
+
+  .courses-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    color: var(--navy);
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+
+  .courses-header h2 span {
+    color: var(--coaching-gold);
+  }
+
+  .courses-header p.subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.08rem);
+    color: var(--body-text);
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* Toolbar */
+  .courses-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    max-width: 1100px;
+    margin: 0 auto 26px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid var(--coaching-gold-border);
+  }
+
+  .courses-badge-info {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .courses-badge-info .live-indicator {
+    width: 10px;
+    height: 10px;
+    background: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #10b981;
+  }
+
+  .courses-toggle-group {
+    display: flex;
+    gap: 8px;
+  }
+
+  .courses-btn-toggle {
+    background: #ffffff;
+    border: 1.5px solid var(--coaching-gold-border);
+    color: var(--navy);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .courses-btn-toggle:hover {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    border-color: var(--coaching-gold);
+    color: var(--ink);
+  }
+
+  /* Accordion Desktop Grid (2 Columns) & Mobile (1 Column) */
+  .courses-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  @media (max-width: 860px) {
+    .courses-grid-container {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media (min-width: 861px) {
+    .accordion-card:last-child {
+      grid-column: span 2;
+    }
+  }
+
+  /* Accordion Card: White color with slight golden border */
+  .accordion-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1.5px solid var(--coaching-gold-border);
+    box-shadow: 0 4px 18px rgba(10, 15, 26, 0.04), 0 1px 3px rgba(201, 152, 42, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .accordion-card:hover {
+    box-shadow: 0 10px 26px rgba(201, 152, 42, 0.16);
+    border-color: var(--coaching-gold);
+    transform: translateY(-2px);
+  }
+
+  .accordion-card.active {
+    border-color: var(--coaching-gold);
+    box-shadow: 0 12px 30px rgba(201, 152, 42, 0.2);
+  }
+
+  /* Dropdown Header Button: White with slight golden border */
+  .accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 22px;
+    background: #ffffff;
+    border: none;
+    border-bottom: 1px solid rgba(201, 152, 42, 0.22);
+    color: var(--navy);
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.25s ease;
+  }
+
+  .accordion-header:hover {
+    background: #fdfbf7;
+  }
+
+  .accordion-header:focus-visible {
+    outline: 3px solid var(--gold-bright);
+    outline-offset: -3px;
+  }
+
+  .accordion-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Number Badge: Gold tint with slight golden border */
+  .accordion-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(201, 152, 42, 0.1);
+    border: 1.5px solid var(--coaching-gold-border);
+    color: var(--coaching-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  /* Header Title Text */
+  .accordion-title-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  /* Rotating "+" to "x" Icon: White with slight golden border */
+  .accordion-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--coaching-gold);
+    border: 1.5px solid var(--coaching-gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(201, 152, 42, 0.15);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .accordion-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    display: block;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Icon rotation 45 degrees into "x" when active */
+  .accordion-card.active .accordion-icon {
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color: var(--ink);
+    border-color: var(--coaching-gold);
+  }
+
+  /* Accordion Body with max-height transition */
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.38s ease-in-out;
+    background: #ffffff;
+  }
+
+  .accordion-inner {
+    padding: 20px 22px 24px;
+    background: #fdfbf7;
+    border-top: 1px solid rgba(201, 152, 42, 0.2);
+  }
+
+  /* Course List styling: White boxes with slight golden border */
+  .accordion-course-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .accordion-course-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--coaching-gold-border);
+    border-left: 3.5px solid var(--coaching-gold);
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--navy);
+    box-shadow: 0 2px 6px rgba(10, 15, 26, 0.03);
+    transition: all 0.2s ease;
+  }
+
+  .accordion-course-item:hover {
+    border-left-color: var(--gold-bright);
+    border-color: var(--coaching-gold);
+    transform: translateX(4px);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(201, 152, 42, 0.12);
+  }
+
+  .accordion-course-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--coaching-gold);
+    flex-shrink: 0;
+  }
+
+  /* ==========================================================================
+     SECTION: THIRD PAGE — CBT ONLINE EXAMINATION (GLASSMORPHISM STYLE)
+     ========================================================================== */
+  .cbt-section {
+    scroll-margin-top: 70px;
+    background: #faf8f3; /* Same background color as second page */
+    padding: 100px clamp(20px, 6vw, 80px) 120px;
+    position: relative;
+    border-top: 2px solid rgba(201, 152, 42, 0.25);
+    overflow: hidden;
+  }
+
+  /* Ambient glowing mesh orbs that shine through the frosted glass */
+  .cbt-ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    filter: blur(65px);
+    opacity: 0.85;
+    animation: cbtFloat 14s ease-in-out infinite alternate;
+  }
+
+  .cbt-orb-1 {
+    width: 460px;
+    height: 460px;
+    top: 10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(201, 152, 42, 0.28) 0%, rgba(224, 172, 61, 0.12) 50%, transparent 70%);
+  }
+
+  .cbt-orb-2 {
+    width: 500px;
+    height: 500px;
+    bottom: 5%;
+    right: 8%;
+    background: radial-gradient(circle, rgba(14, 31, 61, 0.14) 0%, rgba(22, 48, 92, 0.05) 50%, transparent 70%);
+    animation-delay: -6s;
+  }
+
+  .cbt-orb-3 {
+    width: 300px;
+    height: 300px;
+    top: 48%;
+    left: 50%;
+    background: radial-gradient(circle, rgba(224, 172, 61, 0.24) 0%, rgba(201, 152, 42, 0.08) 60%, transparent 75%);
+    animation-delay: -9s;
+  }
+
+  @keyframes cbtFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(25px, -20px) scale(1.06); }
+    100% { transform: translate(-20px, 20px) scale(0.96); }
+  }
+
+  /* Container wrapper */
+  .cbt-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .cbt-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto 48px;
+  }
+
+  .cbt-header .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--coaching-gold);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 6px 18px;
+    border-radius: 50px;
+    border: 1px solid var(--coaching-gold-border);
+    box-shadow: 0 2px 10px rgba(201, 152, 42, 0.08);
+  }
+
+  .cbt-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    color: var(--navy);
+    line-height: 1.18;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+
+  .cbt-header h2 span {
+    color: var(--coaching-gold);
+  }
+
+  .cbt-header p.subtitle {
+    font-size: clamp(0.96rem, 2vw, 1.1rem);
+    color: var(--body-text);
+    line-height: 1.65;
+  }
+
+  /* Main Glassmorphism Display Card */
+  .cbt-glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(190%);
+    -webkit-backdrop-filter: blur(24px) saturate(190%);
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow:
+      0 24px 60px rgba(14, 31, 61, 0.07),
+      0 4px 16px rgba(201, 152, 42, 0.1),
+      inset 0 1.5px 2px rgba(255, 255, 255, 1),
+      inset 0 -1.5px 3px rgba(201, 152, 42, 0.18);
+    padding: clamp(36px, 5.5vw, 64px) clamp(24px, 5vw, 56px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cbt-glass-card:hover {
+    box-shadow:
+      0 30px 70px rgba(14, 31, 61, 0.1),
+      0 6px 22px rgba(201, 152, 42, 0.16),
+      inset 0 2px 3px rgba(255, 255, 255, 1),
+      inset 0 -2px 4px rgba(201, 152, 42, 0.25);
+  }
+
+  /* Top tag inside glass card */
+  .cbt-glass-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201, 152, 42, 0.12);
+    border: 1px solid rgba(201, 152, 42, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--navy);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .cbt-glass-badge .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+    display: inline-block;
+    animation: cbtPulse 2s infinite;
+  }
+
+  @keyframes cbtPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+
+  .cbt-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .cbt-card-desc {
+    font-size: clamp(0.92rem, 1.8vw, 1.04rem);
+    color: var(--body-text);
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto 34px;
+  }
+
+  /* -------------------------------------------------------------
+     THE HERO GLASSMORPHISM BUTTON: 'CBT Online Examination'
+     ------------------------------------------------------------- */
+  .btn-cbt-glass {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 42px;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.05rem, 2.4vw, 1.28rem);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--navy);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.72) 100%
+    );
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow:
+      0 14px 40px rgba(14, 31, 61, 0.1),
+      0 3px 12px rgba(201, 152, 42, 0.22),
+      inset 0 2px 2px rgba(255, 255, 255, 1),
+      inset 0 -2px 3px rgba(201, 152, 42, 0.28);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+  }
+
+  /* Light sweep shine reflection across the glass surface */
+  .btn-cbt-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.85) 50%,
+      transparent 100%
+    );
+    transform: skewX(-25deg);
+    transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .btn-cbt-glass:hover::before {
+    left: 150%;
+  }
+
+  .btn-cbt-glass:hover {
+    transform: translateY(-4px) scale(1.025);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 248, 235, 0.75) 50%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+    border-color: rgba(201, 152, 42, 0.8);
+    box-shadow:
+      0 20px 52px rgba(201, 152, 42, 0.32),
+      0 8px 24px rgba(14, 31, 61, 0.14),
+      inset 0 2px 3px #ffffff,
+      inset 0 -2px 4px rgba(201, 152, 42, 0.4);
+    color: #050b17;
+  }
+
+  .btn-cbt-glass:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow:
+      0 8px 20px rgba(201, 152, 42, 0.2),
+      inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-cbt-glass:focus-visible {
+    outline: 3px solid var(--gold-bright);
+    outline-offset: 4px;
+  }
+
+  /* Glass button internal icon */
+  .btn-cbt-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(201, 152, 42, 0.14);
+    border: 1.5px solid rgba(201, 152, 42, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--coaching-gold);
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .btn-cbt-glass:hover .btn-cbt-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color: var(--ink);
+    border-color: var(--coaching-gold);
+  }
+
+  .btn-cbt-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+
+  /* Label text inside button */
+  .btn-cbt-label {
+    font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  /* Live indicator badge inside button */
+  .btn-cbt-status {
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #047857;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .btn-cbt-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+  }
+
+  /* Subtitle note below button */
+  .cbt-powered-note {
+    margin-top: 20px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--body-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .cbt-powered-note strong {
+    color: var(--navy);
+  }
+
+  /* Glassmorphism Feature Grid inside the Third Page */
+  .cbt-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+    text-align: left;
+  }
+
+  @media (max-width: 992px) {
+    .cbt-features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .cbt-features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cbt-feature-pill {
+    background: rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-left: 3.5px solid var(--coaching-gold);
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 16px rgba(14, 31, 61, 0.03);
+    transition: all 0.25s ease;
+  }
+
+  .cbt-feature-pill:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(201, 152, 42, 0.45);
+    box-shadow: 0 8px 24px rgba(201, 152, 42, 0.15);
+  }
+
+  .cbt-feature-pill h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cbt-feature-pill p {
+    font-size: 0.82rem;
+    color: var(--body-text);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  /* Interactive Modal for CBT Examination Preview */
+  .cbt-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(5, 11, 23, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .cbt-modal-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cbt-modal-window {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow:
+      0 30px 80px rgba(5, 11, 23, 0.3),
+      0 4px 20px rgba(201, 152, 42, 0.2),
+      inset 0 2px 2px #ffffff;
+    max-width: 580px;
+    width: 100%;
+    padding: 36px 32px;
+    position: relative;
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+    text-align: center;
+  }
+
+  .cbt-modal-backdrop.open .cbt-modal-window {
+    transform: scale(1) translateY(0);
+  }
+
+  .cbt-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 152, 42, 0.3);
+    background: #ffffff;
+    color: var(--navy);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .cbt-modal-close:hover {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color: var(--ink);
+  }
+
+  .cbt-stream-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 24px 0 28px;
+    text-align: left;
+  }
+
+  .cbt-stream-opt {
+    background: #ffffff;
+    border: 1.5px solid var(--coaching-gold-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--navy);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cbt-stream-opt:hover, .cbt-stream-opt.selected {
+    border-color: var(--coaching-gold);
+    background: #fdfbf7;
+    box-shadow: 0 4px 14px rgba(201, 152, 42, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .cbt-start-exam-btn {
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 14px 24px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(201, 152, 42, 0.3);
+    transition: all 0.25s ease;
+  }
+
+  .cbt-start-exam-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201, 152, 42, 0.4);
+  }
+
+  /* Candidate Student Details Form */
+  .cbt-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .cbt-form-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .cbt-form-label small {
+    font-weight: 400;
+    font-size: 0.74rem;
+    color: var(--body-text);
+  }
+
+  .cbt-form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid rgba(201, 152, 42, 0.4);
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    color: var(--navy);
+    background: #ffffff;
+    transition: all 0.25s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .cbt-form-input:focus {
+    border-color: var(--coaching-gold);
+    box-shadow: 0 0 0 3.5px rgba(201, 152, 42, 0.2);
+    background: #fffdf9;
+  }
+
+  .cbt-form-input.input-error {
+    border-color: #ef4444 !important;
+    background: #fef2f2 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+  }
+
+  .cbt-form-alert {
+    display: none;
+    background: #fef2f2;
+    border: 1.5px solid #fca5a5;
+    color: #991b1b;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  /* Site Footer */
+  .site-footer {
+    background: var(--navy-deep);
+    border-top: 3px solid var(--coaching-gold);
+    padding: 36px clamp(20px, 5vw, 64px);
+    text-align: center;
+    color: var(--cream);
+    position: relative;
+    z-index: 10;
+  }
+
+  .site-footer p {
+    font-size: 0.9rem;
+    opacity: 0.88;
+    margin-bottom: 8px;
+  }
+
+  .site-footer a {
+    color: var(--gold-bright);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="#" class="brand">
+    <span class="mark">S</span>
+    <span class="brand-text">SNTRA INSTITUTES</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#courses" style="background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:var(--ink);font-weight:700;border-radius:100px;padding:8px 18px;box-shadow:0 4px 14px rgba(201,152,42,0.3);">Our Courses ↓</a></li>
+    <li><a href="#jee">IIT‑JEE</a></li>
+    <li><a href="#neet">NEET</a></li>
+    <li><a href="#defense">Defense</a></li>
+    <li><a href="#upsc">UPSC</a></li>
+    <li><a href="#board">CBSE / ICSE</a></li>
+    <li><a href="#law">Law</a></li>
+    <li><a href="#commerce">Commerce / CA</a></li>
+    <li><a href="#cbt" style="background:rgba(255,255,255,0.78);backdrop-filter:blur(10px);border:1.5px solid rgba(201,152,42,0.55);color:var(--navy);font-weight:700;border-radius:100px;padding:8px 16px;box-shadow:0 2px 10px rgba(10,15,26,0.06);white-space:nowrap;">CBT Exam 💻</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="slides" id="slides">
+
+    <div class="slide active" data-index="0">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1759610545704-9bbee32cb17c?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">NDA · CDS · AFCAT · SSB COACHING</p>
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1759610545704-9bbee32cb17c?w=1920&q=80&auto=format&fit=crop');">DEFENSE</h1>
+        <p class="tagline">Train for a career in uniform with structured SSB drills, physical conditioning, and mentors who've cleared the boards themselves.</p>
+        <a href="#defense" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="1">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1562758778-9f5ba22c8bae?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">JEE MAIN &amp; ADVANCED</p>
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1562758778-9f5ba22c8bae?w=1920&q=80&auto=format&fit=crop');">IIT‑JEE</h1>
+        <p class="tagline">Crack JEE Main &amp; Advanced with expert mentors, rigorous problem-solving practice, and a curriculum built around real exam patterns.</p>
+        <a href="#jee" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="2">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">MBBS · BDS ENTRANCE</p>
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=1920&q=80&auto=format&fit=crop');">NEET</h1>
+        <p class="tagline">Your path to MBBS/BDS starts here — biology, physics, and chemistry taught by faculty who've walked the wards themselves.</p>
+        <a href="#neet" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="3">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1523962543648-07f19c5590ee?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">CIVIL SERVICES COACHING</p>
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1523962543648-07f19c5590ee?w=1920&q=80&auto=format&fit=crop');">UPSC</h1>
+        <p class="tagline">Prepare for IAS, IPS, and IFS with a syllabus-first approach, daily current affairs, and answer-writing that examiners notice.</p>
+        <a href="#upsc" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="4">
+      <div class="bg" style="background-image:url('https://images.pexels.com/photos/13538617/pexels-photo-13538617.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">CLASS 6TH – 12TH</p>
+        <h1 class="cutout" style="background-image:url('https://images.pexels.com/photos/13538617/pexels-photo-13538617.jpeg?auto=compress&cs=tinysrgb&w=1920');">CBSE &amp; ICSE</h1>
+        <p class="tagline">Board exam excellence built subject by subject, with concept clarity that carries straight through to competitive exams later.</p>
+        <a href="#board" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="5">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1618771623063-6c3faa854a61?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow">CLAT · JUDICIARY · LLB ENTRANCE</p>
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1618771623063-6c3faa854a61?w=1920&q=80&auto=format&fit=crop');">LAW</h1>
+        <p class="tagline">Build a case-ready mind for CLAT, judiciary exams, and law-school entrances, with legal reasoning drilled from day one.</p>
+        <a href="#law" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="6">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?w=1920&q=80&auto=format&fit=crop');"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <h1 class="cutout" style="background-image:url('https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?w=1920&q=80&auto=format&fit=crop');">CA FOUNDATION</h1>
+        <p class="tagline">Your first step to becoming a Chartered Accountant — accounts, law, and quant taught the way ICAI actually examines them.</p>
+        <a href="#commerce" class="cta">Explore Courses ↓</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-controls">
+    <button class="arrow-btn" id="prevBtn" aria-label="Previous slide">‹</button>
+    <div class="dots-wrap">
+      <div class="dots" id="dots"></div>
+      <span class="slide-counter" id="counter">01 / 07</span>
+    </div>
+    <button class="arrow-btn" id="nextBtn" aria-label="Next slide">›</button>
+  </div>
+</section>
+
+<section class="courses-section" id="courses">
+  <div class="courses-header">
+    <span class="kicker">COACHING ADMISSIONS 2026–27</span>
+    <h2>Our <span>Courses</span></h2>
+    <p class="subtitle">Comprehensive classroom coaching, specialized test series, and dedicated mentorship across 7 flagship verticals.</p>
+  </div>
+
+  <!-- Live Counter & Expand/Collapse All Toolbar -->
+  <div class="courses-toolbar">
+    <div class="courses-badge-info">
+      <span class="live-indicator"></span>
+      <span>7 Specialised Academic Verticals</span>
+    </div>
+    <div class="courses-toggle-group">
+      <button type="button" class="courses-btn-toggle" id="accExpandAll">Expand All</button>
+      <button type="button" class="courses-btn-toggle" id="accCollapseAll">Collapse All</button>
+    </div>
+  </div>
+
+  <!-- 7 Accordion Cards (White background with slight golden border) -->
+  <div class="courses-grid-container" id="coursesGrid">
+
+    <!-- 1. IIT-JEE -->
+    <article class="accordion-card" id="jee">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-jee">
+        <div class="accordion-header-left">
+          <span class="accordion-num">01</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">IIT-JEE</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-jee">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>IIT-JEE (Mains / Advanced)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. NEET -->
+    <article class="accordion-card" id="neet">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-neet">
+        <div class="accordion-header-left">
+          <span class="accordion-num">02</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">NEET</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-neet">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>NEET</span>
+              <a href="paper/test.html" class="cbt-mini-launch" id="neetMiniLaunchBtn" style="margin-left:auto;font-size:0.75rem;background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:var(--navy-dark);padding:4px 12px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:4px;box-shadow:0 2px 8px rgba(201,152,42,0.25);">Launch Mock CBT 💻</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Defense -->
+    <article class="accordion-card" id="defense">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-defense">
+        <div class="accordion-header-left">
+          <span class="accordion-num">03</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">Defense</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-defense">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>NDA</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>SSC</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Police</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Bank / RRB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. UPSC -->
+    <article class="accordion-card" id="upsc">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-upsc">
+        <div class="accordion-header-left">
+          <span class="accordion-num">04</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">UPSC</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-upsc">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Sarvottam IAS</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>IAS / IPS / PCS / PSC-J / NCERT</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Foundation after 12th Class</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>CSAT</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Pre-cum-Mains Optional Essay Writing</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Daily Mains Answer Writing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. CBSE/ICSE Board -->
+    <article class="accordion-card" id="board">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-board">
+        <div class="accordion-header-left">
+          <span class="accordion-num">05</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">CBSE/ICSE Board</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-board">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>CBSE/ICSE Board</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Class I–VIII (All Subjects)</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Class IX–X (All Subjects)</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>Class XI–XII (PCM, PCB, Commerce, Humanities)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Law Entrance -->
+    <article class="accordion-card" id="law">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-law">
+        <div class="accordion-header-left">
+          <span class="accordion-num">06</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">Law Entrance</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-law">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>CLAT</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. Commerce & University Entrance -->
+    <article class="accordion-card" id="commerce">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="acc-content-commerce">
+        <div class="accordion-header-left">
+          <span class="accordion-num">07</span>
+          <div class="accordion-title-wrap">
+            <h3 class="accordion-title">Commerce &amp; University Entrance</h3>
+          </div>
+        </div>
+        <span class="accordion-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </span>
+      </button>
+      <div class="accordion-body" id="acc-content-commerce">
+        <div class="accordion-inner">
+          <ul class="accordion-course-list">
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>CUET</span>
+            </li>
+            <li class="accordion-course-item">
+              <span class="accordion-course-dot"></span>
+              <span>CA (Foundation / Intermediate)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     THIRD PAGE: CBT ONLINE EXAMINATION (GLASSMORPHISM STYLE)
+     ========================================================================== -->
+<section class="cbt-section" id="cbt">
+  <!-- Ambient glowing lighting orbs providing depth for frosted glass refraction -->
+  <div class="cbt-ambient-orb cbt-orb-1" aria-hidden="true"></div>
+  <div class="cbt-ambient-orb cbt-orb-2" aria-hidden="true"></div>
+  <div class="cbt-ambient-orb cbt-orb-3" aria-hidden="true"></div>
+
+  <div class="cbt-container">
+    <!-- Third Page Header -->
+    <div class="cbt-header">
+      <span class="kicker">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          <path d="M2 12h20"></path>
+        </svg>
+        ONLINE ASSESSMENT PORTAL
+      </span>
+      <h2>SNTRA <span>Examination Engine</span></h2>
+      <p class="subtitle">Experience high-stakes national competitive testing under real examination conditions with AI-driven speed, accuracy, and negative marking analytics.</p>
+    </div>
+
+    <!-- Centerpiece Glassmorphism Card -->
+    <div class="cbt-glass-card">
+      <div class="cbt-glass-badge">
+        <span class="badge-dot"></span>
+        <span>Simulated NTA &amp; UPSC Testing Interface</span>
+      </div>
+
+      <h3 class="cbt-card-title">Practice With Exact Exam-Hall Simulation</h3>
+      <p class="cbt-card-desc">Instant question paper generation, timer synchronization, multi-language support, and comprehensive sectional benchmarking across all 7 flagship streams.</p>
+
+      <!-- Glassmorphism-style button labeled 'CBT Online Examination' for SNTRA Examination Engine -->
+      <div>
+        <button type="button" class="btn-cbt-glass" id="openCbtModalBtn" aria-label="Launch CBT Online Examination Portal">
+          <span class="btn-cbt-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </span>
+          <span class="btn-cbt-label">CBT Online Examination</span>
+          <span class="btn-cbt-status">
+            <span class="btn-cbt-status-dot"></span>
+            LIVE
+          </span>
+        </button>
+      </div>
+
+      <p class="cbt-powered-note">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--coaching-gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        Powered by <strong>SNTRA Examination Engine</strong> · JEE, NEET, NDA, UPSC &amp; Boards
+      </p>
+
+      <!-- 4 Glass Feature Badges -->
+      <div class="cbt-features-grid">
+        <div class="cbt-feature-pill">
+          <h4>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--coaching-gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Real-Time Timer
+          </h4>
+          <p>Strict countdown timer with auto-submit and section locking.</p>
+        </div>
+        <div class="cbt-feature-pill">
+          <h4>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--coaching-gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Instant Ranking
+          </h4>
+          <p>AIR percentile &amp; accuracy score generated in seconds.</p>
+        </div>
+        <div class="cbt-feature-pill">
+          <h4>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--coaching-gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            AI Diagnostics
+          </h4>
+          <p>Pinpoint weak topics, time sinks, and question attempt bias.</p>
+        </div>
+        <div class="cbt-feature-pill">
+          <h4>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--coaching-gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Step Solutions
+          </h4>
+          <p>Exhaustive video &amp; text rationales for every problem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Glassmorphic Modal for CBT Portal -->
+  <div class="cbt-modal-backdrop" id="cbtModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="cbt-modal-window">
+      <button type="button" class="cbt-modal-close" id="closeCbtModalBtn" aria-label="Close modal">×</button>
+      <div class="cbt-glass-badge" style="margin-bottom:14px;">
+        <span class="badge-dot"></span>
+        <span>SNTRA Engine Active</span>
+      </div>
+      <h3 id="modalTitle" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.45rem;color:var(--navy);margin-bottom:8px;">Start CBT Mock Examination</h3>
+      <p style="font-size:0.9rem;color:var(--body-text);line-height:1.5;">Select your target examination stream to launch the online testing interface:</p>
+
+      <div class="cbt-stream-selector" id="cbtStreamSelector">
+        <div class="cbt-stream-opt selected" data-stream="NEET">🩺 NEET UG Mock <span style="font-size:0.68rem;background:#10b981;color:#fff;padding:2px 8px;border-radius:100px;margin-left:auto;font-weight:800;">LIVE</span></div>
+        <div class="cbt-stream-opt" data-stream="IIT-JEE">🎯 IIT-JEE Mains / Adv</div>
+        <div class="cbt-stream-opt" data-stream="Defense">🎖️ NDA / CDS CBT</div>
+        <div class="cbt-stream-opt" data-stream="UPSC">🏛️ UPSC CSAT / GS-1</div>
+      </div>
+
+      <button type="button" class="cbt-start-exam-btn" id="cbtLaunchAlertBtn">Launch Test Session →</button>
+    </div>
+  </div>
+
+  <!-- STUDENT DETAILS WINDOW (BEFORE LAUNCHING EXAM) -->
+  <div class="cbt-modal-backdrop" id="studentDetailsModal" role="dialog" aria-modal="true" aria-labelledby="studentModalTitle">
+    <div class="cbt-modal-window" style="max-width: 520px; text-align: left; padding: 32px 28px;">
+      <button type="button" class="cbt-modal-close" id="closeStudentModalBtn" aria-label="Close modal">×</button>
+      
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(201,152,42,0.15);border:1.5px solid var(--coaching-gold);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--navy);flex-shrink:0;">
+          📋
+        </div>
+        <div>
+          <span class="cbt-glass-badge" style="margin-bottom:2px;padding:3px 10px;font-size:0.72rem;background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.35);color:#047857;">
+            <span class="badge-dot" style="background:#10b981;"></span> NTA NEET UG 2024 · Verification
+          </span>
+          <h3 id="studentModalTitle" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.35rem;color:var(--navy);margin:4px 0 0;">Student Candidate Details</h3>
+        </div>
+      </div>
+
+      <p style="font-size:0.86rem;color:var(--body-text);line-height:1.5;margin-bottom:16px;">
+        Please enter your authentic student information below before launching the CBT exam:
+      </p>
+
+      <div class="cbt-form-alert" id="studentFormAlert"></div>
+
+      <form id="studentDetailsForm" onsubmit="return false;" novalidate>
+        <div class="cbt-form-group">
+          <label for="studentFullName" class="cbt-form-label">
+            <span>Student Full Name <span style="color:#ef4444;">*</span></span>
+            <small>As per official ID</small>
+          </label>
+          <input type="text" id="studentFullName" class="cbt-form-input" placeholder="e.g. Aarav Sharma" required autocomplete="name">
+        </div>
+
+        <div class="cbt-form-group">
+          <label for="studentAge" class="cbt-form-label">
+            <span>Age in DDMMYY <span style="color:#ef4444;">*</span></span>
+            <small>DDMMYY (e.g. 180506 for 18 May 2006)</small>
+          </label>
+          <input type="text" id="studentAge" class="cbt-form-input" placeholder="DDMMYY (e.g. 180506)" maxlength="10" required>
+        </div>
+
+        <div class="cbt-form-group">
+          <label for="studentEmail" class="cbt-form-label">
+            <span>Email ID <span style="color:#ef4444;">*</span></span>
+            <small>For scorecard report</small>
+          </label>
+          <input type="email" id="studentEmail" class="cbt-form-input" placeholder="e.g. student@gmail.com" required autocomplete="email">
+        </div>
+
+        <div class="cbt-form-group" style="margin-bottom:22px;">
+          <label for="studentPhone" class="cbt-form-label">
+            <span>Phone Number <span style="color:#ef4444;">*</span></span>
+            <small>10-digit mobile number</small>
+          </label>
+          <input type="tel" id="studentPhone" class="cbt-form-input" placeholder="e.g. 9876543210" maxlength="10" required autocomplete="tel">
+        </div>
+
+        <button type="button" class="cbt-start-exam-btn" id="btnLaunchExamWithDetails" style="display:flex;align-items:center;justify-content:center;gap:10px;font-size:1.05rem;font-weight:800;padding:15px;">
+          <span>Launch Exam</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>SNTRA Institutes — Premier Coaching for Competitive &amp; Academic Excellence</p>
+  <p style="font-size:0.8rem;opacity:0.75;">CBT Online Examination Engine powered by <strong style="color:var(--gold-bright);">SNTRA Examination Engine</strong></p>
+</footer>
+
+<script>
+(function(){
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsWrap = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const hero = document.getElementById('hero');
+  let current = 0;
+  let timer = null;
+  const DURATION = 5000;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot';
+    dot.innerHTML = '<span class="fill"></span>';
+    dot.setAttribute('aria-label', 'Go to slide ' + (i+1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function render(){
+    slides.forEach((s,i) => s.classList.toggle('active', i === current));
+    dots.forEach((d,i) => d.classList.toggle('active', i === current));
+    counter.textContent = String(current+1).padStart(2,'0') + ' / ' + String(slides.length).padStart(2,'0');
+  }
+
+  function goTo(i){
+    current = (i + slides.length) % slides.length;
+    render();
+    restart();
+  }
+  function next(){ goTo(current+1); }
+  function prev(){ goTo(current-1); }
+
+  function restart(){
+    clearInterval(timer);
+    timer = setInterval(next, DURATION);
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+  hero.addEventListener('mouseenter', () => clearInterval(timer));
+  hero.addEventListener('mouseleave', restart);
+
+  // touch swipe
+  let touchStartX = 0;
+  hero.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+  hero.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+  }, {passive:true});
+
+  render();
+  restart();
+
+  // navbar scroll state
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Courses Accordion Interactive Logic
+  (function initCoursesAccordion() {
+    const cards = Array.from(document.querySelectorAll('.accordion-card'));
+    const expandAllBtn = document.getElementById('accExpandAll');
+    const collapseAllBtn = document.getElementById('accCollapseAll');
+
+    function openCard(card) {
+      if (!card) return;
+      const header = card.querySelector('.accordion-header');
+      const body = card.querySelector('.accordion-body');
+      if (!card.classList.contains('active')) {
+        card.classList.add('active');
+        if (header) header.setAttribute('aria-expanded', 'true');
+        if (body) body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    }
+
+    function closeCard(card) {
+      if (!card) return;
+      const header = card.querySelector('.accordion-header');
+      const body = card.querySelector('.accordion-body');
+      if (card.classList.contains('active')) {
+        card.classList.remove('active');
+        if (header) header.setAttribute('aria-expanded', 'false');
+        if (body) body.style.maxHeight = null;
+      }
+    }
+
+    function toggleCard(card) {
+      if (card.classList.contains('active')) {
+        closeCard(card);
+      } else {
+        openCard(card);
+      }
+    }
+
+    cards.forEach((card) => {
+      const header = card.querySelector('.accordion-header');
+      if (header) {
+        header.addEventListener('click', () => toggleCard(card));
+      }
+    });
+
+    if (expandAllBtn) {
+      expandAllBtn.addEventListener('click', () => cards.forEach(openCard));
+    }
+
+    if (collapseAllBtn) {
+      collapseAllBtn.addEventListener('click', () => cards.forEach(closeCard));
+    }
+
+    // Handle window resize dynamically to recalculate max-height
+    window.addEventListener('resize', () => {
+      cards.forEach((card) => {
+        if (card.classList.contains('active')) {
+          const body = card.querySelector('.accordion-body');
+          if (body) body.style.maxHeight = body.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Handle deep links from URL hash (e.g. #jee, #neet, #defense, #ca-foundation)
+    function handleHash() {
+      let hash = window.location.hash;
+      if (!hash) return;
+      if (hash === '#ca-foundation') hash = '#commerce';
+      const target = document.querySelector(hash);
+      if (target && target.classList.contains('accordion-card')) {
+        openCard(target);
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    }
+    window.addEventListener('hashchange', handleHash);
+    if (window.location.hash) {
+      setTimeout(handleHash, 350);
+    }
+  })();
+
+  // CBT Online Examination Modal & Interactive Controls
+  (function initCbtModal() {
+    const openBtn = document.getElementById('openCbtModalBtn');
+    const closeBtn = document.getElementById('closeCbtModalBtn');
+    const backdrop = document.getElementById('cbtModalBackdrop');
+    const launchBtn = document.getElementById('cbtLaunchAlertBtn');
+    const streamOpts = Array.from(document.querySelectorAll('.cbt-stream-opt'));
+    let selectedStream = 'NEET';
+
+    if (!openBtn || !backdrop) return;
+
+    function openModal() {
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && backdrop.classList.contains('open')) {
+        closeModal();
+      }
+    });
+
+    streamOpts.forEach((opt) => {
+      opt.addEventListener('click', () => {
+        streamOpts.forEach((o) => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        selectedStream = opt.dataset.stream || opt.textContent.trim();
+      });
+    });
+
+    if (launchBtn) {
+      launchBtn.addEventListener('click', () => {
+        if (selectedStream === 'NEET') {
+          openStudentModal();
+        } else {
+          launchBtn.textContent = 'Launching ' + selectedStream + ' CBT Test...';
+          launchBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          launchBtn.style.color = '#ffffff';
+          setTimeout(() => {
+            window.location.href = 'paper/test.html';
+          }, 250);
+        }
+      });
+    }
+
+    // Student Details Window Controls
+    const studentModal = document.getElementById('studentDetailsModal');
+    const closeStudentBtn = document.getElementById('closeStudentModalBtn');
+    const btnLaunchExam = document.getElementById('btnLaunchExamWithDetails');
+    const neetMiniBtn = document.getElementById('neetMiniLaunchBtn');
+    const studentFormAlert = document.getElementById('studentFormAlert');
+
+    const inputName = document.getElementById('studentFullName');
+    const inputAge = document.getElementById('studentAge');
+    const inputEmail = document.getElementById('studentEmail');
+    const inputPhone = document.getElementById('studentPhone');
+
+    function openStudentModal() {
+      closeModal();
+      if (studentModal) {
+        studentModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (studentFormAlert) studentFormAlert.style.display = 'none';
+        [inputName, inputAge, inputEmail, inputPhone].forEach(i => i && i.classList.remove('input-error'));
+        // Prepopulate if previously filled
+        try {
+          const raw = localStorage.getItem('sarvottam_cbt_student') || sessionStorage.getItem('sarvottam_cbt_student');
+          if (raw) {
+            const saved = JSON.parse(raw);
+            if (inputName && saved.fullName) inputName.value = saved.fullName;
+            if (inputAge && saved.age) inputAge.value = saved.age;
+            if (inputEmail && saved.email) inputEmail.value = saved.email;
+            if (inputPhone && saved.phone) inputPhone.value = saved.phone;
+          }
+        } catch(e){}
+        setTimeout(() => inputName && inputName.focus(), 150);
+      }
+    }
+
+    function closeStudentModal() {
+      if (studentModal) {
+        studentModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (closeStudentBtn) closeStudentBtn.addEventListener('click', closeStudentModal);
+    if (studentModal) {
+      studentModal.addEventListener('click', (e) => {
+        if (e.target === studentModal) closeStudentModal();
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && studentModal && studentModal.classList.contains('open')) {
+        closeStudentModal();
+      }
+    });
+
+    if (neetMiniBtn) {
+      neetMiniBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openStudentModal();
+      });
+    }
+
+    // Age in DDMMYY validator
+    function validateAgeDDMMYY(val) {
+      if (!val) return false;
+      const clean = val.replace(/[\/\-\s]/g, '');
+      if (clean.length !== 6 && clean.length !== 8) return false;
+      const d = parseInt(clean.slice(0, 2), 10);
+      const m = parseInt(clean.slice(2, 4), 10);
+      if (isNaN(d) || d < 1 || d > 31) return false;
+      if (isNaN(m) || m < 1 || m > 12) return false;
+      return true;
+    }
+
+    function showError(msg, inputElement) {
+      if (studentFormAlert) {
+        studentFormAlert.textContent = msg;
+        studentFormAlert.style.display = 'block';
+      }
+      if (inputElement) {
+        inputElement.classList.add('input-error');
+        inputElement.focus();
+      }
+    }
+
+    if (btnLaunchExam) {
+      btnLaunchExam.addEventListener('click', () => {
+        if (studentFormAlert) studentFormAlert.style.display = 'none';
+        [inputName, inputAge, inputEmail, inputPhone].forEach(i => i && i.classList.remove('input-error'));
+
+        const fullName = inputName ? inputName.value.trim() : '';
+        const age = inputAge ? inputAge.value.trim() : '';
+        const email = inputEmail ? inputEmail.value.trim() : '';
+        const phone = inputPhone ? inputPhone.value.trim() : '';
+
+        // Validation
+        if (!fullName || fullName.length < 2) {
+          showError('Please enter the student\'s full name (at least 2 characters).', inputName);
+          return;
+        }
+
+        if (!validateAgeDDMMYY(age)) {
+          showError('Please enter a valid age / DOB in DDMMYY format (e.g. 180506 for 18 May 2006).', inputAge);
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          showError('Please enter a valid email address.', inputEmail);
+          return;
+        }
+
+        const cleanPhone = phone.replace(/[\+\-\s\(\)]/g, '');
+        if (!cleanPhone || !/^\d{10}$/.test(cleanPhone)) {
+          showError('Please enter a valid 10-digit mobile phone number.', inputPhone);
+          return;
+        }
+
+        const studentData = {
+          fullName: fullName,
+          age: age,
+          email: email,
+          phone: cleanPhone,
+          registeredAt: new Date().toISOString()
+        };
+
+        try {
+          localStorage.setItem('sarvottam_cbt_student', JSON.stringify(studentData));
+          sessionStorage.setItem('sarvottam_cbt_student', JSON.stringify(studentData));
+          sessionStorage.setItem('sarvottam_cbt_enter_fullscreen', '1');
+        } catch(e){}
+
+        // Transmit live candidate registration telemetry to Admin Portal
+        try {
+          const telemetryPayload = {
+            action: 'register',
+            fullName: fullName,
+            age: age,
+            email: email,
+            phone: cleanPhone,
+            rollNo: 'NEET2024-' + age + '-' + (cleanPhone.slice(-4) || '0881'),
+            stream: 'NEET (UG) 2024',
+            subject: 'Botany Mock (50 Qs)',
+            status: 'LIVE_TESTING'
+          };
+          let telemetryUrl = '/api/cbt/telemetry';
+          if (typeof window !== 'undefined' && window.location) {
+            if (window.location.protocol.startsWith('http')) {
+              telemetryUrl = window.location.origin + '/api/cbt/telemetry';
+            } else {
+              telemetryUrl = 'http://localhost:3001/api/cbt/telemetry';
+            }
+          }
+
+          fetch(telemetryUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(telemetryPayload),
+            keepalive: true
+          }).catch(() => {
+            if (telemetryUrl.includes('localhost')) {
+              fetch('http://192.168.29.66:3001/api/cbt/telemetry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(telemetryPayload),
+                keepalive: true
+              }).catch(() => {});
+            }
+          });
+        } catch(e){}
+
+        // Request full screen mode immediately on this user click interaction
+        try {
+          const docEl = document.documentElement;
+          const reqFs = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+          if (reqFs) {
+            reqFs.call(docEl).catch(() => {});
+          }
+        } catch(e){}
+
+        btnLaunchExam.innerHTML = '<span>Authenticating &amp; Launching in Full Screen...</span>';
+        btnLaunchExam.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        btnLaunchExam.style.color = '#ffffff';
+
+        setTimeout(() => {
+          window.location.href = 'paper/test.html';
+        }, 300);
+      });
+    }
+  })();
+})();
+</script>
+
+</body>
+</html>

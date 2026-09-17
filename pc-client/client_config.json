@@ -1,0 +1,22 @@
+{
+  "relay_http_url": "http://127.0.0.1:5100",
+  "relay_ws_url": "ws://127.0.0.1:5100",
+  "username": "sarvottam",
+  "password": "sarvottam2026",
+  "device_name": "Sarvottam Windows PC",
+  "watchdog_interval_sec": 6,
+  "max_backoff_sec": 30,
+  "chunk_size_bytes": 65536,
+  "watch_folders": [
+    {
+      "path": "Video Lectures",
+      "type": "video",
+      "subject": "All"
+    },
+    {
+      "path": "pdf",
+      "type": "pdf",
+      "subject": "All"
+    }
+  ]
+}

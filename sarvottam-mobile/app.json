@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Sarvottam Institutes",
+    "slug": "sarvottam-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#050b17"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.ac.sarvottam.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#050b17",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "in.ac.sarvottam.app",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    }
+  }
+}

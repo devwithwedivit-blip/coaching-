@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biological Classification",
+    "question": "Which one of the following is not a criterion for classification of fungi?",
+    "diagram": null,
+    "options": {
+      "a": "Mode of spore formation",
+      "b": "Fruiting body",
+      "c": "Morphology of mycelium",
+      "d": "Mode of nutrition"
+    },
+    "correctAnswer": "d",
+    "explanation": "The morphology of the mycelium, mode of spore formation and fruiting bodies form the basis for the division of the kingdom fungi into various classes. All fungi derive their nutrition through heterotrophic mode of nutrition.",
+    "expDiagram": null
+  },
+  {
+    "id": 2,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Morphology of Flowering Plants > (The Seed)",
+    "question": "Match List-I with List-II. List-I List-II (A) Rhizopus (I) Mushroom (B) Ustilago (II) Smut fungus (C) Puccinia (III) Bread mould (D) Agaricus (IV) Rust fungus Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "c",
+    "explanation": "Some common members of basidiomycetes are Agaricus (mushroom) , Ustilago (smut) and Puccinia (rust fungus). Rhizopus is also known as the bread mould. It belongs to Phycomycetes.",
+    "expDiagram": null
+  },
+  {
+    "id": 3,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(The Flower)",
+    "question": "Identify the part of the seed from the given figure which is destined to form root when the seed germinates.",
+    "diagram": "img/page_1_Im1.png",
+    "options": {
+      "a": "C",
+      "b": "D",
+      "c": "A",
+      "d": "B"
+    },
+    "correctAnswer": "a",
+    "explanation": "The primary root, or radicle is the first organ to appear when a seed germinates. Pericarp Endosperm Scutellum Coleoptile (A) Plumule (B) Radicle (C) Coleorhiza (D)",
+    "expDiagram": "img/page_15_Im0.png"
+  },
+  {
+    "id": 4,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(The Flower)",
+    "question": "Identify the type of flowers based on the position of calyx, corolla and androecium with respect to the ovary from the given figures (A) and (B). (A) (B)",
+    "diagram": "img/page_1_Im0.jpg",
+    "options": {
+      "a": "Perigynous;  Epigynous",
+      "b": "Perigynous;  Perigynous",
+      "c": "Epigynous;  Hypogynous",
+      "d": "Hypogynous;  Epigynous"
+    },
+    "correctAnswer": "b",
+    "explanation": "Given figures (A) and ( B) shows perigynous flower. In this, gynoecium is situated in the centre and other parts of the flower are located on the rim of the thalamus almost at the same level. The ovary here is said to be half inferior, e.g., plum, rose, peach.",
+    "expDiagram": null
+  },
+  {
+    "id": 5,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Anatomy of Flowering Plants > (Anatomy of Dicot & Monocot Plants)",
+    "question": "Which of the following is an example of actinomorphic flower?",
+    "diagram": null,
+    "options": {
+      "a": "Pisum",
+      "b": "Sesbania",
+      "c": "Datura",
+      "d": "Cassia"
+    },
+    "correctAnswer": "c",
+    "explanation": "Datura is an example of actinomorphic flower as their flowers can be divided into two equal radial halves in any radial plane passing through the centre.",
+    "expDiagram": null
+  },
+  {
+    "id": 6,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Tissue System)",
+    "question": "Bulliform cells are responsible for",
+    "diagram": null,
+    "options": {
+      "a": "Increased photosynthesis in monocots.",
+      "b": "Providing large spaces for storage of sugars.",
+      "c": "Inward curling of leaves in monocots.",
+      "d": "Protecting the plant from salt stress. A B C D"
+    },
+    "correctAnswer": "c",
+    "explanation": "In monocots, under water stress condition, bulliform cells becomes flaccid that makes the leaves curl inwards to minimise water loss.",
+    "expDiagram": null
+  },
+  {
+    "id": 7,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Permanent Tissues)",
+    "question": "In the given figure, which component has thin outer walls and highly thickened inner walls? A B C D",
+    "diagram": "img/page_2_Im0.png",
+    "options": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D"
+    },
+    "correctAnswer": "c",
+    "explanation": "In the given figure of stomata with bean shaped guard cells, A-Epidermal cells, B-Subsidiary cells, C-Guard cells, D-Stomatal pore. The outer walls of guard cells (away from the stomatal pore) are thin and the inner walls (towards the stomatal pore) are highly thickened.",
+    "expDiagram": null
+  },
+  {
+    "id": 8,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Cell The Unit of Life > (Nucleus and Microbodies)",
+    "question": "Given below are two statements: Statement I: Parenchyma is living but collenchyma is dead tissue. Statement II: Gymnosperms lack xylem vessels but presence of xylem vessels is the characteristic of angiosperms. In the light of the above statements, choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "Statement I is true put Statement II is false",
+      "b": "Statement I is false but Statement II is true",
+      "c": "Both Statement I and Statement II are true",
+      "d": "Both Statement I and Statement II are false"
+    },
+    "correctAnswer": "b",
+    "explanation": "Parenchyma and collenchyma are living tissue. Gymnosperms lack vessels in their xylem but in flowering plants, tracheids and vessels are the main water transporting elements.",
+    "expDiagram": null
+  },
+  {
+    "id": 9,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biomolecules > (Enzymes)",
+    "question": "Match List-I with List-II. List-I List-II (A) Nucleolus (I) Site of formation of glycolipid (B) Centriole (II) Organization like the cartwheel (C) Leucoplasts (III) Site for active ribosomal RNA synthesis (D) Golgi apparatus (IV) For storing nutrients Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "c",
+    "explanation": "A. Nucleolus - site for active ribosomal RNA synthesis. B. Centriole - organisation like cartwheel C. Leucoplasts - for storing nutrients D. Golgi apparatus- site for formation of glycolipid",
+    "expDiagram": null
+  },
+  {
+    "id": 10,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biomolecules > (Enzymes)",
+    "question": "Inhibition of Succinic dehydrogenase enzyme by malonate is a classical example of:",
+    "diagram": null,
+    "options": {
+      "a": "Competitive inhibition",
+      "b": "Enzyme activation",
+      "c": "Cofactor inhibition",
+      "d": "Feedback inhibition"
+    },
+    "correctAnswer": "a",
+    "explanation": "Inhibition of succinic dehydrogenase by malonate is an example of competitive inhibition. Malonate resembles the substrate succinate and competes with the substrate for the substrate-binding site of the enzyme. Consequently, the substrate cannot bind and as a result, the enzyme action declines.",
+    "expDiagram": null
+  },
+  {
+    "id": 11,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Analysis of Chemical Composition)",
+    "question": "The cofactor of the enzyme carboxypeptidase is",
+    "diagram": null,
+    "options": {
+      "a": "Flavin",
+      "b": "Haem",
+      "c": "Zinc",
+      "d": "Niacin"
+    },
+    "correctAnswer": "c",
+    "explanation": "Metal ions are the common cofactors. Cofactor for enzyme carboxypeptidase is zinc.",
+    "expDiagram": null
+  },
+  {
+    "id": 12,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Cell Cycle and Cell Division > (Mitosis)",
+    "question": "Lecithin, a small molecular weight organic compound found in living tissues, is an example of:",
+    "diagram": null,
+    "options": {
+      "a": "Glycerides",
+      "b": "Carbohydrates",
+      "c": "Amino acids",
+      "d": "Phospholipids"
+    },
+    "correctAnswer": "d",
+    "explanation": "Lecithin or phosphatidyl choline, a small molecular a weight organic compound found in living tissues, is an example of phospholipid.",
+    "expDiagram": null
+  },
+  {
+    "id": 13,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Meiosis)",
+    "question": "Spindle fibers attach to kinetochores of chromosomes during",
+    "diagram": null,
+    "options": {
+      "a": "Anaphase",
+      "b": "Telophase",
+      "c": "Prophase",
+      "d": "Metaphase"
+    },
+    "correctAnswer": "d",
+    "explanation": "Spindle fibres attach to kinetochores of chromosomes during metaphase stage. Chromosomes are moved to spindle equator and get aligned along metaphase plate through spindle fibres to both poles.",
+    "expDiagram": null
+  },
+  {
+    "id": 14,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Photosynthesis in Higher Plants > (Where are ATP & NADPH Used?)",
+    "question": "Given below are two statements: Statement I: Chromosomes become gradually visible under light microscope during leptotene stage. Statement II: The beginning of diplotene stage is recognized by dissolution of synaptonemal complex. In the light of the above statements, choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "Statement I is true but Statement II is false",
+      "b": "Statement I is false but Statement II is true",
+      "c": "Both Statement I and Statement II are true",
+      "d": "Both Statement I and Statement II are false"
+    },
+    "correctAnswer": "c",
+    "explanation": "During leptotene stage the chromosomes become gradually visible under the light microscope. The beginning of diplotene is recognised by the dissolution of the synaptonemal complex and the tendency of the recombined homologous chromosomes of the bivalents to separate from each other except at the sites of crossovers.",
+    "expDiagram": null
+  },
+  {
+    "id": 15,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Photosynthesis in Higher Plants > (Where are ATP & NADPH Used?)",
+    "question": "Which of the following are required for the dark reaction of photosynthesis? A. Light B. Chlorophyll C. CO2 D. ATP E. NADPH Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "C, D and E only",
+      "b": "D and E only",
+      "c": "A, B and C only",
+      "d": "B, C and D only"
+    },
+    "correctAnswer": "a",
+    "explanation": "For the dark reaction or Calvin cycle, CO2 is required for the carboxylation step and ATP and NADH are required for the reduction and regeneration step.",
+    "expDiagram": null
+  },
+  {
+    "id": 16,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Plant Growth and Development > (Differentiation, Dedifferentiation, Redifferentiation > and Development)",
+    "question": "How many molecules of ATP and NADPH are required for every molecule of CO2 fixed in the Calvin cycle?",
+    "diagram": null,
+    "options": {
+      "a": "3 molecules of ATP and 3 molecules of NADPH",
+      "b": "3 molecules of ATP and 2 molecules of NADPH",
+      "c": "2 molecules of ATP and 3 molecules of NADPH",
+      "d": "2 molecules of ATP and 2 molecules of NADPH"
+    },
+    "correctAnswer": "b",
+    "explanation": "For every CO2 molecule entering the Calvin cycle, 3 molecules of ATP and 2 of NADPH are required. The Calvin cycle can be described under three stages: carboxylation, reduction and regeneration. Reduction step involves utilisation of 2 molecules of ATP for phosphorylation and two of NADPH for reduction per CO2 molecule fixed. The regeneration steps require one ATP for phosphorylation to form RuBP.",
+    "expDiagram": null
+  },
+  {
+    "id": 17,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Plant Growth Regulators)",
+    "question": "Formation of interfascicular cambium from fully developed parenchyma cells is an example for",
+    "diagram": null,
+    "options": {
+      "a": "Dedifferentiation",
+      "b": "Maturation",
+      "c": "Differentiation",
+      "d": "Redifferentiation"
+    },
+    "correctAnswer": "a",
+    "explanation": "Plants show an interesting phenomenon, the living differentiated cells, that by now have lost the capacity to divide can regain the capacity of division under certain conditions. This phenomenon is termed as dedifferentiation. For example, formation of meristems – interfascicular cambium and cork cambium from fully differentiated parenchyma cells.",
+    "expDiagram": null
+  },
+  {
+    "id": 18,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Sexual Reproduction in Flowering Plants > (Flowering and Pre-fertilisation)",
+    "question": "Auxin is used by gardeners to prepare weed free lawns. But no damage is caused to grass as auxin",
+    "diagram": null,
+    "options": {
+      "a": "does not affect mature monocotyledonous plants.",
+      "b": "can help in cell division in grasses, to produce growth.",
+      "c": "promotes apical dominance.",
+      "d": "promotes abscission of mature leaves only."
+    },
+    "correctAnswer": "a",
+    "explanation": "Auxins are widely used as herbicides. 2, 4-D, widely used to kill dicotyledonous weeds, does not affect mature monocotyledonous plants.",
+    "expDiagram": null
+  },
+  {
+    "id": 19,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Principles of Inheritance and Variation > (Mendal’s Laws of Inheritance And Inheritance of One Gene)",
+    "question": "Identify the set of correct statements: A. The flowers of Vallisneria are colourful and produce nectar. B. The flowers of waterlily are not pollinated by water. C. In most of water-pollinated species, the pollen grains are protected from wetting. D. Pollen grains of some hydrophytes are long and ribbon like. E. In some hydrophytes, the pollen grains are carried passively inside water. Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A, C, D and E only",
+      "b": "B, C, D and E only",
+      "c": "C, D and E only",
+      "d": "A, B, C and D only"
+    },
+    "correctAnswer": "b",
+    "explanation": "Vallisneria is a water pollinated flowers which are not very colourful and do not produce nectar. In most of the water-pollinated species, pollen grains are protected from wetting by a mucilaginous covering. In water lily, the flowers emerge above the level of water and are pollinated by insects or wind. Pollen grains in many water pollinated plants like seagrasses are long, ribbon like and they are carried passively inside the water; some of them reach the stigma and achieve pollination.",
+    "expDiagram": null
+  },
+  {
+    "id": 20,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Principles of Inheritance and Variation > (Mendal’s Laws of Inheritance And Inheritance of One Gene)",
+    "question": "In a plant, black seed color (BB/Bb) is dominant over white seed color (bb). In order to find out the genotype of the black seed plant, with which of the following genotype will you cross it?",
+    "diagram": null,
+    "options": {
+      "a": "Bb",
+      "b": "BB/Bb",
+      "c": "BB",
+      "d": "bb"
+    },
+    "correctAnswer": "d",
+    "explanation": "To determine the genotype of the black seed plant, a test cross is performed with a homozygous recessive (bb) individual. This cross will reveal whether the black seed plant is homozygous dominant (BB) or heterozygous (Bb) based on the offspring's phenotypes.",
+    "expDiagram": null
+  },
+  {
+    "id": 21,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Principles of Inheritance and Variation > (Mendal’s Laws of Inheritance And Inheritance of One Gene)",
+    "question": "A pink flowered Snapdragon plant was crossed with a red flowered Snapdragon plant. What type of phenotype/s is/are expected in the progeny?",
+    "diagram": null,
+    "options": {
+      "a": "Only pink flowered plants",
+      "b": "Red, Pink as well as white flowered plants",
+      "c": "Only red flowered plants",
+      "d": "Red flowered as well as pink flowered plants"
+    },
+    "correctAnswer": "d",
+    "explanation": "50% flowers are red in colour and 50% flowers are pink in colour. When a heterozygous red (Rr) is crossed with homozygous red (RR), or pink (Rr) with red (RR), 50% of the offspring are red and 50% are pink.",
+    "expDiagram": null
+  },
+  {
+    "id": 22,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Principles of Inheritance and Variation > (Mendal’s Laws of Inheritance And Inheritance of One Gene)",
+    "question": "Match List-I with List-II. List-I List-II (A) Two or more alternative forms of a gene (I) Back cross (B) Cross of F1 progeny with homozygous recessive parent (II) Ploidy (C) Cross of F 1 progeny with any of the parents (III) Allele (D) Number of chromosome sets in plant (IV) Test cross Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-III, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "a",
+    "explanation": "Two or more alternative forms of a gene- Allele Cross of F1 progeny with homozygous recessive parent- Test cross Cross of F1 progeny with any of the parents- Back cross Number of chromosome sets in plant- Ploidy",
+    "expDiagram": null
+  },
+  {
+    "id": 23,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Molecular Basis of Inheritance > (Transcription)",
+    "question": "Which one of the following can be explained on the basis of Mendel's Law of Dominance? A. Out of one pair of factors one is dominant and the other is recessive. B. Alleles do not show any expression and both the characters appears as such in F2 generation. C. Factors occur in pairs in normal diploid plants. D. The discrete unit controlling a particular character is called factor. E. The expression of only one of the parental characters is found in a monohybrid cross. Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "B, C and D only",
+      "b": "A, B, C, D and E",
+      "c": "A, B and C only",
+      "d": "A, C, D and E only"
+    },
+    "correctAnswer": "d",
+    "explanation": "Alleles show expressions in the F2 generation.",
+    "expDiagram": null
+  },
+  {
+    "id": 24,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Regulation of Gene Expression)",
+    "question": "A transcription unit in DNA is defined primarily by the three regions in DNA and these are with respect to upstream and down stream end;",
+    "diagram": null,
+    "options": {
+      "a": "Inducer, Repressor, Structural gene",
+      "b": "Promotor, Structural gene, Terminator",
+      "c": "Repressor, Operator gene, Structural gene",
+      "d": "Structural gene, Transposons, Operator gene"
+    },
+    "correctAnswer": "b",
+    "explanation": "A transcription unit in DNA is defined primarily by the three regions in the DNA: (i) A Promoter (ii) The Structural gene (iii) A Terminator",
+    "expDiagram": null
+  },
+  {
+    "id": 25,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Microbes in Human Welfare > (Microbes in Household & Industrial Products)",
+    "question": "The lactose present in the growth medium of bacteria is transported to the cell by the action of",
+    "diagram": null,
+    "options": {
+      "a": "Permease",
+      "b": "Polymerase",
+      "c": "Beta-galactosidase",
+      "d": "Acetylase"
+    },
+    "correctAnswer": "a",
+    "explanation": "In the absence of a preferred carbon source such as glucose, if lactose is provided in the growth medium of the bacteria, the lactose is transported into the cells through the action of permease.",
+    "expDiagram": null
+  },
+  {
+    "id": 26,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biotechnology : Principles and Processes > (Tools of Recombinant DNA Technology)",
+    "question": "Match List-I with List-II. List-I List-II (A) Clostridium butylicum (I) Ethanol (B) Saccharomyces cerevisae (II) Streptokinase (C) Trichoderma polysporum (III) Butyric acid (D) Streptococcus sp. (IV) Cyclosporin-A Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "a",
+    "explanation": "• Clostridium butylicum - Butyric acid • Saccharomyces cerevisiae- Ethanol • Trichoderma polysporum- Cyclosporin-A • Streptococcus sp.- Streptokinase",
+    "expDiagram": null
+  },
+  {
+    "id": 27,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Principles of Biotechnology)",
+    "question": "Hind II always cuts DNA molecules at a particular point called recognition sequence and it consists of:",
+    "diagram": null,
+    "options": {
+      "a": "4 bp",
+      "b": "10 bp",
+      "c": "8 bp",
+      "d": "6 bp"
+    },
+    "correctAnswer": "d",
+    "explanation": "Recognition sequence of first restriction endonuclease Hind II is of 6 base pairs and it generates blunt ends.",
+    "expDiagram": null
+  },
+  {
+    "id": 28,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biotechnology and Its Applications > (Biotechnological Applications in Agriculture)",
+    "question": "What is the fate of a piece of DNA carrying a gene of interest which is transferred into an alien organism? A. The piece of DNA would be able to multiply, itself independently in the progeny cells of the organism. B. It may get integrated into the genome of recipient. C. It may multiply and be inherited along with the host DNA. D. The alien piece of DNA is not an integral part of chromosome. E. It shows ability to replicate. Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "B and C only",
+      "b": "A and E only",
+      "c": "A and B only",
+      "d": "D and E only"
+    },
+    "correctAnswer": "a",
+    "explanation": "When a piece of DNA carrying gene of interest is transferred into an alien organism – it may get integrated itself into the genome of the recipient and may multiply and be inherited along with the host DNA.",
+    "expDiagram": null
+  },
+  {
+    "id": 29,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biotechnology and Its Applications > (Biotechnological Applications in Agriculture)",
+    "question": "The capacity to generate a whole plant from any cell of the plant is called:",
+    "diagram": null,
+    "options": {
+      "a": "Differentiation",
+      "b": "Somatic hybridization",
+      "c": "Totipotency",
+      "d": "Micropropagation"
+    },
+    "correctAnswer": "c",
+    "explanation": "The capacity to generate a whole plant from any cell of the plant is called totipotency.",
+    "expDiagram": null
+  },
+  {
+    "id": 30,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Organisms and Populations > (Population Attributes, Population Growth > and Life History Variation)",
+    "question": "Given below are two statements: Statement I: Bt toxins are insect group specific and coded by a gene cry IAc. Statement II: Bt toxin exists as inactive protoxin in B. thuringiensis. However, after ingestion by the insect the inactive protoxin gets converted into active form due to acidic pH of the insect gut. In the light of the above statements, choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "Statement I is true but Statement II is false",
+      "b": "Statement I is false but Statement II is true",
+      "c": "Both Statement I and statement II arc true",
+      "d": "Both Statement I and Statement II are false"
+    },
+    "correctAnswer": "a",
+    "explanation": "Bt toxins are insect-group specific. The toxin is coded by a gene cryIAc named cry. The Bt toxin protein exist as inactive protoxins but once an insect ingest the inactive toxin, it is converted into an active form of toxin due to the alkaline pH of the gut which solubilise the crystals.",
+    "expDiagram": null
+  },
+  {
+    "id": 31,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Biodiversity and Conservation > (Biodiversity Conservation)",
+    "question": "The equation of Verhulst-Pearl logistic growth is .dN K NrNdt K −=  From this equation, K indicates:",
+    "diagram": null,
+    "options": {
+      "a": "Carrying capacity",
+      "b": "Population density",
+      "c": "Intrinsic rate of natural increase",
+      "d": "Biotic potential"
+    },
+    "correctAnswer": "a",
+    "explanation": "Verhulst-Pearl Logistic Growth is described by the following equation: dN/dt = rN((K - N)/K). Where N = Population density at time t, r = Intrinsic rate of natural increase, K = Carrying capacity.",
+    "expDiagram": null
+  },
+  {
+    "id": 32,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Biodiversity & Patterns of Biodiversity)",
+    "question": "The type of conservation in which the threatened species are taken out from their natural habitat and placed in special setting where they can be protected and given special care is called;",
+    "diagram": null,
+    "options": {
+      "a": "Semi-conservative method",
+      "b": "Sustainable development",
+      "c": "in-situ conservation",
+      "d": "Biodiversity conservation"
+    },
+    "correctAnswer": "d",
+    "explanation": "Ex situ Conservation– In this approach, threatened animals and plants are taken out from their natural habitat and placed in special setting where they can be protected and given special care. Zoological parks, botanical gardens and wildlife safari parks serve this purpose.",
+    "expDiagram": null
+  },
+  {
+    "id": 33,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Importance & Loss of Biodiversity)",
+    "question": "Tropical regions show greatest level of species richness because A. Tropical latitudes have remained relatively undisturbed for millions of years, hence more time was available for species diversification. B. Tropical environments are more seasonal. C. More solar energy is available in tropics. D. Constant environments promote niche specialization. E. Tropical environments are constant and predictable. Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A, B and E only",
+      "b": "A, B and D only",
+      "c": "A, C, D and E only",
+      "d": "A and B only"
+    },
+    "correctAnswer": "c",
+    "explanation": "Speciation is generally a function of time, unlike temperate regions subjected to frequent glaciations in the past, tropical latitudes have remained relatively undisturbed for millions of years and thus, had a long evolutionary time for species diversification. Tropical environments, unlike temperate ones, are less seasonal, relatively more constant and predictable. Such constant environments promote niche specialisation and lead to a greater species diversity. There is more solar energy available in the tropics, which contributes to higher productivity; this in turn might contribute indirectly to greater diversity.",
+    "expDiagram": null
+  },
+  {
+    "id": 34,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "(Importance & Loss of Biodiversity)",
+    "question": "These are regarded as major causes of biodiversity loss: A. Over exploitation B. Co-extinction C. Mutation D. Habitat loss and fragmentation E. Migration Choose the correct option:",
+    "diagram": null,
+    "options": {
+      "a": "A, B and E only",
+      "b": "A, B and D only",
+      "c": "A, C and D only",
+      "d": "A, B, C and D only"
+    },
+    "correctAnswer": "b",
+    "explanation": "Causes of biodiversity losses: The accelerated rates of species extinctions that the world is facing now are largely due to human activities. There are four major causes (‘ The Evil Quartet ’ is the sobriquet used to describe them). 1. Habitat loss and fragmentation 2. Over-exploitation 3. Alien species invasions 4. Co-extinctions",
+    "expDiagram": null
+  },
+  {
+    "id": 35,
+    "subject": "Botany",
+    "section": "Botany Section A",
+    "topic": "Plant Kingdom > (Algae)",
+    "question": "List of endangered species was released by-",
+    "diagram": null,
+    "options": {
+      "a": "FOAM",
+      "b": "IUCN",
+      "c": "GE AC",
+      "d": "WWF"
+    },
+    "correctAnswer": "b",
+    "explanation": "The IUCN Red List (2004) documents the extinction of 784 species (including 338 vertebrates, 359 invertebrates and 87 plants) in the last 500 years.",
+    "expDiagram": null
+  },
+  {
+    "id": 36,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Morphology of Flowering Plants > (The Flower)",
+    "question": "Read the following statements and choose the set of correct statements. In the members of Phaeophyceae, A. Asexual reproduction occurs usually by biflagellate zoospores. B. Sexual reproduction is by oogamous method only. C. Stored food is in the form of carbohydrates which is either mannitol or laminarin. D. The major pigments found are chlorophyll a, c and carotenoids and xanthophyll. E. Vegetative cells have a cellulosic wall, usually covered on the outside by gelatinous coating of algin. Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A, C, D and E only",
+      "b": "A, B, C and E only",
+      "c": "A, B, C and C only",
+      "d": "B, C, D and E only"
+    },
+    "correctAnswer": "a",
+    "explanation": "Sexual reproduction can be isogamous, anisogamous or oogamous in phaeophyceae.",
+    "expDiagram": null
+  },
+  {
+    "id": 37,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Morphology of Flowering Plants > (The Flower)",
+    "question": "Match List-I with List-II. List-I List-II (A) Rose (I) Twisted aestivation (B) Pea (II) Perigynous flower (C) Cotton (III) Drupe (D) Mango (IV) Marginal placentation Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "c",
+    "explanation": "Rose Perigynous flower Pea Marginal placentation Cotton Twisted aestivation Mango Drupe",
+    "expDiagram": null
+  },
+  {
+    "id": 38,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Cell The Unit of Life > (Mitochondria, Plastids, Ribosomes)",
+    "question": "Match List-I with List-II. List-I (Types of stamen) List-II (Example) (A) Monoadelphous (I) Citrus (B) Diadelphous (II) Pea (C) Polyadelphous (III) Lily (D) Epiphyllous (IV) China-rose Choose the correct answer from the option below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, B-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "c",
+    "explanation": "Monoadelphous China rose Diadelphous Pea Polyadelphous Citrus Epiphyllous Lily",
+    "expDiagram": null
+  },
+  {
+    "id": 39,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Biomolecules > (Biomacromolecules, Proteins)",
+    "question": "The DNA present in chloroplast is:",
+    "diagram": null,
+    "options": {
+      "a": "Linear, single stranded",
+      "b": "Circular, single stranded",
+      "c": "Linear, double stranded",
+      "d": "Circular, double stranded"
+    },
+    "correctAnswer": "d",
+    "explanation": "Chloroplast contains small, double- stranded circular DNA molecules and ribosomes.",
+    "expDiagram": null
+  },
+  {
+    "id": 40,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Plant Growth and Development > (Plant Growth Regulators)",
+    "question": "Match List-I with List-II. List-I List-II (A) GLUT-4 (I) Hormone (B) Insulin (II) Enzyme (C) Trypsin (III) Intercellular ground substance (D) Collagen (IV) Enables glucose transport into cells Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A- B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "c",
+    "explanation": "• GLUT-4 enables glucose transport into cells. • Insulin is a hormone secreted by pancreas. • Trypsin is an example of enzyme. • Collagen is the most abundant protein in animal world, which is an intercellular ground substances.",
+    "expDiagram": null
+  },
+  {
+    "id": 41,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Photosynthesis in Higher Plants > (C4 Pathway & Photorespiration)",
+    "question": "Spraying sugarcane crop with which of the following plant growth regulators, increases the length of stem, thus, increasing the yield?",
+    "diagram": null,
+    "options": {
+      "a": "Cytokinin",
+      "b": "Abscisic acid",
+      "c": "Auxin",
+      "d": "Gibberellin"
+    },
+    "correctAnswer": "d",
+    "explanation": "Sugarcane stores carbohydrate as sugar in their stems. Spraying sugarcane crop with gibberellins increases the length of the stem, thus increasing the yield by as much as 20 tonnes per acre.",
+    "expDiagram": null
+  },
+  {
+    "id": 42,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Respiration in Plants > (Aerobic Respiration)",
+    "question": "Given below are two statements: Statement I: In C3 plants, some O2 binds RuBisCO, hence CO2 fixation is decreased. Statement II: In C 4 plants, mesophyll cells shows very little photorespiration while bundle sheath cells do not show photorespiration. In the light of the above statements, choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "Statement I is true but Statement II is false",
+      "b": "Statement I is false but Statement II is true",
+      "c": "Both Statement I and Statement II are true",
+      "d": "Both Statement I and Statement II are false"
+    },
+    "correctAnswer": "a",
+    "explanation": "In C3 plants some O 2 does bind to RuBisCO, and hence CO2 fixation is decreased. In C4 plants photorespiration does not occur.",
+    "expDiagram": null
+  },
+  {
+    "id": 43,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Respiration in Plants > (Aerobic Respiration)",
+    "question": "Identify the step in tricarboxylic acid cycle, which does not involve oxidation of substrate.",
+    "diagram": null,
+    "options": {
+      "a": "Succinyl-CoA → Succinic acid",
+      "b": "Isocitrate → a-ketoglutaric acid",
+      "c": "Malic acid → Oxaloacetic acid",
+      "d": "Succinic acid → Malic acid"
+    },
+    "correctAnswer": "a",
+    "explanation": "The step in the tricarboxylic acid cycle that does not involve oxidation of substrate is Succinyl-CoA → Succinic acid This step involves the conversion of Succinyl-CoA to Succinic Acid by cleavage of CoA from Succinyl-CoA, which is a substrate-level phosphorylation, not an oxidation step.",
+    "expDiagram": null
+  },
+  {
+    "id": 44,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Sexual Reproduction in Flowering Plants > (Flower and Pre-fertilisation)",
+    "question": "Match List-I with List-II List-I List-II (A) Citric acid cycle (I) Cytoplasm (B) Glycolysis (II) Mitochondrial matrix (C) Electron transport (III) Intermembrane space of mitochondria (D) Proton gradient (IV) Inner mitochondrial membrane Choose the correct answer from the option given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "d",
+    "explanation": "Citric acid cycle Mitochondrial matrix Glycolysis Cytoplasm Electron transport system Inner mitochondrial membrane Proton gradient Intermembrane space of mitochondria",
+    "expDiagram": null
+  },
+  {
+    "id": 45,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Molecular Basis of Inheritance > (Regulation of Gene Expression)",
+    "question": "Identify the correct description about the given figure:",
+    "diagram": "img/page_6_Im0.jpg",
+    "options": {
+      "a": "Cleistogamous flowers showing autogamy.",
+      "b": "Compact inflorescence showing complete autogamy.",
+      "c": "Wind pollinated plant inflorescence showing flowers with well exposed stamens.",
+      "d": "Water pollinated flowers showing stamens with mucilaginous covering."
+    },
+    "correctAnswer": "c",
+    "explanation": "The given diagram shows a wind-pollinated plant showing compact inflorescence and well exposed stamens.",
+    "expDiagram": "img/page_17_Im0.png"
+  },
+  {
+    "id": 46,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "(Replication)",
+    "question": "Match List-I with List-II List-I List-II (A) Frederick Griffith (I) Genetic code (B) Francois Jacob & Jacque (II) Semi-conservative mode of DNA replication (C) Har Gobind Khorana (III) Transformation (D) Meselson & Stahl (IV) Lac operon Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "d",
+    "explanation": "Frederick Griffith Transformation Francois Jacob and Jacque Monod Lac operon Har Gobind Khorana Genetic code Meselson and Stahl Semi-conservative mode of DNA replication",
+    "expDiagram": null
+  },
+  {
+    "id": 47,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Biotechnology and Its Applications > (Biotechnological Applications in Agriculture)",
+    "question": "Which of the following statement is correct regarding the process of replication in E.coli?",
+    "diagram": null,
+    "options": {
+      "a": "The DNA dependent DNA polymerase catalyses polymerization in 5' → 3' as well as 3' → 5' direction.",
+      "b": "The DNA dependent DNA polymerase catalyses polymerization in 5' → 3 ' direction.",
+      "c": "The DNA dependent DNA polymerase catalyses polymerization in one direction that is 3' → 5'.",
+      "d": "The DNA dependent RNA polymerase catalyses polymerization in one direction, that is 5' → 3'."
+    },
+    "correctAnswer": "b",
+    "explanation": "The DNA-dependent DNA polymerase in E. coli catalyse polymerisation only in one direction, that is 5’ → 3’.",
+    "expDiagram": null
+  },
+  {
+    "id": 48,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Ecosystem > (Productivity)",
+    "question": "Which of the following are fused in somatic hybridization involving two varieties of plants?",
+    "diagram": null,
+    "options": {
+      "a": "Protoplasts",
+      "b": "Pollens",
+      "c": "Callus",
+      "d": "Somatic embryos"
+    },
+    "correctAnswer": "a",
+    "explanation": "Protoplasts fused in somatic hybridisation involving two varieties of plants.",
+    "expDiagram": null
+  },
+  {
+    "id": 49,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Biodiversity and Conservation > (Importance & Loss of Biodiversity)",
+    "question": "In an ecosystem if the Net Primary Productivity (NPP) of first trophic level is 100x (kcalm–2) yr–1, what would be the GPP (Gross Primary Productivity') of the third trophic level of the same ecosystem?",
+    "diagram": null,
+    "options": {
+      "a": "l0x (kcalm–2) yr–1",
+      "b": "100 3 x x (kcalm–2) yr–1",
+      "c": "10 x (kcalm–2) yr–1",
+      "d": "x (kcalm–2) yr–1"
+    },
+    "correctAnswer": "a",
+    "explanation": "The NPP of the first trophic level is the GPP of the second trophic level and the NPP of the 2nd trophic level is GPP is 3rd trophic level. According to the 10% law 90 per cent is the respiratory loss (R) at each trophic level. NPP = GPP – R At the first trophic level NPP is 100x which is GPP of second trophic level. At second trophic level NPP is 10% of GPP = 10x Since the GPP of the 3rd trophic level is the same as the NPP of the second trophic level, it is equal to 10x.",
+    "expDiagram": null
+  },
+  {
+    "id": 50,
+    "subject": "Botany",
+    "section": "Botany Section B",
+    "topic": "Animal Kingdom > (Basis of Classification)",
+    "question": "Match List-I with List-II. List-I List-II (A) Robert May (I) Species-Area relationship (B) Alexander von Humboldt (II) Long term ecosystem experiment using out door plots (C) Paul Ehrlich (III) Global species diversity at about 7 million (D) David Tilman (IV) Rivet popper hypothesis Choose the correct answer from the options given below:",
+    "diagram": null,
+    "options": {
+      "a": "A-, B-, C-, D-",
+      "b": "A-, B-, C-, D-",
+      "c": "A-, B-, C-, D-",
+      "d": "A-, B-, C-, D-"
+    },
+    "correctAnswer": "d",
+    "explanation": "Robert May Global species diversity at about 7 million Alexander von Humboldt Species-Area relationship Paul Ehrlich Rivet popper hypothesis David Tilman Long term ecosystem experiment using outdoor plots",
+    "expDiagram": null
+  }
+]

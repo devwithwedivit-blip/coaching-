@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AR System</title>
+<style>
+  :root{
+    --cream-1:#fffdf9;
+    --cream-2:#fbf3e6;
+    --cream-3:#f4e9d6;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 120% 90% at 50% 18%, var(--cream-1) 0%, var(--cream-2) 52%, var(--cream-3) 100%);
+    font-family: -apple-system, sans-serif;
+  }
+
+  #noise{
+    position:fixed; inset:0;
+    pointer-events:none;
+    opacity:0.035;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    z-index:5;
+  }
+
+  #vignette{
+    position:fixed; inset:0;
+    pointer-events:none;
+    background: radial-gradient(ellipse 140% 100% at 50% 45%, transparent 55%, rgba(120,90,50,0.06) 100%);
+    z-index:4;
+  }
+
+  #scene-container{
+    position:fixed; inset:0;
+    z-index:1;
+    cursor: grab;
+  }
+  #scene-container.dragging{ cursor: grabbing; }
+  #scene-container canvas{ display:block; }
+
+  #loader{
+    position:fixed; inset:0;
+    z-index:20;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--cream-1);
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+  }
+  #loader.hidden{ opacity:0; visibility:hidden; }
+  .loader-ring{
+    width:34px; height:34px;
+    border-radius:50%;
+    border:2px solid rgba(30,40,50,0.12);
+    border-top-color:#1c9fb0;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+
+  #hint{
+    position:fixed;
+    bottom:38px; left:50%;
+    transform: translateX(-50%);
+    z-index:3;
+    opacity:0;
+    transition: opacity 1.4s ease 0.4s;
+    pointer-events:none;
+  }
+  #hint.show{ opacity:0.55; }
+  #hint svg{ display:block; animation: pulseHint 2.6s ease-in-out infinite; }
+  @keyframes pulseHint{
+    0%,100%{ transform: scale(1); opacity:0.55; }
+    50%{ transform: scale(1.12); opacity:0.9; }
+  }
+
+  #edge-glow-l, #edge-glow-r{
+    position:fixed; top:0; bottom:0; width:18vw;
+    z-index:2; pointer-events:none;
+  }
+  #edge-glow-l{ left:0; background:linear-gradient(90deg, rgba(255,253,249,0.9), transparent); }
+  #edge-glow-r{ right:0; background:linear-gradient(270deg, rgba(255,253,249,0.9), transparent); }
+</style>
+</head>
+<body>
+
+<div id="scene-container"></div>
+<div id="edge-glow-l"></div>
+<div id="edge-glow-r"></div>
+<div id="vignette"></div>
+<div id="noise"></div>
+
+<div id="hint">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+    <path d="M15 3 C22 3 27 9 27 15 C27 21 22 26 15 26" stroke="#1c1c1c" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M11 22 L15 26 L11 30" stroke="#1c1c1c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-4)"/>
+    <path d="M15 26 C8 26 3 21 3 15 C3 9 8 3 15 3" stroke="#1c1c1c" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="2 4"/>
+  </svg>
+</div>
+
+<div id="loader"><div class="loader-ring"></div></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+const container = document.getElementById('scene-container');
+const loader = document.getElementById('loader');
+const hint = document.getElementById('hint');
+
+/* ---------- core setup ---------- */
+const scene = new THREE.Scene();
+scene.fog = new THREE.Fog(0xfbf3e6, 9, 22);
+
+const camera = new THREE.PerspectiveCamera(42, innerWidth/innerHeight, 0.1, 100);
+camera.position.set(0, 0.3, 17);
+
+const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true, powerPreference:'high-performance' });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.setClearColor(0x000000, 0);
+container.appendChild(renderer.domElement);
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+/* ---------- composer / bloom ---------- */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloomPass = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.85, 0.55, 0.78);
+composer.addPass(bloomPass);
+
+/* ---------- lighting ---------- */
+scene.add(new THREE.HemisphereLight(0xfff8ef, 0xd8c3a5, 0.85));
+
+const keyLight = new THREE.DirectionalLight(0xfff1de, 1.5);
+keyLight.position.set(6, 8, 7);
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0x9fe9ff, 0.9);
+rimLight.position.set(-7, -2, -6);
+scene.add(rimLight);
+
+const mouseLight = new THREE.PointLight(0xffffff, 3.2, 12, 2);
+mouseLight.position.set(0, 0, 3);
+scene.add(mouseLight);
+
+const accentLight = new THREE.PointLight(0x1cc7d9, 1.4, 14, 2);
+accentLight.position.set(-3, -2, 4);
+scene.add(accentLight);
+
+/* ---------- materials ---------- */
+const chromeMat = new THREE.MeshPhysicalMaterial({
+  color: 0xe9edf1, metalness: 1, roughness: 0.16,
+  clearcoat: 1, clearcoatRoughness: 0.12, envMapIntensity: 1.3
+});
+const hubMat = new THREE.MeshPhysicalMaterial({
+  color: 0xf3f5f7, metalness: 1, roughness: 0.22,
+  clearcoat: 1, clearcoatRoughness: 0.15, envMapIntensity: 1.2
+});
+const frameMat = new THREE.MeshPhysicalMaterial({
+  color: 0xfdfbf6, metalness: 0.25, roughness: 0.45, clearcoat: 0.4
+});
+const copperMat = new THREE.MeshStandardMaterial({
+  color: 0xff7a45, metalness: 0.9, roughness: 0.28, envMapIntensity: 1.1
+});
+const glowMat = new THREE.MeshBasicMaterial({ color: 0x2fd9e8 });
+const glowMatWarm = new THREE.MeshBasicMaterial({ color: 0xffb26b });
+
+/* ---------- rig hierarchy ---------- */
+const tiltGroup = new THREE.Group();
+scene.add(tiltGroup);
+
+const spinGroup = new THREE.Group();
+tiltGroup.add(spinGroup);
+
+/* hub */
+const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.34, 0.38, 0.5, 48), hubMat);
+hub.rotation.x = Math.PI / 2;
+spinGroup.add(hub);
+
+const hubCap = new THREE.Mesh(new THREE.SphereGeometry(0.2, 32, 32, 0, Math.PI*2, 0, Math.PI/2), chromeMat);
+hubCap.rotation.x = -Math.PI/2;
+hubCap.position.z = 0.25;
+spinGroup.add(hubCap);
+
+/* blade geometry */
+function buildBladeGeometry(){
+  const shape = new THREE.Shape();
+  shape.moveTo(0.18, -0.06);
+  shape.quadraticCurveTo(0.95, -0.34, 1.78, -0.10);
+  shape.quadraticCurveTo(1.95, 0, 1.78, 0.10);
+  shape.quadraticCurveTo(0.95, 0.26, 0.18, 0.07);
+  shape.quadraticCurveTo(0.06, 0, 0.18, -0.06);
+  const geo = new THREE.ExtrudeGeometry(shape, { depth:0.055, bevelEnabled:true, bevelThickness:0.018, bevelSize:0.018, bevelSegments:3, curveSegments:16 });
+  geo.translate(0, 0, -0.0275);
+  return geo;
+}
+const bladeGeo = buildBladeGeometry();
+
+const BLADE_COUNT = 7;
+for(let i=0;i<BLADE_COUNT;i++){
+  const pivot = new THREE.Object3D();
+  pivot.rotation.z = (i / BLADE_COUNT) * Math.PI * 2;
+  const blade = new THREE.Mesh(bladeGeo, chromeMat);
+  blade.rotation.x = THREE.MathUtils.degToRad(26); // pitch / angle of attack
+  pivot.add(blade);
+  spinGroup.add(pivot);
+}
+
+/* outer duct ring + inner glow ring (static, does not spin with blades) */
+const outerRing = new THREE.Mesh(new THREE.TorusGeometry(2.05, 0.075, 20, 96), frameMat);
+outerRing.rotation.x = Math.PI/2;
+tiltGroup.add(outerRing);
+
+const glowRing = new THREE.Mesh(new THREE.TorusGeometry(1.92, 0.012, 12, 96), glowMat);
+glowRing.rotation.x = Math.PI/2;
+tiltGroup.add(glowRing);
+
+/* radial support struts (electrical / structural feel) */
+for(let i=0;i<3;i++){
+  const strut = new THREE.Mesh(new THREE.BoxGeometry(1.65, 0.05, 0.05), frameMat);
+  strut.position.x = 1.05;
+  const pivot = new THREE.Object3D();
+  pivot.rotation.z = (i/3) * Math.PI*2 + 0.3;
+  pivot.add(strut);
+  tiltGroup.add(pivot);
+}
+
+/* copper coil (electrical/heat-exchanger accent), gently independent spin */
+const coilGroup = new THREE.Group();
+coilGroup.position.z = -1.8;
+tiltGroup.add(coilGroup);
+
+const helixPts = [];
+for(let i=0;i<=220;i++){
+  const t = i/220;
+  const ang = t * Math.PI * 9;
+  const r = 1.15 + Math.sin(t*Math.PI)*0.08;
+  const y = (t - 0.5) * 2.6;
+  helixPts.push(new THREE.Vector3(Math.cos(ang)*r, y, Math.sin(ang)*r*0.32));
+}
+const helixCurve = new THREE.CatmullRomCurve3(helixPts);
+const coilMesh = new THREE.Mesh(new THREE.TubeGeometry(helixCurve, 260, 0.032, 10, false), copperMat);
+coilMesh.rotation.x = Math.PI/2;
+coilGroup.add(coilMesh);
+
+/* small warm accent orbs on the frame (electronic indicator feel) */
+for(let i=0;i<4;i++){
+  const orb = new THREE.Mesh(new THREE.SphereGeometry(0.045, 16, 16), i % 2 === 0 ? glowMatWarm : glowMat);
+  const ang = (i/4) * Math.PI * 2 + 0.8;
+  orb.position.set(Math.cos(ang)*2.05, Math.sin(ang)*2.05, 0.05);
+  tiltGroup.add(orb);
+}
+
+/* ---------- airflow particles (world space, independent of tilt) ---------- */
+const PARTICLE_COUNT = 900;
+const positions = new Float32Array(PARTICLE_COUNT*3);
+const colors = new Float32Array(PARTICLE_COUNT*3);
+const speeds = new Float32Array(PARTICLE_COUNT);
+const colorCool = new THREE.Color(0x36d6e8);
+const colorWarm = new THREE.Color(0xfff6ea);
+
+function resetParticle(i){
+  const ang = Math.random()*Math.PI*2;
+  const r = 0.5 + Math.random()*2.6;
+  positions[i*3+0] = Math.cos(ang)*r;
+  positions[i*3+1] = Math.sin(ang)*r;
+  positions[i*3+2] = -9 - Math.random()*6;
+  speeds[i] = 0.55 + Math.random()*0.9;
+  const c = colorCool.clone().lerp(colorWarm, Math.random()*0.5);
+  colors[i*3+0]=c.r; colors[i*3+1]=c.g; colors[i*3+2]=c.b;
+}
+for(let i=0;i<PARTICLE_COUNT;i++) resetParticle(i);
+
+const particleGeo = new THREE.BufferGeometry();
+particleGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
+particleGeo.setAttribute('color', new THREE.BufferAttribute(colors,3));
+const particleMat = new THREE.PointsMaterial({
+  size:0.045, vertexColors:true, transparent:true, opacity:0.85,
+  blending:THREE.AdditiveBlending, depthWrite:false, sizeAttenuation:true
+});
+const particles = new THREE.Points(particleGeo, particleMat);
+scene.add(particles);
+
+/* ---------- soft ambient background orbs (depth / bokeh) ---------- */
+const orbGeo = new THREE.SphereGeometry(1, 12, 12);
+const ambientOrbs = new THREE.InstancedMesh(orbGeo, new THREE.MeshBasicMaterial({
+  color:0xffe8c9, transparent:true, opacity:0.10, blending:THREE.AdditiveBlending, depthWrite:false
+}), 22);
+const orbData = [];
+const dummy = new THREE.Object3D();
+for(let i=0;i<22;i++){
+  const s = 0.15 + Math.random()*0.55;
+  const px = (Math.random()-0.5)*16;
+  const py = (Math.random()-0.5)*9;
+  const pz = -6 - Math.random()*12;
+  orbData.push({px,py,pz,s,phase:Math.random()*Math.PI*2,speed:0.15+Math.random()*0.25});
+  dummy.position.set(px,py,pz);
+  dummy.scale.setScalar(s);
+  dummy.updateMatrix();
+  ambientOrbs.setMatrixAt(i, dummy.matrix);
+}
+scene.add(ambientOrbs);
+
+/* ---------- interaction state ---------- */
+let mouseNDC = new THREE.Vector2(0,0);
+let targetTiltX = 0, targetTiltY = 0;
+let isDragging = false;
+let dragStartX = 0, dragStartY = 0;
+let dragBaseRotY = 0, dragBaseRotX = 0;
+let dragVelocity = 0;
+let hasInteracted = false;
+
+const raycastPlane = new THREE.Plane(new THREE.Vector3(0,0,1), -2.2);
+const raycaster = new THREE.Raycaster();
+const planeHit = new THREE.Vector3();
+
+function onPointerMove(clientX, clientY){
+  mouseNDC.x = (clientX / innerWidth) * 2 - 1;
+  mouseNDC.y = -(clientY / innerHeight) * 2 + 1;
+
+  if(!isDragging){
+    targetTiltY = mouseNDC.x * 0.32;
+    targetTiltX = -mouseNDC.y * 0.18;
+  } else {
+    const dx = clientX - dragStartX;
+    const dy = clientY - dragStartY;
+    tiltGroup.rotation.y = dragBaseRotY + dx * 0.006;
+    tiltGroup.rotation.x = THREE.MathUtils.clamp(dragBaseRotX + dy * 0.004, -0.5, 0.5);
+    dragVelocity = dx * 0.00004;
+  }
+
+  raycaster.setFromCamera(mouseNDC, camera);
+  raycaster.ray.intersectPlane(raycastPlane, planeHit);
+  if(planeHit) mouseLight.position.lerp(planeHit, 0.18);
+}
+
+function markInteracted(){
+  if(!hasInteracted){
+    hasInteracted = true;
+    hint.classList.remove('show');
+  }
+}
+
+window.addEventListener('mousemove', e => onPointerMove(e.clientX, e.clientY));
+window.addEventListener('touchmove', e => {
+  if(e.touches[0]) onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+}, { passive:true });
+
+container.addEventListener('pointerdown', e => {
+  isDragging = true;
+  markInteracted();
+  container.classList.add('dragging');
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  dragBaseRotY = tiltGroup.rotation.y;
+  dragBaseRotX = tiltGroup.rotation.x;
+});
+window.addEventListener('pointerup', () => {
+  isDragging = false;
+  container.classList.remove('dragging');
+});
+window.addEventListener('pointerleave', () => {
+  isDragging = false;
+  container.classList.remove('dragging');
+});
+
+let fanSpeedBoost = 0;
+window.addEventListener('wheel', e => {
+  e.preventDefault();
+  markInteracted();
+  fanSpeedBoost = THREE.MathUtils.clamp(fanSpeedBoost + e.deltaY * 0.0025, -2, 6);
+  camera.position.z = THREE.MathUtils.clamp(camera.position.z + e.deltaY * 0.003, 5.2, 9.5);
+}, { passive:false });
+
+window.addEventListener('click', markInteracted);
+window.addEventListener('touchstart', markInteracted, { passive:true });
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+  composer.setSize(innerWidth, innerHeight);
+  bloomPass.setSize(innerWidth, innerHeight);
+});
+
+/* ---------- animation loop ---------- */
+const clock = new THREE.Clock();
+const BASE_SPEED = 1.4;
+let introT = 0;
+
+function animate(){
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05);
+  const elapsed = clock.elapsedTime;
+
+  /* intro ease-in */
+  if(introT < 1){
+    introT = Math.min(1, introT + dt/2.1);
+    const eased = 1 - Math.pow(1 - introT, 3);
+    camera.position.z = THREE.MathUtils.lerp(17, 6.4, eased);
+    camera.position.y = THREE.MathUtils.lerp(2.2, 0, eased);
+  }
+
+  /* fan spin */
+  fanSpeedBoost *= 0.94;
+  const fanSpeed = BASE_SPEED + Math.max(0, fanSpeedBoost) + Math.max(0, -fanSpeedBoost)*0.3;
+  spinGroup.rotation.z += fanSpeed * dt;
+
+  /* coil slow spin */
+  coilGroup.rotation.y += dt * 0.12;
+
+  /* parallax + inertia tilt */
+  if(!isDragging){
+    tiltGroup.rotation.y += (targetTiltY - tiltGroup.rotation.y) * 0.045;
+    tiltGroup.rotation.x += (targetTiltX - tiltGroup.rotation.x) * 0.045;
+    tiltGroup.rotation.y += dragVelocity;
+    dragVelocity *= 0.92;
+  }
+
+  /* glow ring gentle pulse */
+  const pulse = 0.55 + Math.sin(elapsed*1.6)*0.15 + Math.max(0, fanSpeedBoost)*0.05;
+  glowRing.material.color.setHSL(0.5, 0.75, THREE.MathUtils.clamp(pulse,0.35,0.85));
+
+  /* particle flow */
+  const posAttr = particleGeo.attributes.position;
+  for(let i=0;i<PARTICLE_COUNT;i++){
+    const idx = i*3;
+    positions[idx+2] += speeds[i] * dt * (2.2 + Math.max(0,fanSpeedBoost));
+    if(positions[idx+2] > 6){
+      resetParticle(i);
+    }
+  }
+  posAttr.needsUpdate = true;
+
+  /* ambient orb drift */
+  for(let i=0;i<22;i++){
+    const d = orbData[i];
+    const y = d.py + Math.sin(elapsed*d.speed + d.phase)*0.4;
+    const x = d.px + Math.cos(elapsed*d.speed*0.7 + d.phase)*0.3;
+    dummy.position.set(x, y, d.pz);
+    dummy.scale.setScalar(d.s);
+    dummy.updateMatrix();
+    ambientOrbs.setMatrixAt(i, dummy.matrix);
+  }
+  ambientOrbs.instanceMatrix.needsUpdate = true;
+
+  composer.render();
+}
+
+/* ---------- boot ---------- */
+requestAnimationFrame(() => {
+  animate();
+  setTimeout(() => {
+    loader.classList.add('hidden');
+    hint.classList.add('show');
+    setTimeout(() => { if(!hasInteracted) hint.classList.add('show'); }, 50);
+  }, 350);
+});
+</script>
+</body>
+</html>

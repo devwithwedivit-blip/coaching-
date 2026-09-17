@@ -1,0 +1,22 @@
+[
+  {
+    "id": "CAN-067673",
+    "rollNo": "NEET2024-27112002-7891",
+    "fullName": "saatwik",
+    "age": "27112002",
+    "dobFormatted": "27 Nov 2002",
+    "email": "abc@gmail.com",
+    "phone": "1234567891",
+    "stream": "NEET (UG) 2024",
+    "subject": "Botany Mock (50 Qs)",
+    "registeredAt": "2026-09-16T11:41:30.676Z",
+    "lastActiveAt": "2026-09-16T11:48:28.156Z",
+    "status": "LIVE_TESTING",
+    "score": 0,
+    "maxScore": 200,
+    "correct": null,
+    "wrong": null,
+    "unattempted": null,
+    "proctorFlags": 0
+  }
+]

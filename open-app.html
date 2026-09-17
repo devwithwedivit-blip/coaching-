@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarvottam Mobile App — Multi-Platform Launcher (iOS / Android / Web)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0e1f3d;
+      --navy-dark: #050b17;
+      --navy-surface: #091426;
+      --navy-card: rgba(14, 31, 61, 0.75);
+      --navy-border: rgba(201, 152, 42, 0.25);
+      --gold: #c9982a;
+      --gold-bright: #e0ac3d;
+      --gold-glow: rgba(224, 172, 61, 0.35);
+      --text: #faf8f3;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.3);
+      --red: #ef4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #050b17 radial-gradient(circle at 50% 0%, #16305c 0%, #050b17 70%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px 60px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* Top Brand Header */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .badge-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      color: var(--navy-dark);
+      font-weight: 900;
+      font-size: 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px var(--gold-glow);
+      margin-bottom: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--gold-bright) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .subtitle span {
+      color: var(--gold-bright);
+      font-weight: 700;
+    }
+
+    /* Status Pill */
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+      animation: pulse 2s infinite;
+    }
+    .status-dot.offline {
+      background: var(--red);
+      box-shadow: 0 0 12px var(--red);
+      animation: none;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* Main Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* Cards */
+    .card {
+      background: var(--navy-card);
+      border: 1.5px solid var(--navy-border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(201, 152, 42, 0.08);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .card-title .icon-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(201, 152, 42, 0.15);
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    /* Tabs for Device Choice */
+    .tab-bar {
+      display: flex;
+      background: rgba(5, 11, 23, 0.8);
+      border-radius: 14px;
+      padding: 4px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .tab-btn:hover { color: #ffffff; }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      color: var(--navy-dark);
+      font-weight: 800;
+      box-shadow: 0 4px 12px var(--gold-glow);
+    }
+
+    /* QR Code Display Box */
+    .qr-container {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin: 0 auto 18px;
+      width: 250px;
+      height: 250px;
+      position: relative;
+    }
+    .qr-container img {
+      width: 218px;
+      height: 218px;
+      display: block;
+      border-radius: 8px;
+    }
+    .qr-target-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--navy-dark);
+      background: var(--gold-bright);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 6px;
+    }
+
+    /* URL Box */
+    .url-box {
+      background: rgba(5, 11, 23, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .url-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--gold-bright);
+      word-break: break-all;
+    }
+    .btn-copy {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-copy:hover {
+      background: var(--gold);
+      color: var(--navy-dark);
+      border-color: var(--gold);
+    }
+
+    /* Action Buttons */
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      color: var(--navy-dark);
+      font-size: 1rem;
+      font-weight: 800;
+      padding: 15px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px var(--gold-glow);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(224, 172, 61, 0.5);
+    }
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Device Steps Guide */
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(5, 11, 23, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: rgba(201, 152, 42, 0.2);
+      color: var(--gold-bright);
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-content {
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+    .step-content strong {
+      color: #ffffff;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .step-content code {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--gold-bright);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    /* Embedded Simulator Section */
+    .sim-section {
+      margin-top: 36px;
+      width: 100%;
+      background: var(--navy-card);
+      border: 1.5px solid var(--navy-border);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px);
+    }
+    .sim-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .sim-title h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sim-title p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+    .sim-chassis {
+      margin: 0 auto;
+      width: 390px;
+      height: 780px;
+      max-width: 100%;
+      background: #000000;
+      border: 12px solid #222938;
+      border-radius: 54px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Dynamic Island / Notch */
+    .sim-island {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 26px;
+      background: #000000;
+      border-radius: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    .sim-camera {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #111a2e;
+      border: 1px solid #1e293b;
+    }
+    .sim-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #050b17;
+    }
+
+    /* Network IP Manual Override Footer */
+    .ip-override {
+      margin-top: 24px;
+      background: rgba(5, 11, 23, 0.5);
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+    }
+    .ip-input-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ip-input {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 6px 12px;
+      color: var(--gold-bright);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      width: 150px;
+    }
+    .btn-apply {
+      background: rgba(201, 152, 42, 0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-apply:hover {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="badge-icon">S</div>
+      <h1>Sarvottam Institutes Mobile App</h1>
+      <div class="subtitle">
+        Universal Learning & CBT Examination Engine &bull; <span>Apple iOS &bull; Android &bull; Web</span>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-pill">
+          <div class="status-dot" id="serverDot"></div>
+          <span id="serverStatusText">Checking Dev Server...</span>
+        </div>
+        <div class="status-pill">
+          <span>📶 LAN IP: <strong id="lanIpDisplay" style="color:var(--gold-bright);">192.168.29.66</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Grid: QR Code & Launch Guides -->
+    <div class="grid">
+      <!-- Left Card: Scan to Open App -->
+      <div class="card">
+        <div class="card-title">
+          <div class="icon-badge">📱</div>
+          <span>Scan to Open on iPhone & Android</span>
+        </div>
+
+        <!-- Target Switcher Tabs -->
+        <div class="tab-bar">
+          <button class="tab-btn active" id="tabWeb" onclick="switchQr('web')">
+            <span>🌐</span> Mobile Web (PWA)
+          </button>
+          <button class="tab-btn" id="tabExpo" onclick="switchQr('expo')">
+            <span>⚡</span> Expo Go App
+          </button>
+        </div>
+
+        <!-- QR Box -->
+        <div class="qr-container">
+          <img id="qrImage" src="" alt="Sarvottam Mobile App QR Code">
+          <div class="qr-target-pill" id="qrTargetLabel">Mobile Web App (Instant)</div>
+        </div>
+
+        <!-- URL copy box -->
+        <div class="url-box">
+          <div class="url-text" id="targetUrlText">http://192.168.29.66:8081</div>
+          <button class="btn-copy" onclick="copyUrl()">Copy URL</button>
+        </div>
+
+        <!-- Action buttons -->
+        <a id="btnOpenLocal" href="http://localhost:8081" target="_blank" class="btn-primary">
+          Open in PC Browser Tab &rarr;
+        </a>
+        <a id="btnOpenLan" href="http://192.168.29.66:8081" target="_blank" class="btn-secondary">
+          Open LAN URL in New Tab
+        </a>
+      </div>
+
+      <!-- Right Card: Platform Setup Instructions -->
+      <div class="card">
+        <div class="card-title">
+          <div class="icon-badge">✨</div>
+          <span>1-Tap Installation Instructions</span>
+        </div>
+
+        <!-- Platform Instructions Tabs -->
+        <div class="tab-bar">
+          <button class="tab-btn active" id="tabIosGuide" onclick="switchGuide('ios')">
+            <span>🍏</span> Apple iOS
+          </button>
+          <button class="tab-btn" id="tabAndroidGuide" onclick="switchGuide('android')">
+            <span>🤖</span> Android
+          </button>
+          <button class="tab-btn" id="tabApkGuide" onclick="switchGuide('apk')">
+            <span>📦</span> Standalone APK
+          </button>
+        </div>
+
+        <!-- iOS Guide -->
+        <div id="guideIos" class="guide-panel">
+          <ul class="steps-list">
+            <li class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <strong>Connect to Same Wi-Fi</strong>
+                Ensure your iPhone/iPad is on the same local Wi-Fi network as this PC.
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <strong>Scan with iPhone Camera</strong>
+                Open the native <strong>Camera app</strong> and point it at the QR code on the left, or open Safari and navigate to:
+                <div style="margin-top:4px;"><code id="iosUrlCode">http://192.168.29.66:8081</code></div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <strong>Install as Native Full-Screen App</strong>
+                In Safari, tap the <strong>Share icon (square with arrow)</strong> &rarr; scroll down &rarr; tap <strong>'Add to Home Screen'</strong>.
+                The official Sarvottam Gold icon will appear on your iPhone home screen!
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <strong>Or Run in Expo Go</strong>
+                Download <strong>Expo Go</strong> from the App Store, switch to the "Expo Go App" tab on the left, and scan with your Camera.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Android Guide -->
+        <div id="guideAndroid" class="guide-panel" style="display:none;">
+          <ul class="steps-list">
+            <li class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <strong>Connect to Same Wi-Fi</strong>
+                Ensure your Android phone/tablet is connected to the same Wi-Fi.
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <strong>Scan with Camera or Chrome</strong>
+                Open your Camera or Google Chrome and enter:
+                <div style="margin-top:4px;"><code id="androidUrlCode">http://192.168.29.66:8081</code></div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <strong>Install Native App Icon</strong>
+                In Chrome, tap the <strong>3 dots (menu)</strong> in the top-right &rarr; tap <strong>'Install app'</strong> or <strong>'Add to Home screen'</strong>.
+                The app runs in full-screen standalone mode with native gestures!
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <strong>Or Run via Expo Go</strong>
+                Install <strong>Expo Go</strong> from Google Play Store &rarr; tap "Scan QR code" &rarr; scan the QR code.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- APK Build Guide -->
+        <div id="guideApk" class="guide-panel" style="display:none;">
+          <ul class="steps-list">
+            <li class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <strong>Install EAS CLI</strong>
+                Open PowerShell in <code>sarvottam-mobile</code> and run:
+                <div style="margin-top:4px;"><code>npm install -g eas-cli</code></div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <strong>Build Standalone APK (.apk)</strong>
+                Run the one-line cloud build:
+                <div style="margin-top:4px;"><code>eas build -p android --profile preview</code></div>
+                You will receive a direct <code>.apk</code> download link that installs on any Android device.
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <strong>Local Android / iOS Builds</strong>
+                To generate native Android Studio / Xcode project files, run:
+                <div style="margin-top:4px;"><code>npx expo run:android</code> or <code>npx expo run:ios</code></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- On-Screen Interactive Simulator Section -->
+    <div class="sim-section">
+      <div class="sim-header">
+        <div class="sim-title">
+          <h2><span>💻</span> Live Desktop Mobile Simulator</h2>
+          <p>Test the full Sarvottam mobile app right here without picking up your phone.</p>
+        </div>
+        <div>
+          <button class="btn-copy" onclick="reloadIframe()" style="padding:10px 16px; font-size:0.85rem;">
+            🔄 Reload Simulator
+          </button>
+        </div>
+      </div>
+
+      <div class="sim-chassis">
+        <div class="sim-island">
+          <div class="sim-camera"></div>
+        </div>
+        <iframe id="appSimulator" class="sim-iframe" src="http://localhost:8081" title="Sarvottam Mobile App Simulator"></iframe>
+      </div>
+    </div>
+
+    <!-- Manual IP configuration bar -->
+    <div class="ip-override">
+      <div>
+        <strong>Need to change your Wi-Fi IP?</strong>
+        If you connected to a different hotspot or network, enter the new IPv4 address here:
+      </div>
+      <div class="ip-input-group">
+        <input type="text" id="manualIpInput" class="ip-input" value="192.168.29.66" placeholder="e.g. 192.168.1.5">
+        <button class="btn-apply" onclick="applyCustomIp()">Apply IP</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let currentLanIp = '192.168.29.66';
+    let currentPort = 8081;
+    let currentMode = 'web'; // 'web' | 'expo'
+    let storedConfig = null;
+
+    // Check URL query parameters (?ip=...)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('ip')) {
+      currentLanIp = urlParams.get('ip');
+    }
+    if (urlParams.has('port')) {
+      currentPort = parseInt(urlParams.get('port'), 10) || 8081;
+    }
+
+    // Try loading generated config JSON
+    fetch('./app-network-config.json')
+      .then(res => res.json())
+      .then(cfg => {
+        storedConfig = cfg;
+        if (!urlParams.has('ip') && cfg.lanIp) {
+          currentLanIp = cfg.lanIp;
+        }
+        updateAllUrlsAndQr();
+      })
+      .catch(() => {
+        updateAllUrlsAndQr();
+      });
+
+    function getWebUrl() {
+      return `http://${currentLanIp}:${currentPort}`;
+    }
+
+    function getExpoUrl() {
+      return `exp://${currentLanIp}:${currentPort}`;
+    }
+
+    function getQrSrc(url) {
+      if (storedConfig && storedConfig.lanIp === currentLanIp) {
+        if (currentMode === 'web' && storedConfig.qrWeb) return storedConfig.qrWeb;
+        if (currentMode === 'expo' && storedConfig.qrExpo) return storedConfig.qrExpo;
+      }
+      // Live fallback generator
+      return `https://api.qrserver.com/v1/create-qr-code/?size=280x280&color=050b17&bgcolor=ffffff&data=${encodeURIComponent(url)}`;
+    }
+
+    function updateAllUrlsAndQr() {
+      document.getElementById('lanIpDisplay').textContent = currentLanIp;
+      document.getElementById('manualIpInput').value = currentLanIp;
+
+      const webUrl = getWebUrl();
+      const expoUrl = getExpoUrl();
+      const targetUrl = currentMode === 'web' ? webUrl : expoUrl;
+
+      document.getElementById('targetUrlText').textContent = targetUrl;
+      document.getElementById('qrImage').src = getQrSrc(targetUrl);
+      document.getElementById('qrTargetLabel').textContent = currentMode === 'web' ? 'Mobile Web App (Instant)' : 'Expo Go App Link';
+
+      document.getElementById('btnOpenLan').href = webUrl;
+      document.getElementById('iosUrlCode').textContent = webUrl;
+      document.getElementById('androidUrlCode').textContent = webUrl;
+    }
+
+    function switchQr(mode) {
+      currentMode = mode;
+      document.getElementById('tabWeb').classList.toggle('active', mode === 'web');
+      document.getElementById('tabExpo').classList.toggle('active', mode === 'expo');
+      updateAllUrlsAndQr();
+    }
+
+    function switchGuide(platform) {
+      document.getElementById('tabIosGuide').classList.toggle('active', platform === 'ios');
+      document.getElementById('tabAndroidGuide').classList.toggle('active', platform === 'android');
+      document.getElementById('tabApkGuide').classList.toggle('active', platform === 'apk');
+
+      document.getElementById('guideIos').style.display = platform === 'ios' ? 'block' : 'none';
+      document.getElementById('guideAndroid').style.display = platform === 'android' ? 'block' : 'none';
+      document.getElementById('guideApk').style.display = platform === 'apk' ? 'block' : 'none';
+    }
+
+    function copyUrl() {
+      const url = document.getElementById('targetUrlText').textContent;
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = document.querySelector('.btn-copy');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied! ✓';
+        setTimeout(() => { btn.textContent = orig; }, 1800);
+      });
+    }
+
+    function applyCustomIp() {
+      const input = document.getElementById('manualIpInput').value.trim();
+      if (input) {
+        currentLanIp = input;
+        updateAllUrlsAndQr();
+      }
+    }
+
+    function reloadIframe() {
+      const iframe = document.getElementById('appSimulator');
+      iframe.src = iframe.src;
+    }
+
+    // Ping Dev Server health
+    function checkServerHealth() {
+      const dot = document.getElementById('serverDot');
+      const text = document.getElementById('serverStatusText');
+
+      fetch('http://localhost:8081', { mode: 'no-cors' })
+        .then(() => {
+          dot.classList.remove('offline');
+          text.textContent = '🟢 Server Online (Port 8081)';
+        })
+        .catch(() => {
+          dot.classList.add('offline');
+          text.textContent = '🔴 Server Offline — Run OPEN-SARVOTTAM-APP.bat';
+        });
+    }
+
+    checkServerHealth();
+    setInterval(checkServerHealth, 6000);
+    updateAllUrlsAndQr();
+  </script>
+</body>
+</html>

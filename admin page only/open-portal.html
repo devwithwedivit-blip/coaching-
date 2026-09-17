@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarvottam Institutes — Central Portal & Mobile App Launcher</title>
+  <style>
+    body {
+      background: #050b17 radial-gradient(circle at 50% 20%, #16305c 0%, #050b17 80%);
+      color: #faf8f3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .portal-card {
+      text-align: center;
+      padding: 36px 32px;
+      background: rgba(14, 31, 61, 0.85);
+      border: 1.5px solid rgba(201, 152, 42, 0.35);
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(201, 152, 42, 0.15);
+      backdrop-filter: blur(16px);
+    }
+    .badge {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #e0ac3d, #c9982a);
+      color: #050b17;
+      font-size: 2rem;
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    h2 { margin: 0 0 8px; font-size: 1.5rem; color: #ffffff; }
+    p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 24px; }
+    .btn-group { display: flex; flex-direction: column; gap: 12px; }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #e0ac3d, #c9982a);
+      color: #050b17;
+      box-shadow: 0 8px 20px rgba(201, 152, 42, 0.3);
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(201, 152, 42, 0.45); }
+    .btn-navy {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-navy:hover { background: rgba(255, 255, 255, 0.15); }
+  </style>
+</head>
+<body>
+  <div class="portal-card">
+    <div class="badge">S</div>
+    <h2>Sarvottam Institutes</h2>
+    <p>Select which platform you would like to open:</p>
+    <div class="btn-group">
+      <a href="../open-app.html" class="btn btn-gold">
+        📱 Open Mobile App (iOS / Android / Web) →
+      </a>
+      <a href="http://localhost:3001/login" class="btn btn-navy">
+        ⚡ Antigravity Central Admin Portal (Port 3001) →
+      </a>
+      <a href="http://localhost:3001/test" class="btn btn-navy">
+        📝 Full CBT Exam Portal (Port 3001) →
+      </a>
+    </div>
+  </div>
+</body>
+</html>

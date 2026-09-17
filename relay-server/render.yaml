@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sarvottam-cloud-relay
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
