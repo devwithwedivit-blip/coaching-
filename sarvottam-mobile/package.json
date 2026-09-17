@@ -25,6 +25,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "export:web": "expo export -p web",
     "prepare-launch": "node scripts/prepare-launch.js"
   },
   "private": true

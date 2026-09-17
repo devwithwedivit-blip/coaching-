@@ -2,16 +2,7 @@ import { Platform } from 'react-native';
 import { RelayFile, RelayDeviceStatus } from '../../types';
 import { storage } from '../storage';
 
-// Dynamic host resolver:
-// When loaded on mobile Safari/Chrome, window.location.hostname is the PC's Wi-Fi IP (e.g. 192.168.29.66).
-// In native Expo Go or fallback, it uses 192.168.29.66.
-export function getDynamicRelayHost(): string {
-  if (typeof window !== 'undefined' && window.location && window.location.hostname) {
-    const host = window.location.hostname;
-    if (host && host !== 'localhost' && host !== '127.0.0.1') {
-      return host;
-    }
-  }
+// Default to the 24/7 Global Cloud Relay on Render
 export const CLOUD_RELAY_URL = 'https://coaching-1-0xeo.onrender.com';
 
 type StatusCallback = (status: RelayDeviceStatus) => void;
@@ -51,6 +42,9 @@ class RelayClient {
   public async getBaseUrl(): Promise<string> {
     const custom = await storage.getItem('sarvottam_relay_url');
     if (custom && custom.trim()) return custom.trim();
+    if (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.startsWith('http')) {
+      return window.location.origin;
+    }
     // Default to the 24/7 Global Cloud Relay on Render
     return CLOUD_RELAY_URL;
   }
