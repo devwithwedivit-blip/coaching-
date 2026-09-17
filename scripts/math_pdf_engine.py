@@ -14,6 +14,7 @@ Handles:
 import re
 import sys
 import unicodedata
+from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 import pymupdf
 
@@ -622,3 +623,64 @@ class MathPdfEngine:
 
         text = re.sub(r' +', ' ', text)
         return text
+
+    def crop_page_region(self, page_num: int, rect: pymupdf.Rect, output_path: str, dpi: int = 200) -> bool:
+        """Crops a bounding box on page_num at high DPI and saves as PNG."""
+        try:
+            page = self.doc[page_num]
+            out_p = Path(output_path)
+            out_p.parent.mkdir(parents=True, exist_ok=True)
+            clip_rect = rect & page.rect
+            if clip_rect.is_empty or clip_rect.width <= 10 or clip_rect.height <= 10:
+                return False
+            pix = page.get_pixmap(clip=clip_rect, dpi=dpi)
+            pix.save(str(out_p))
+            return True
+        except Exception as e:
+            print(f"Error cropping page {page_num} to {output_path}: {e}")
+            return False
+
+    def question_needs_image(self, page_num: int, rect: pymupdf.Rect, q_text: str, options: Dict[str, str]) -> bool:
+        """
+        Determines whether a question must be represented as a cropped image:
+        Returns True if question contains diagrams, drawings, figures, vector hats (î, ĵ),
+        or complex mathematical formulas/notation.
+        Returns False ONLY if it is pure conceptual text with no diagrams or math symbols.
+        """
+        page = self.doc[page_num]
+
+        # 1. Raster images intersecting question rect
+        for img in page.get_images():
+            for r in page.get_image_rects(img[0]):
+                if r.intersects(rect) and (r & rect).get_area() > 30:
+                    return True
+
+        # 2. Vector drawings (circuit lines, graph axes, curves, fraction bars)
+        for d in page.get_drawings():
+            dr = d['rect']
+            if dr.intersects(rect):
+                # Ignore outer page boundaries and column dividers
+                if dr.width > 500 or (dr.width < 1.0 and dr.height > 150) or dr.y0 < 65 or dr.y1 > page.rect.height - 35:
+                    continue
+                if (dr & rect).get_area() > 5 or dr.width > 10:
+                    return True
+
+        # 3. Explicit keywords indicating visual content
+        combined = q_text + " " + " ".join(str(v) for v in options.values())
+        if re.search(r'\b(figure|fig\.|diagram|graph|circuit|shown in|as shown|reaction sequence|pathway|curve)\b', combined, re.IGNORECASE):
+            return True
+
+        # 4. Vector hats, arrows, and vector notation
+        if any(s in combined for s in ['î', 'ĵ', 'k̂', '\u0302', '\u20d7', '→', '−−→']):
+            return True
+        if re.search(r'[a-zA-Z0-9]\s*[\^ˆ]', combined) or re.search(r'[\^ˆ]\s*[a-zA-Z]', combined):
+            return True
+
+        # 5. Complex math symbols, radicals, integrals, matrices, fractions
+        if any(s in combined for s in ['√', '∫', '±', '≤', '≥', '≠', '≈', '∞', '⇌', '∑', '∏', 'Δ', 'λ', 'θ', 'α', 'β', 'γ', 'μ', 'ω']):
+            return True
+        if re.search(r'\([^\)]+/[^\)]+\)', combined) or re.search(r'[\^]\d+', combined) or re.search(r'[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]', combined):
+            return True
+
+        return False
+

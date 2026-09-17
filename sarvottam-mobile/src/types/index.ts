@@ -137,15 +137,25 @@ export interface CbtQuestion {
   section: string; // e.g. "Botany Section A" or "Botany Section B"
   topic: string;
   question: string;
+  imageUrl?: string | null; // Cropped PDF page portion for questions with diagrams/math/vectors
+  imageAspectRatio?: number | null;
   diagram: string | null;
+  isImageBased?: boolean;
   options: {
     a: string;
     b: string;
     c: string;
     d: string;
   };
+  optionsImages?: {
+    a?: string | null;
+    b?: string | null;
+    c?: string | null;
+    d?: string | null;
+  } | null;
   correctAnswer: 'a' | 'b' | 'c' | 'd';
   explanation: string;
+  explanationImage?: string | null;
   expDiagram: string | null;
 }
 

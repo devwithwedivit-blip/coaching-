@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 """
-build_neet_mocks.py - Math-Aware Extractor for NEET 2024 Physics & Chemistry Papers
-Uses MathPdfEngine to extract all 50 questions per subject with:
-  - Intact mathematical fractions (e.g. vernier constant (1 / 100(N+1)))
-  - Subscripts and superscripts (m/s², He⁺, Be³⁺)
-  - Options (a, b, c, d) with clean math expressions
-  - Official answer keys and step-by-step derivations
+build_neet_mocks.py - Math-Aware & Image-Cropping Extractor for NEET 2024 Papers
+Extracts questions with diagrams/figures or mathematical/vector notation as 200-DPI PNGs.
+Leaves pure conceptual text questions as text.
 """
 
 import sys
@@ -13,7 +10,8 @@ import os
 import re
 import json
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
+import pymupdf
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -21,10 +19,13 @@ if hasattr(sys.stdout, 'reconfigure'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 PDF_DIR = BASE_DIR / "paper"
 OUTPUT_DIR = BASE_DIR / "sarvottam-mobile" / "src" / "data"
+PUBLIC_QUESTIONS_DIR = BASE_DIR / "relay-server" / "public" / "questions"
+PUBLIC_QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 from math_pdf_engine import MathPdfEngine, clean_text_symbols
 from validate_math_extraction import audit_question_dataset
+
 
 def clean_neet_text(text: str) -> str:
     if not text:
@@ -38,11 +39,11 @@ def clean_neet_text(text: str) -> str:
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 
+
 def parse_neet_options(body_text: str):
     """
     Extracts options a, b, c, d from question body.
     """
-    # Look for a., b., c., d. or (a), (b), (c), (d)
     matches = list(re.finditer(r'(?:^|\s|\n|\()([a-dA-D])[\.\)]\s*', body_text))
     opt_matches = []
     expected = ['a', 'b', 'c', 'd']
@@ -76,13 +77,13 @@ def parse_neet_options(body_text: str):
             opts[expected[i]] = opt_val if opt_val else f"[Option ({expected[i].upper()}) as in paper]"
         return q_text, opts
 
-    # Explicit extraction error fallback
     return clean_neet_text(body_text), {
         "a": "[Option A unavailable - extraction error]",
         "b": "[Option B unavailable - extraction error]",
         "c": "[Option C unavailable - extraction error]",
         "d": "[Option D unavailable - extraction error]"
     }
+
 
 def extract_neet_solutions(full_sol_text: str) -> Dict[int, Dict[str, str]]:
     """Extracts qnum -> {correctAnswer, explanation}."""
@@ -97,6 +98,43 @@ def extract_neet_solutions(full_sol_text: str) -> Dict[int, Dict[str, str]]:
         if 1 <= qnum <= 50:
             sol_map[qnum] = {"correctAnswer": ans, "explanation": exp}
     return sol_map
+
+
+def extract_neet_question_rects(doc: pymupdf.Document, max_p: int) -> Dict[int, Tuple[int, pymupdf.Rect]]:
+    """
+    Maps each question 1..50 to its (page_idx, Rect) on the 2-column NEET question pages.
+    """
+    q_map = {}
+    for p_idx in range(min(max_p, len(doc))):
+        p = doc[p_idx]
+        col_split = p.rect.width / 2.0
+        blocks = p.get_text('blocks')
+        for x0, x1 in [(28.0, col_split - 4.0), (col_split - 4.0, p.rect.width - 20.0)]:
+            col_blocks = [b for b in blocks if x0 <= (b[0] + b[2]) / 2.0 <= x1 and 40 < b[1] < p.rect.height - 30]
+            col_blocks.sort(key=lambda b: b[1])
+            q_starts = []
+            for b in col_blocks:
+                m = re.search(r'(?:^|\b|\n)\s*(\d+)\.(?!\d)', b[4])
+                if m:
+                    num = int(m.group(1))
+                    if 1 <= num <= 50 and num not in q_map:
+                        q_starts.append({'num': num, 'bbox': b[:4], 'text': b[4].strip()})
+            for i, q in enumerate(q_starts):
+                num = q['num']
+                y0 = max(40.0, q['bbox'][1] - 4.0)
+                if i + 1 < len(q_starts):
+                    y1 = q_starts[i+1]['bbox'][1] - 2.0
+                else:
+                    below = [b[3] for b in col_blocks if b[1] >= q['bbox'][1] - 2.0]
+                    bot_y = max(below + [q['bbox'][3]])
+                    for img in p.get_images():
+                        for r in p.get_image_rects(img[0]):
+                            if x0 <= (r.x0 + r.x1) / 2.0 <= x1 and r.y0 >= q['bbox'][1] and r.y1 < p.rect.height - 30:
+                                bot_y = max(bot_y, r.y1)
+                    y1 = min(p.rect.height - 35.0, bot_y + 8.0)
+                q_map[num] = (p_idx, pymupdf.Rect(x0, y0, x1, y1))
+    return q_map
+
 
 def parse_neet_paper(subject: str, pdf_filename: str, questions_end_page: int):
     pdf_path = PDF_DIR / pdf_filename
@@ -117,6 +155,7 @@ def parse_neet_paper(subject: str, pdf_filename: str, questions_end_page: int):
     full_sol_text = "\n".join(sol_pages)
 
     sol_map = extract_neet_solutions(full_sol_text)
+    rect_map = extract_neet_question_rects(engine.doc, questions_end_page)
 
     # Split full_q_text into questions 1. to 50.
     q_matches = list(re.finditer(r'(?:^|\n)\s*(\d+)\.\s+', full_q_text))
@@ -139,13 +178,38 @@ def parse_neet_paper(subject: str, pdf_filename: str, questions_end_page: int):
         sec_title = f"{subject} Section A" if qnum <= 35 else f"{subject} Section B"
         topic = "Core Fundamentals & Applications"
 
+        # Determine if question contains diagram, figure, or math/vector notation
+        image_url = None
+        image_aspect_ratio = None
+        is_image_based = False
+
+        if qnum in rect_map:
+            p_idx, rect = rect_map[qnum]
+            needs_img = engine.question_needs_image(p_idx, rect, q_text, opts)
+            if needs_img:
+                img_filename = f"neet_{subject.lower()}_q{qnum}.png"
+                out_path = PUBLIC_QUESTIONS_DIR / img_filename
+                success = engine.crop_page_region(p_idx, rect, str(out_path), dpi=200)
+                if success:
+                    image_url = f"/questions/{img_filename}"
+                    image_aspect_ratio = round(rect.width / max(1.0, rect.height), 4)
+                    is_image_based = True
+                    # Clean placeholder options when full question + options is shown in image
+                    for opt_k in ['a', 'b', 'c', 'd']:
+                        val = opts.get(opt_k, '')
+                        if any(ph in val for ph in ['[Option', 'extraction error', 'unavailable']) or not val.strip():
+                            opts[opt_k] = f"Option {opt_k.upper()}"
+
         questions_data.append({
             "id": qnum,
             "subject": subject,
             "section": sec_title,
             "topic": topic,
             "question": q_text,
-            "diagram": None,
+            "imageUrl": image_url,
+            "imageAspectRatio": image_aspect_ratio,
+            "diagram": image_url,
+            "isImageBased": is_image_based,
             "options": opts,
             "correctAnswer": sol_info["correctAnswer"],
             "explanation": sol_info["explanation"],
@@ -169,13 +233,14 @@ export const {ts_var_name}: CbtQuestion[] = {json.dumps(questions_data, indent=2
     print(f"💾 Wrote {len(questions_data)} questions to: {out_file.name}")
     return questions_data
 
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    # Physics: questions on pages 1 to 7 (0 to 7), solutions on 8 to 12
     parse_neet_paper("Physics", "NEET 2024 Paper - Physics.pdf", 7)
-    # Chemistry: questions on pages 1 to 7 (0 to 7), solutions on 8 to 12
     parse_neet_paper("Chemistry", "NEET 2024 Paper - Chemistry.pdf", 7)
-    print("\n🎉 ALL NEET CBT QUESTIONS PRODUCED SUCCESSFULLY!")
+    parse_neet_paper("Botany", "NEET 2024 Paper - Botany.pdf", 14)
+    print("\n🎉 ALL NEET CBT QUESTIONS PRODUCED WITH HYBRID CROPPING & MATH PARSER!")
+
 
 if __name__ == "__main__":
     main()

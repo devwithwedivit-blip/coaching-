@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
@@ -101,11 +102,33 @@ export const CbtExamActiveScreen: React.FC<CbtExamActiveScreenProps> = ({ onFini
           <Text style={styles.markingSchemeText}>Correct: +4 · Negative: -1</Text>
         </View>
 
-        {/* Question Text */}
+        {/* Question Text / Original PDF Crop */}
         <View style={styles.questionCard}>
-          <Text style={styles.questionText}>{currentQuestion.question}</Text>
+          {currentQuestion.imageUrl ? (
+            <View style={styles.imageQuestionContainer}>
+              <View style={styles.imageBadgeRow}>
+                <Text style={styles.imageBadgeText}>📷 ORIGINAL EXAM DIAGRAM / SHEET</Text>
+                <Text style={styles.imageBadgeSub}>200 DPI High-Resolution Crop</Text>
+              </View>
+              <Image
+                source={{ uri: currentQuestion.imageUrl }}
+                style={[
+                  styles.questionCropImage,
+                  currentQuestion.imageAspectRatio
+                    ? { aspectRatio: currentQuestion.imageAspectRatio }
+                    : { minHeight: 220 },
+                ]}
+                resizeMode="contain"
+              />
+              {currentQuestion.question && !currentQuestion.question.toLowerCase().startsWith('question ') && (
+                <Text style={styles.questionTextSecondary}>{currentQuestion.question}</Text>
+              )}
+            </View>
+          ) : (
+            <Text style={styles.questionText}>{currentQuestion.question}</Text>
+          )}
 
-          {currentQuestion.diagram && (
+          {currentQuestion.diagram && !currentQuestion.imageUrl && (
             <View style={styles.diagramNotice}>
               <Text style={styles.diagramNoticeText}>📊 [Diagram/Figure reference attached]</Text>
             </View>
@@ -116,8 +139,9 @@ export const CbtExamActiveScreen: React.FC<CbtExamActiveScreenProps> = ({ onFini
         <Text style={styles.optionsTitle}>Select your answer:</Text>
         {optionKeys.map((key) => {
           const optionText = currentQuestion.options[key];
+          const optionImg = currentQuestion.optionsImages?.[key];
           const isSelected = selectedAnswer === key;
-          const isErrorOption = !optionText || optionText.toLowerCase().includes('unavailable') || optionText.toLowerCase().includes('extraction error');
+          const isErrorOption = !optionText && !optionImg;
 
           return (
             <TouchableOpacity
@@ -143,7 +167,9 @@ export const CbtExamActiveScreen: React.FC<CbtExamActiveScreenProps> = ({ onFini
                   {key.toUpperCase()}
                 </Text>
               </View>
-              {isErrorOption ? (
+              {optionImg ? (
+                <Image source={{ uri: optionImg }} style={styles.optionCropImage} resizeMode="contain" />
+              ) : isErrorOption ? (
                 <View style={{ flex: 1 }}>
                   <Text style={styles.optionErrorTitle}>⚠️ Option Text Unavailable</Text>
                   <Text style={styles.optionErrorSubtitle}>Content could not be extracted from the test paper. Please refer to question sheet.</Text>
@@ -377,6 +403,56 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 22,
     fontWeight: '700',
+  },
+  imageQuestionContainer: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    alignItems: 'center',
+    width: '100%',
+  },
+  imageBadgeRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    backgroundColor: '#f8fafc',
+    borderRadius: 8,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#e2e8f0',
+  },
+  imageBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#0284c7',
+    letterSpacing: 0.5,
+  },
+  imageBadgeSub: {
+    fontSize: 10,
+    color: '#64748b',
+    fontWeight: '600',
+  },
+  questionCropImage: {
+    width: '100%',
+    maxWidth: 720,
+    backgroundColor: '#ffffff',
+    borderRadius: 8,
+  },
+  questionTextSecondary: {
+    marginTop: 12,
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
+    width: '100%',
+  },
+  optionCropImage: {
+    flex: 1,
+    height: 60,
+    maxWidth: 280,
+    resizeMode: 'contain',
+    backgroundColor: '#ffffff',
   },
   diagramNotice: {
     backgroundColor: '#f1f5f9',

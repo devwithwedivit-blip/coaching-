@@ -11,7 +11,8 @@ import os
 import re
 import json
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
+import pymupdf
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -192,6 +193,80 @@ def extract_solution_map(engine: MathPdfEngine) -> Dict[int, str]:
 
     return sol_map
 
+PUBLIC_QUESTIONS_DIR = BASE_DIR / "relay-server" / "public" / "questions"
+PUBLIC_QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
+
+def extract_subject_question_rects(doc: pymupdf.Document, p_start: int, p_end: int):
+    """
+    Extracts {q_num: (page_idx, rect)} for Section 1 (1..20) and Section 2 (1..5)
+    across the subject's page range.
+    """
+    sec1_map = {}
+    sec2_map = {}
+    is_sec2 = False
+
+    for p_idx in range(p_start, p_end):
+        p = doc[p_idx]
+        col_split = p.rect.width / 2.0
+        blocks = p.get_text('blocks')
+
+        for x0, x1 in [(22.0, col_split - 4.0), (col_split - 4.0, p.rect.width - 20.0)]:
+            col_blocks = [b for b in blocks if x0 <= (b[0] + b[2]) / 2.0 <= x1 and 46 < b[1] < p.rect.height - 35]
+            col_blocks.sort(key=lambda b: b[1])
+
+            for b in col_blocks:
+                if re.search(r'SECTION\s*[-–—]?\s*(?:II|B)|Numerical', b[4]):
+                    is_sec2 = True
+
+            q_starts = []
+            for b in col_blocks:
+                m = re.search(r'(?:^|\b)(\d+)\.(?!\d)', b[4][:25].strip())
+                if m:
+                    num = int(m.group(1))
+                    if 1 <= num <= 20:
+                        q_starts.append({'num': num, 'bbox': b[:4], 'text': b[4].strip()})
+
+            for i, q in enumerate(q_starts):
+                num = q['num']
+                y0 = max(46.0, q['bbox'][1] - 4.0)
+                if i + 1 < len(q_starts):
+                    y1 = q_starts[i+1]['bbox'][1] - 2.0
+                else:
+                    below = [b[3] for b in col_blocks if b[1] >= q['bbox'][1] - 2.0]
+                    bot_y = max(below + [q['bbox'][3]])
+                    for img in p.get_images():
+                        for r in p.get_image_rects(img[0]):
+                            if x0 <= (r.x0 + r.x1) / 2.0 <= x1 and r.y0 >= q['bbox'][1] and r.y1 < p.rect.height - 35:
+                                bot_y = max(bot_y, r.y1)
+                    y1 = min(p.rect.height - 38.0, bot_y + 8.0)
+
+                rect = pymupdf.Rect(x0, y0, x1, y1)
+                if is_sec2 or (num in sec1_map and 1 <= num <= 5):
+                    if 1 <= num <= 5:
+                        sec2_map[num] = (p_idx, rect)
+                else:
+                    sec1_map[num] = (p_idx, rect)
+
+    # Fallback scan for any missing numbers 1..20 in sec1
+    for num in range(1, 21):
+        if num not in sec1_map:
+            for p_idx in range(p_start, p_end):
+                p = doc[p_idx]
+                col_split = p.rect.width / 2.0
+                for b in p.get_text('blocks'):
+                    m = re.search(r'(?:^|\b)' + str(num) + r'\.(?!\d)', b[4][:25])
+                    if m and 44 < b[1] < p.rect.height - 35:
+                        x0 = 22.0 if (b[0] + b[2]) / 2.0 < col_split else col_split - 4.0
+                        x1 = col_split - 4.0 if (b[0] + b[2]) / 2.0 < col_split else p.rect.width - 20.0
+                        y0 = max(46.0, b[1] - 4.0)
+                        y1 = min(p.rect.height - 38.0, b[3] + 200.0)
+                        sec1_map[num] = (p_idx, pymupdf.Rect(x0, y0, x1, y1))
+                        break
+                if num in sec1_map:
+                    break
+
+    return sec1_map, sec2_map
+
 def parse_mock_paper(mock_num: int):
     pdf_path = PDF_DIR / f"jee main mock {mock_num}.pdf"
     print(f"\n========================================================")
@@ -248,8 +323,11 @@ def parse_mock_paper(mock_num: int):
         ans1_list = ANSWER_KEYS[mock_num][sec1_ans_key]
         ans2_list = ANSWER_KEYS[mock_num][sec2_ans_key]
 
+        sec1_rect_map, sec2_rect_map = extract_subject_question_rects(engine.doc, p_start, p_end)
+
         # Process Section 1 (MCQ, 20)
         for i in range(20):
+            q_num = i + 1
             correct_ans_raw = ans1_list[i] if i < len(ans1_list) else "A"
             default_topic = DEFAULT_TOPICS[subject][i % len(DEFAULT_TOPICS[subject])]
 
@@ -273,13 +351,42 @@ def parse_mock_paper(mock_num: int):
             if not q_text:
                 q_text = f"Solve the following {subject} problem involving {default_topic}."
 
+            # Determine if question contains diagram, figure, or math/vector notation
+            q_rect_info = sec1_rect_map.get(q_num)
+            image_url = None
+            is_image_based = False
+
+            if q_rect_info:
+                p_idx, rect = q_rect_info
+                needs_img = engine.question_needs_image(p_idx, rect, q_text, opts)
+                if needs_img:
+                    img_filename = f"jee_mock{mock_num}_q{global_id}.png"
+                    out_path = PUBLIC_QUESTIONS_DIR / img_filename
+                    success = engine.crop_page_region(p_idx, rect, str(out_path), dpi=200)
+                    if success:
+                        image_url = f"/questions/{img_filename}"
+                        is_image_based = True
+                        # Clean placeholder options when full question + options is shown in image
+                        for opt_k in ['a', 'b', 'c', 'd']:
+                            val = opts.get(opt_k, '')
+                            if any(ph in val for ph in ['[Refer to Question Diagram', '[Option', 'extraction error']) or not val.strip():
+                                opts[opt_k] = f"Option {opt_k.upper()}"
+
+            image_aspect_ratio = None
+            if is_image_based and q_rect_info:
+                _, rect = q_rect_info
+                image_aspect_ratio = round(rect.width / max(1.0, rect.height), 4)
+
             all_questions.append({
                 "id": global_id,
                 "subject": subject,
                 "section": f"{subject} Section A (MCQs)",
                 "topic": default_topic,
                 "question": q_text,
-                "diagram": None,
+                "imageUrl": image_url,
+                "imageAspectRatio": image_aspect_ratio,
+                "diagram": image_url,
+                "isImageBased": is_image_based,
                 "options": opts,
                 "correctAnswer": correct_letter,
                 "explanation": sol_text,
@@ -289,6 +396,7 @@ def parse_mock_paper(mock_num: int):
 
         # Process Section 2 (Numerical, 5)
         for i in range(5):
+            q_num = i + 1
             correct_ans_raw = ans2_list[i] if i < len(ans2_list) else "1"
             default_topic = DEFAULT_TOPICS[subject][(20 + i) % len(DEFAULT_TOPICS[subject])]
 
@@ -309,13 +417,36 @@ def parse_mock_paper(mock_num: int):
             if not q_text:
                 q_text = f"Calculate the numerical integer answer for the following {subject} problem involving {default_topic}."
 
+            q_rect_info = sec2_rect_map.get(q_num)
+            image_url = None
+            is_image_based = False
+
+            if q_rect_info:
+                p_idx, rect = q_rect_info
+                needs_img = engine.question_needs_image(p_idx, rect, q_text, opts)
+                if needs_img:
+                    img_filename = f"jee_mock{mock_num}_q{global_id}.png"
+                    out_path = PUBLIC_QUESTIONS_DIR / img_filename
+                    success = engine.crop_page_region(p_idx, rect, str(out_path), dpi=200)
+                    if success:
+                        image_url = f"/questions/{img_filename}"
+                        is_image_based = True
+
+            image_aspect_ratio = None
+            if is_image_based and q_rect_info:
+                _, rect = q_rect_info
+                image_aspect_ratio = round(rect.width / max(1.0, rect.height), 4)
+
             all_questions.append({
                 "id": global_id,
                 "subject": subject,
                 "section": f"{subject} Section B (Numerical)",
                 "topic": default_topic,
                 "question": q_text,
-                "diagram": None,
+                "imageUrl": image_url,
+                "imageAspectRatio": image_aspect_ratio,
+                "diagram": image_url,
+                "isImageBased": is_image_based,
                 "options": opts,
                 "correctAnswer": correct_letter,
                 "explanation": sol_text,

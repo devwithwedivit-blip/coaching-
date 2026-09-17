@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
@@ -195,7 +196,28 @@ export const CbtResultScreen: React.FC<CbtResultScreenProps> = ({ onRetake, onHo
 
               {isExpanded && (
                 <View style={styles.solutionBody}>
-                  <Text style={styles.solQuestionText}>{q.question}</Text>
+                  {q.imageUrl ? (
+                    <View style={styles.solImageContainer}>
+                      <View style={styles.solImageBadge}>
+                        <Text style={styles.solImageBadgeText}>📷 ORIGINAL EXAM SHEET CROP (HIGH-RES)</Text>
+                      </View>
+                      <Image
+                        source={{ uri: q.imageUrl }}
+                        style={[
+                          styles.solCropImage,
+                          q.imageAspectRatio
+                            ? { aspectRatio: q.imageAspectRatio }
+                            : { minHeight: 200 },
+                        ]}
+                        resizeMode="contain"
+                      />
+                      {q.question && !q.question.toLowerCase().startsWith('question ') && (
+                        <Text style={styles.solQuestionTextSecondary}>{q.question}</Text>
+                      )}
+                    </View>
+                  ) : (
+                    <Text style={styles.solQuestionText}>{q.question}</Text>
+                  )}
 
                   {/* Options Comparison */}
                   <View style={styles.solOptionsList}>
@@ -203,7 +225,8 @@ export const CbtResultScreen: React.FC<CbtResultScreenProps> = ({ onRetake, onHo
                       const isUserSelected = userAns === opt;
                       const isCorrectAnswer = q.correctAnswer.toLowerCase() === opt;
                       const optText = q.options[opt];
-                      const isErrorOption = !optText || optText.toLowerCase().includes('unavailable') || optText.toLowerCase().includes('extraction error');
+                      const optImg = q.optionsImages?.[opt];
+                      const isErrorOption = !optText && !optImg;
 
                       return (
                         <View
@@ -216,7 +239,9 @@ export const CbtResultScreen: React.FC<CbtResultScreenProps> = ({ onRetake, onHo
                           ]}
                         >
                           <Text style={styles.solOptLetter}>({opt.toUpperCase()})</Text>
-                          {isErrorOption ? (
+                          {optImg ? (
+                            <Image source={{ uri: optImg }} style={styles.solOptImage} resizeMode="contain" />
+                          ) : isErrorOption ? (
                             <Text style={styles.solOptErrorText}>⚠️ [Option unavailable - extraction error]</Text>
                           ) : (
                             <Text style={styles.solOptText}>{optText}</Text>
@@ -464,6 +489,50 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: '700',
     marginVertical: 10,
+  },
+  solImageContainer: {
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 14,
+    marginTop: 8,
+    padding: 6,
+    borderWidth: 1,
+    borderColor: '#e2e8f0',
+  },
+  solImageBadge: {
+    width: '100%',
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    backgroundColor: '#f1f5f9',
+    borderRadius: 6,
+    marginBottom: 8,
+  },
+  solImageBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#0284c7',
+  },
+  solCropImage: {
+    width: '100%',
+    maxWidth: 680,
+    backgroundColor: '#ffffff',
+    borderRadius: 6,
+  },
+  solQuestionTextSecondary: {
+    marginTop: 10,
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
+    width: '100%',
+  },
+  solOptImage: {
+    flex: 1,
+    height: 44,
+    maxWidth: 200,
+    resizeMode: 'contain',
+    backgroundColor: '#ffffff',
   },
   solOptionsList: {
     gap: 6,
