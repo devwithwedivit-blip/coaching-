@@ -178,9 +178,45 @@ class MathPdfEngine:
         """
         Synthesizes 2D vertical fractions at span level based on bounding box geometry
         (numerator directly above denominator with high x-overlap and narrow width).
+        Guarded against merging across distinct multiple-choice option lines or words.
         """
         def is_opt(t: str) -> bool:
             return bool(re.match(r'^\([A-Da-d]\)$', t) or re.match(r'^\([1-4]\)$', t) or re.match(r'^[A-Da-d]\.$', t))
+
+        # Identify spans that immediately follow an option label on the same line
+        opt_spans = [s for s in spans if is_opt(s['text'].strip())]
+        def is_opt_start(s: Dict[str, Any]) -> bool:
+            s_ymid = (s['bbox'][1] + s['bbox'][3]) / 2.0
+            for opt in opt_spans:
+                opt_ymid = (opt['bbox'][1] + opt['bbox'][3]) / 2.0
+                if abs(s_ymid - opt_ymid) <= 4.0:
+                    # To the right of option label, within 35 pt
+                    if 0 < (s['bbox'][0] - opt['bbox'][2]) <= 35.0:
+                        return True
+            return False
+
+        def is_valid_math_term(t: str) -> bool:
+            t = t.strip()
+            if not t or len(t) > 10:
+                return False
+            if is_opt(t):
+                return False
+            # Disallow punctuation like colons, semicolons
+            if any(c in t for c in [':', ';', '!', '?']):
+                return False
+            # Disallow spaces followed by letters/units, e.g. "12.5 J", "5000 Hz", "2 m/s"
+            if re.search(r'\s+[A-Za-z]', t):
+                return False
+            # Disallow ordinary English words of length >= 3
+            words = re.findall(r'[a-zA-Z]{3,}', t)
+            math_funcs = {'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'log', 'ln', 'lim', 'det', 'exp', 'max', 'min'}
+            for w in words:
+                if w.lower() not in math_funcs:
+                    return False
+            # Must contain at least a digit, variable, or math symbol
+            if not re.search(r'[0-9a-zA-Z\+\-\*\/\\^_(){}\[\]±√π]', t):
+                return False
+            return True
 
         spans_sorted = sorted(spans, key=lambda s: (s['bbox'][1], s['bbox'][0]))
         used = set()
@@ -194,7 +230,7 @@ class MathPdfEngine:
             w1 = b1[2] - b1[0]
             best_j = None
 
-            if w1 <= 50 and len(t1) <= 10 and not is_opt(t1):
+            if w1 <= 50 and is_valid_math_term(t1):
                 for j in range(i + 1, len(spans_sorted)):
                     if j in used:
                         continue
@@ -203,9 +239,13 @@ class MathPdfEngine:
                     t2 = s2['text'].strip()
                     w2 = b2[2] - b2[0]
                     y_gap = b2[1] - b1[3]
-                    if y_gap > 22:
+                    if y_gap > 8.0:
                         break
-                    if -2 <= y_gap <= 20 and w2 <= 50 and len(t2) <= 10 and not is_opt(t2):
+                    # Vertical gap must be tight (typical fraction gap is 0-6 pt; body line spacing is 14-18 pt)
+                    # Denominator cannot be an option start span and must be a valid math term
+                    if -2.5 <= y_gap <= 7.0 and w2 <= 50 and is_valid_math_term(t2):
+                        if is_opt_start(s2):
+                            continue
                         overlap = min(b1[2], b2[2]) - max(b1[0], b2[0])
                         min_w = min(w1, w2)
                         if min_w > 0 and (overlap / min_w >= 0.35 or overlap > 0):
@@ -291,8 +331,15 @@ class MathPdfEngine:
 
     def _try_merge_fraction(self, top_line: Dict, bot_line: Dict, y_gap: float) -> Optional[str]:
         """Tries to pair top_line (numerator) and bot_line (denominator) if they form a fraction."""
+        if y_gap > 7.0 or y_gap < -3.0:
+            return None
+
         top_spans = top_line['spans']
         bot_spans = bot_line['spans']
+
+        # Guard: Do not merge across lines containing option labels or markers
+        if any(re.search(r'\([A-Da-d1-4]\)', s['text']) for s in top_spans + bot_spans):
+            return None
 
         # Fractions are concise expressions, not full sentences or headings
         if len(top_spans) <= 3 and len(bot_spans) <= 3:
@@ -314,7 +361,8 @@ class MathPdfEngine:
                 return None
             if re.match(r'^\(?\d+\.?\)?$', b_txt) or re.match(r'^\(?[A-Da-d]\.?\)?$', b_txt):
                 return None
-            if any(w in t_txt.lower() for w in ['section', 'marks', 'question', 'evaluate', 'find', 'reaction', 'subscripts', 'year', 'paper', 'solved', 'solid', 'angle', 'strain', 'discover']):
+            disallowed = ['section', 'marks', 'question', 'evaluate', 'find', 'reaction', 'subscripts', 'year', 'paper', 'solved', 'solid', 'angle', 'strain', 'discover', 'zero', 'none', 'these', 'ratio', 'speed', 'true', 'false', 'both', 'only']
+            if any(w in t_txt.lower() for w in disallowed) or any(w in b_txt.lower() for w in disallowed):
                 return None
 
             t_x0 = min(s['bbox'][0] for s in top_spans)

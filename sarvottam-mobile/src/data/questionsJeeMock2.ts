@@ -10,13 +10,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "A rod of mass 20 kg & length 10m is hinged at A\n& hanging vertically. A bullet of mass 5kg moving\nwith velocity 10 m/s sticks to one end of rod. Find\nangular velocity of rod just after the collision\nparticle sticks to it :-",
     "diagram": null,
     "options": {
-      "a": "(7 / 3)\n(rad/ sec / rad/ sec)",
-      "b": "(3 / 7)",
-      "c": "(3 / 10)\n(rad/ sec / 3 rad/sec)",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "(7 / 3)rad/ sec",
+      "b": "(3 / 7)rad/ sec",
+      "c": "(3 / 10)rad/ sec",
+      "d": "^{3 rad/sec}"
     },
     "correctAnswer": "b",
-    "explanation": "(e / ⇒)(x / (1 + ye)\n)(dy + ydx) = 2x dx\n(x / (1 + ye)x(dy + ye / 2)(x / + c)\nxdx) = 2xdx\n() (e / 2)\n() / √)(= x / 2)\n(⇒ / ⇒)(2 / + 1 =)\n^{(x / f (−1) =)}(2x / 6^-1)(+ 4 / e)\nye\n∴ (√)\nHS^-10/11\nTarget:JEE (Main) 2025/27^-10-2024",
+    "explanation": "( 1 )\nex(1 + yex)(dy + ydx) = 2x dx\n⇒ (1 + ye x x dy + ye x dx) = 2xdx\n() (e / 2)\n(1 + yex)\n⇒= x2+ c\nx(2 / + 1 =)2\n(ye / f (−1) =)^{(√ / 6^-1)}(+ 4 / e)\n⇒2x\n∴ (√)\nHS^-10/11\nTarget:JEE (Main) 2025/27^-10-2024",
     "expDiagram": null
   },
   {
@@ -27,13 +27,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "Four rod each of mass m form a square length of\ndiagonal b rotates about its diagonal. Its moment of\ninertia is :-\n2",
     "diagram": null,
     "options": {
-      "a": "(mb / 3)",
-      "b": "^{(2 / 12)}\n(mb / mb)\n2",
-      "c": "((6 / 2) /",
-      "d": "mb)\nENTHUSE + LEADER COURSE - 3"
+      "a": "(mb / 3)\n2",
+      "b": "(mb / 12)\n2",
+      "c": "(mb / 6)",
+      "d": "mb2\nENTHUSE + LEADER COURSE - 3"
     },
     "correctAnswer": "a",
-    "explanation": "( 2 )\n(xcos x)dy + (xysinx + ycos x – l)dx = 0, \n^{(π / 2)}\n(0 < x < / dy)\nx sin x + cos x\n+ () y =(1 / x cos x)\ndx x cos x\nIF = x secx\ny. x sec x =(x sec x / x cos x)dx = tan x + c\n(∫ / π)\ny =^{(√ / π)}\n3 3\n(Since / Hence)(( / c =)(3 / √)() / 3)\n(π / 6)y ((π / 6)) + y^{′}((π / 6))∣∣= |−2| = 2\n(Hence / Ans)(∣∣∣ / ( 6 ))\n^{∣}",
+    "explanation": "( 2 )\n(xcos x)dy + (xysinx + ycos x – l)dx = 0, \n0 < x <^{(π / 2)}\n(dy / dx)+ () y =\nx sin x + cos x 1\nx cos x x cos x\nIF = x secx\nx sec x\ny. x sec x = ∫dx = tan x + c\nx cos x\nSince y ((π / 3)) =^{(√ / π)}\n3 3\nHence c =√3\nHence ∣∣∣(π / 6)y ((π / 6)) + y^{′}((π / 6))∣∣= |−2| = 2\n^{∣}",
     "expDiagram": null
   },
   {
@@ -41,16 +41,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Wave Motion & Sound Waves",
-    "question": "A light rod carries three equal masses A, B and C\nas shown in figure. The velocity of B in vertical\nposition of rod if it is released from horizontal\nposition as shown in figure is :-\n(√ / √)(√ / √)\n2g l^{l}",
+    "question": "A light rod carries three equal masses A, B and C\nas shown in figure. The velocity of B in vertical\nposition of rod if it is released from horizontal\nposition as shown in figure is :-",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "^{(18g / 7)}\n^{l}^{l}",
-      "c": "^{(4g / 3)}",
-      "d": "^{(8g / 7)}"
+      "a": "√2g l",
+      "b": "√^{(18g / 7)}\n^{l}",
+      "c": "√^{(4g / 3)}",
+      "d": "√^{(8g / 7)}\n^{l}^{l}"
     },
     "correctAnswer": "d",
-    "explanation": "(dy / dx)+(4x / −1))y=(x / 2)(+ / −1)),x>1\n2\n((x / 2)^{(2 / 4x)}(x\n(5 / 2)\n∫dx\n(= / I.F. = (x)(x / 2)\nI.F. e^-1\n(– / 2)(1) / −1)(2 / 2)\n⇒d(y.(x))=(x / 2)(+ / −1)).(x^-1)\n(2 2 2 / (5 / 2))\n((x / =)\n⇒d y.x^-1)(x / 2)(+ / −1))dx ...(1)\n22 2\n(∫ / −1))(( / =)(( / 2)() / ()(∫ / √)\n(1 / 2)\n((x / −1)\n22√+2 ln x+x2)+ C\n(y (x / ⇒)(x / √)(−1 / 3)\n(C = / So)(− / −1)\n(2)√x2^-1+2 ln(x+√x2^-1)−√3\n2\n(x / αβγ)(= / = 6)\n⇒\n9610ZJM\n(Ans / f(x) = sin)(( 0 ) / −1)",
+    "explanation": "( 6 )\n(dy / dx)+(4x / −1))y=,x>1\nx+2\n(x2(x2^-1)(5 / 2)\n∫(4x / 2)dx\nI.F. = e x^-1\nI.F. = (x 2 – 1)2\n22 x+222\n⇒d(y.(x^-1))=.(x^-1)\n(x2^-1)^{(5 / 2)}\n⇒∫d(y.(x^-1))=∫(x / 2)(+ / −1))dx ...(1)\n22 2\n(x^{(1 / 2)}\ny (x2^-1)2=√x2^-1+2 ln(x+√x2^-1)+ C\n⇒ C = −√3\nSo (x2^-1)=√x2^-1+2 ln(x+√x2^-1)−√3\n2\n⇒αβγ = 6\n9610ZJM",
     "expDiagram": null
   },
   {
@@ -58,16 +58,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Simple Harmonic Motion (SHM)",
-    "question": "A wheel rolls without sliding along a horizontal\nroad as shown. The velocity of the center of the\nwheel is represented by → . Point P is painted on\nthe rim of the wheel. The instantaneous\nacceleration of point P is:\n(→ / ↑)",
+    "question": "A wheel rolls without sliding along a horizontal\nroad as shown. The velocity of the center of the\nwheel is represented by → . Point P is painted on\nthe rim of the wheel. The instantaneous\nacceleration of point P is:",
     "diagram": null,
     "options": {
-      "a": "represented by",
+      "a": "represented by →",
       "b": "represented by ←",
-      "c": "represented by ­",
+      "c": "represented by ­↑",
       "d": "zero"
     },
     "correctAnswer": "c",
-    "explanation": "2(+ sin / θ)(( / 0,)(√ / π)2\n((2|x| / 1 + x))(|x| / 1 + x))\n^{(−1 / [)}\n|x| = tan θ, ∈2() / −1)\n(Put / ∴)\n(f(x) = sin / 2θ + θ,)^{(−1 / θ)}\n(sin 2θ) + sin(sin θ)\n=(⎡ / ⎣)⎢⎢⎢(∈ / ∈)([ / ()(0, / π)(] / ))\n(π / 4)\nπ −2θ + θθ,(π / 2)\nf(x) = 3tan^-1^{(4 / |x|,)}x[−1,1]\n∴ ∈\n^{(1 / ∫)}(3tan^-1x −tan^-1x) dx\n(Area = 2 / 1)\n(0 / tan)\n(∫ / 0)\n−1x dx\n(= 4 / = π −ln 4)\n∴[b −a] = [4 −π] = 0\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024",
+    "explanation": "( 0 )\n1 + x2(( / 0,)(√ / π)1 + x2\nf(x) = sin^-1() + sin^-1)\n2|x||x|\nPut|x| = tan θ,θ ∈[2() / −1)\n∴f(x) = sin^-1(sin 2θ) + sin(sin θ)\n⎡2θ + θ,θ ∈[0,(π / 4)]\n=⎢⎢⎢\n⎣π −2θ + θθ ∈(π / 4),(π / 2)\n(( / |x|,)() / x)\n∴f(x) = 3tan^-1 ∈[−1,1]\n1\nArea = 2∫(3tan^-1x −tan^-1x) dx\n0\n1\n= 4∫tan x dx^-1\n(0 / = π −ln 4)\n∴[b −a] = [4 −π] = 0\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024",
     "expDiagram": null
   },
   {
@@ -78,13 +78,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "A uniform rod of mass m and length l is connected\nwith two ideal strings from ends of rod as shown in\nfigure, if tensions in strings are T & T 1 2\nrespectively then :-",
     "diagram": null,
     "options": {
-      "a": "^{>}(mg / 2)\n^{(T / T >)}_{(1 / 2)}",
-      "b": "(mg / 2)",
-      "c": "(mg / 2)\n^{(T < / T = T =)}_{(1 / 1)}",
-      "d": "2(mg / 2)\n9610ZJM"
+      "a": "^{T}1^{>}^{(mg / 2)}",
+      "b": "^{T >}2^{(mg / 2)}",
+      "c": "^{T <}1^{(mg / 2)}",
+      "d": "^{T = T =}1 2(mg / 2)\n9610ZJM"
     },
     "correctAnswer": "d",
-    "explanation": "( 2 )\nP is intersecton point of line AB & 2x + 3y + 1 =\n((0 / ∴) / P(7, – 5))\nHS^-11/11",
+    "explanation": "( 2 )\nP is intersecton point of line AB & 2x + 3y + 1 =\n0\n∴ P(7,–5)\nHS^-11/11",
     "expDiagram": null
   },
   {
@@ -101,7 +101,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
       "d": "Magnitude of angular momentum remains same."
     },
     "correctAnswer": "c",
-    "explanation": "( A)\nEquation of DE is y = 2\nso, point of intersection\n(22 / 3), 2 E ((33 / 4), 2)\n(D / ⇒)(( / 22)() / < λ <)(and / 33)\n4\n(3 / Ans)",
+    "explanation": "( A)\nEquation of DE is y = 2\nso, point of intersection\nD(22 / 3), 2) and E ((33 / 4), 2)\n(( / 22)\n⇒< λ <(33 / 4)\n(3 / ()",
     "expDiagram": null
   },
   {
@@ -109,7 +109,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Modern Physics & Nuclear Physics",
-    "question": "Rod of mass m and length l is free to rotate about\npoint 'O' in vertical plane. A particle having same\nmass m moving horizontally with velocity v hits0\nthe rod perpendicular at distance (l / 4) from the top\nend 'O' and stops. Find the magnitude of impulse\ndue to hinge on the rod due to collision.",
+    "question": "Rod of mass m and length l is free to rotate about\npoint 'O' in vertical plane. A particle having same\nmass m moving horizontally with velocity v hits0\nl\nthe rod perpendicular at distance from the top\n4\nend 'O' and stops. Find the magnitude of impulse\ndue to hinge on the rod due to collision.",
     "diagram": null,
     "options": {
       "a": "(mv / 19)",
@@ -118,7 +118,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
       "d": "(5mv / 8)0\n0"
     },
     "correctAnswer": "d",
-    "explanation": "( C)\nx – 3y = q ... (1)\nax + 2y = q ... (2)\nax + y = r ... (3)\nit means equation (1) & (3) are perpendicular \n(1 / 3)3= −a\n(m / m)_{(1 / 1)}(= / × m)(, / 3)(m / = −1)\na = 3 \nIt satisfied a 2– 9a + 18 = 0",
+    "explanation": "C)\nx – 3y = q ... (1)\nax + 2y = q ... (2)\nax + y = r ... (3)\nit means equation (1) & (3) are perpendicular \nm1=(1 / 3),m3= −a\nm 1 × m 3= −1\na = 3 \nIt satisfied a 2– 9a + 18 = 0",
     "expDiagram": null
   },
   {
@@ -130,12 +130,12 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "diagram": null,
     "options": {
       "a": "(mg / 2)",
-      "b": "(mg / 2)\n(cos / tan)(θ / θ)",
-      "c": "(mg / 2)",
+      "b": "(mg / 2)cosθ",
+      "c": "(mg / 2) tanθ",
       "d": "(mg / 2)cot θ\nENTHUSE + LEADER COURSE - 3"
     },
     "correctAnswer": "d",
-    "explanation": "( C)\n(2 / y=1 gives)\nHomogenize x + y 2– 4x^-2y + 1= 0 with line\n_{(α / x + y)}(x + / 2)\n2^-4x (x + αy) –2y (x + αy)+ (x + αy)2\n= 0\nFor angle to be 90°, we need coeff of x + coeff2\n(of y = 0 / –)(2 / 4 +1) + (1)\n2α +α2) =0\n((1 / ⇒)(– / 1= 0)\n(2 / Sum = 2)\nα-2α–\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024\n(Ans / Equation)",
+    "explanation": "( C)\nHomogenize x + y 2 2– 4x^-2y + 1= 0 with line\nαy=1 gives\n(x + / 2)\nx + y 2^-4x (x + αy) –2y (x + αy)+ (x + αy)2\n= 0\nFor angle to be 90°, we need coeff of x + coeff2\n2\nof y = 0\n(1–-2α +α2) =0\n(4 +1) + (1 / 2)\n⇒α-2α–1= 0\n Sum = 2\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024",
     "expDiagram": null
   },
   {
@@ -143,16 +143,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Thermodynamics & Kinetic Theory",
-    "question": "A solid sphere of mass m is placed on a rough\ninclined plane as shown in figure. The coefficient\nof friction μ is not sufficient for pure rolling. The\ncentre of sphere slides a length l on the incline\nfrom rest and its kinetic energy becomes k. Then\nwork done by friction will be :-\n^{(– / –)}^{(μmg / l)}^{(l / sin)}^{(cos / + k)}\n(",
+    "question": "A solid sphere of mass m is placed on a rough\ninclined plane as shown in figure. The coefficient\nof friction μ is not sufficient for pure rolling. The\ncentre of sphere slides a length l on the incline\nfrom rest and its kinetic energy becomes k. Then\nwork done by friction will be :-",
     "diagram": null,
     "options": {
-      "a": "θ / (mg / 2))\n^{(θ / sin)}",
-      "b": "(− / −)(5 / 2)(μmg / mg)(l / sin)",
-      "c": "θ + k",
-      "d": "lθ\n5"
+      "a": "−^{μmg}^{l}^{cos}^{θ}",
+      "b": "−^{mg}^{l}^{sin}^{θ}^{+ k}",
+      "c": "−^{(2 / 5)}μmg l sin θ + k",
+      "d": "−^{(2 / 5)}mg l sin θ"
     },
     "correctAnswer": "b",
-    "explanation": "( A)\n of diagonal AC is \ny^-0 = −2 (x^-3)\n(2x + y = 6 / Solving)\n⇒\n2x + y = 6 and x = 2y\nwe get y =(6 / 5)(12 / 5)\n(Then, / ∴)(and x = / 12)\n Centre of square is (,(6 / 5))\n5\n(∣ / ∣)(∣ / ∣)\nLet slope of side AB or AD is m then, (m −(−2) / 1 + m (−2))= 1\n∣∣\nm = −(1 / 3)m = 3\nAB : y^-0 = 3 (x^-3)\nAD : y^-0 = −(1 / 3)(x^-3)",
+    "explanation": "( A)\nEquation of diagonal AC is \ny^-0 = −2 (x^-3)\n⇒2x + y = 6\nSolving 2x + y = 6 and x = 2y\nThen,we get y =(6 / 5)and x =(12 / 5)\n∴ Centre of square is ((12 / 5),(6 / 5))\n∣∣\nm −(−2)\nLet slope of side AB or AD is m then, ∣∣= 1\n∣1 + m (−2)∣\nm = −(1 / 3)m = 3\nAB : y^-0 = 3 (x^-3)\nAD : y^-0 = −(1 / 3)(x^-3)",
     "expDiagram": null
   },
   {
@@ -177,16 +177,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Current Electricity",
-    "question": "A slit of width a is illuminated by red light of\n6500^{(o / A)}\nwavelength . If the first diffraction\nminimum falls at 30°, then the value of a is\n^{(−4 / 1.3 micron)}",
+    "question": "A slit of width a is illuminated by red light of\n6500^{(o / A)}\nwavelength . If the first diffraction\nminimum falls at 30°, then the value of a is",
     "diagram": null,
     "options": {
-      "a": "6.5 × 10 mm",
-      "b": "[Refer to Question Diagram for Option B]",
-      "c": "(o / A)\n(3250 / 2.6 × 10)",
-      "d": "−4cm\n9610ZJM"
+      "a": "6.5 × 10^-4mm",
+      "b": "1.3 micron\no",
+      "c": "3250 A",
+      "d": "2.6 × 10^-4cm\n9610ZJM"
     },
     "correctAnswer": "b",
-    "explanation": "( A)\n|x| ≤ 4 and |y| ≤ 4 \nArea of shaded portion\nΔ =^{(4 / ∫)}(2 / x)dx ⇒[2lnx]^{(4 / 1/2)}^{⇒}^{2 [ln4 + ln2] = ln64}\n1/2\nShaded region = 14 –λn64",
+    "explanation": "( A)\n|x| ≤ 4 and |y| ≤ 4 \nArea of shaded portion\n4\nΔ =∫(2 / x)dx ⇒[2lnx]^{(4 / 1/2)}^{⇒}^{2 [ln4 + ln2] = ln64}\n1/2\nShaded region = 14 –λn64",
     "expDiagram": null
   },
   {
@@ -194,16 +194,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Magnetism & Magnetic Effects of Current",
-    "question": "In the Young's double slit experiment a\nmonochromatic source of wavelength is used. Theλ\nintensity of light passing through each slit is I . The0\nintensity of light reaching the screen S at a point P,c\na distance x from 0 is given by (Take d << D)",
+    "question": "In the Young's double slit experiment a\nmonochromatic source of wavelength is used. Theλ\nintensity of light passing through each slit is I . The0\nintensity of light reaching the screen S at a point P,c\na distance x from 0 is given by (Take d << D)\n2π2d",
     "diagram": null,
     "options": {
-      "a": "I0cos2(π / λ)(D / d)x",
-      "b": "4I0cos2(π / λ)(d / D)x\n(( / ()() / ))(( / ()() / ))",
-      "c": "I 0 sin(π / λ)(d / D)x",
-      "d": "4I 0 cos(π / λ)(d / D)x\n^{(2 / Statement)}(2 / -1:)\n2"
+      "a": "I0cos((D / d)x)",
+      "b": "4I0cos((π / D)x)\nλλ",
+      "c": "I0sin2((π / 2)(d / D)x)",
+      "d": "4I0 cos((π / 2)(d / D)x)\nλλ"
     },
     "correctAnswer": "b",
-    "explanation": "( B)\nRequired Area \n⎡−⎤\n(1 / 2)× 10 × 4 −^{(3 / ∫)}√−x^-3dx +^{(6 / ∫)}√x + 3 dx⎥\n(⎢ / (−x^-3))⎣−4⎦\n(−3 / (x + 3))\n20 −(2 / 3)[^{3/2}](−3 / −4)+(2 / 3)^{(3 / 2)}](6 / −3)^{]}\n([ / [)([ / ])\n20 −(2 / 3)[0^-1]+(2 / 3)[9^{3/2}]\n20 −(2 / 3)+(2 / 3)× 33]\n([ / [)\n20 −(2 / 3)+ 18]\n= 2 −(2 / 3)=(4 / 3)\nHS^-8/11\nTarget:JEE (Main) 2025/27^-10-2024\n(Ans / 2)",
+    "explanation": "( B)\nRequired Area \n⎡−36⎤\n(1 / 2)× 10 × 4 −⎢∫√−x^-3dx +∫√x + 3 dx⎥\n⎣⎦\n−4^-3\n20 −(−x^-3)^{3/2}−3+(x + 3)(3 / 2)6\n[(2 / 3)[](2 / 3)[]^{]}\n−4^-3\n20 −[(2 / 3)[0^-1]+(2 / 3)[9^{3/2}]]\n20 −[(2 / 3)+(2 / 3)× 33]\n20 −[(2 / 3)+ 18]\n= 2 −(2 / 3)=(4 / 3)\nHS^-8/11\nTarget:JEE (Main) 2025/27^-10-2024",
     "expDiagram": null
   },
   {
@@ -211,7 +211,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Work, Energy & Momentum",
-    "question": "In YDSE, as shown in figure, central\nbright fringe is formed at O. If a liquid is filled \nbetween plane of slits and screen, the central bright\nfringe is shifted in upward direction. \nand Statement^-2: If path difference at O increases, \ny-coordinate of central bright fringe will change.",
+    "question": "Statement^-1: In YDSE, as shown in figure, central\nbright fringe is formed at O. If a liquid is filled \nbetween plane of slits and screen, the central bright\nfringe is shifted in upward direction. \nand Statement^-2: If path difference at O increases, \ny-coordinate of central bright fringe will change.",
     "diagram": null,
     "options": {
       "a": "Statement^-1 is true, statement^-2 is true and\nstatement^-2 is correct explanation for\nstatement^-1.",
@@ -220,7 +220,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
       "d": "Statement^-1 is false, statement^-2 is true."
     },
     "correctAnswer": "d",
-    "explanation": "( D)\ny = 4x ; x = 4y2\nx = 4; y = 4\nx = 0; y = 0\nS=^{(4 / ∫)}x^{(2 / 4)}dx =^{(3 / 3.4)}x=(64 / 3.4)=(16 / 3)\n3\n(0 / 4)\nS = ^{(2 / 4)}dy = ^{(3 / 12)} = (64 / 12) = (16 / 3)\ny y\n1(∫ / 0)\nS2^{(4 / ∫)}2√^{(2 / 4)} dx = 2 ⋅(2 / 3)x^{(3 / 2)}^{∣}(4 / 0)−^{(3 / 12)}∣∣(4 / 0)\nx x\n(= / 32)0([ / 16)(x − / 16)(] / ⇒)(∣∣ / = S)\n∣\n=−=S1= S23\n3 3 3",
+    "explanation": "( D)\ny = 4x ; x = 4y 2 2\nx = 4; y = 4\nx = 0; y = 0\n4\n23\nS3=∫(x / 4)dx =(x / 3.4)=(64 / 3.4)=(16 / 3)\n(0 / 4)\n23\nS = 1∫(y / 4)dy = (y / 12) = (64 / 12) = (16 / 3)\n(0 / 4)\n2434\nS2=∫[2√x −(x / 4)] dx = 2 ⋅(2 / 3)x^{(3 / 2)}∣∣−(x / 12)∣∣\n(∣ / 0 ∣ 0)\n0\n=(32 / 3)−(16 / 3)=(16 / 3)⇒S1= S2= S3",
     "expDiagram": null
   },
   {
@@ -228,16 +228,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "System of Particles & Rotational Motion",
-    "question": "Light of wavelength λ in air enters a medium of\nrefractive index μ. Two points in this medium, lying\nalong the path of this light, are at a distance x apart.\nThe phase difference between these points is :",
+    "question": "Light of wavelength λ in air enters a medium of\nrefractive index μ. Two points in this medium, lying\nalong the path of this light, are at a distance x apart.\nThe phase difference between these points is :\n2πμx 2πx",
     "diagram": null,
     "options": {
-      "a": "(πμ / λ)",
-      "b": "^{(π / μλ)}\n2 x 2 x",
-      "c": "(μ / λ)",
-      "d": "(2 / μ)(π / −1))\n2π( −1)x x\n(λ\nENTHUSE + LEADER COURSE - 3"
+      "a": "[Refer to Question Diagram for Option A]",
+      "b": "λμλ",
+      "c": "[Refer to Question Diagram for Option C]",
+      "d": "^{(π / −1))}\n2π(μ −1)x 2 x\nλ(μλ\nENTHUSE + LEADER COURSE - 3"
     },
     "correctAnswer": "a",
-    "explanation": "( D)\n2^{(3 / ∫)}2√xdx + 2^{(√ / ∫)}√21 −x2dx\n21\narea \n(1 / ()(3 / + 21sin)\n(( / =)(−6 / 8)\n() / 3 −)\nΔ =(8 / 3)3√3^-1(2 / 7)√3^-1\n() / ()√\n(√ / 2)\n(( / 3 −)\n(1 / 2)Δ −21sin^-1(2 / 7)))\n3\n√2\n=√^{(4 / 3)}\n9610ZJM",
+    "explanation": "( D)\n3√21\narea 2∫2√xdx + 2∫√21 −x2dx\n1 3\nΔ =(8 / 3)(3√3^-1) + 21sin^-1((2 / 7)) −6√3\n√2√3 −^{(8 / 3)}\n(1 / 2)(Δ −21sin^-1((2 / 7))) =\n√2\n=√3 −^{(4 / 3)}\n9610ZJM",
     "expDiagram": null
   },
   {
@@ -245,16 +245,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Wave Motion & Sound Waves",
-    "question": "In the figure, if a parallel beam of white light is\nincident on the plane of the slits S and S then the2\ndistance of the nearest white spot on the screen(1 / λ)\nfrom O is [Assume D >> d, d >> ]",
+    "question": "In the figure, if a parallel beam of white light is\nincident on the plane of the slits S and S then the 1 2\ndistance of the nearest white spot on the screen\nfrom O is [Assume D >> d, d >> λ]",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(d / 3)\n(0 / d)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "(d / 6)\n2"
+      "a": "0",
+      "b": "(d / 3)",
+      "c": "(d / 2)",
+      "d": "(d / 6)"
     },
     "correctAnswer": "b",
-    "explanation": "( B)\nA =(1 / 2).4.4) −8\n(( / = 4 = A)(4 + / 1)\nRequired area = 8 + A + A1\n= 8 + 8 = 16\n(Ans / y = x)(( / √)(D / 2 −x)",
+    "explanation": "( B)\nA = (4 +(1 / 2).4.4) −8\n= 4 = A1\nRequired area = 8 + A + A1\n= 8 + 8 = 16",
     "expDiagram": null
   },
   {
@@ -262,16 +262,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Simple Harmonic Motion (SHM)",
-    "question": "Calculate the resolving power of a telescope,\nassuming the diameter of the objective lens to be 6\ncm and the wavelength of light used to be 540 nm.\n(4 / 3)(3 / 4)",
+    "question": "Calculate the resolving power of a telescope,\nassuming the diameter of the objective lens to be 6\ncm and the wavelength of light used to be 540 nm.",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(3.2 × 10 / 9.2 × 10)(3.1 × 10 / 9.1 × 10)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "3.2 × 104",
+      "b": "3.1 × 103\n3 4",
+      "c": "9.2 × 10",
+      "d": "9.1 × 10"
     },
     "correctAnswer": "d",
-    "explanation": ")\n2^{(1 / ∫)}x(√2 −x)dx Let 2 – x = t2\n0\n dx = -2\n2(1 / ∫)2)t(−2t)dt\n((2 −t / 1)\n(√ / = 4)\n2\n(∫ / √)\n(2t2−t4)dt\n(2 / 3)2\n4(2t / 3)^{(5 / 5)}(√ / 1)\nt\n(( / ()\n(− / 2)() / √)\n4^{(√ / 3)}−) −((2 / 3)−(1 / 5))\n(4 4 2 / (5 / 7))\n(( / 4(8)(− / 2^-7))15\n4^{(√ / 15)})\n(8 2 / (√ / 15))\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024",
+    "explanation": "( D)\ny = x√2 −x\n1\n2∫x(√2 −x)dx Let 2 – x = t2\n0\n dx = -2\n1\n2∫(2 −t2)t(−2t)dt\n√2\n1\n= 4∫(2t2−t4)dt\n√\n(2 / 3)√2\n5\n4(2t / 3)−(t / 5)\n(( / ()\n() / √)1\n4^{(√ / 3)}−) −((2 / 3)−(1 / 5))\n4 2 4 2\n5\n(( / 4(8)\n4^{(√ / 15)}−(7 / 15))\n8 2\n^{(√ / 15)}\n2^-7)\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/27^-10-2024",
     "expDiagram": null
   },
   {
@@ -279,16 +279,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Electromagnetic Induction & AC",
-    "question": "The intensity of light from a source is\n((500 / π)) W/m2. Find the amplitude of electric field\nin this wave.\n√2√2\n(3 × 10 / √)(N/C / 2)(2 / 2)(3 × 10 / 3 × 10)(N/C / N/C)",
+    "question": "The intensity of light from a source is\n((500 / π)) W/m2. Find the amplitude of electric field\nin this wave.",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "[Refer to Question Diagram for Option B]",
-      "c": "(3 / 2)× 10 N/C",
-      "d": "√1"
+      "a": "√3 × 102N/C",
+      "b": "2√3 × 102N/C",
+      "c": "(√ / 2)× 102N/C",
+      "d": "2√3 × 10 N/C\n31"
     },
     "correctAnswer": "b",
-    "explanation": "( B)\nf(x) = |2{x} −1| + |2{x} + 1|\n|2{x} −1| + 2{x} + 1\n⎧⎪(1 / 2)\n=⎨(2 / 4{x})(0 / 1)(⩽ / ⩽)({x} < / {x} < 1)\n⎪⎩\n2\nRequired Area = 2×(1 / 2)+(1 / 2)×(4 + 2)×(1 / 2)\n(3 / 2)(5 / 2) square units\n(= 1 + / Ans)(= / ))\n(D / 2)",
+    "explanation": "( B)\nf(x) = |2{x} −1| + |2{x} + 1|\n|2{x} −1| + 2{x} + 1\n⎧⎪2 0 ⩽{x} <(1 / 2)\n=⎨\n⎪⎩4{x}_{(1 / 2)}⩽{x} < 1\nRequired Area = 2×(1 / 2)+(1 / 2)×(4 + 2)×(1 / 2)\n= 1 +(3 / 2)=(5 / 2) square units",
     "expDiagram": null
   },
   {
@@ -296,16 +296,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Electrostatics & Capacitance",
-    "question": "A carbon dioxide laser emits a sinusoidal\nelectromagnetic wave that travel in vacuum in the→\nnegative X-direction. The wavelength is 10.6→ μm\n(and the / max)\nE field is parallel to z-axis with\nE= 1.5 Mv/m. Write vector equation of as B\n→\nfunction of time and position.\nB(x, t) = J(5.0 × 10^cos [(5.93 × 10 5 rad/m)x",
+    "question": "A carbon dioxide laser emits a sinusoidal\nelectromagnetic wave that travel in vacuum in the→\nnegative X-direction. The wavelength is 10.6→ μm\nand the E field is parallel to z-axis with\nEmax= 1.5 Mv/m. Write vector equation of as B\n→\nfunction of time and position.\nB(x, t) = J(5.0 × 10^-3 cos [(5.93 × 10 5 rad/m)x",
     "diagram": null,
     "options": {
-      "a": "→14^{(−3 / rad/s))}(T) / t])\n+(1.78 × 10\nB(x, t) = −J(5.0 × 10^cos [(5.93 × 10 5 rad/m)x",
-      "b": "→(−3 / rad/s))(T) / t])\n+(1.78 × 1014\nB (x, t) = K(1.5 × 10^cos [(5.93 × 105rad/m)x",
-      "c": "→^{(6 / rad/s))}(V /m) / t])\n+(1.78 × 1014\nB (x, t) = −K(1.5 × 10^cos [(5.93 × 10 5 rad/m)x",
-      "d": "(6 / rad/s))(V /m) / t])\n+(1.78 × 1014\n9610ZJM"
+      "a": "→14(T) / t])\n+(1.78 × 10 rad/s)\nB(x, t) = −J(5.0 × 10^-3 cos [(5.93 × 10 5 rad/m)x",
+      "b": "→14(T) / t])\n+(1.78 × 10 rad/s)\nB (x, t) = K(1.5 × 10^6cos [(5.93 × 105rad/m)x",
+      "c": "→14(V /m) / t])\n+(1.78 × 10 rad/s)\nB (x, t) = −K(1.5 × 10^6 cos [(5.93 × 10 5 rad/m)x",
+      "d": "14(V /m) / t])\n+(1.78 × 10 rad/s)\n9610ZJM"
     },
     "correctAnswer": "a",
-    "explanation": "(( / +)−1)\n(dy / dx)^{(x−y / 2)}((2 / x)^{(y / −1)}= 0\nx, y > 0, y(1) = 1, y (2) = ?\n(dy / dx)(2 / 2)^{(x / y)}((2 / (2)^{(y / x)}(−1) / −1))\n(= − / y)\n(2 / y)(2 / x)^{(x / −1)}\n(∫ / ln 2)(−1 / 2)(∫ / dy =)(2 / −)(dx / ∫)\n2(dy = − / y)\n(ln 2 / −1)(1 / ln 2)(2 / 2)^{(x / x)}(ln 2 / −1)dx\n(1 / 1)(∫ / ln|2)\n(2 / y)^{(y / −1| =)}\n(−1 / ln 2)ln|2x^-1| + C\nln 2\nAt x= 1, y = 1\nPutting this values in above relation we get C = 0\n(ln|2 / x)^{(y / −1) (2)}(−1| + ln|2 / y)^{(x / −1) = 1)}\n−1| = 0\n((2 / y)\n−1 =x(1 / −1)\n(2 / At x = 2)\n2\ny=(1 / 3)(4 / 3)\n(2 / y = log)(+ 1 = / 4)\n2= log24 −log23 = 2 −log23\n3\nHS^-9/11",
+    "explanation": "( \n(D / 2)() / x−y)\ny\n(dy / dx)+((2 / x)(−1) / −1)= 0\n2\nx, y > 0, y(1) = 1, y (2) = ?\nxy\n(dy / dx)= −(2 / 2)y((2 / (2)x(−1) / −1))\nyx\n∫(2 / y)dy = −∫(2 / x)dx\n2 2\n(−1 / 2)y(−1 / 1)x\n(1 / ln 2)∫y(ln 2 / −1)dy = −∫(2 / 2)x(ln 2 / −1)dx\n(2 / y)(ln 2 / x)\n(1 / ln 2)ln|2^-1| =(−1 / ln 2)ln|2^-1| + C\nAt x= 1, y = 1\nPutting this values in above relation we get C = 0\nln|2y^-1| + ln|2x^-1| = 0\n(2x^-1) (2y^-1) = 1\n2y^-1 =x(1 / −1)\n2\nAt x = 2\n2y=(1 / 3)+ 1 =(4 / 3)\ny = log2(4 / 3)= log24 −log23 = 2 −log23\nHS^-9/11",
     "expDiagram": null
   },
   {
@@ -313,16 +313,16 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Modern Physics & Nuclear Physics",
-    "question": "Electric field of plane electromagnetic wave\n(– / 10)\npropagating through a non magnetic medium is\ngiven by E = 20cos (2 × 10 t – 200x) V/m. The\ndielectric constant of the medium is equal to\n: (Take μ = 1)r",
+    "question": "Electric field of plane electromagnetic wave\npropagating through a non–magnetic medium is\ngiven by E = 20cos (2 × 10 t 10– 200x) V/m. The\ndielectric constant of the medium is equal to\n: (Take μ = 1)r",
     "diagram": null,
     "options": {
       "a": "[Refer to Question Diagram for Option A]",
-      "b": "(9 / 1)(2 / 3)",
+      "b": "2\n(9 / 1)",
       "c": "[Refer to Question Diagram for Option C]",
-      "d": "3"
+      "d": "3\n3"
     },
     "correctAnswer": "a",
-    "explanation": "( B)\nLet, y = tx\n(dy / dx)(dt / dx)\n(= t + x / dt)\n∴tx = x t2(φ(t / ′)^{(2 / 2)}() / ))\ndx(( / φ(t)(+ / 2)φ() / tφ)\n(( / + xt)(t + x / dt)() / = t)\n((t / ∫))\nt22+() / 2)^{(′ / φ(t)}((t / 2)^{(2 / ))}dt =(dx / x)\n(dx / 2)(∫ / )2tdt = dp)\nφ^{′}(t)\nφ∴φ'(t 2\n(Let / ∫)((t / dy)() = p / dx)\n⇒= ∫(1 / 2)l nφ(t 2) = l nx + l nc\n2p\n(x / ()\n(φ / ()() / ))\n(y / x)^{(2 / 2)} = kx2, φ(1) = k\n (t 2 2 k φ^{(2 / 4)} = 4φ(1)\ny\n(φ / Ans)() = x / C)",
+    "explanation": "( B)\nLet, y = tx\n(dy / dx)= t + x(dt / dx)\n2\n(( / φ(t)φ^{′})() / tφ)\n∴tx (t + x(dt / dx)) = x t2+(φ(t / (t)() / 2)\n2^{′}2\nt2+ xt(dt / dx)= t2+() / 2)∫((t / φ(t)() / ))dt = ∫(dx / x)\nφ^{′}(t)2\n Let φ(t2) = p ∴φ'(t2)2tdt = dp\n⇒∫(dy / 2p)= ∫(dx / x)(1 / 2)l nφ(t 2) = l nx + l nc\nφ ((y / x)) = kx2, φ(1) = k\n2\n2\nφ (t 2) = x 2 k φ ((y / 4)) = 4φ(1)\n2",
     "expDiagram": null
   },
   {
@@ -336,10 +336,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
       "a": "AC only",
       "b": "DC only",
       "c": "Both AC and DC",
-      "d": "Neither AC or DC\n(SECTION / section)(B / contains)(: ( / 05)(Maximum / questions)\n-Marks: 20)\nThis\n(. /"
+      "d": "Neither AC or DC\n \n(B / 05)\nThis section contains questions.\nThe answer to each question is a"
     },
     "correctAnswer": "c",
-    "explanation": "(( / =)() / y)\n(dy / dx)(( / x (y)(x + y / 3)^{(3 / −x))}\n)\n(⇒ / ⇒)(dy(xy / 3)(3 / (xdy)(– / –)\n x2) = (xy + y4)dx\n(y / x)\n ydx) = x(ydx + xdy)\ny (y / x)\n(⇒ / ⇒)(3 / d)(d / ()() / =)\n(2 / y)(( / y)(= x d(xy) / d(xy))\n() / 2)\n(x / 1)(x / ))^{(2 / + c)}\n((xy) / 1)\n⇒((y / x)\n2(= − / –)\n(xy / 2) Þ c = 0)\nPasses through (4, \nSo y = 3^-2x\n\n(Ans / x)(( 1 ) / (1 + ye)",
+    "explanation": "( \n(C / y)() / ()\nx + y3\n(dy / dx)=() / −x))\n3\n(x (y / dy(xy)3 2 4\n⇒– x) = (xy + y)dx\n⇒3(xdy – ydx) = x(ydx + xdy)\n(y / x)\n⇒2 3 d(y / x)) = x d(xy)\n(( / y)\n(y / ()\n⇒(y / x)d =(d(xy) / 2)\n() / 2)\n(x / ))\n((xy) / 1)\n⇒(1 / 2)((y / x)= −+ c\nxy\nPasses through (4, –2) Þ c = 0\nSo y = 3^-2x",
     "expDiagram": null
   },
   {
@@ -347,7 +347,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B (Numerical)",
     "topic": "Thermodynamics & Kinetic Theory",
-    "question": "Young's double slit experiment is conducted in a\nliquid of refractive index μ as shown in figure. A1\nthin transparent slab of refractive index μ is placed\n(2 / , t = 8)\nin front of the slit S. If μ2=(3 / 2), μ1=(4 / 3) μm,\nthe magnitude of optical path difference (wrt(2 / m is :)\nliquid) at 'O' in μ\nENTHUSE + LEADER COURSE - 3",
+    "question": "Young's double slit experiment is conducted in a\nliquid of refractive index μ as shown in figure. A1\nthin transparent slab of refractive index μ is placed2\nin front of the slit S",
     "diagram": null,
     "options": {
       "a": "1",
@@ -364,7 +364,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B (Numerical)",
     "topic": "Kinematics & Dynamics",
-    "question": "The polarizing angle for light in air that is incident\non a certain interface is 60o. What is the angle (in\ndegree) of refraction of light incident at this angle ?",
+    "question": "If μ2=(3 / 2), μ1=(4 / 3), t = 8 μm,\nthe magnitude of optical path difference (wrt\nliquid) at 'O' in μm is :\nENTHUSE + LEADER COURSE - 3\n2.The polarizing angle for light in air that is incident\non a certain interface is 60o. What is the angle (in\ndegree) of refraction of light incident at this angle ?",
     "diagram": null,
     "options": {
       "a": "30",
@@ -435,10 +435,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "For a reversible process at equilibrium, the change\nin entropy may be expressed as:",
     "diagram": null,
     "options": {
-      "a": "rev",
-      "b": "=^{(q / T)}^{rev}\n^{(Δ / Δ)}^{(S = Tq / T)}(Δ / Δ)(S / S =)",
-      "c": "S=",
-      "d": "^{Δ}^{G}\nΔH"
+      "a": "^{Δ}^{S = Tq}rev",
+      "b": "ΔS=^{(q / T)}^{rev}",
+      "c": "ΔS=(T / H)",
+      "d": "^{Δ}^{S =}^{Δ}^{G}\nΔ"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Coordination Compounds, the correct response is verified as B.",
@@ -452,10 +452,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "A heat engine operating between 227°C and 27°C\nabsorbs 2 kcal of heat from the 227°C reservoir\nreversibly per cycle. The amount of work done in\none cycle is ?",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(0.4 kcal / 4 kcal)(0.8 kcal / 8 kcal)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "0.4 kcal",
+      "b": "0.8 kcal",
+      "c": "4 kcal",
+      "d": "8 kcal"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as B.",
@@ -466,13 +466,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Equilibrium & Solutions",
-    "question": "The standard enthalpy of formation of propene,\nC3H6, is +20.6 kJ/mole. Calculate the heat of\ncombustion of one mole of C 3 6. The heats of\n(H / O(l) are)\nformation of CO2(g) and H2^-394 kJ/mole\n(– / 1721.2)\nand 285.8 kJ/mole respectively.\n(",
+    "question": "The standard enthalpy of formation of propene,\nC3H6, is +20.6 kJ/mole. Calculate the heat of\ncombustion of one mole of C3H6. The heats of\nformation of CO2(g) and H2O(l) are^-394 kJ/mole\nand^-285.8 kJ/mole respectively.",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "1939.1 / (– / 2221.6))",
+      "a": "1721.2",
+      "b": "–1939.1",
       "c": "–2060.0",
-      "d": "[Refer to Question Diagram for Option D]"
+      "d": "2221.6"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 3: Applying fundamental principles of Equilibrium & Solutions, the correct response is verified as C.",
@@ -517,13 +517,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Periodic Properties & Chemical Bonding",
-    "question": "A gas is heated at constant pressure. The fraction of\nheat absorbed used in doing work is",
+    "question": "A gas is heated at constant pressure. The fraction of\nheat absorbed used in doing work is\n1 1",
     "diagram": null,
     "options": {
-      "a": "(1 / γ)",
-      "b": "–(1 / γ)\n(1 / γ)",
+      "a": "[Refer to Question Diagram for Option A]",
+      "b": "1 –\nγγ",
       "c": "γ-1",
-      "d": "[Refer to Question Diagram for Option D]"
+      "d": "γ"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Periodic Properties & Chemical Bonding, the correct response is verified as B.",
@@ -551,7 +551,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Hydrocarbons & Alkyl Halides",
-    "question": "Given below are two statements : one is labelled\n(Assertion / Assertion)\nas A and the other is labelled as Reason R :\nA : Acetal/Ketal is stable in basic medium.\nReason R: The high leaving tendency of alkoxide ion\ngives the stability to acetal/ketal in basic medium.\nIn the light of the above statements, choose the\ncorrect answer from the options given below: [JEE\n(Main) January 2023]",
+    "question": "Given below are two statements : one is labelled\nas Assertion A and the other is labelled as Reason R :\nAssertion A : Acetal/Ketal is stable in basic medium.\nReason R: The high leaving tendency of alkoxide ion\ngives the stability to acetal/ketal in basic medium.\nIn the light of the above statements, choose the\ncorrect answer from the options given below: [JEE\n(Main) January 2023]",
     "diagram": null,
     "options": {
       "a": "A is true but R is false",
@@ -602,13 +602,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Solid State & Surface Chemistry",
-    "question": "The most suitable reagent for the conversion of R –\nCH 2→ R − CHO is :-\n(– / CrO)(OH / 3)",
+    "question": "The most suitable reagent for the conversion of R –\nCH 2– OH → R – CHO is :-",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
+      "a": "CrO3",
       "b": "PCC (Pyridinium chlorochromate)",
-      "c": "(KMNO / K)(4 / O)",
-      "d": "2 Cr 2 7"
+      "c": "KMNO4",
+      "d": "K2Cr2O7"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 11: Applying fundamental principles of Solid State & Surface Chemistry, the correct response is verified as B.",
@@ -619,10 +619,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "General Organic Chemistry (GOC)",
-    "question": "Which of the following compound gives positive\niodoform test, reduces Tollens', Fehling's as well as\nBenedict's reagent also?\n(O / ||)",
+    "question": "Which of the following compound gives positive\niodoform test, reduces Tollens', Fehling's as well as\nBenedict's reagent also?\nO",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
+      "a": "^{||}",
       "b": "C6H5 −CH2 −CHO\nC 6 H 5 −C −CH 3",
       "c": "[Refer to Question Diagram for Option C]",
       "d": "ENTHUSE + LEADER COURSE - 3"
@@ -656,10 +656,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "The product of acid catalysed hydration of 3−\nphenylpropene is",
     "diagram": null,
     "options": {
-      "a": "(3 / 1)(− / −)(Phenyl / Phenyl)(−− / −−)(2 / 1)(propanol / propanol)",
-      "b": "[Refer to Question Diagram for Option B]",
-      "c": "(2 / 2)(− / −)(Phenyl / Phenyl)(−− / −−)(2 / 1)(propanol / propanol)",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "3−Phenyl−−propanol\n(2 / 1)",
+      "b": "1−Phenyl−−propanol",
+      "c": "2−Phenyl−−propanol\n(2 / 1)",
+      "d": "2−Phenyl−−propanol"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 14: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as B.",
@@ -687,12 +687,12 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Organic Reactions & Mechanisms",
-    "question": "Find out the reactant P and RX for Williamson\n(synthesis / Na)\nP −−→ Y ^{(R / −−−)}−^{(X / →)}",
+    "question": "Find out the reactant P and RX for Williamson\nsynthesis\nNa R−X\nP −−→ Y −−−→",
     "diagram": null,
     "options": {
-      "a": "PhBr + NaOCH O − CH3\n(2 / 2)(– / Br)",
-      "b": "3OH + PhCH\n(CH / PhCH)",
-      "c": "2OH + CH3Br",
+      "a": "PhBr + NaOCH 2 –– CH 3\n(O / Br)",
+      "b": "CH3OH + PhCH2",
+      "c": "PhCH2OH + CH3Br",
       "d": "Both (B) & (C)\n9610ZJM"
     },
     "correctAnswer": "d",
@@ -704,13 +704,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Electrochemistry & Kinetics",
-    "question": "Which reaction conditions (reagents) are suitable\nfor the following reactions: \n−^{((?) / →)}",
+    "question": "Which reaction conditions (reagents) are suitable\nfor the following reactions: \n((?) / − →)",
     "diagram": null,
     "options": {
-      "a": "2 4\n(Br / SOBr)(/CCl / 2)",
-      "b": "[Refer to Question Diagram for Option B]",
+      "a": "Br2/CCl4",
+      "b": "SOBr2",
       "c": "HBr / ZnBr2",
-      "d": "(i) TsCl / pyridine (ii) LiBr in Acetone"
+      "d": "(i) TsCl / pyridine (ii) LiBr in Acetone\nconc.H 2 SO 4"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 17: Applying fundamental principles of Electrochemistry & Kinetics, the correct response is verified as D.",
@@ -721,7 +721,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Periodic Properties & Chemical Bonding",
-    "question": "In the reaction (conc / −−−−−−−−).24→\nH SO\n A. The product A is -",
+    "question": "In the reaction −−−−−−−−→\n A. The product A is -",
     "diagram": null,
     "options": {
       "a": "[Refer to Question Diagram for Option A]",
@@ -738,7 +738,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Aldehydes, Ketones & Carboxylic Acids",
-    "question": "'B', 'A' and 'B' respectively\n('A' / are :)",
+    "question": "'A' 'B', 'A' and 'B' respectively\nare :",
     "diagram": null,
     "options": {
       "a": "Both are",
@@ -760,8 +760,8 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "options": {
       "a": "Carbon dioxide",
       "b": "Sodium hydroxide",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "Hydrogen oxide\n(Oxygen / SECTION)\n(B / contains)(: ( / 05)(Maximum / questions)\n-Marks: 20)\nThis section\n(. /"
+      "c": "Oxygen",
+      "d": "Hydrogen oxide\n \n(B / 05)\nThis section contains questions.\nThe answer to each question is a"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 20: Applying fundamental principles of Hydrocarbons & Alkyl Halides, the correct response is verified as A.",
@@ -772,7 +772,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "d- and f-Block Elements",
-    "question": "A ⇌B\nFor a reversible reaction . Find K at_{eq}\n2727°C temperature. (nearest integer)\n(Given : / Δ)\n_{(r / r)}(H / S)^{(∘ / ∘)}(= −30 kJ / −1)^{(−1 / (at)}((at / 2727)(2727 / ∘)\nmol^{∘}C)\n(Δ / R = 8.314)(JK / JK)\n(= 10 C) / −1 mol^-1)",
+    "question": "A ⇌B\nFor a reversible reaction . Find K at_{eq}\n2727°C temperature. (nearest integer)\nGiven :\nΔrH^{∘}= −30 kJ mol^-1(at 2727^{∘}C)\nΔrS^{∘}= 10 JK^-1(at 2727^{∘}C)\nR = 8.314 JK^-1mol^-1",
     "diagram": null,
     "options": {
       "a": "1",
@@ -789,7 +789,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "Biomolecules & Polymers",
-    "question": "-1\nThe entropies of H (g) and H(g) are 60 and 50 J mole2\n(– / calculate)\nK respectively at 300 K. Using the data given below1^-1\nthe bond enthalpy of H (g) in Kcal mole2. \nH (g) → 2H (g) ; ΔGo = 21.6 KJ mole^-1\n2",
+    "question": "-1\nThe entropies of H (g) and H(g) are 60 and 50 J mole2^-1\nK respectively at 300 K. Using the data given below\ncalculate^-1\nthe bond enthalpy of H (g) in Kcal mole2. \nH (g) → 2H (g) ; ΔGo = 21.6 KJ mole^-1\n2",
     "diagram": null,
     "options": {
       "a": "8",
@@ -861,9 +861,9 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "diagram": null,
     "options": {
       "a": "(3 / 5)",
-      "b": "(6 / 3)",
+      "b": "6",
       "c": "5",
-      "d": "[Refer to Question Diagram for Option D]"
+      "d": "3"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 1: Applying fundamental principles of Vectors & 3D Geometry, the correct response is verified as B.",
@@ -891,12 +891,12 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Calculus & Integrals",
-    "question": "A straight line through the point A(–1, 3) cuts the\nline x + y = 4 and y = x at B and C respectively. If\nAB × AC = 16, and possible slopes of the line are\n2\nm & m then 1 2((m / 1 + m)1(−m / m)_{(2 / 2)}) is equal to\n1",
+    "question": "A straight line through the point A(–1, 3) cuts the\nline x + y = 4 and y = x at B and C respectively. If\nAB × AC = 16, and possible slopes of the line are\nm 1 2\nm & m then 1 2((−m / m)(2 / 2)) is equal to\n1 + m 1",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(3 / 4)\n(1 / 3)",
-      "c": "[Refer to Question Diagram for Option C]",
+      "a": "1",
+      "b": "(3 / 4)",
+      "c": "3",
       "d": "(1 / 3)"
     },
     "correctAnswer": "c",
@@ -911,10 +911,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "In a triangle ABC the equation of side BC is x – 7y\n+ λ = 0 with vertex A(1,2) & internal angle\nbisector through B is y = x, then value of λ is-",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(5 / –)(3 / –)",
-      "c": "3",
-      "d": "5\nENTHUSE + LEADER COURSE - 3"
+      "a": "5",
+      "b": "3",
+      "c": "-3",
+      "d": "-5\nENTHUSE + LEADER COURSE - 3"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 4: Applying fundamental principles of Matrices & Determinants, the correct response is verified as A.",
@@ -925,13 +925,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Coordinate Geometry & Conic Sections",
-    "question": "External angular bisectors of ∠B∠C of a\ntriangle ABC are y = x, y = -2x respectively if(and / le)\nvertex A = (1,3). Then incentre of \n(ABC is / ))\n(Δ / −1)\n^{((1, 1) / (0, 0))}(( / ()(2 / 1)(, 1 / 3)",
+    "question": "External angular bisectors of ∠B and ∠C of a\ntriangle ABC are y = x, y = -2x respectively if\nvertex A = (1,3). Then incentre of Δ^{le} ABC is",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "[Refer to Question Diagram for Option B]",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "^{,})\n2 2"
+      "a": "^{(1, 1)}",
+      "b": "((−1 / 2), 1)",
+      "c": "^{(0, 0)}",
+      "d": "((1 / 2),(3 / 2))"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 5: Applying fundamental principles of Coordinate Geometry & Conic Sections, the correct response is verified as D.",
@@ -942,13 +942,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Probability & Statistics",
-    "question": "The value of λ for which the point (λ\n(,2) is are / –)\ninterior point of ΔABC formed by x + y = 4, 3x \n(– / ,)\n7y = 8 and 4x y = 31 is :",
+    "question": "The value of λ for which the point (λ,2) is are\ninterior point of ΔABC formed by x + y = 4, 3x –\n7y = 8 and 4x – y = 31 is :",
     "diagram": null,
     "options": {
-      "a": "λ∈(22 / 3)(33 / 4)\n(( / ()() / ))",
-      "b": "λ∈(21 / 3),(34 / 3)",
-      "c": "λ∈(20 / 3),(31 / 4)\n(( / ()() / ))",
-      "d": "λ∈(21 / 4),(33 / 5)"
+      "a": "λ∈((22 / 3),(33 / 4))",
+      "b": "λ∈((21 / 3),(34 / 3))",
+      "c": "λ∈((20 / 3),(31 / 4))",
+      "d": "λ∈((21 / 4),(33 / 5))"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Probability & Statistics, the correct response is verified as A.",
@@ -959,13 +959,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Functions, Limits & Continuity",
-    "question": "If the three lines x – 3y = p, ax + 2y = q and ax + y\n= r form a right – angled triangle then : \n(a / a)^{(2 / 2)}(a / a)^{(2 / 2)}",
+    "question": "If the three lines x – 3y = p, ax + 2y = q and ax + y\n= r form a right – angled triangle then :",
     "diagram": null,
     "options": {
-      "a": "−6a^-12 = 0",
-      "b": "−9a + 12 = 0",
-      "c": "−9a + 18 = 0",
-      "d": "−6a^-18 = 0"
+      "a": "a2^-6a^-12 = 0",
+      "b": "a2^-9a + 12 = 0",
+      "c": "a2^-9a + 18 = 0",
+      "d": "a2^-6a^-18 = 0"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 7: Applying fundamental principles of Functions, Limits & Continuity, the correct response is verified as C.",
@@ -979,10 +979,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "Line x + αy =1 cuts the circle x + y 22– 4x^-2y\n+1= 0 at two points A and B such that Chord AB\nsubtends an angle of 90° at origin then sum of\npossible values of α is",
     "diagram": null,
     "options": {
-      "a": "1",
-      "b": "(– / 2)(1 / 4)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "-1",
+      "b": "1",
+      "c": "2",
+      "d": "4"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 8: Applying fundamental principles of Sequences & Series, the correct response is verified as C.",
@@ -996,10 +996,10 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "question": "If one of the diagonal of a square is along the line x\n= 2y and one of its vertices is (3, 0), then its sides\nthrough this vertex are given by, the equations",
     "diagram": null,
     "options": {
-      "a": "y – 3x + 9 = 0, 3y + x \n(– / –)(3 = 0 / 3 = 0)",
-      "b": "y + 3x + 9 = 0, 3y + x",
-      "c": "3x + 9 = 0, 3y – x + 3 = 0\n(y / y)(– / –)",
-      "d": "3x + 3 = 0, 3y + x + 9 = 0\n9610ZJM"
+      "a": "y – 3x + 9 = 0, 3y + x –\n(3 = 0 / 3 = 0)",
+      "b": "y + 3x + 9 = 0, 3y + x –",
+      "c": "y – 3x + 9 = 0, 3y – x + 3 = 0",
+      "d": "y – 3x + 3 = 0, 3y + x + 9 = 0\n9610ZJM"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 9: Applying fundamental principles of Complex Numbers & Quadratic Equations, the correct response is verified as A.",
@@ -1010,13 +1010,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Permutations & Combinations",
-    "question": "If the area bounded by the curves y = x and y = 2\n(2 / 1 + x) is λ sq. units and the area bounded by the\n2\nregion [x][y] = 2 is μ, then the correct relation is \n(where [*] denotes greatest integer function)",
+    "question": "If the area bounded by the curves y = x and y = 2\n2\n is λ sq. units and the area bounded by the\n1 + x2\nregion [x][y] = 2 is μ, then the correct relation is \n(where [*] denotes greatest integer function)",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "([ / 4[)(λ / λ)(] = 2 / ] =)(μ / μ)(2[ / [)(λ / λ)(] = / ] = 4)(μ / μ)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "[λ] = 2μ",
+      "b": "2[λ] = μ",
+      "c": "4[λ] = μ",
+      "d": "[λ] = 4μ"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 10: Applying fundamental principles of Permutations & Combinations, the correct response is verified as B.",
@@ -1027,13 +1027,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Trigonometry & Inverse Trigonometry",
-    "question": "The area of the region which consists of all the\npoints satisfying the conditions |x – y + |x + y| ≤ 8,\n(≥ / 14)(2, x / –)(≥ / l)(0 and y / n64)\nxy ≥ 0 is equal to -",
+    "question": "The area of the region which consists of all the\npoints satisfying the conditions |x – y + |x + y| ≤ 8,\nxy ≥ 2, x ≥ 0 and y ≥ 0 is equal to -",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "28 \n(– / 14 +)(l / l)(n64 / n4)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "–l n4\n(18 / Area)"
+      "a": "14 –l n64",
+      "b": "28 –l\n(n64 / n4)",
+      "c": "14 + l",
+      "d": "18 –l n4"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 11: Applying fundamental principles of Trigonometry & Inverse Trigonometry, the correct response is verified as A.",
@@ -1044,7 +1044,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Binomial Theorem",
-    "question": "of the region\n is equal to",
+    "question": "Area of the region\n is equal to",
     "diagram": null,
     "options": {
       "a": "(1 / 6)",
@@ -1061,12 +1061,12 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Vectors & 3D Geometry",
-    "question": "The parabolas y = 4x and x = 4y divide the22\nsquare region bounded by the lines x = 4, y = 4\nand the coordinate axes. If S1, S2, S are3\nrespectively the areas of these parts numbered from\ntop to bottom, then S : S : S 1 2 3\n(is : / 1 : 2 : 3)",
+    "question": "The parabolas y = 4x and x = 4y divide the22\nsquare region bounded by the lines x = 4, y = 4\nand the coordinate axes. If S1, S2, S are3\nrespectively the areas of these parts numbered from\ntop to bottom, then S : S : S 1 2 3 is :",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(1 : 2 : 1 / 2 : 1 : 2)",
-      "c": "[Refer to Question Diagram for Option C]",
+      "a": "1 : 2 : 1",
+      "b": "1 : 2 : 3",
+      "c": "2 : 1 : 2",
       "d": "1 : 1 : 1"
     },
     "correctAnswer": "d",
@@ -1078,13 +1078,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Differential Equations",
-    "question": "Let Δ be the area of the region \n. Then \n(1 / 2)(Δ−21sin(2 / √)) is equal to\n^{(−1 / 1)}7\n(2 / √)^{(√ / 3 −)}(3 − / 2)",
+    "question": "Let Δ be the area of the region \n. Then \n(1 / 2)(Δ−21sin^-1(2 / √)) is equal to\n7",
     "diagram": null,
     "options": {
-      "a": "3",
-      "b": "(3 / 3 −)",
-      "c": "^{(2 / 3)}\n(2 / √)^{(√ / 3 −)}",
-      "d": "^{(4 / 3)}\nENTHUSE + LEADER COURSE - 3\n(Let / f)^{′}(f / (x) > 0)^{(+ / and)}^{(+ / f)}^{′′}"
+      "a": "2√3 −^{(1 / 3)}",
+      "b": "√3 −^{(2 / 3)}",
+      "c": "2√3 −^{(2 / 3)}",
+      "d": "√3 −^{(4 / 3)}\nENTHUSE + LEADER COURSE - 3"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 14: Applying fundamental principles of Differential Equations, the correct response is verified as D.",
@@ -1095,13 +1095,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Calculus & Integrals",
-    "question": ": R→R is an invertible function such that \n(x) > 0∀x∈[1, 5]. If \n(f (1) = 1 / x-axis,)\n and f(5) = 5 and area bounded by y = f (x) ,\nx = 1 and x = 5 is 8 sq. units. Then the area\ny = f^-1(x)\nbounded by , x-axis, x = 1 and x = 5 is :",
+    "question": "Let : R+→R+ is an invertible function such that \n^{′}(f / (x) > 0)^{′′}\nf and f(x) > 0∀x∈[1, 5]. If f (1) = 1\n and f(5) = 5 and area bounded by y = f (x) , x-axis,\nx = 1 and x = 5 is 8 sq. units. Then the area\ny = f^-1(x)\nbounded by , x-axis, x = 1 and x = 5 is :",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(12 / 18)(16 / 20)",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "[Refer to Question Diagram for Option D]"
+      "a": "12",
+      "b": "16",
+      "c": "18",
+      "d": "20"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 15: Applying fundamental principles of Calculus & Integrals, the correct response is verified as B.",
@@ -1112,13 +1112,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Matrices & Determinants",
-    "question": "Area enclosed by the curve y = x22(2 – x) and right\nby the line x = 1 is - \n(5 + 7 / 2()(2 / 2^-1))^{(4 / 4(8)}",
+    "question": "Area enclosed by the curve y = x22(2 – x) and right\nby the line x = 1 is -",
     "diagram": null,
     "options": {
-      "a": "√√",
-      "b": "[Refer to Question Diagram for Option B]",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "(2^-7) / 15)\n√\n^{(√ / Let f : ()}\n(→ / +)"
+      "a": "√5 + 7√2",
+      "b": "4\n√4(8√",
+      "c": "2(2^-1)",
+      "d": "(2^-7) / 15)"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 16: Applying fundamental principles of Matrices & Determinants, the correct response is verified as D.",
@@ -1129,13 +1129,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Coordinate Geometry & Conic Sections",
-    "question": "–1, 0) R be the function defined by\nf(x) = |2{x} −1||2{x} + 1| where {x} denotes\nthe fractional part function. then the area of the\nregion bounded by the curve y = f(x), x = 0, \n(– / 3)\nx = 1 and x-axis is equal to :",
+    "question": "Let f : (–1, 0) → R be the function defined by\nf(x) = |2{x} −1|+|2{x} + 1| where {x} denotes\nthe fractional part function. then the area of the\nregion bounded by the curve y = f(x), x = 0, \nx = –1 and x-axis is equal to :",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(5 / 2)\n((2 / 9) /",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": ")\n(2 / dy)(3 / y > 0,)"
+      "a": "(3 / 2)",
+      "b": "(5 / 2)",
+      "c": "(9 / 2)",
+      "d": "3\n2x−yy"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 17: Applying fundamental principles of Coordinate Geometry & Conic Sections, the correct response is verified as B.",
@@ -1146,13 +1146,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Probability & Statistics",
-    "question": "If +^{(x−y / 2)}((2 / x)^{(y / −1)}= 0,x,y (1) = 1, then y(2)\n2^-1)\ndx\nis equal to :",
+    "question": "If (dy / dx)+((2 / x)(−1) / −1)= 0,x,y > 0,y (1) = 1, then y(2)\n2\nis equal to :",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "(2 + log 3 / –)_{(2 / log 2)}(2 + log 2 / –)_{(2 / log 3)}",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "2\n(2 / dy)(2 / 2)(2 / , x > 0,)"
+      "a": "2 + log 32",
+      "b": "2 + log 22",
+      "c": "2 − log 22",
+      "d": "2 − log 32\n⎡2φ(y / x)^{(2 / 2)}⎤"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 18: Applying fundamental principles of Probability & Statistics, the correct response is verified as D.",
@@ -1163,13 +1163,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Functions, Limits & Continuity",
-    "question": "If y= x_{⎢⎢}_{(y / x)}(φ / φ)(( / ′)^{() / 2)}(⎤ / ⎦)⎥⎥φ > 0, and y(1) = –\n(⎡ / ()⎣^{(2 / y)}(+ / 2)2\n(y / x)^{(2 / 2)}\n(dx / 1, then)\n((y / x))\n) is equal to :\n(φ / φ)\n4",
+    "question": "If y(dy / dx)= x⎢⎢(y / x)+(( / ()() / 2)⎥⎥, x > 0, φ > 0, and y(1) = –\n⎣φ(y / x)2)⎦\n2^{′}\n2\n1, then φ ((y / 4)) is equal to :",
     "diagram": null,
     "options": {
-      "a": "(2)",
-      "b": "φ (1)\n(4 / 2)(4 / φ)",
-      "c": "φ (1)",
-      "d": "(1)"
+      "a": "4 φ (2)",
+      "b": "4 φ (1)",
+      "c": "2 φ (1)",
+      "d": "φ (1)\n (x + y3"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 19: Applying fundamental principles of Functions, Limits & Continuity, the correct response is verified as B.",
@@ -1180,13 +1180,13 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Sequences & Series",
-    "question": "The curve satisfies the equation (dy / dx)(y / x (y)(x + y / 3)^{(3 / −x))}\n ()\n(= / 2) is)\n(– / 2y =)\n and passes through the point (4, \n(y = / y =)(2 / 3)(– / –)(2x +12 / 2x)(– / y = x)\n(",
+    "question": "The curve satisfies the equation (dy / dx)=(y / x (y)() / −x))\n3\n and passes through the point (4, –2) is",
     "diagram": null,
     "options": {
-      "a": "[Refer to Question Diagram for Option A]",
-      "b": "x /",
-      "c": "[Refer to Question Diagram for Option C]",
-      "d": "2)\n9610ZJM\n \n(SECTION / section)(B / contains)(: ( / 05)(Maximum / questions)\n-Marks: 20)\nThis\n(. /"
+      "a": "y = 2–",
+      "b": "–x\n(2x +12 / 2x)(2y = / 2)",
+      "c": "y = 3–",
+      "d": "y = x\n9610ZJM\n \n \n(B / 05)\nThis section contains questions.\nThe answer to each question is a"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 20: Applying fundamental principles of Sequences & Series, the correct response is verified as C.",
@@ -1197,7 +1197,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Complex Numbers & Quadratic Equations",
-    "question": "Let y = f(x) is a solution of differential equation\n(dy / dx)(2xe / 1 + ye)^{(−x / x)}such that f(0) = 1, then\n(+ y = / f (−1))\n[] is equal to (where [*] denotes greatest\ne\ninteger function)",
+    "question": "Let y = f(x) is a solution of differential equation\n2xe−x\n(dy / dx)+ y =such that f(0) = 1, then\n1 + yex\n[(f (−1) / e)] is equal to (where [*] denotes greatest\ninteger function)",
     "diagram": null,
     "options": {
       "a": "1",
@@ -1214,7 +1214,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Permutations & Combinations",
-    "question": "Let y = y(x) be a solution of the differential\n(– / ,)(l)dx = 0, / then)\nequation (xcos x)dy + (xysinx + ycos x \n^{(π / 2)}(π / 3)y ((π / 3)) =√3\n(0 < x < / π)(. / π)(If / ′)\n∣∣∣y() + 2y((π / 6))∣∣ is equal to ______\n(′′ ∣ / 6 6)",
+    "question": "Let y = y(x) be a solution of the differential\nequation (xcos x)dy + (xysinx + ycos x – l)dx = 0, \n0 < x <^{(π / 2)}. If (π / 3)y ((π / 3)) =√3, then \n∣∣∣(π / 6)y((π / 6)) + 2y((π / 6))∣∣ is equal to ______\n^{′′}^{′}^{∣}",
     "diagram": null,
     "options": {
       "a": "2",
@@ -1231,7 +1231,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Trigonometry & Inverse Trigonometry",
-    "question": "If y = y (x) is the solution of the differential\n(dy / dx)+(4x / 2)y =(x + 2 / 2)\n(equation / such that)((x / 2)_{(−1) / log)}(, x > 1 / =)\n(5 / 2)\n((x / 3)(−1) / and)\n(y(2) = / β)(9 / β)_{(e / √)}(( / γ)(2 + / α)^{(√ / β)}() / γ)(y / , then)(2 / αβγ)\n (√)\nαloge (√α +) + −,,,∈N\nis equal to ____.\nENTHUSE + LEADER COURSE - 3",
+    "question": "If y = y (x) is the solution of the differential\nequation (dy / dx)+(4x / 2)y = , x > 1\nx + 2\n((x / 2)(x^-1)\n−1)2(5 / 2)\nsuch that y(2) =loge (2 +√3)and y (√2)= \n9\nαloge (√α + β) + β −√γ, α, β, γ∈N, then αβγ\nis equal to ____.\nENTHUSE + LEADER COURSE - 3",
     "diagram": null,
     "options": {
       "a": "6",
@@ -1248,7 +1248,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Binomial Theorem",
-    "question": "(If / f(x) = sin)(area / ()(enclosed / ))(curve / and)\n(by / |x|)\n−1(2 |x| / 1 + x)−1(\n2(+ sin / –)√1 + x2() / π)\ng(x) =^{∣}∣tan^-1x^{∣}∣ from x = 1 to x = 1 is – lnb.\nThen value of [b –π] is, where [ ] is greatest\ninteger function.",
+    "question": "If area enclosed curve\n(by / |x|)\nf(x) = sin^-1() + sin^-1(and \n1 + x2√1 + x2() / π)\n2 |x|\ng(x) =^{∣}∣tan^-1x^{∣}∣ from x = –1 to x = 1 is – lnb.\nThen value of [b –π] is, where [ ] is greatest\ninteger function.",
     "diagram": null,
     "options": {
       "a": "0",
@@ -1265,7 +1265,7 @@ export const JEE_MOCK_2_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Vectors & 3D Geometry",
-    "question": "α, β) lies on the 2x + 3y + 1 = 0 such that |PA\n(If P( / –)\n PB| is maximum, then the value of (α + β),\nwhere A is (2, 0) and B is (0, 2), is \n9610ZJM\n \nENTHUSE + LEADER COURSE - 3\n9610ZJM",
+    "question": "If P(α, β) lies on the 2x + 3y + 1 = 0 such that |PA\n– PB| is maximum, then the value of (α + β),\nwhere A is (2, 0) and B is (0, 2), is \n9610ZJM\n \nENTHUSE + LEADER COURSE - 3\n9610ZJM",
     "diagram": null,
     "options": {
       "a": "2",
