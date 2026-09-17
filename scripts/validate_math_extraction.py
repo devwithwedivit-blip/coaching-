@@ -97,6 +97,7 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
         "with_fractions": 0,
         "with_greek": 0,
         "with_radicals": 0,
+        "with_vectors": 0,
         "clean_pass": 0
     }
 
@@ -105,6 +106,7 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
     greek_chars = ['α', 'β', 'γ', 'θ', 'λ', 'μ', 'ω', 'Δ', 'π']
     exponents = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹', '⁻', '⁺', '^']
     subscripts = ['₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉', '_']
+    vector_chars = ['î', 'ĵ', 'k̂', '\u0302', '\u20d7']
 
     for q in questions:
         qid = q.get('id', '?')
@@ -143,6 +145,7 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
         has_frac = '/' in qtext or any('/' in opt for opt in opt_vals)
         has_greek = any(s in qtext for s in greek_chars) or any(any(s in opt for s in greek_chars) for opt in opt_vals)
         has_rad = '√' in qtext or any('√' in opt for opt in opt_vals)
+        has_vec = any(s in qtext for s in vector_chars) or any(any(s in opt for s in vector_chars) for opt in opt_vals)
 
         if has_math: stats["with_math_symbols"] += 1
         if has_exp: stats["with_exponents"] += 1
@@ -150,6 +153,7 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
         if has_frac: stats["with_fractions"] += 1
         if has_greek: stats["with_greek"] += 1
         if has_rad: stats["with_radicals"] += 1
+        if has_vec: stats["with_vectors"] += 1
 
         # 3. Check for Unicode replacement chars
         for char in suspicious_chars:
@@ -159,7 +163,17 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
                 if isinstance(opt_val, str) and char in opt_val:
                     errors.append(f"Q{qid}: Option ({opt_key.upper()}) contains suspicious character {repr(char)}")
 
-        # 4. Check broken fractions
+        # 4. Check broken carets or caret lines
+        if re.search(r'(?:^|\n)\s*[\^ˆ]{1,4}\s*(?=\n|$)', qtext):
+            errors.append(f"Q{qid}: Broken caret line detected in question text")
+        for opt_key, opt_val in options.items():
+            if isinstance(opt_val, str):
+                if re.search(r'(?:^|\n)\s*[\^ˆ]{1,4}\s*(?=\n|$)', opt_val):
+                    errors.append(f"Q{qid}: Option ({opt_key.upper()}) contains broken caret line")
+                if re.search(r'\(\s*[^()]*\s*/\s*[\^ˆ]\s*\)', opt_val):
+                    errors.append(f"Q{qid}: Option ({opt_key.upper()}) contains broken caret fraction")
+
+        # 5. Check broken fractions
         if re.search(r'\(\s*/\s*\)', qtext) or re.search(r'/\s*$', qtext):
             warnings.append(f"Q{qid}: Potential dangling fraction detected in question text")
 
@@ -183,6 +197,7 @@ def audit_question_dataset(questions: List[Dict[str, Any]], dataset_name: str = 
     print(f"  • With Fractions (a/b):     {stats['with_fractions']}")
     print(f"  • With Greek Letters (α,β): {stats['with_greek']}")
     print(f"  • With Radicals (√):        {stats['with_radicals']}")
+    print(f"  • With Vector Notation (î, ĵ, k̂, →): {stats['with_vectors']}")
     print(f"  ------------------------------------------------")
     print(f"🎯 4-Option Verification Report:")
     print(f"  • Exactly 4 Distinct, Non-Empty Options: {stats['options_valid_count']} / {stats['total']} ({stats['options_valid_count']*100//max(1,stats['total'])}%)")

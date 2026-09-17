@@ -98,7 +98,7 @@ def clean_text_symbols(text: str) -> str:
         return ""
     for k, v in SYMBOL_MAP.items():
         text = text.replace(k, v)
-    text = unicodedata.normalize('NFKC', text)
+    text = unicodedata.normalize('NFC', text)
     text = text.replace('\ufffd', ' ')
     text = re.sub(r'[\r\t]+', ' ', text)
     text = re.sub(r' +', ' ', text)
@@ -201,6 +201,9 @@ class MathPdfEngine:
                 return False
             if is_opt(t):
                 return False
+            # Never treat solitary vector carets or circumflexes as fraction numerators or denominators
+            if all(c in '^ˆ\u02c6\u0302\u005e' for c in t):
+                return False
             # Disallow punctuation like colons, semicolons
             if any(c in t for c in [':', ';', '!', '?']):
                 return False
@@ -271,9 +274,110 @@ class MathPdfEngine:
 
         return new_spans
 
+    def _absorb_vector_accents(self, spans: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Absorbs vector hat/circumflex accents ('^', 'ˆ') and over-arrow annotations ('→', '⃗')
+        into their respective base letters (e.g. i -> î, j -> ĵ, k -> k̂, a -> a⃗) based on spatial proximity.
+        """
+        HAT_CHARS = {'^', 'ˆ', '\u02c6', '\u0302', '\u005e'}
+        ARROW_CHARS = {'→', '⃗', '⃑', '−→', '−−→', '¯', 'ˉ'}
+        ALL_ACCENTS = HAT_CHARS | ARROW_CHARS
+
+        accent_indices = []
+        for idx, s in enumerate(spans):
+            t = s['text'].strip()
+            if t in ALL_ACCENTS or (len(t) <= 3 and all(c in '^ˆ' for c in t)):
+                accent_indices.append(idx)
+
+        if not accent_indices:
+            return spans
+
+        used_accents = set()
+        for a_idx in accent_indices:
+            a = spans[a_idx]
+            a_txt = a['text'].strip()
+            a_bb = a['bbox']
+            a_xmid = (a_bb[0] + a_bb[2]) / 2.0
+
+            is_hat = any(c in HAT_CHARS for c in a_txt)
+            is_arrow = any(c in ARROW_CHARS for c in a_txt)
+
+            best_b_idx = None
+            best_dist = 999.0
+
+            for b_idx, b in enumerate(spans):
+                if b_idx in accent_indices:
+                    continue
+                b_bb = b['bbox']
+                # Accent should overlap horizontally with base span (within 4 pt)
+                if b_bb[0] - 4.0 <= a_xmid <= b_bb[2] + 4.0:
+                    y_diff = b_bb[1] - a_bb[1]
+                    if -4.0 <= y_diff <= 14.0:
+                        dist = abs(y_diff) + abs(a_xmid - (b_bb[0] + b_bb[2]) / 2.0) * 0.1
+                        if dist < best_dist:
+                            best_dist = dist
+                            best_b_idx = b_idx
+
+            if best_b_idx is not None:
+                b = spans[best_b_idx]
+                b_txt = b['text']
+                b_bb = b['bbox']
+                w = max(1.0, b_bb[2] - b_bb[0])
+                frac = max(0.0, min(1.0, (a_xmid - b_bb[0]) / w))
+                char_idx = min(len(b_txt) - 1, int(frac * len(b_txt)))
+
+                if is_hat:
+                    target_idx = None
+                    for offset in [0, -1, 1, -2, 2]:
+                        cand_idx = char_idx + offset
+                        if 0 <= cand_idx < len(b_txt):
+                            if b_txt[cand_idx].lower() in ['i', 'j', 'k', 'n', 'r', 'v', 'p', 'a', 'b', 'c', 'x', 'y', 'z']:
+                                target_idx = cand_idx
+                                break
+                    if target_idx is None:
+                        target_idx = char_idx
+
+                    ch = b_txt[target_idx]
+                    if ch == 'i':
+                        new_ch = 'î'
+                    elif ch == 'j':
+                        new_ch = 'ĵ'
+                    elif ch == 'k':
+                        new_ch = 'k̂'
+                    elif ch == 'I':
+                        new_ch = 'Î'
+                    elif ch == 'J':
+                        new_ch = 'Ĵ'
+                    elif ch == 'K':
+                        new_ch = 'K̂'
+                    else:
+                        new_ch = ch + '\u0302'
+
+                    b['text'] = b_txt[:target_idx] + new_ch + b_txt[target_idx + 1:]
+                    used_accents.add(a_idx)
+
+                elif is_arrow:
+                    target_idx = None
+                    for offset in [0, -1, 1, -2, 2]:
+                        cand_idx = char_idx + offset
+                        if 0 <= cand_idx < len(b_txt):
+                            if b_txt[cand_idx].isalpha():
+                                target_idx = cand_idx
+                                break
+                    if target_idx is not None:
+                        ch = b_txt[target_idx]
+                        new_ch = ch + '\u20d7'
+                        b['text'] = b_txt[:target_idx] + new_ch + b_txt[target_idx + 1:]
+                        used_accents.add(a_idx)
+
+        return [s for idx, s in enumerate(spans) if idx not in used_accents]
+
     def _process_column_spans(self, spans: List[Dict[str, Any]]) -> str:
         if not spans:
             return ""
+
+        # Step -1: Absorb vector hat/arrow diacritical spans into base letters (î, ĵ, k̂, a⃗, etc.)
+        spans = self._absorb_vector_accents(spans)
 
         # Step 0: Synthesize local 2D fractions at span level before line clustering
         spans = self._synthesize_span_fractions(spans)
@@ -350,6 +454,10 @@ class MathPdfEngine:
             if len(t_txt) > 20 or len(b_txt) > 20:
                 return None
             if len(t_txt.split()) > 3 or len(b_txt.split()) > 3:
+                return None
+
+            # Guard: Solitary carets must never form fraction numerators or denominators
+            if all(c in '^ˆ\u02c6\u0302\u005e' for c in t_txt) or all(c in '^ˆ\u02c6\u0302\u005e' for c in b_txt):
                 return None
 
             # Guard: A true fraction must contain at least one digit or math symbol in numerator or denominator
@@ -472,5 +580,45 @@ class MathPdfEngine:
         text = re.sub(r'°\s*C\b', '°C', text)
         text = re.sub(r'Fridel\s*[-–—]?\s*Crafts', 'Friedel–Crafts', text)
         text = re.sub(r'Reimer\s*[-–—]?\s*Tiemann', 'Reimer–Tiemann', text)
+
+        # Vector and Unit Vector Normalization (i-hat, j-hat, k-hat, vectors)
+        # Fix LaTeX \hat and \vec notation
+        text = re.sub(r'\\hat\{i\}', 'î', text)
+        text = re.sub(r'\\hat\{j\}', 'ĵ', text)
+        text = re.sub(r'\\hat\{k\}', 'k̂', text)
+        text = re.sub(r'\\hat\{([a-zA-Z])\}', lambda m: m.group(1) + '\u0302', text)
+        text = re.sub(r'\\vec\{([a-zA-Z])\}', lambda m: m.group(1) + '\u20d7', text)
+
+        # Fix caret or circumflex on base letters in stream (i^, j^, k^)
+        text = re.sub(r'(?<![a-zA-Z0-9])i\s*[\^ˆ]', 'î', text)
+        text = re.sub(r'(?<![a-zA-Z0-9])j\s*[\^ˆ]', 'ĵ', text)
+        text = re.sub(r'(?<![a-zA-Z0-9])k\s*[\^ˆ]', 'k̂', text)
+        text = re.sub(r'(\d+)\s*i\s*[\^ˆ]', r'\1î', text)
+        text = re.sub(r'(\d+)\s*j\s*[\^ˆ]', r'\1ĵ', text)
+        text = re.sub(r'(\d+)\s*k\s*[\^ˆ]', r'\1k̂', text)
+        text = re.sub(r'[\^ˆ]\s*i(?![a-zA-Z])', 'î', text)
+        text = re.sub(r'[\^ˆ]\s*j(?![a-zA-Z])', 'ĵ', text)
+        text = re.sub(r'[\^ˆ]\s*k(?![a-zA-Z])', 'k̂', text)
+
+        # Fix capitalized unit vectors if present
+        text = re.sub(r'(?<![a-zA-Z0-9])I\s*[\^ˆ]', 'Î', text)
+        text = re.sub(r'(?<![a-zA-Z0-9])J\s*[\^ˆ]', 'Ĵ', text)
+        text = re.sub(r'(?<![a-zA-Z0-9])K\s*[\^ˆ]', 'K̂', text)
+
+        # Fix arrow vector notation
+        text = re.sub(r'−−→\s*([A-Za-z]{1,3})', lambda m: m.group(1) + '\u20d7', text)
+        text = re.sub(r'([A-Za-z]{1,3})\s*−−→', lambda m: m.group(1) + '\u20d7', text)
+        text = re.sub(r'→\s*([A-Za-z])\b', lambda m: m.group(1) + '\u20d7', text)
+        text = re.sub(r'\b([A-Za-z])\s*→', lambda m: m.group(1) + '\u20d7', text)
+
+        # Cleanup stray carets or broken caret lines
+        text = re.sub(r'(?:^|\n)\s*[\^ˆ]{1,4}\s*(?=\n|$)', '', text)
+        text = re.sub(r'\(\s*([^()]+?)\s*/\s*[\^ˆ]\s*\)', r'\1', text)
+        text = re.sub(r'\(\s*[\^ˆ]?\s*/\s*[\^ˆ]?\s*\)', '', text)
+
+        # Cleanup spurious arrows on words like Ans or Sol
+        text = re.sub(r'\bA⃗ns\b', 'Ans', text)
+        text = re.sub(r'\bS⃗ol\b', 'Sol', text)
+
         text = re.sub(r' +', ' ', text)
         return text

@@ -16,7 +16,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "(3T / 4)"
     },
     "correctAnswer": "a",
-    "explanation": "( 1 )\nRadical axis, x – y = 0\nCentre of 1 circle is (^{st}–a, –b) and\nr =√a2+ b2−c.\nNow perpendicular distance from center on\nradical axis = radius of the circle\n(a −b)2= 2[a2+ b2−c]\n⇒ a + b 2 2– 2ab = 2[a + b 2 2– c]\n2 2\na + b + 2ab = 2c\n(a + b)2\n⇒= 1\n(2c / ( 2 ))^{→}^{→}\n^{→}",
+    "explanation": "( 1 )\nRadical axis, x – y = 0\nCentre of 1 circle is (^{st}–a, –b) and\nr =√a²+ b²−c.\nNow perpendicular distance from center on\nradical axis = radius of the circle\n(a −b)²= 2[a²+ b²−c]\n⇒ a + b 2 2– 2ab = 2[a + b 2 2– c]\n2 2\na + b + 2ab = 2c\n(a + b)²\n⇒= 1\n(2c / ( 2 ))^{→}^{→}\n^{→}",
     "expDiagram": null
   },
   {
@@ -30,10 +30,10 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "a": "A",
       "b": "B",
       "c": "A + B",
-      "d": "√A2+ B2"
+      "d": "√A²+ B²"
     },
     "correctAnswer": "b",
-    "explanation": "^{→}\n(b⋅a a\n() / 2)^^^\nGiven, =(4 / 3)(i−j−k)\n|\n(a| / ^)\n{(λi^-3j+k^) ⋅(^i−j^−k^ )}(^i−j^−k^)\n⇒\n(1 + 1 + 1)\n=(4 / 3)(i−j−k)\n^^^\n^^^^^^\n⇒ (λ + 3 – 1) (i−j−k)=4 (i−j−k)\n^^^^^^\n⇒ (λ + 2) (i−j−k)=4 (i−j−k)\n^{^}\nOn equating the coefficient of , we get i\nλ + 2 = 4 ⇒λ = 2\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/10^-11-2024",
+    "explanation": "(b⋅a⃗a\n() / 2)\nGiven, =(4 / 3)(̂i−ĵ−k)̂\n(a| / −3ĵ)\n|\n{(λî+k)̂ ⋅(̂i−ĵ−k ̂)}(̂i−ĵ−k)̂\n⇒\n(1 + 1 + 1)\n=(4 / 3)(̂i−ĵ−k)̂\n⇒ (λ + 3 – 1) (̂i−ĵ−k)̂=4 (̂i−ĵ−k)̂\n⇒ (λ + 2) (̂i−ĵ−k)̂=4 (̂i−ĵ−k)̂\nOn equating the coefficient of , we getî\nλ + 2 = 4 ⇒λ = 2\n9610ZJM\nENTHUSE + LEADER COURSE/Phase^-3/10^-11-2024",
     "expDiagram": null
   },
   {
@@ -41,7 +41,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Wave Motion & Sound Waves",
-    "question": "In the shown arrangement, the coefficient of\n friction between the blocks is μ and no friction\nbetween ground surface and block 2m. The blocks\nare displaced slightly and released. They move\ntogether without slipping on each other. The time\nperiod will be :-",
+    "question": "In the shown arrangement, the coefficient of\n friction between the blocks is µ and no friction\nbetween ground surface and block 2m. The blocks\nare displaced slightly and released. They move\ntogether without slipping on each other. The time\nperiod will be :-",
     "diagram": null,
     "options": {
       "a": "2π√^{(m / k)}",
@@ -79,7 +79,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "diagram": null,
     "options": {
       "a": "^{π}",
-      "b": "2^{π}",
+      "b": "²^{π}",
       "c": "^{(π / √)}\nβ",
       "d": "^{(π / √)}\n2\nβ\n9610ZJM"
     },
@@ -101,7 +101,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "increase the maximum kinetic energy of the\nemitted photo-electrons by a factor of two but\nwill have no effect on the saturation\nphotoelectric current."
     },
     "correctAnswer": "c",
-    "explanation": "( D)\n2b√a2+ b2\ne =√(a / 4)+^{(2 / 4)}=\n2\n√(4 −(a / 2))+ (k −(b / 2))\n2 2\ncos 45^{∘}=\n^{(2 / 2)}\n√a+b2\n⎛22⎞\n2\n((1 / 2))=(1 / 4)⎜((2x −a) / (a)(+ (2y −b) / 2)2⎟\n√⎝_{(+b / 4)})⎠\na2+ b22222\n= 4x+ 4y^-4ax^-4by + a+ b\n2\n22a2+ b2\n4x+ 4y^-4ax^-4by += 0\n2\n22a2+ b2\nx+ y−ax −by += 0\n8\nHS^-8/11\n→^{→}Target:JEE (Main) 2025/10^-11-2024→",
+    "explanation": "( D)\n²b√a²+ b²\ne =√(a / 4)+^{(2 / 4)}=\n2\n√(4 −(a / 2))+ (k −(b / 2))\n2 2\ncos 45^{∘}=\n^{(2 / 2)}\n√a+b²\n⎛²²⎞\n2\n((1 / 2))=(1 / 4)⎜((2x −a) / (a)(+ (2y −b) / 2)²⎟\n√⎝_{(+b / 4)}⁾⎠\na²+ b²²²²²\n= 4x+ 4y^-4ax^-4by + a+ b\n2\n²²a²+ b²\n4x+ 4y^-4ax^-4by += 0\n2\n²²a²+ b²\nx+ y−ax −by += 0\n8\nHS^-8/11\n→^{→}Target:JEE (Main) 2025/10^-11-2024→",
     "expDiagram": null
   },
   {
@@ -109,16 +109,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Modern Physics & Nuclear Physics",
-    "question": "The binding energies of deutron (1H2) and α-\nparticle (2He4) are 1.125 and 7.2 MeV/nucleon\nrespectively. In the process 1^{H}2+1^{H}2^{→}2^{He}4\n , Amount of energy transferred is & which nucleus\nis more stable ?",
+    "question": "The binding energies of deutron (₁H²) and α-\nparticle (₂He⁴) are 1.125 and 7.2 MeV/nucleon\nrespectively. In the process ₁^{H}²⁺₁^{H}²^{→}₂^{He}⁴\n , Amount of energy transferred is & which nucleus\nis more stable ?",
     "diagram": null,
     "options": {
-      "a": "24.3 MeV liberated, 1^{H}2",
-      "b": "24.3 MeV liberated, 2^{He}4",
-      "c": "24.3 MeV supplied, 1^{H}2",
-      "d": "24.3 MeV supplied, 2^{He}4"
+      "a": "24.3 MeV liberated, ₁^{H}²",
+      "b": "24.3 MeV liberated, ₂^{He}⁴",
+      "c": "24.3 MeV supplied, ₁^{H}²",
+      "d": "24.3 MeV supplied, ₂^{He}⁴"
     },
     "correctAnswer": "b",
-    "explanation": "( C)\n→^{→}→\nGiven that a,b and are non-coplanar. Thus,c\n→^{→} →→ →\n→(...(i) / a × ()→^{→}→^{→}→→ →\n[a b c] ≠0\nAgain b ×c). (a ×c) = 0\n^{→}^{→}^{→}^{→}^{→}\n(or / or)→→\n[(a.c)b −(a.b)c] ⋅(a ×c) = 0\n(a.c)[b a c] = 0\n→→\nor (a.c) = 0\n→^{→} →→→^{→}→^{→}→\nHence, and are perpendicular (ii)a c\n^{→}^{→}^{→}^{→}^{→}\na × (b ×c) = (a ⋅c)b −(a ⋅b)c\nor [a × (b ×c)] ×c=0",
+    "explanation": "( C)\nGi⃗v⃗e⃗n that a,b and are non-coplanar. Thus,c\n^{→} → →\n(...(i⃗) / a⃗ × ()^{→}→→ →\n[a b c⃗] ≠0\nAgain⃗ b ×c⃗). (a⃗ ×c) = 0\n^{→}\n(or / or)\n[(a.c⃗⃗)b⃗ −(a⃗.b)c] ⋅(a ×c) = 0\n(a⃗.c⃗)[b a c] = 0\n→\nor (a.c⃗) = 0\nH⃗ence⃗, and are⃗ p⃗erpen⃗dic⃗ul⃗ar (ii)a⃗c⃗\n^{→}^{→}\na × (b⃗ ×c) = (a ⋅c⃗)b⃗ −(a ⋅b)c\nor [a × (b ×c)] ×c=0",
     "expDiagram": null
   },
   {
@@ -126,7 +126,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Optics & Wave Optics",
-    "question": "A photoelectric material having work-function φ0\n(is / ()hc\nilluminated with light of wavelength\nλλ<). The fastest photoelectron has a de\nφ0\nBroglie wavelength ^{λ}_{d}. A change in wavelength of\nthe incident light by ^{Δλ} results in a change ^{Δλ}_{d} in\nΔλa\n^{λ}_{d}. Then the ratio is proportional to\nΔλ\nλ^{(3 / d)}λ^{(3 / d)}",
+    "question": "A photoelectric material having work-function ϕ₀\n(is / ()hc\nilluminated with light of wavelength\nλλ<). The fastest photoelectron has a de\nϕ0\nBroglie wavelength ^{λ}_{d}. A change in wavelength of\nthe incident light by ^{Δλ} results in a change ^{Δλ}_{d} in\nΔλa\n^{λ}_{d}. Then the ratio is proportional to\nΔλ\nλ^{(3 / d)}λ^{(3 / d)}",
     "diagram": null,
     "options": {
       "a": "[Refer to Question Diagram for Option A]",
@@ -135,7 +135,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "λλ\nENTHUSE + LEADER COURSE_PHASE - 3"
     },
     "correctAnswer": "a",
-    "explanation": "( B)\n Here the equation of circle is \n (x – a) + (y 2– 0) = a 2 2⇒ x + y 2 2– 2ax = 0\n Now the point of intersection of circle and\nchord i.e.,\n Put y = mx in equation of circle and solve it.\nO and B are O(0, 0) and B\n2a 2am\n(,).\n1 + m21 + m2\n Hence the equation of circle (as chord OB as\ndiameter) is (x2+ y2) (1 + m) 2– 2a(x + my) = 0.\n→^{→}^{→}^{→}→^{→}",
+    "explanation": "( B)\n Here the equation of circle is \n (x – a) + (y 2– 0) = a 2 2⇒ x + y 2 2– 2ax = 0\n Now the point of intersection of circle and\nchord i.e.,\n Put y = mx in equation of circle and solve it.\nO and B are O(0, 0) and B\n2a 2am\n(,).\n1 + m²1 + m²\n Hence the equation of circle (as chord OB as\ndiameter) is (x²+ y²) (1 + m) ²– 2a(x + my) = 0.\n^{→}^{→}→^{→}",
     "expDiagram": null
   },
   {
@@ -143,7 +143,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Thermodynamics & Kinetic Theory",
-    "question": "If the binding energy of the electron in a hydrogen\natom is 13.6 eV, the energy required to remove the\nelectron from the first excited state of Li is^-2+",
+    "question": "If the binding energy of the electron in a hydrogen\natom is 13.6 eV, the energy required to remove the\nelectron from the first excited state of Li is-²⁺",
     "diagram": null,
     "options": {
       "a": "30.6 eV",
@@ -152,7 +152,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "122.4 eV"
     },
     "correctAnswer": "a",
-    "explanation": "D\n(( / a)→() / i ,)→^{→} →^{→}^{→}^{→}\nLet =b =j ,c=k\n⎧⎪→r1= p →a + q b +→c= p i+ q j+k\n^{→}^{→}^{→}^{→}\n⎨→→\n⎩⎪\n(r / r)(2 / 1)→ →^^^\n=a + p b + q c=i+ p j+ q k\n⎡ + 2 r 2= i(p + 2) + j(q + 2p) + k(1 + 2q)\n⎢^{→}^{→}^{→}^{→}\n⎣r r= (2p + 1)i^+ (2q + p)j^+ (2 + q)k^\n(2 / + 2)(1 / r)(+ / )//(2)\n 2\n(r 1 r 1 r 2)\n(2 / p + 2)(+ / q + 2p)\n1 + 2q\n⇒==\n2p + 1 2q + p 2 + q\np = q & q = 1\n9610ZJM",
+    "explanation": "⃗D⃗\n(( / a⃗)() / i ,)^{→}^{→}^{→}^{→}\nLet =b⃗ =j ,c⃗=k\n⎧⎪r⃗₁= p⃗a + q⃗b +c⃗= p⃗i+ q⃗j+k⃗\n⎨→→\n⎩⎪\n(r / r)(2 / 1)→\n=a + p b + q c=i+ p j+ q k\n⎡ + 2 r⃗ 2= î(p + 2) + ĵ(q + 2p) + k̂(1 + 2q)\n⎢^{→}^{→}^{→}^{→}\n⎣r r= (2p + 1)î+ (2q + p)ĵ+ (2 + q)k̂\n(2 / + 2)(1 / r)(+ / )//(2)\n 2\n(r 1 r 1 r 2)\n(2 / p + 2)(+ / q + 2p)\n1 + 2q\n⇒==\n2p + 1 2q + p 2 + q\np = q & q = 1\n9610ZJM",
     "expDiagram": null
   },
   {
@@ -160,16 +160,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Kinematics & Dynamics",
-    "question": "Energy levels A, B and C of a certain atom\ncorrespond to increasing values of energy i.e. E_{A}<\nE B < E C. If λ1 ,λ2 and λ3 are wave lengths of\nradiations corresponding to transitions C to B, B to\nA and C to A respectively, which of the following\nrelations is correct :\nλλ2",
+    "question": "Energy levels A, B and C of a certain atom\ncorrespond to increasing values of energy i.e. E_{A}<\nE B < E C. If λ1 ,λ2 and λ3 are wave lengths of\nradiations corresponding to transitions C to B, B to\nA and C to A respectively, which of the following\nrelations is correct :\nλλ₂",
     "diagram": null,
     "options": {
-      "a": "^{λ}3 =^{λ}1 +^{λ}2",
+      "a": "^{λ}3 ⁼^{λ}1 ⁺^{λ}2",
       "b": "λ3=λ(1 / +) λ\n1 2",
-      "c": "^{λ}1 +^{λ}2 +^{λ}3 ^{= 0}",
-      "d": "λ23=^{λ}^{(2 / 1)}+^{λ}^{(2 / 2)}"
+      "c": "^{λ}1 ⁺^{λ}2 ⁺^{λ}3 ^{= 0}",
+      "d": "λ²₃⁼^{λ}^{(2 / 1)}⁺^{λ}^{(2 / 2)}"
     },
     "correctAnswer": "b",
-    "explanation": "( C)\nEquation of AB is 4x + 3y = 9 ..... (i)\n{∵ it is chord of contact}\nOQ = (9 / 5) [perpendicular distance of AB from\norigin]\nAQ = √OA22=√9−(81 / 25)=(12 / 5)\n(−OQ / 24)\nAB = 2AQ = \n5\nPQ = (16 / √)(+ / 16)(9 / +)(−9 / 9)=(16 / 5)\nHence the area = × (1 / 2)(24 / 5) × (16 / 5) = (192 / 25)\nAliter : Required area= (a / +) (h + k 2 2– a )2 3/2\n(h / 9) =)^{(2 / 3/2)}^{(2 / 192)}\nk\n= (3 / +) (42 + 32 −\n42225\n(3 / ))",
+    "explanation": "( C)\nEquation of AB is 4x + 3y = 9 ..... (i)\n{∵ it is chord of contact}\nOQ = (9 / 5) [perpendicular distance of AB from\norigin]\nAQ = √OA²²=√9−(81 / 25)=(12 / 5)\n(−OQ / 24)\nAB = 2AQ = \n5\nPQ = (16 / √)(+ / 16)(9 / +)(−9 / 9)=(16 / 5)\nHence the area = × (1 / 2)(24 / 5) × (16 / 5) = (192 / 25)\nAliter : Required area= (a / +) (h + k 2 2– a )2 3/2\n(h / 9) =)^{(2 / 3/2)}^{(2 / 192)}\nk\n= (3 / +) (42 + 32 ⁻\n4²²25\n(3 / ))",
     "expDiagram": null
   },
   {
@@ -177,16 +177,16 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Current Electricity",
-    "question": "If each fission in a U235 nucleus releases 200 MeV,\nhow many fissions must occurs per second to\nproduce a power of 1 KW",
+    "question": "If each fission in a U²³⁵ nucleus releases 200 MeV,\nhow many fissions must occurs per second to\nproduce a power of 1 KW",
     "diagram": null,
     "options": {
-      "a": "1.325 × 1013",
-      "b": "3.125 × 1013",
-      "c": "1.235 × 1013",
-      "d": "2.135 × 1013"
+      "a": "1.325 × 10¹³",
+      "b": "3.125 × 10¹³",
+      "c": "1.235 × 10¹³",
+      "d": "2.135 × 10¹³"
     },
     "correctAnswer": "b",
-    "explanation": "( C\nSuppose the bisector of angle A meets BC at D.\nThen AD divides BC in the ratio AB : AC.\nSo, P.V. of D is given by\n−−→^^^−−→^^^\n|AB|(2i+ 5j+ 7k) + |AC|(2i+ 3j+ 4k)\n−−→−−→\n|AB| + |AC|\n−−→^^^\n(AB = −2i / ^)(−4j / ^)(−4k / ^)\n(But / −− →)\nand AC= −2i^-2j−k\n−−→−−→\n⇒|AB| = 6 and |AC| = 3\nTherefore, P.V. of D is given by\n^^^^^^\n6(2i+ 5j+ 7k) + 3(2i+ 3j+ 4k)\n(6 + 3 / ^)\n=(1 / 3)(6i+ 13j+ 18k)\n^^",
+    "explanation": "( C\nSuppose the bisector of angle A meets BC at D.\nThen AD divides BC in the ratio AB : AC.\nSo, P.V. of D is given by⃗−−→\n|AB|(2î+ 5ĵ+ 7k̂) + |AC|(2î+ 3ĵ+ 4k̂)\n−−→−−→\n|AB| + |AC|\nBut⃗ AB = −2î−4ĵ−4k̂\nand⃗ AC= −2î−2ĵ−k̂\n−−→−−→\n⇒|AB| = 6 and |AC| = 3\nTherefore, P.V. of D is given by\n6(2î+ 5ĵ+ 7k̂) + 3(2î+ 3ĵ+ 4k̂)\n(6 + 3 / + 18k̂))\n=(1 / 3)(6î+ 13ĵ",
     "expDiagram": null
   },
   {
@@ -220,7 +220,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "∞"
     },
     "correctAnswer": "b",
-    "explanation": "( D)\nHere, the required plane is\n a(x – 4) + b(y – 3) + c(z – 2) = 0\n Also a + b + 2c = 0 and a – 4b + 5c = 0\n Solving, we have\n(a / 5 + 8)=(b / 2^-5)=(c / −4^-1)= k\n(a / 13)=(b / −3)=(c / −5)= k\n Therefore, the required equation of plane is^-13x + 3y + 5z + 33 = 0\n→",
+    "explanation": "( D)\nHere, the required plane is\n a(x – 4) + b(y – 3) + c(z – 2) = 0\n Also a + b + 2c = 0 and a – 4b + 5c = 0\n Solving, we have\n(a / 5 + 8)=(b / 2^-5)=(c / −4^-1)= k\n(a / 13)=(b / −3)=(c / −5)= k\n Therefore, the required equation of plane is^-13x + 3y + 5z + 33 = 0",
     "expDiagram": null
   },
   {
@@ -237,7 +237,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "(1 / 8) times the mass of e\n–"
     },
     "correctAnswer": "d",
-    "explanation": "( C)\n^^^\n→r= (1 + λ −μ) i+ (2 −λ) j+ (3^-2λ + 2μ) k\n⇒\n^^^^^^^^\n→r= (i+ 2j+ 3k) + λ (i−j^-2k) + μ (−i+ 2k)\n→which is a plane passing through →\n^^^\na= i(+ 2j / ^)(+ 3k / ^) and parallel to the vectors \n→b = i^{→}^−j →−2k c= −i^+ 2k^\n and therefore, it\nperpendicular to the vector \nn =^{→}b ×^{→}c^{→}= −2i^−k^\nHence, its vector equation is →→ →→^{→}\n(r−\n→(a) . / n =)(n = 0 / a)^^\n⇒r⋅ ⋅⇒r⋅(−2i−k) = −2^-3\n(n / ^)\n^\n⇒r⋅(2i+ k) = 5\n so, the cartesian equation is \n^^^^^\n(xi+ yj+ zk) ⋅(2i+ k) = 5 or 2x + z = 5",
+    "explanation": "( C)\nr⃗= (1 + λ −μ) î+ (2 −λ) ĵ+ (3^-2λ + 2μ) k̂\n⇒\nr= (̂i+ 2ĵ+ 3k)̂ + λ (̂i−ĵ−2k)̂ + μ (−î+ 2k)̂\nw⃗⃗hich is a plane passing through \n= î+ 3k̂ and⃗ parallel to the vectors \n(a / b⃗ = î⃗)(+ 2ĵ / −2k̂)\n−ĵ⃗ and c= −î+ 2k̂ therefore, it\nperpendicular to the vector \nn⃗ =b⃗ ×c⃗= −2î−k̂\nHenc⃗e, i⃗ts⃗ ve⃗ctor eq⃗uation is \n(r−\n(a) . / n =)(n = 0 / a)\n⇒r⃗⋅ ⋅n⇒r⋅(−2î−k)̂ = −2^-3\n⇒r⋅(2î+ k)̂ = 5\n so, the cartesian equation is \n(xî+ yĵ+ zk)̂ ⋅(2î+ k)̂ = 5 or 2x + z = 5",
     "expDiagram": null
   },
   {
@@ -245,7 +245,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Wave Motion & Sound Waves",
-    "question": "Which of the following transitions of He ion will+\ngive rise to spectral line which has same wavelength\nas some spectral line in hydrogen atom ?",
+    "question": "Which of the following transitions of He ion will⁺\ngive rise to spectral line which has same wavelength\nas some spectral line in hydrogen atom ?",
     "diagram": null,
     "options": {
       "a": "n = 4 to n = 2",
@@ -279,13 +279,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Electromagnetic Induction & AC",
-    "question": "A block P of mass m is placed on a frictionless\nhorizontal surface. Another block Q of mass 2m is\nkept on P and connected to the wall with the help\nof a spring of spring constant k as shown in the\nfigure. ^{μ}s is the coefficient of friction between P\nand Q. The blocks move together performing SHM\nof amplitude A. The maximum value of the friction\nforce between P and Q is",
+    "question": "A block P of mass m is placed on a frictionless\nhorizontal surface. Another block Q of mass 2m is\nkept on P and connected to the wall with the help\nof a spring of spring constant k as shown in the\nfigure. ^{μ}ₛ is the coefficient of friction between P\nand Q. The blocks move together performing SHM\nof amplitude A. The maximum value of the friction\nforce between P and Q is",
     "diagram": null,
     "options": {
       "a": "(2kA / 3)",
       "b": "(kA / 2)",
       "c": "^{zero}",
-      "d": "^{μ}^{mg}s"
+      "d": "^{μ}^{mg}ₛ"
     },
     "correctAnswer": "a",
     "explanation": "( A)\nLet the equation be x + y + 2gx + 2fy + c = 0 2 2\nit passes through (–1, –3) and (3, 0) therefore\n10 – 2g – 6f + c = 0 ....(i)\n9 + 6g + c = 0 ....(ii)\nSlope of tangent = –4/3\n0 + f\n() ((−4 / 3)) = −1\n3 + g\n⇒ 3g – 4f + 9 = 0 ....(iii)\n solving g = –1, f = 3/2, c = -3",
@@ -322,7 +322,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "d": "λ(1 −(V / E))\n9610ZJM"
     },
     "correctAnswer": "d",
-    "explanation": "( D)\nh + a k + b\ncentre (,)\n2 2\nradius = (1 / 2)√(h −a)+ (k −b)\n22\nAcc. to condition\n(1 / 2)√(h −a)2+ (k −b)2=\nh + a\n2\n⇒ (k – b) = 4ah 2\n⇒ (y – b) = 4ax 2",
+    "explanation": "( D)\nh + a k + b\ncentre (,)\n2 2\nradius = (1 / 2)√(h −a)+ (k −b)\n²²\nAcc. to condition\n(1 / 2)√(h −a)²+ (k −b)²=\nh + a\n2\n⇒ (k – b) = 4ah 2\n⇒ (y – b) = 4ax 2",
     "expDiagram": null
   },
   {
@@ -330,13 +330,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A (MCQs)",
     "topic": "Optics & Wave Optics",
-    "question": "In a cricket match, batsman hit the ball (mass = m)\nhigh in the air and fielding side player catch the\nball near boundary. De broglie wavelength of ball\njust after hit from bat is ^{λ}1 and just before the catch\nis ^{λ}2. Assume height at which ball is hit by bat and\nheight at which ball is catch are same. Find total\nwork done by air-resistance (Mechanical energy is\nloss only due to air-resistance)\n21 1",
+    "question": "In a cricket match, batsman hit the ball (mass = m)\nhigh in the air and fielding side player catch the\nball near boundary. De broglie wavelength of ball\njust after hit from bat is ^{λ}₁ and just before the catch\nis ^{λ}₂. Assume height at which ball is hit by bat and\nheight at which ball is catch are same. Find total\nwork done by air-resistance (Mechanical energy is\nloss only due to air-resistance)\n²1 1",
     "diagram": null,
     "options": {
       "a": "(h / m)(−)\nλ1λ2",
-      "b": "(h / 2m)((1 / 2)−(1 / 2))\n2\nλλ\n1 2\n2λ1λ2",
-      "c": "(h / 2m)()\nλ1 −λ2\n21 1",
-      "d": "(h / 2m)(−)\nλ1−λ2\n \n(II / 05)\nThis section contains questions.\nThe answer to each question is a"
+      "b": "(h / 2m)((1 / 2)−(1 / 2))\n²\nλλ\n1 2\n²λ1λ2",
+      "c": "(h / 2m)()\nλ₁ −λ₂\n²1 1",
+      "d": "(h / 2m)(−)\nλ₁−λ₂\n \n(II / 05)\nThis section contains questions.\nThe answer to each question is a"
     },
     "correctAnswer": "b",
     "explanation": "( A)\nLet plane is (x / a)+(y / b)+(z / c)= 1 ..... (i)\n mid point of P(1, 2, 3) and Q(–3, 4, 5)\n i.e., –1, 3, 4 lie on Eq. (i)\n∴−(1 / a)+(3 / b)+(4 / c)= 1 ..... (ii)\n Also, PQ is parallel to normal of the plane (i)\n(/a / −4)=(/b / 2)=(/c / 2)\n1 1 1\n⇒(1 / −2a)=(1 / b)=(1 / c)= λ(say)\n∴(1 / a)= −2λ,(1 / b)= λ,(1 / c)= λ\n∴From Eq.(ii),2λ + 3λ + 4λ = 1\n∴λ =^{(1 / 9)}\na = −(1 / 2λ), b =, c =\n(1 1 / λ λ)\na = −(9 / 2), b = 9, c = 9\n Intercepts are (−(9 / 2), 9, 9).\n9610ZJM",
@@ -398,7 +398,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B (Numerical)",
     "topic": "Magnetism & Magnetic Effects of Current",
-    "question": "12 × 10^-15(V / eV-)\ns. If the value of Planck's constant is P × 10^-15\ns then value of 100 × P × 10 will be.\n4.The system shown is in equilibrium. The string is\ncut at t = 0. The spring comes to its natural length\nat t = t1 sec. If minimum value of t1is T then value\nof 5T will be (Take : π2 = 10)",
+    "question": "12 × 10\n₋₁₅(V / eV-)\ns. If the value of Planck's constant is P × 10^-15\ns then value of 100 × P × 10 will be.\n4.The system shown is in equilibrium. The string is\ncut at t = 0. The spring comes to its natural length\nat t = t₁ sec. If minimum value of t₁is T then value\nof 5T will be (Take : π² = 10)",
     "diagram": null,
     "options": {
       "a": "1",
@@ -432,7 +432,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Coordination Compounds",
-    "question": "1 mol of nitrogen is mixed with 3 moles of hydrogen\nin a √3 litre container where 66.67 % of nitrogen is\nconverted in to ammonia by the following reaction :\nN (g) + 3H (g) 2 2→ 2NH (g) , then the value of K 3 C\nfor the reaction NH3(g) →(1 / 2)N2(g) +(3 / 2)H2 will be -",
+    "question": "1 mol of nitrogen is mixed with 3 moles of hydrogen\nin a √3 litre container where 66.67 % of nitrogen is\nconverted in to ammonia by the following reaction :\nN (g) + 3H (g) 2 2→ 2NH (g) , then the value of K 3 C\nfor the reaction NH₃(g) →(1 / 2)N₂(g) +(3 / 2)H₂ will be -",
     "diagram": null,
     "options": {
       "a": "2 M",
@@ -455,7 +455,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "a": "^{K = K (RT)}p c 1",
       "b": "^{K = K (RT)}p c 2",
       "c": "log(K / K)−2 log RT= 0\np\n(c / [C])\n[D]^{(3 / eq.)}",
-      "d": "K_c=(eq / [B])2\neq."
+      "d": "K_c=(eq / [B])²\neq."
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Chemical Thermodynamics, the correct response is verified as A.",
@@ -466,7 +466,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Equilibrium & Solutions",
-    "question": "(NH4)2CO3(s) 2NH^{⇌}3(g) + CO2(g) + H2O(g)\nThe value of K for above equilibrium is 64 atmp4.\nThe equilibrium pressure of the system is",
+    "question": "(NH₄)₂CO₃(s) 2NH^{⇌}₃(g) + CO₂(g) + H₂O(g)\nThe value of K for above equilibrium is 64 atmₚ⁴.\nThe equilibrium pressure of the system is",
     "diagram": null,
     "options": {
       "a": "4 atm",
@@ -483,7 +483,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Organic Reactions & Mechanisms",
-    "question": "At 25°C, K of weak monobasic acid, HA, is 5 ×a^-6–\n10. K of A is -_{b}\n-6 5",
+    "question": "At 25°C, K of weak monobasic acid, HA, is 5 ×ₐ\n-6–\n10. K of A is -_{b}\n-6 5",
     "diagram": null,
     "options": {
       "a": "5 × 10",
@@ -520,10 +520,10 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "The compound which undergo nucelophilic\nsubstitution fastest would be :",
     "diagram": null,
     "options": {
-      "a": "CHCH2CONH2",
-      "b": "CH3CH2COOCH3",
-      "c": "CH3CH2COCl",
-      "d": "CH3CH2COCH3"
+      "a": "CHCH₂CONH₂",
+      "b": "CH₃CH₂COOCH₃",
+      "c": "CH₃CH₂COCl",
+      "d": "CH₃CH₂COCH₃"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Periodic Properties & Chemical Bonding, the correct response is verified as C.",
@@ -534,11 +534,11 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Aldehydes, Ketones & Carboxylic Acids",
-    "question": "Which of the following compound will not give\nCO gas on heating ?2",
+    "question": "Which of the following compound will not give\nCO gas on heating ?₂",
     "diagram": null,
     "options": {
       "a": "[Refer to Question Diagram for Option A]",
-      "b": "^{HOOC}−^{CH}2−",
+      "b": "^{HOOC}⁻^{CH}2⁻",
       "c": "[Refer to Question Diagram for Option C]",
       "d": "COOH"
     },
@@ -551,7 +551,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section A (MCQs)",
     "topic": "Hydrocarbons & Alkyl Halides",
-    "question": "Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n⊖\nO Et\n−−→ (Q)\nPossible structure of \"Q\" is",
+    "question": "Ester having α–'H' gives β, keto ester in\npresence of alkoxide ion. This reaction is\nknown as Claisen condensations reaction.\n⊖\nO Et⃗ (Q)\nPossible structure of \"Q\" is",
     "diagram": null,
     "options": {
       "a": "[Refer to Question Diagram for Option A]",
@@ -571,9 +571,9 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "In which of the following reaction, one of the\nproduct obtained will give isocynide test ?\nBr 2",
     "diagram": null,
     "options": {
-      "a": "−−−→\nKOH\nLAH",
-      "b": "−−−→\n(i)CH3−Br",
-      "c": "−−−−−−−→\n(ii)H3O+",
+      "a": "−KOH⃗\nLAH",
+      "b": "−−−→\n(i)CH₃−Br",
+      "c": "−−−−−−−→\n(ii)H₃O⁺",
       "d": "All of these"
     },
     "correctAnswer": "d",
@@ -741,10 +741,10 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "Which of the following acids has the smallest\ndissociation constant?",
     "diagram": null,
     "options": {
-      "a": "CH3CHFCOOH",
-      "b": "FCH2CH2COOH",
-      "c": "BrCH2CH2COOH",
-      "d": "CH3CHBrCOOH\n9610ZJM"
+      "a": "CH₃CHFCOOH",
+      "b": "FCH₂CH₂COOH",
+      "c": "BrCH₂CH₂COOH",
+      "d": "CH₃CHBrCOOH\n9610ZJM"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 19: Applying fundamental principles of Aldehydes, Ketones & Carboxylic Acids, the correct response is verified as C.",
@@ -772,7 +772,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "d- and f-Block Elements",
-    "question": "For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(K / K) = (RT)x. Hence x is :\np\nc",
+    "question": "For the reversible reaction A(g) + B(s) ⇌ 2C(g),\n(K / K) = (RT)ˣ. Hence x is :\np\nc",
     "diagram": null,
     "options": {
       "a": "1",
@@ -789,7 +789,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "Biomolecules & Polymers",
-    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.2\n2NO(g) + O2→ 2NO2(g)\n((g) / 1)\n(Take R = ltr. Atm/mol K)\n12",
+    "question": "Calculate the change in pressure (in atm) when 2\nmole of NO and 16 g O in a 6.25 litre originally at 2\n27°C react to produce the maximum quantity of\nNO possible according to the equation.₂\n2NO(g) + O₂→ 2NO₂(g)\n((g) / 1)\n(Take R = ltr. Atm/mol K)\n12",
     "diagram": null,
     "options": {
       "a": "2",
@@ -806,7 +806,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "Solid State & Surface Chemistry",
-    "question": "The acid ionization (hydrolysis) constant of\n2⊕-9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl2is",
+    "question": "The acid ionization (hydrolysis) constant of\n2⊕-9\nZn is 1.0 × 10 then the pH of a 0.001 M\nsolution of ZnCl₂is",
     "diagram": null,
     "options": {
       "a": "6",
@@ -840,7 +840,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Chemistry",
     "section": "Chemistry Section B (Numerical)",
     "topic": "Coordination Compounds",
-    "question": "Identify total number of esters having molecular\nformula C6H12O which give “EtOH” as one of the2\nproduct on acidic hydrolysis :\n9610ZJM",
+    "question": "Identify total number of esters having molecular\nformula C₆H₁₂O which give “EtOH” as one of the₂\nproduct on acidic hydrolysis :\n9610ZJM",
     "diagram": null,
     "options": {
       "a": "2",
@@ -874,13 +874,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Differential Equations",
-    "question": "A uni-modular tangent vector on the curve x = t +2\n2, y = 4t – 5, z = 2t 2– 6t at t = 2 is :-",
+    "question": "A uni-modular tangent vector on the curve x = t +²\n2, y = 4t – 5, z = 2t ²– 6t at t = 2 is :-",
     "diagram": null,
     "options": {
-      "a": "(1 / 3)(2i+ 2j+ k)\n^^^",
-      "b": "(1 / 3)(i−j−k)\n^^^",
-      "c": "(1 / 6)(2i+ j+ k)\n^^^",
-      "d": "(2 / 3)(i+ j+ k)\n^^^"
+      "a": "(1 / 3)(2î+ 2ĵ+ k̂)",
+      "b": "(1 / 3)(î−ĵ−k̂)",
+      "c": "(1 / 6)(2î+ ĵ+ k̂)",
+      "d": "(2 / 3)(î+ ĵ+ k̂)"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step derivation for question 2: Applying fundamental principles of Differential Equations, the correct response is verified as A.",
@@ -908,10 +908,10 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Matrices & Determinants",
-    "question": "If the circles x + y + 2x + 2ky + 6 = 0 and22\n(2 / is -)\nx + y + 2ky + k = 0 intersect orthogonally, then k2",
+    "question": "If the circles x + y + 2x + 2ky + 6 = 0 and²²\n(2 / is -)\nx + y + 2ky + k = 0 intersect orthogonally, then k²",
     "diagram": null,
     "options": {
-      "a": "2 or +^{(3 / 2)}",
+      "a": "2 or ⁺^{(3 / 2)}",
       "b": "+2 or −^{(3 / 2)}",
       "c": "–2 or –(3 / 2)",
       "d": "–2 or (3 / 2)\nENTHUSE + LEADER COURSE_PHASE - 3\n→→\n→→"
@@ -925,11 +925,11 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Coordinate Geometry & Conic Sections",
-    "question": "Vector in the plane of a^{^}b = 2i^+ j^ and c= i^−j^+ k^\n→\n is such that it is equally inclined to b and where d\nd = j^+ 2k.^a^{^}\n The value of is :-\n^^^\ni+ j+ k",
+    "question": "Vector in the plane of âb = 2î+ ĵ and c= î−ĵ+ k̂\n i⃗s such that it is equally inclined to b and where d\nd = ĵ+ 2k̂. The value of is :-â\nî+ k̂",
     "diagram": null,
     "options": {
-      "a": "(3 / ^)\n(√ / ^ ^)\ni+ k",
-      "b": "(−j / √)\n(3 / ^)\n^\n2i+ j",
+      "a": "(+ ĵ / √)\n3\nî−ĵ+ k̂",
+      "b": "√\n(3 / + ĵ)\n2î",
       "c": "√5",
       "d": "^{None}"
     },
@@ -942,13 +942,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Probability & Statistics",
-    "question": "The locus of the mid-points of the chords of the\nx22−ax −by = 0\ncircle , which subtends a right\n(−y / a)\nangle at (,(b / 2)) is :\n2",
+    "question": "The locus of the mid-points of the chords of the\nx²²−ax −by = 0\ncircle , which subtends a right\n(−y / a)\nangle at (,(b / 2)) is :\n2\n(A)^{ax + by = 0}\n(B)ax + by = a²+ b²\n²²a²+ b²\n(C)x−y−ax −by −= 0\n8\n^{→}²²a²+ b²→ →\n(D⃗)x+ y−a⃗x −by += 0\n^{→}8",
     "diagram": null,
     "options": {
-      "a": "^{ax + by = 0}",
-      "b": "ax + by = a2+ b2\n22a2+ b2",
-      "c": "x−y−ax −by −= 0\n8\n→^{→}22→a2+ b2→ →",
-      "d": "x+ y−ax −by += 0\n^{→}8\n→ →"
+      "a": "[Option A unavailable - extraction error]",
+      "b": "[Option B unavailable - extraction error]",
+      "c": "[Option C unavailable - extraction error]",
+      "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 6: Applying fundamental principles of Probability & Statistics, the correct response is verified as D.",
@@ -959,11 +959,11 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Functions, Limits & Continuity",
-    "question": "If a,b^{→} and are non-coplar vectors and c a ×c is\n→ → →\nperpendicular to a × (b ×c), then the value of\n→^{→}→→→^{→}→^{→}\n[a × (b ×c)] ×c is equal to :-\n→→^{→}→→",
+    "question": "If a,b and are n⃗on-copl⃗ar vectors and c a ×c is\npe⃗rpe⃗ndi⃗cular⃗ to a × (b ×c), then the value of\n→→^{→}→^{→}\n[a × (b⃗⃗ ×c⃗)] ×c is equal to :-\n→",
     "diagram": null,
     "options": {
       "a": "[a b c]c",
-      "b": "[a b c]b",
+      "b": "[a⃗b⃗c⃗]b⃗",
       "c": "0",
       "d": "[a b c]a"
     },
@@ -979,10 +979,10 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "y = mx is a chord of a circle of radius 'a' and the\ndiameter of the circle lies along x-axis and one end\nof this chord is origin. The equation of the circle\ndescribed on this chord as diameter is :-",
     "diagram": null,
     "options": {
-      "a": "(1 + m2) (x + y22) – 2ax = 0",
-      "b": "(1 + m) (x + y222) – 2a(x + my) = 0",
-      "c": "(1 + m2) (x + y22) + 2a(x + my) = 0",
-      "d": "(1 + m2) (x + y22) – 2a(x – my) = 0\n9610ZJM\n \n→^{→}\n→→→^{→} →→ →^{→}→"
+      "a": "(1 + m²) (x + y²²) – 2ax = 0",
+      "b": "(1 + m) (x + y²²²) – 2a(x + my) = 0",
+      "c": "(1 + m²) (x + y²²) + 2a(x + my) = 0",
+      "d": "(1 + m²) (x + y²²) – 2a(x – my) = 0\n9610ZJM\n \n→^{→}"
     },
     "correctAnswer": "b",
     "explanation": "Step-by-step derivation for question 8: Applying fundamental principles of Sequences & Series, the correct response is verified as B.",
@@ -993,7 +993,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Complex Numbers & Quadratic Equations",
-    "question": "Given three non-zero, non-coplanar vectors a,b and \n→→→ →\n 1 = p a + q and r 2=a + p b + q c. The vectors\n(c, / r)(r / + 2)(b + / 2)(c / +)\n 1 r 2 and r 1 r 2 are collinear then (p,q) is :-",
+    "question": "G⃗i⃗ven th⃗ree⃗ non⃗-zero, n⃗on⃗-coplan⃗ar vec⃗tors a,b and \n→\n 1 = p a + q r 2=a + p b + q c. The vectors\n(c⃗, / r)(r / + 2)(b⃗ + / 2)(c / +)(a⃗nd / r)\n 1 r 2 and r 1 2 are collinear then (p,q) is :-",
     "diagram": null,
     "options": {
       "a": "(0,0)",
@@ -1027,13 +1027,13 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Trigonometry & Inverse Trigonometry",
-    "question": "4i^+ 7j^+ 8k,^2i^+ 3j^+ 4k^2i^+ 5j^+ 7k^\nIf and are\nthe position vectors of the vertices A, B and C,\nrespectively, of triangle ABC, then the position\nvector of the point where the bisector of angle A\nmeets BC is :-",
+    "question": "If 4î+ 7ĵ+ 8k̂,2î+ 3ĵ+ 4k̂ and 2î+ 5ĵ+ 7k̂ are\nthe position vectors of the vertices A, B and C,\nrespectively, of triangle ABC, then the position\nvector of the point where the bisector of angle A\nmeets BC is :-",
     "diagram": null,
     "options": {
-      "a": "(2 / 3)(−6i^-8j^-6k)\n^^^",
-      "b": "(2 / 3)(6i+ 8j+ 6k)\n^^^",
-      "c": "(1 / 3)(6i+ 13j+ 18k)\n^^^",
-      "d": "(1 / 3)(5j+ 12k)\n^^"
+      "a": "(2 / 3)(−6î−8ĵ−6k̂)",
+      "b": "(2 / 3)(6î+ 8ĵ+ 6k̂)",
+      "c": "(1 / 3)(6î+ 13ĵ+ 18k̂)",
+      "d": "(1 / 3)(5ĵ+ 12k̂)"
     },
     "correctAnswer": "c",
     "explanation": "Step-by-step derivation for question 11: Applying fundamental principles of Trigonometry & Inverse Trigonometry, the correct response is verified as C.",
@@ -1044,7 +1044,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Binomial Theorem",
-    "question": "The number of integral values of λ for which x +2\ny + 2λx + (1 –λ)y + 5 = 0 is the equation of a\ncircle whose radius cannot exceed 5, is :-",
+    "question": "The number of integral values of λ for which x +²\ny + 2λx + (1 –λ)y + 5 = 0 is the equation of a\ncircle whose radius cannot exceed 5, is :-",
     "diagram": null,
     "options": {
       "a": "14",
@@ -1067,7 +1067,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
       "a": "11x – y – 3z = 35",
       "b": "11x + y – 3z = 35",
       "c": "11x – y + 3z = 35",
-      "d": "none of these\n→"
+      "d": "none of these"
     },
     "correctAnswer": "d",
     "explanation": "Step-by-step derivation for question 13: Applying fundamental principles of Vectors & 3D Geometry, the correct response is verified as D.",
@@ -1078,7 +1078,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Differential Equations",
-    "question": "The cartesian equation the plane \n^^(of / + (3^-2)^\nr= (1 + λ −μ) i+ (2 −λ) jλ + 2μ) k is :-",
+    "question": "cartesian equation the plane \n(T⃗he / r)(of / + (3^-2)\n= (1 + λ −μ) î+ (2 −λ) ĵλ + 2μ) k̂ is :-",
     "diagram": null,
     "options": {
       "a": "2x + y = 5",
@@ -1134,7 +1134,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "options": {
       "a": "x + y 2 2––\n(2x + 3y / 3y)(3 = 0 / 5 = 0)",
       "b": "x + y + 2x 2 2––",
-      "c": "2x + 2y 22– 2x + 5y – 8 = 0",
+      "c": "2x + 2y ²²– 2x + 5y – 8 = 0",
       "d": "None of these\n9610ZJM"
     },
     "correctAnswer": "a",
@@ -1146,7 +1146,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section A (MCQs)",
     "topic": "Probability & Statistics",
-    "question": "The equation of a line which passes through point_{→}\nA(1,0,–1) and perpendicular to the straight lines\n→^^^^^^\n(= 2i / ^)(−j / ^)(( / ^)(+ 7j / ^)\nand r+ k + λ2i^-3k)and \nr= 3i^−j+ 3k + λ2i^-2j+ 5k , is :-\n ()",
+    "question": "The equation of a line which passes through point_{→}\n–1) and perpendicular to the straight lines\n(A(1,0, / a⃗nd)\n(( / −2ĵ)\nr= 2î−ĵ+ k̂ + λ2î+ 7ĵ−3k)̂and \nr= 3î−ĵ+ 3k̂ + λ (2î+ 5k)̂ , is :-",
     "diagram": null,
     "options": {
       "a": "(x^-2 / 29)=(y / −16)=(z + 1 / 18)",
@@ -1166,7 +1166,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "question": "A variable circle passes through the fixed point P(a,\nb) and touches y-axis. The locus of the other end of\nthe diameter through P is :-",
     "diagram": null,
     "options": {
-      "a": "(x^-2\n(a) = 4by / 2)",
+      "a": "(x –²\n(a) = 4by / 2)",
       "b": "(x –\n(b) = 4ay / 2)",
       "c": "(y –\n(a) = 4bx / 2)",
       "d": "(y – b) = 4ax"
@@ -1197,7 +1197,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Complex Numbers & Quadratic Equations",
-    "question": "If the circle x + y + 2ax + 2by + c = 0 and x + y 2 2 2 2\n+ 2cx + 2ay + c = 0 where c > 0, have exactly one\n→(a + b)2\n→\npoint is common, then the value of is :\n→→(2c / ^)",
+    "question": "If the circle x + y + 2ax + 2by + c = 0 and x + y 2 2 2 2\n+ 2cx + 2ay + c = 0 where c > 0, have exactly one\n(a + b)²\npoint⃗ is common, then the⃗ value of is :\n2c",
     "diagram": null,
     "options": {
       "a": "1",
@@ -1214,7 +1214,7 @@ export const JEE_MOCK_3_QUESTIONS: CbtQuestion[] = [
     "subject": "Mathematics",
     "section": "Mathematics Section B (Numerical)",
     "topic": "Permutations & Combinations",
-    "question": "a= i^−j^−k^λ^^+ k\nIf and and the\n(b = / 4)(i / ^)(−3j / ^)\n^\nprojection of on b a is (i−j−k), then λ is\n3\nequal to :-",
+    "question": "If a= î−ĵ−k⃗̂and⃗ λ̂î-3ĵ+ k̂and the\n(b = / 4)\nprojection of on b a is (̂i−ĵ−k)̂, then λ is\n3\nequal to :-",
     "diagram": null,
     "options": {
       "a": "2",

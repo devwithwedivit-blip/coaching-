@@ -50,7 +50,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "4 N\n(Circular Motion, Banking of Road)"
     },
     "correctAnswer": "a",
-    "explanation": "In connected motion,\nCommon acceleration a=(F / M)^{net}\ntotal\na =(10 / 5)= 2 m/s2\nNow, from FBD of 2 kg block & 3 kg block\nForce exerted by block A on block B,\nF=(3)a\n(BA / F)\n_{BA}=3×2=6 N",
+    "explanation": "In connected motion,\nCommon acceleration a=(F / M)^{net}\ntotal\na =(10 / 5)= 2 m/s²\nNow, from FBD of 2 kg block & 3 kg block\nForce exerted by block A on block B,\nF=(3)a\n(BA / F)\n_{BA}=3×2=6 N",
     "expDiagram": null
   },
   {
@@ -84,7 +84,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "d",
-    "explanation": "= M w2r\n(T / w)\n(T / T)\n(∝ 2 / becomes 4 times)",
+    "explanation": "= M w²r\n(T / w)\n(T / T)\n(∝ 2 / becomes 4 times)",
     "expDiagram": null
   },
   {
@@ -109,7 +109,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "Two bodies A and B of same mass undergo completely \ninelastic one dimensional collision. The body A moves with \nvelocity v1 while body B is at rest before collision. The \nvelocity of the system after collision is v2. The ratio v1: v2 is:",
+    "question": "Two bodies A and B of same mass undergo completely \ninelastic one dimensional collision. The body A moves with \nvelocity v₁ while body B is at rest before collision. The \nvelocity of the system after collision is v₂. The ratio v₁: v₂ is:",
     "diagram": null,
     "options": {
       "a": "4 : 1",
@@ -118,7 +118,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "2 : 1\n(Moment of Inertia, Theorem of Parallel and \nSystem of Particles and Rotational Motion\nPerpendicular Axis and Energy in Rotation)"
     },
     "correctAnswer": "d",
-    "explanation": "Before collision:\nm m\n(v 1 / A B)\nrest\nAfter collision:\nv2\nm m\nNow, from conservations of momentum, \nMomentum before collision = Momentum after collision.\n(mv / mv)_{(1 / 1)}(+ (0) = 2 / = 2)2\nm v\nmv2\n(v / v)_{(1 / 2)}=(2 / 1)\n∴v1 : v2 = 2 : 1",
+    "explanation": "Before collision:\nm m\n(v 1 / A B)\nrest\nAfter collision:\nv₂\nm m\nNow, from conservations of momentum, \nMomentum before collision = Momentum after collision.\n(mv / mv)_{(1 / 1)}(+ (0) = 2 / = 2)²\nm v\nmv₂\n(v / v)_{(1 / 2)}⁼(2 / 1)\n∴v₁ : v₂ = 2 : 1",
     "expDiagram": null
   },
   {
@@ -126,7 +126,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "The moment of inertia of a thin rod about an axis passing \nthrough its mid point and perpendicular to the rod is 2400 g \ncm2. The length of the 400 g rod is nearly:",
+    "question": "The moment of inertia of a thin rod about an axis passing \nthrough its mid point and perpendicular to the rod is 2400 g \ncm². The length of the 400 g rod is nearly:",
     "diagram": null,
     "options": {
       "a": "20.7 cm",
@@ -135,7 +135,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "17.5 cm\n\n2 \n(Rolling Motion)"
     },
     "correctAnswer": "c",
-    "explanation": "(2 / 12)=2400\nML\nL2\n⇒(400 / 12)=2400\n⇒L2=(2400 / 400)\n×12\n⇒L2=\n(72 / 72)\n(L / L)\n⇒ =\n⇒=8.5 cm",
+    "explanation": "(2 / 12)=2400\nML\nL²\n⇒(400 / 12)=2400\n⇒L²=(2400 / 400)\n×12\n⇒L²=\n(72 / 72)\n(L / L)\n⇒ =\n⇒=8.5 cm",
     "expDiagram": null
   },
   {
@@ -169,7 +169,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "b",
-    "explanation": "g=(GM / 2)= 9.8 m/s2...(i)\nR\nNow for Planet,\nM'=(M / 10),D'=(D / 2) [D is diameter of earth]\n∴R'=(R / 2)\nNow, g'=(GM / ()2'=(GM / 10)(4 / 2)=(4 / 10)×(GM / 2)\n×\nR')×R\n(R / GM)\nSubstitute value of from equation (i)\nR2\ng′ = 0.4 × 9.8 m/s2 = 3.92 m/s2",
+    "explanation": "g=(GM / 2)= 9.8 m/s²...(i)\nR\nNow for Planet,\nM'=(M / 10),D'=(D / 2) [D is diameter of earth]\n∴R'=(R / 2)\nNow, g'=(GM / ()₂'=(GM / 10)(4 / 2)=(4 / 10)×(GM / 2)\n×\nR')×R\n(R / GM)\nSubstitute value of from equation (i)\nR²\ng′ = 0.4 × 9.8 m/s² = 3.92 m/s²",
     "expDiagram": null
   },
   {
@@ -177,7 +177,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "The maximum elongation of a steel wire of 1 m length if the \nelastic limit of steel and its Young’s modulus, respectively, \nare 8 × 108 N m^-2 and 2 × 1011 N m^{– 2}, is:",
+    "question": "The maximum elongation of a steel wire of 1 m length if the \nelastic limit of steel and its Young’s modulus, respectively, \nare 8 × 10⁸ N m⁻² and 2 × 10¹¹ N m^{– 2}, is:",
     "diagram": null,
     "options": {
       "a": "40 mm",
@@ -186,7 +186,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "0.4 mm\n(Surface Tension and Surface Energy)\nMechanical Properties of Fluid"
     },
     "correctAnswer": "c",
-    "explanation": "(Stress)max=Young's modulus ×(Strain)max\n(8 / 2)(10 / 10)^{(8 / 11)}=(∆l)max\n(× / ×)\n(4 × 10 / ()max^-3 = (∆l)\n∆l)max = 4 mm",
+    "explanation": "(Stress)ₘₐₓ=Young's modulus ×(Strain)ₘₐₓ\n(8 / 2)(10 / 10)^{(8 / 11)}=(∆l)ₘₐₓ\n(× / ×)\n(4 × 10 / ()max\n⁻³ = (∆l)\n∆l)ₘₐₓ = 4 mm",
     "expDiagram": null
   },
   {
@@ -194,7 +194,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "A thin flat circular disc of radius 4.5 cm is placed gently over the \nsurface of water. If surface tension of water is 0.07 Nm^-1, then \nthe excess force required to take it away from the surface is :",
+    "question": "A thin flat circular disc of radius 4.5 cm is placed gently over the \nsurface of water. If surface tension of water is 0.07 Nm⁻¹, then \nthe excess force required to take it away from the surface is :",
     "diagram": null,
     "options": {
       "a": "1.98 mN",
@@ -203,7 +203,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "198 N\nThermodynamics\n(Thermodynamic Processes and First Law of Thermodynamics)"
     },
     "correctAnswer": "c",
-    "explanation": "For circular disc,\nexcess(= 2π / r)\nF r T\nwhere is radius of disc and T is surface tension.\nSubstituting the given values,\nF_{excess} = 2π × 4.5 × 10^-2 × 0.07 \n= 2 × ^{(22 / 7)}^{× 4.5 × 10}−2^{× 7 × 10}−2\n= 198 × 10^-4 N = 19.8 mN",
+    "explanation": "For circular disc,\nexcess(= 2π / r)\nF r T\nwhere is radius of disc and T is surface tension.\nSubstituting the given values,\nF_{excess} = 2π × 4.5 × 10⁻² × 0.07 \n= 2 × ^{(22 / 7)}^{× 4.5 × 10}⁻²^{× 7 × 10}⁻²\n= 198 × 10⁻⁴ N = 19.8 mN",
     "expDiagram": null
   },
   {
@@ -211,7 +211,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "A thermodynamic system is taken through the cycle abcda.\nThe work done by the gas along the path bc is:\nP\n300 kPa d c\n100 kPa a b\n100 cm3400 cm3\nV\na. – 90J \n(b. – 60J / d. 30J)\nc. Zero \nOscillations\n(Time Period and Frequency)",
+    "question": "A thermodynamic system is taken through the cycle abcda.\nThe work done by the gas along the path bc is:\nP\n300 kPa d c\n100 kPa a b\n100 cm³400 cm³\nV\na. – 90J \n(b. – 60J / d. 30J)\nc. Zero \nOscillations\n(Time Period and Frequency)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -245,7 +245,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "Given below are two statements: one is labelled as Assertion \nA and the other is labelled as Reason R.\n Assertion A: The potential (V) at any axial point, at 2 m distance \n(r) from the centre of the dipole of dipole moment vector ^{P} of \nmagnitude, 4 × 10^-6C m, is ± 9 × 103 V.\nTake(1 / π∈)=9×109SI Units\n\n40\nReason R:V= ±(2 / π∈)2, where r is the distance of any \n(P / 4 0 r)\naxial point, situated at 2 m from the centre of the dipole. \nIn the light of the above statements, choose the correct answer \nfrom the options given below:\na. A is true but R is false.\nb. A is false but R is true.\nc. Both A and R are true and R is the correct explanation of \nA.\nd. Both A and R are true and R is NOT the correct explanation \n(Potential Difference and Work Done)\nof A.",
+    "question": "Given below are two statements: one is labelled as Assertion \nA and the other is labelled as Reason R.\n Assertion A: The potential (V) at any axial point, at 2 m distance \n(r) from the centre of the dipole of dipole moment vector ^{P} of \nmagnitude, 4 × 10⁻⁶C m, is ± 9 × 10³ V.\nTake(1 / π∈)=9×10⁹SI Units\n\n4₀\nReason R:V= ±(2 / π∈)₂, where r is the distance of any \n(P / 4 0 r)\naxial point, situated at 2 m from the centre of the dipole. \nIn the light of the above statements, choose the correct answer \nfrom the options given below:\na. A is true but R is false.\nb. A is false but R is true.\nc. Both A and R are true and R is the correct explanation of \nA.\nd. Both A and R are true and R is NOT the correct explanation \n(Potential Difference and Work Done)\nof A.",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -254,7 +254,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "a",
-    "explanation": "Formula of potential is given by V=(K_p / r)(cos / 2)\nθ\nFor axial point θ = 0° or 180°\nV = ±(K_p / 2)= ±(1 / πε)×(p / 2)\nr 4 r\n(0 / –6)\n9×109××10\n= ±(4 / 4)\n= ±9×103",
+    "explanation": "Formula of potential is given by V=(K_p / r)(cos / 2)\nθ\nFor axial point θ = 0° or 180°\nV = ±(K_p / 2)= ±(1 / πε)×(p / 2)\nr 4 r\n(0 / –6)\n9×10⁹××10\n= ±(4 / 4)\n= ±9×10³",
     "expDiagram": null
   },
   {
@@ -262,7 +262,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "A thin spherical shell is charged by some source. The potential \ndifference between the two points C and P (in V) shown in the \ngiven is: Take(1 / π∈)=9×109SI units\n\n40\nP\nC\nR = 3 cm\nq = 1 m C\na. 0.5 × 105b. zero\nc. 3 × 105d. 4 × 105\n(Grouping of Capacitors)",
+    "question": "A thin spherical shell is charged by some source. The potential \ndifference between the two points C and P (in V) shown in the \ngiven is: Take(1 / π∈)=9×10⁹SI units\n\n4₀\nP\nC\nR = 3 cm\nq = 1 m C\na. 0.5 × 10⁵b. zero\nc. 3 × 10⁵d. 4 × 10⁵\n(Grouping of Capacitors)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -333,13 +333,13 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "question": "A tightly wound 100 turns coil of radius 10 cm carries a \ncurrent of 7",
     "diagram": null,
     "options": {
-      "a": "The magnitude of the magnetic field at the \ncentre of the coil is (Take permeability of free space as 4 p × \n10^-7 Sl units):\na. 4.4 mT",
+      "a": "The magnitude of the magnetic field at the \ncentre of the coil is (Take permeability of free space as 4 p × \n10⁻⁷ Sl units):\na. 4.4 mT",
       "b": "44 T",
       "c": "44 mT",
       "d": "4.4 T\n(Magnetic Properties of Materials)\nMagnetism and Matter"
     },
     "correctAnswer": "a",
-    "explanation": "Magnetic field B=0(NI / 2)\nμ\n4^-7××7(r / 0.0044)\n=(π× / 2)(10 / 100)(100 / 2)−=T\n(× × 10 / = 4.4 mT)",
+    "explanation": "Magnetic field B=⁰(NI / 2)\nµ\n4⁻⁷××7(r / 0.0044)\n=(π× / 2)(10 / 100)(100 / 2)₋=T\n(× × 10 / = 4.4 mT)",
     "expDiagram": null
   },
   {
@@ -351,12 +351,12 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "diagram": null,
     "options": {
       "a": "Diamagnetic c\n(I. / II.)(= 0 / 0 >)",
-      "b": "Ferromagnetic3 – 1\n(c / >> 1)",
+      "b": "Ferromagnetic³ – 1\n(c / >> 1)",
       "c": "Paramagnetic III.\n(c / 0 <)",
       "d": "Non-magnetic IV.c < e (a small positive \nnumber)\n 3\nChoose the correct answer from the options given below:\na. A-III, B-II, C-I, D-IV\nb. A-IV, B-III, C-II, D-I\nc. A-II, B-III C-IV, D-I\nd. A-II, B-I, C-III, D-IV\nElectromagnetic Induction\n(Lenz’s Law)\n 22.v\nN S\nA B C D\nSolenoid^-1 Solenoid^-2\n In the above diagram, a strong bar magnet is moving towards \nsolenoid^-2 from solenoid^-1. The direction of induced current \nin solenoid^-1 and that in solenoid^-2, respectively, are through \nthe directions:\na. AB and CD b. BA and DC\n(Dipole)\nc. AB and DC d. BA and CD"
     },
     "correctAnswer": "c",
-    "explanation": "Material Magnetic susceptibility (c)\nDiamagnetic^-5^-9\n(–10 / 10)(to 10 / to 10)\nParamagnetic^-3\n^{(–5 / >> 1)}\n(Ferromagnetic / Non–magnetic 0)",
+    "explanation": "Material Magnetic susceptibility (c)\nDiamagnetic⁻⁵⁻⁹\n(–10 / 10)(to 10 / to 10)\nParamagnetic⁻³\n^{(–5 / >> 1)}\n(Ferromagnetic / Non–magnetic 0)",
     "expDiagram": null
   },
   {
@@ -364,7 +364,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "In a uniform magnetic field of 0.049 T, a magnetic needle \nperforms 20 complete oscillations in 5 seconds as shown. \nThe moment of inertia of the needle is 9.8 × 10 kg m. If the \n^{(–6 / x)}^{(2 / × 10)}−52\nmagnitude of magnetic moment of the needle is Am; \nthen the value of ‘x’ is:\nN\nB\nS\n(a. 50 / c. 5)(p / p)(b. 1280 / d. 128)(p / p)\n22\n22\nAlternative Current\n(Transformer)",
+    "question": "In a uniform magnetic field of 0.049 T, a magnetic needle \nperforms 20 complete oscillations in 5 seconds as shown. \nThe moment of inertia of the needle is 9.8 × 10 kg m. If the \n^{(–6 / x)}^{(2 / × 10)}⁻⁵²\nmagnitude of magnetic moment of the needle is Am; \nthen the value of ‘x’ is:\nN\nB\nS\n(a. 50 / c. 5)(p / p)(b. 1280 / d. 128)(p / p)\n²²\n²²\nAlternative Current\n(Transformer)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -373,7 +373,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "b",
-    "explanation": "B = 0.049 T = 4.9 × 10^-2 T\nT = ^{(5 / 20)}=^{(1 / 4)}^{s}^{,}^{I}^{= 9.8 × 10}−6^{kgm}2\nT=2π(I / MB)⇒T2=(2 / MB)\n4πI\nM=(4 / T)^{(2 / 2)}(I / B)\nπ\n=(4 / 1)(2 / 2)=1280π2×10^-5Am2\nπ×9.8×10^-6\n×4.9×10^-2\n(4 / = 1280 π)\n(  / ∴ x 2)",
+    "explanation": "B = 0.049 T = 4.9 × 10⁻² T\nT = ^{(5 / 20)}⁼^{(1 / 4)}^{s}^{,}^{I}^{= 9.8 × 10}⁻⁶^{kgm}²\nT=2π(I / MB)⇒T²=(2 / MB)\n4πI\nM=(4 / T)^{(2 / 2)}(I / B)\nπ\n=(4 / 1)(2 / 2)=1280π²×10⁻⁵Am²\nπ×9.8×10⁻⁶\n×4.9×10⁻²\n(4 / = 1280 π)\n(  / ∴ x 2)",
     "expDiagram": null
   },
   {
@@ -381,7 +381,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "In an ideal transformer, the turns ratio is (N / N)_{(P / s)}=(1 / 2) The ratio \nVs : Vp is equal to (the symbols carry their usual meaning):",
+    "question": "In an ideal transformer, the turns ratio is (N / N)_{(P / s)}=(1 / 2) The ratio \nVₛ : Vₚ is equal to (the symbols carry their usual meaning):",
     "diagram": null,
     "options": {
       "a": "1:1",
@@ -407,7 +407,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "(5 / 2)\n(Interference and Young’s Double Slit Experiment)\nWave Optics"
     },
     "correctAnswer": "d",
-    "explanation": "10 \nFor surface \n(AB / sin)\n1 sin30° = r...(1)\n(m / AC)\nFor surface \n(sin (90° – / cos)() = 1 / = 1)\nm r...(2)\n⇒m r\n1\n⇒cos r= μ\nFrom (1) and (2)\n⇒^{(1 / 2)}^{= μ}1–(1 / 2)\nμ\n2\n⇒(1 / 4)= μ1–(1 / 2)\nμ\n⇒(1 / 4)^{= μ}2^-1⇒μ2=1+(1 / 4)\n⇒μ =(5 / 2)",
+    "explanation": "10 \nFor surface \n(AB / sin)\n1 sin30° = r...(1)\n(m / AC)\nFor surface \n(sin (90° – / cos)() = 1 / = 1)\nm r...(2)\n⇒m r\n1\n⇒cos r= µ\nFrom (1) and (2)\n⇒^{(1 / 2)}^{= µ}1–(1 / 2)\nµ\n₂\n⇒(1 / 4)= µ1–(1 / 2)\nµ\n⇒(1 / 4)^{= µ}²–1⇒µ²=1+(1 / 4)\n⇒µ =(5 / 2)",
     "expDiagram": null
   },
   {
@@ -441,7 +441,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "the refracted light will be completely polarised.\n(Wave Nature of Matter [De-Broglie Wavelength])\nDual Nature of Radiation and Matter"
     },
     "correctAnswer": "b",
-    "explanation": "At brewster angle, only the reflected light is completely \npolarised, but the refracted light is partially polarised.\n2 8.(b)\nλ =(h / p)=(h / 2)\nmE\nλ =(h / 2)\n(mE / 2)\nλ2=(h / 2)\n(mE / 1)\nE ∝\nλ2",
+    "explanation": "At brewster angle, only the reflected light is completely \npolarised, but the refracted light is partially polarised.\n2 8.(b)\nλ =(h / p)=(h / 2)\nmE\nλ =(h / 2)\n(mE / 2)\nλ²=(h / 2)\n(mE / 1)\nE ∝\nλ²",
     "expDiagram": null
   },
   {
@@ -449,7 +449,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "The graph which shows the variation of (1 / 2) and its kinetic \nλ\nenergy, E is (where l is de Broglie wavelength of a free \nparticle):\na. (1 / l)2b. (1 / l)2\nO E O E\nc. d. \n(1 / l)2(1 / l)2\nO E O E\nParameters of Photon (Momentum, Pressure and Energy)",
+    "question": "The graph which shows the variation of (1 / 2) and its kinetic \nλ\nenergy, E is (where l is de Broglie wavelength of a free \nparticle):\na. (1 / l)²b. (1 / l)²\nO E O E\nc. d. \n(1 / l)²(1 / l)²\nO E O E\nParameters of Photon (Momentum, Pressure and Energy)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -475,7 +475,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "A, B, C and D only\n(Alpha-Particle Scattering and Rutherford’s Nuclear Model of \nAtoms\nAtom [Distance of Closest Approach and Impact Parameter, \nElectron Orbits])"
     },
     "correctAnswer": "d",
-    "explanation": "Energy E = hv\nVelocity = C = v l\nλ =(c / v)\nP==(h / c)=(v / c)\nh h\nλ\nv\nFext = 0, So momentum conserved energy conserved.",
+    "explanation": "Energy E = hv\nVelocity = C = v l\nλ =(c / v)\nP==(h / c)=(v / c)\nh h\nλ\nv\nFₑₓₜ = 0, So momentum conserved energy conserved.",
     "expDiagram": null
   },
   {
@@ -500,16 +500,16 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section A",
     "topic": "Core Fundamentals & Applications",
-    "question": "Match List I with List II.\nList I List II\n(Spectral Lines of Hydrogen (Wavelengths (nm))\nfor transitions from)\n2(n / n)1(= 2 / = 2)(I. / II.)(410.2 / 434.1)",
+    "question": "Match List I with List II.\nList I List II\n(Spectral Lines of Hydrogen (Wavelengths (nm))\nfor transitions from)\n²(n / n)¹(= 2 / = 2)(I. / II.)(410.2 / 434.1)",
     "diagram": null,
     "options": {
       "a": "n = 3 to",
-      "b": "n2 = 4 to \n(1 / = 2)",
-      "c": "n2 = 5 to III.\n(n / n)_{(1 / = 2)}(656.3 / 486.1)",
-      "d": "n2 = 6 to 1IV.\nChoose the correct answer from the options given below:\na. A-IV, B-III, C-I, D-II\nb. A-I, B-II, C-III, D-IV\nc. A-II, B-I, C-IV, D-III\nd. A-III, B-IV, C-II, D-I\n(Alpha, Beta and Gamma Decay)\nNuclei\n 32.X→αY→e+Z→β−P→e−Q\n(290 / 82)\nIn the nuclear emission stated above, the mass number and \natomic number of the product respectively, are: \n(Q / b. 286, 81)\n(a. 288, 82 / c. 280, 81)\nd. 286, 80\n(Optoelectronic Devices)\nSemiconductor Electronics"
+      "b": "n₂ = 4 to \n(1 / = 2)",
+      "c": "n₂ = 5 to III.\n(n / n)_{(1 / = 2)}(656.3 / 486.1)",
+      "d": "n₂ = 6 to ₁IV.\nChoose the correct answer from the options given below:\na. A-IV, B-III, C-I, D-II\nb. A-I, B-II, C-III, D-IV\nc. A-II, B-I, C-IV, D-III\nd. A-III, B-IV, C-II, D-I\n(Alpha, Beta and Gamma Decay)\nNuclei\n 32.X→αYe⃗⁺Z→β⁻Pe⃗⁻Q\n(290 / 82)\nIn the nuclear emission stated above, the mass number and \natomic number of the product respectively, are: \n(Q / b. 286, 81)\n(a. 288, 82 / c. 280, 81)\nd. 286, 80\n(Optoelectronic Devices)\nSemiconductor Electronics"
     },
     "correctAnswer": "d",
-    "explanation": "12\n=RZ(1 / 2)–(1 / 2)\nλn1n2\nλ =(1 / RZ)(n / 2)^{(2 / 1)}n^{(2 / 2)}\n2n2– n(2 / 1)\nFor H, Z = 1 So,\nλ =91.2(n / 2)^{(2 / 1)}n^{(2 / 2)}nm\nn– n(2 / 1)\n(2 / = 656.3)\nFor \n(A / B)(l / l)\nFor \n(= 486.1 / = 434.1)\nFor \n(C / D)(l / l)\nFor \n(= 410.2 / 286)",
+    "explanation": "1₂\n=RZ(1 / 2)–(1 / 2)\nλn₁n₂\nλ =(1 / RZ)(n / 2)^{(2 / 1)}n^{(2 / 2)}\n²n₂– n(2 / 1)\nFor H, Z = 1 So,\nλ =91.2(n / 2)^{(2 / 1)}n^{(2 / 2)}nm\nn– n(2 / 1)\n(2 / = 656.3)\nFor \n(A / B)(l / l)\nFor \n(= 486.1 / = 434.1)\nFor \n(C / D)(l / l)\nFor \n(= 410.2 / 286)",
     "expDiagram": null
   },
   {
@@ -534,7 +534,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B",
     "topic": "Core Fundamentals & Applications",
-    "question": "A force defined by F = a t2 + b t acts on a particle at given time t. \nThe factor which is dimensionless, if a and b are constants, is:",
+    "question": "A force defined by F = a t² + b t acts on a particle at given time t. \nThe factor which is dimensionless, if a and b are constants, is:",
     "diagram": null,
     "options": {
       "a": "ab t /",
@@ -543,7 +543,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "a t/b\n(Graphs)\nMotion in a Straight Line"
     },
     "correctAnswer": "d",
-    "explanation": "a t\n(F = / ] =)^{(2 / a)}(+ / [T)(b / 2)(t / ])\n([MLT^-2 / a = [MLT)\n^{(–4 / ] =)}(] / [T])\n[MLT^-2\n(b / ])\nb = [MLT^-3\nαt=([ / 3) = [M0L0T0]\nMLT^-4T]\nβMLT−\n",
+    "explanation": "a t\n(F = / ] =)^{(2 / a)}(+ / [T)(b / 2)(t / ])\n([MLT^-2 / a = [MLT)\n^{(–4 / ] =)}(] / [T])\n[MLT⁻²\n(b / ])\nb = [MLT⁻³\nαt=([ / 3) = [M⁰L⁰T⁰]\nMLT⁻⁴T]\nβMLT⁻\n",
     "expDiagram": null
   },
   {
@@ -560,7 +560,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "A is incorrect but B is correct.\n(Logic gate)"
     },
     "correctAnswer": "a",
-    "explanation": "a = slope of v – t graph\nfrom A to B → slope is positive and constant \n→ so acceleration is positive & constant\nB to C →slope is zero ⇒ acceleration is zero.\nC to D → slope is negative and constant → so acceleration \nis negative & constant",
+    "explanation": "a = slope of v – t graph\nfrom A to B⃗ slope is positive and constant \n→ so acceleration is positive & constant\nB to C⃗slope is zero ⇒ acceleration is zero.\nC to D⃗ slope is negative and constant → so acceleration \nis negative & constant",
     "expDiagram": null
   },
   {
@@ -611,7 +611,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "c",
-    "explanation": "(T.E)initial = PE of satellite\n−GMm\n= \nR\n (T.E)_{final} = P.E of satellite + K.E of satellite\n2\n−GMm\n = + ^{(1 / 2)}^{m}(GM / 3)\n3 RR\n−GMm\n= \n6 R\n 11\n Minimum energy required\n−GMm^{GMm}\n = + \n6 R R\n−GMm GMm 5 GMm\n = (+ / 6)(6 / R) = \n6 R\n(39. (d) / F)\nThermal stress = thermal strain × Y\n^{= (}^{a}^{∆}^{T) Y}\n(A / F)\n=(10^-5)×100×0.5×1011\n10^-3\nF = 50 × 103 N",
+    "explanation": "(T.E)ᵢₙᵢₜᵢₐₗ = PE of satellite\n−GMm\n= \nR\n (T.E)_{final} = P.E of satellite + K.E of satellite\n2\n−GMm\n = + ^{(1 / 2)}^{m}(GM / 3)\n3 RR\n−GMm\n= \n6 R\n 11\n Minimum energy required\n−GMm^{GMm}\n = + \n6 R R\n−GMm GMm 5 GMm\n = (+ / 6)(6 / R) = \n6 R\n(39. (d) / F)\nThermal stress = thermal strain × Y\n^{= (}^{a}^{∆}^{T) Y}\n(A / F)\n⁼(10⁻⁵)×100×0.5×10¹¹\n10⁻³\nF = 50 × 10³ N",
     "expDiagram": null
   },
   {
@@ -619,7 +619,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B",
     "topic": "Core Fundamentals & Applications",
-    "question": "A metallic bar of Young’s modulus, 0.5 × 1011 Nm^-2 and \ncoefficient of linear thermal 10^-5°C^-1 length 1m and area of cross-\nsection 10^-3m2 is heated from 0°C to 100°C without expansion \nor bending. The compressive force developed in it is:\na. 100 × 103N 3\n(b. 2×10 / d. 50 × 10)(N / 3)\nc. 5 × 103N N\nKinetic Theory\n(Ideal Gas Equations and Vander Waals Relation)",
+    "question": "A metallic bar of Young’s modulus, 0.5 × 10¹¹ Nm⁻² and \ncoefficient of linear thermal 10⁻⁵°C⁻¹ length 1m and area of cross-\nsection 10⁻³m² is heated from 0°C to 100°C without expansion \nor bending. The compressive force developed in it is:\na. 100 × 10³N ³\n(b. 2×10 / d. 50 × 10)(N / 3)\nc. 5 × 10³N N\nKinetic Theory\n(Ideal Gas Equations and Vander Waals Relation)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -636,7 +636,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "subject": "Physics",
     "section": "Physics Section B",
     "topic": "Core Fundamentals & Applications",
-    "question": "The following graph represents the T V curves of an ideal \n(- / F)\ngas (where T is the temperature and the volume) at three \npressures P1, P2 and P3 compared with those of Charles s law \nrepresented as dotted lines.\nP1\nP2\nP3\nT\n0\nV\na. P2 > P> P3b. P1 > P> P3\nc. P > P^{(1 / 2)}> P d. P > P^{(2 / 3)}> P\n3 1 1 2\nOscillations\n(Simple Pendulum and Loaded Springs)",
+    "question": "The following graph represents the T V curves of an ideal \n(- / F)\ngas (where T is the temperature and the volume) at three \npressures P₁, P₂ and P₃ compared with those of Charles s law \nrepresented as dotted lines.\nP₁\nP₂\nP₃\nT\n0\nV\na. P₂ > P> P₃b. P₁ > P> P₃\nc. P > P^{(1 / 2)}> P d. P > P^{(2 / 3)}> P\n3 1 1 2\nOscillations\n(Simple Pendulum and Loaded Springs)",
     "diagram": null,
     "options": {
       "a": "[Option A unavailable - extraction error]",
@@ -645,7 +645,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "b",
-    "explanation": "According to Charle’s law V ∝ T\nP1 > P2 > P3",
+    "explanation": "According to Charle’s law V ∝ T\nP₁ > P₂ > P₃",
     "expDiagram": null
   },
   {
@@ -679,7 +679,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "the ratio of charge to its potential remains the same.\nE. the product of charge and voltage increases.\nChoose the most appropriate answer from the given below:\na. B. D and E only b. A, B and C only\nc. A, B and E only d. A, C and E only\n(Wheatstone and Meter Bridge)\nCurrent Electricity"
     },
     "correctAnswer": "d",
-    "explanation": "Keeping the battery connected\nV remains same\nC=0^{(A / d)}, d is reduced\nε\n∴ C increases\n(From / Q = CV)\nAs C↑ Q↑ ⇒ A is correct\nE=(1 / 2)CV2 As C↑ E increases ⇒ B is incorrect\nCapacitance increases ⇒ C is correct\nProduct of charge and voltage increases\n⇒ E is correct.\n\n12",
+    "explanation": "Keeping the battery connected\nV remains same\nC=⁰^{(A / d)}, d is reduced\nε\n∴ C increases\n(From / Q = CV)\nAs C↑ Q↑ ⇒ A is correct\nE=(1 / 2)CV² As C↑ E increases ⇒ B is incorrect\nCapacitance increases ⇒ C is correct\nProduct of charge and voltage increases\n⇒ E is correct.\n\n12",
     "expDiagram": null
   },
   {
@@ -713,7 +713,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "2 : 9\n(Magnetic Moment)\nMoving Charges and Magnetism"
     },
     "correctAnswer": "d",
-    "explanation": "P1 = 1kW, P2 =2kW\n For parallel combination\nP_{Parallel} = P1 + P2 = 1 + 2 = 3kW\nFor series combination\n = (1 / P)+(1 / P)\n1\nP series 1 2\n= 1 + ^{(1 / 2)}\nP = (2 / 3)^{kW}\nseries\n(P / P)^{parallel}=(3 / 2)×3=(9 / 2)\nseries\n(P / P)^{series}=(2 / 9)\nparallel",
+    "explanation": "P₁ = 1kW, P₂ =2kW\n For parallel combination\nP_{Parallel} = P₁ + P₂ = 1 + 2 = 3kW\nFor series combination\n = (1 / P)+(1 / P)\n1\nP series 1 2\n= 1 + ^{(1 / 2)}\nP = (2 / 3)^{kW}\nseries\n(P / P)^{parallel}=(3 / 2)×3=(9 / 2)\nseries\n(P / P)^{series}=(2 / 9)\nparallel",
     "expDiagram": null
   },
   {
@@ -764,7 +764,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "0.93 A)\n(Properties and Applications [i.e. Velocity, Amplitude, Energy \nElectromagnetic Waves\nDensity] of Electromagnetic Waves)"
     },
     "correctAnswer": "d",
-    "explanation": "rms = 210 volt,\n(V / 210)\n(V / V)0\n = 2 volt\n0 = I 0 X C\nV = I × ^{(1 / C)}\n0 0ω\n210 2 = I0 × (1 / 10)−6\n(2 / × 2)(50 / × 500 × 10)\nπ×××10\n(I / I)0^{(210 / = 0.932A)}\n = 2p^-6\n0",
+    "explanation": "ᵣₘₛ = 210 volt,\n(V / 210)\n(V / V)0\n = 2 volt\n0 = I 0 X C\nV = I × ^{(1 / C)}\n0 0ω\n210 2 = I₀ × (1 / 10)⁻⁶\n(2 / × 2)(50 / × 500 × 10)\nπ×××10\n(I / I)0^{(210 / = 0.932A)}\n = ²p⁻⁶\n0",
     "expDiagram": null
   },
   {
@@ -792,7 +792,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
     "question": "(d)42. (d)43. (c)44. (d)45. (d)46.\n 7",
     "diagram": null,
     "options": {
-      "a": "they travel with speed equal to (1 / 0).\nμ∈0",
+      "a": "they travel with speed equal to (1 / 0).\nµ∈₀",
       "b": "they originate from charges moving with uniform speed.",
       "c": "they are transverse in nature.",
       "d": "the energy density in electric field is equal to energy \n(Displacement Current)\ndensity in magnetic field."
@@ -815,7 +815,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "displacement current of magnitude equal to I flows in the \nsame direction as I.\n(Telescope)\nRay Optics and Optical Instruments"
     },
     "correctAnswer": "d",
-    "explanation": "As capacitor is being charged the displacement current \nis\nI= ε0(( / dt)^{E}\ndφ)\nI= ε0(d / dt)(EA)\nI= ε0(d / dt)(V / d)A\n\n\nI=0^{(A / d)}^{(d / dt)}(Q / C)\nε\n\nI=(dQ / dt) = I_{conduction}",
+    "explanation": "As capacitor is being charged the displacement current \nis\nI= ε₀(( / dt)^{E}\ndφ)\nI= ε₀(d / dt)(EA)\nI= ε₀(d / dt)(V / d)A\n\n\nI=⁰^{(A / d)}^{(d / dt)}(Q / C)\nε\n\nI=(dQ / dt) = I_{conduction}",
     "expDiagram": null
   },
   {
@@ -832,7 +832,7 @@ export const NEET_PHYSICS_QUESTIONS: CbtQuestion[] = [
       "d": "[Option D unavailable - extraction error]"
     },
     "correctAnswer": "d",
-    "explanation": "f0 = 140 cm, fe = 5 cm\nFor normal adjustment\nM=(f / f)_{(0 / e)}=(140 / 5)=28\n−−",
+    "explanation": "f₀ = 140 cm, fₑ = 5 cm\nFor normal adjustment\nM=(f / f)_{(0 / e)}=(140 / 5)=28\n−−",
     "expDiagram": null
   },
   {
