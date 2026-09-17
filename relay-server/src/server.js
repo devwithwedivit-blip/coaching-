@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('node:path');
 const http = require('node:http');
 const express = require('express');
 const cors = require('cors');
@@ -14,6 +15,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'sarvottam_jwt_secret_cloud_relay_2
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
 
 // JWT Authentication Middleware
 function authenticateToken(req, res, next) {
@@ -197,6 +199,12 @@ app.get('/api/relay/download/:fileId', authenticateToken, (req, res) => {
   if (!result.success) {
     res.status(result.status || 503).json({ error: result.message });
   }
+});
+
+// 7. Web Portal & Static Fallback (Serves portal to any mobile or desktop browser)
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api/')) return next();
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // Create HTTP server and mount WebSocket Server
