@@ -94,7 +94,9 @@ export const CbtExamActiveScreen: React.FC<CbtExamActiveScreenProps> = ({ onFini
         {/* Topic & Marking Pill */}
         <View style={styles.metaHeader}>
           <View style={styles.topicPill}>
-            <Text style={styles.topicText}>{currentQuestion.topic || 'Botany'}</Text>
+            <Text style={styles.topicText}>
+              {currentQuestion.subject ? `${currentQuestion.subject} · ${currentQuestion.topic || 'General'}` : (currentQuestion.topic || 'General')}
+            </Text>
           </View>
           <Text style={styles.markingSchemeText}>Correct: +4 · Negative: -1</Text>
         </View>

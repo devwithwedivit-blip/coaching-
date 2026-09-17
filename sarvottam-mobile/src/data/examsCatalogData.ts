@@ -2,6 +2,69 @@ import { CbtExamMeta } from '../types';
 
 export const EXAMS_CATALOG: CbtExamMeta[] = [
   {
+    id: 'jee-main-mock-1',
+    title: 'IIT-JEE Mains 2026 — Official Mock Test 01 (PCM)',
+    stream: 'IIT-JEE',
+    totalQuestions: 75,
+    durationMinutes: 180,
+    maxMarks: 300,
+    markingScheme: {
+      correct: 4,
+      incorrect: -1,
+      unattempted: 0,
+    },
+    sections: [
+      { name: 'Physics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Physics Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Chemistry Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Chemistry Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Mathematics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Mathematics Section B (Numerical)', total: 5, compulsory: 5 },
+    ],
+  },
+  {
+    id: 'jee-main-mock-2',
+    title: 'IIT-JEE Mains 2026 — Official Mock Test 02 (PCM)',
+    stream: 'IIT-JEE',
+    totalQuestions: 75,
+    durationMinutes: 180,
+    maxMarks: 300,
+    markingScheme: {
+      correct: 4,
+      incorrect: -1,
+      unattempted: 0,
+    },
+    sections: [
+      { name: 'Physics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Physics Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Chemistry Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Chemistry Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Mathematics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Mathematics Section B (Numerical)', total: 5, compulsory: 5 },
+    ],
+  },
+  {
+    id: 'jee-main-mock-3',
+    title: 'IIT-JEE Mains 2026 — Official Mock Test 03 (PCM)',
+    stream: 'IIT-JEE',
+    totalQuestions: 75,
+    durationMinutes: 180,
+    maxMarks: 300,
+    markingScheme: {
+      correct: 4,
+      incorrect: -1,
+      unattempted: 0,
+    },
+    sections: [
+      { name: 'Physics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Physics Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Chemistry Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Chemistry Section B (Numerical)', total: 5, compulsory: 5 },
+      { name: 'Mathematics Section A (MCQs)', total: 20, compulsory: 20 },
+      { name: 'Mathematics Section B (Numerical)', total: 5, compulsory: 5 },
+    ],
+  },
+  {
     id: 'neet-botany-2024',
     title: 'NEET (UG) 2024 — Botany Official Mock Examination',
     stream: 'NEET',
@@ -16,23 +79,6 @@ export const EXAMS_CATALOG: CbtExamMeta[] = [
     sections: [
       { name: 'Botany Section A (Q1–35)', total: 35, compulsory: 35 },
       { name: 'Botany Section B (Q36–50)', total: 15, compulsory: 10 },
-    ],
-  },
-  {
-    id: 'jee-mains-physics',
-    title: 'IIT-JEE Mains 2026 — Physics Full-Length Mock Test 01',
-    stream: 'IIT-JEE',
-    totalQuestions: 30,
-    durationMinutes: 60,
-    maxMarks: 100,
-    markingScheme: {
-      correct: 4,
-      incorrect: -1,
-      unattempted: 0,
-    },
-    sections: [
-      { name: 'Section A: Single Choice (Q1–20)', total: 20, compulsory: 20 },
-      { name: 'Section B: Numerical Value (Q21–30)', total: 10, compulsory: 5 },
     ],
   },
   {

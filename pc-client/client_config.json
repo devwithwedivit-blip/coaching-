@@ -17,6 +17,11 @@
       "path": "pdf",
       "type": "pdf",
       "subject": "All"
+    },
+    {
+      "path": "paper/jee mock",
+      "type": "pdf",
+      "subject": "IIT-JEE"
     }
   ]
 }

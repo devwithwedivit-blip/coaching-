@@ -24,6 +24,7 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
   const { startExam } = useExam();
   const [selectedExam, setSelectedExam] = useState<CbtExamMeta | null>(null);
   const [confirmModal, setConfirmModal] = useState(false);
+  const [streamFilter, setStreamFilter] = useState<string>('All');
 
   const handleSelectExam = (exam: CbtExamMeta) => {
     setSelectedExam(exam);
@@ -40,6 +41,18 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
     onStartExam();
   };
 
+  const streams = ['All', 'IIT-JEE', 'NEET', 'Defense', 'UPSC', 'Commerce'];
+
+  const filteredExams = EXAMS_CATALOG.filter((exam) => {
+    if (streamFilter === 'All') return true;
+    return exam.stream === streamFilter;
+  });
+
+  const neetExam = EXAMS_CATALOG.find((e) => e.id === 'neet-botany-2024') || EXAMS_CATALOG[3];
+  const jeeMock1 = EXAMS_CATALOG.find((e) => e.id === 'jee-main-mock-1') || EXAMS_CATALOG[0];
+  const jeeMock2 = EXAMS_CATALOG.find((e) => e.id === 'jee-main-mock-2') || EXAMS_CATALOG[1];
+  const jeeMock3 = EXAMS_CATALOG.find((e) => e.id === 'jee-main-mock-3') || EXAMS_CATALOG[2];
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <TouchableOpacity style={styles.backBtn} onPress={onBack}>
@@ -54,6 +67,62 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
         <Text style={styles.subtitle}>
           Exact exam-hall simulation matching NTA, UPSC & ICAI testing software. Features section locking, negative marking, and instant All-India percentiles.
         </Text>
+      </View>
+
+      {/* Flagship IIT-JEE Main 2026 Series Card */}
+      <View style={[styles.flagshipCard, { borderColor: 'rgba(56, 189, 248, 0.4)', backgroundColor: '#09152b', marginBottom: 16 }]}>
+        <View style={styles.flagshipTagRow}>
+          <View style={[styles.livePulseDot, { backgroundColor: '#38bdf8' }]} />
+          <Text style={[styles.flagshipTag, { color: '#7dd3fc' }]}>FLAGSHIP · NTA IIT-JEE MAINS 2026 TEST SERIES</Text>
+        </View>
+
+        <Text style={styles.flagshipTitle}>IIT-JEE Mains 2026 — Official Mock Tests (PCM)</Text>
+        <Text style={styles.flagshipDesc}>
+          3 Full-Length 75-Question Papers (Physics, Chemistry, Maths) with Section A (20 MCQs) and Section B (5 Numerical Integers) per subject, official answer keys, and complete step-by-step solutions.
+        </Text>
+
+        <View style={styles.flagshipMetaGrid}>
+          <View style={styles.fMetaItem}>
+            <Text style={styles.fMetaNum}>75</Text>
+            <Text style={styles.fMetaLbl}>Questions</Text>
+          </View>
+          <View style={styles.fMetaItem}>
+            <Text style={styles.fMetaNum}>180m</Text>
+            <Text style={styles.fMetaLbl}>3 Hours</Text>
+          </View>
+          <View style={styles.fMetaItem}>
+            <Text style={styles.fMetaNum}>300</Text>
+            <Text style={styles.fMetaLbl}>Marks</Text>
+          </View>
+          <View style={styles.fMetaItem}>
+            <Text style={styles.fMetaNum}>+4 / -1</Text>
+            <Text style={styles.fMetaLbl}>Marking</Text>
+          </View>
+        </View>
+
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 14 }}>
+          <CustomButton
+            title="Launch Mock 01 🚀"
+            onPress={() => handleSelectExam(jeeMock1)}
+            variant="primary"
+            size="small"
+            style={{ flex: 1 }}
+          />
+          <CustomButton
+            title="Mock 02 ⚡"
+            onPress={() => handleSelectExam(jeeMock2)}
+            variant="outline"
+            size="small"
+            style={{ flex: 1 }}
+          />
+          <CustomButton
+            title="Mock 03 🎯"
+            onPress={() => handleSelectExam(jeeMock3)}
+            variant="outline"
+            size="small"
+            style={{ flex: 1 }}
+          />
+        </View>
       </View>
 
       {/* Flagship NEET Card Highlight */}
@@ -89,16 +158,46 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
 
         <CustomButton
           title="Launch NEET Botany CBT Now 💻"
-          onPress={() => handleSelectExam(EXAMS_CATALOG[0])}
+          onPress={() => handleSelectExam(neetExam)}
           variant="primary"
           style={styles.flagshipBtn}
         />
       </View>
 
-      {/* Full Exams Catalog */}
-      <Text style={styles.catalogHeading}>All Stream Mock Examinations</Text>
+      {/* Stream Filter Pills */}
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginVertical: 18 }}>
+        {streams.map((s) => (
+          <TouchableOpacity
+            key={s}
+            onPress={() => setStreamFilter(s)}
+            style={{
+              paddingVertical: 6,
+              paddingHorizontal: 12,
+              borderRadius: 9999,
+              backgroundColor: streamFilter === s ? COLORS.primary : 'rgba(255, 255, 255, 0.08)',
+              borderWidth: 1,
+              borderColor: streamFilter === s ? COLORS.primary : 'rgba(255, 255, 255, 0.1)',
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 12,
+                fontWeight: '600',
+                color: streamFilter === s ? COLORS.navyDeep : COLORS.textMuted,
+              }}
+            >
+              {s}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
 
-      {EXAMS_CATALOG.map((exam) => (
+      {/* Full Exams Catalog */}
+      <Text style={styles.catalogHeading}>
+        {streamFilter === 'All' ? 'All Stream Mock Examinations' : `${streamFilter} Mock Examinations (${filteredExams.length})`}
+      </Text>
+
+      {filteredExams.map((exam) => (
         <View key={exam.id} style={styles.examCard}>
           <View style={styles.examCardHeader}>
             <View style={styles.streamBadge}>
@@ -124,7 +223,7 @@ export const CbtExamListScreen: React.FC<CbtExamListScreenProps> = ({ onStartExa
           <CustomButton
             title="Start Mock Examination →"
             onPress={() => handleSelectExam(exam)}
-            variant={exam.id.includes('neet') ? "primary" : "secondary"}
+            variant={exam.stream === 'IIT-JEE' ? "primary" : "secondary"}
             size="small"
             style={{ marginTop: 12 }}
           />

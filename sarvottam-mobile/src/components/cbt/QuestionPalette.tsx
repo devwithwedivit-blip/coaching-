@@ -10,8 +10,20 @@ interface QuestionPaletteProps {
 }
 
 export const QuestionPalette: React.FC<QuestionPaletteProps> = ({ visible, onClose }) => {
-  const { questions, currentIndex, goToQuestion, getQuestionStatus, getSummaryCounts } = useExam();
+  const { questions, currentIndex, goToQuestion, getQuestionStatus, getSummaryCounts, activeExam } = useExam();
   const summary = getSummaryCounts();
+
+  // Dynamically group questions by section
+  const sectionsGroup: { name: string; items: { q: any; actualIndex: number }[] }[] = [];
+  questions.forEach((q, actualIndex) => {
+    const secName = q.section || 'Questions';
+    let group = sectionsGroup.find(g => g.name === secName);
+    if (!group) {
+      group = { name: secName, items: [] };
+      sectionsGroup.push(group);
+    }
+    group.items.push({ q, actualIndex });
+  });
 
   const getStatusColor = (status: QuestionStatus, isCurrent: boolean) => {
     switch (status) {
@@ -31,9 +43,11 @@ export const QuestionPalette: React.FC<QuestionPaletteProps> = ({ visible, onClo
       <View style={styles.modalOverlay}>
         <View style={styles.sheetContainer}>
           <View style={styles.sheetHeader}>
-            <View>
+            <View style={{ flex: 1, paddingRight: 10 }}>
               <Text style={styles.sheetTitle}>Question Navigation Palette</Text>
-              <Text style={styles.sheetSubtitle}>50 Official NTA NEET Questions</Text>
+              <Text style={styles.sheetSubtitle} numberOfLines={1}>
+                {questions.length} Questions · {activeExam ? activeExam.title : 'Mock Examination'}
+              </Text>
             </View>
             <TouchableOpacity style={styles.closeBtn} onPress={onClose} activeOpacity={0.7}>
               <Text style={styles.closeText}>✕</Text>
@@ -60,68 +74,40 @@ export const QuestionPalette: React.FC<QuestionPaletteProps> = ({ visible, onClo
             </View>
           </View>
 
-          {/* Section A & Section B Split */}
+          {/* Dynamic Sections and Questions Grid */}
           <ScrollView style={styles.scrollArea} contentContainerStyle={styles.scrollContent}>
-            <Text style={styles.sectionHeader}>SECTION A (Q1 – 35) · Compulsory</Text>
-            <View style={styles.grid}>
-              {questions.slice(0, 35).map((q, idx) => {
-                const status = getQuestionStatus(q.id);
-                const isCurrent = idx === currentIndex;
-                const bgColor = getStatusColor(status, isCurrent);
+            {sectionsGroup.map((sec, sIdx) => (
+              <View key={sec.name} style={sIdx > 0 ? { marginTop: 18 } : undefined}>
+                <Text style={styles.sectionHeader}>{sec.name.toUpperCase()}</Text>
+                <View style={styles.grid}>
+                  {sec.items.map(({ q, actualIndex }) => {
+                    const status = getQuestionStatus(q.id);
+                    const isCurrent = actualIndex === currentIndex;
+                    const bgColor = getStatusColor(status, isCurrent);
 
-                return (
-                  <TouchableOpacity
-                    key={q.id}
-                    style={[
-                      styles.qNumberBtn,
-                      { backgroundColor: bgColor },
-                      isCurrent && styles.currentQBorder,
-                    ]}
-                    onPress={() => {
-                      goToQuestion(idx);
-                      onClose();
-                    }}
-                    activeOpacity={0.7}
-                  >
-                    <Text style={[styles.qNumberText, status === 'NOT_VISITED' && !isCurrent && styles.unvisitedText]}>
-                      {idx + 1}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-
-            <Text style={[styles.sectionHeader, { marginTop: 20 }]}>
-              SECTION B (Q36 – 50) · Attempt Any 10
-            </Text>
-            <View style={styles.grid}>
-              {questions.slice(35).map((q, idx) => {
-                const actualIndex = 35 + idx;
-                const status = getQuestionStatus(q.id);
-                const isCurrent = actualIndex === currentIndex;
-                const bgColor = getStatusColor(status, isCurrent);
-
-                return (
-                  <TouchableOpacity
-                    key={q.id}
-                    style={[
-                      styles.qNumberBtn,
-                      { backgroundColor: bgColor },
-                      isCurrent && styles.currentQBorder,
-                    ]}
-                    onPress={() => {
-                      goToQuestion(actualIndex);
-                      onClose();
-                    }}
-                    activeOpacity={0.7}
-                  >
-                    <Text style={[styles.qNumberText, status === 'NOT_VISITED' && !isCurrent && styles.unvisitedText]}>
-                      {actualIndex + 1}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
+                    return (
+                      <TouchableOpacity
+                        key={q.id}
+                        style={[
+                          styles.qNumberBtn,
+                          { backgroundColor: bgColor },
+                          isCurrent && styles.currentQBorder,
+                        ]}
+                        onPress={() => {
+                          goToQuestion(actualIndex);
+                          onClose();
+                        }}
+                        activeOpacity={0.7}
+                      >
+                        <Text style={[styles.qNumberText, status === 'NOT_VISITED' && !isCurrent && styles.unvisitedText]}>
+                          {actualIndex + 1}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            ))}
           </ScrollView>
         </View>
       </View>

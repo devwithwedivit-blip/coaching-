@@ -45,12 +45,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
         </View>
         <TouchableOpacity
           style={styles.heroExamBtn}
-          onPress={() => onNavigate('cbt_active')}
+          onPress={() => onNavigate('cbt_list')}
           activeOpacity={0.8}
         >
           <Text style={styles.heroExamIcon}>💻</Text>
           <Text style={styles.heroExamTitle}>Launch CBT</Text>
-          <Text style={styles.heroExamSub}>50 Questions</Text>
+          <Text style={styles.heroExamSub}>JEE & NEET</Text>
         </TouchableOpacity>
       </View>
 

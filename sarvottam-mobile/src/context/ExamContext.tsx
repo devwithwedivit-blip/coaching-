@@ -1,10 +1,27 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { CbtQuestion, CbtExamMeta, ExamResultSummary, QuestionStatus } from '../types';
 import { NEET_BOTANY_QUESTIONS } from '../data/questionsNeetBotany';
+import { JEE_MOCK_1_QUESTIONS } from '../data/questionsJeeMock1';
+import { JEE_MOCK_2_QUESTIONS } from '../data/questionsJeeMock2';
+import { JEE_MOCK_3_QUESTIONS } from '../data/questionsJeeMock3';
 import { EXAMS_CATALOG } from '../data/examsCatalogData';
 import { useAuth } from './AuthContext';
 import { apiService } from '../services/api';
 import { storage } from '../services/storage';
+
+const getQuestionsForExam = (examId: string): CbtQuestion[] => {
+  switch (examId) {
+    case 'jee-main-mock-1':
+      return JEE_MOCK_1_QUESTIONS;
+    case 'jee-main-mock-2':
+      return JEE_MOCK_2_QUESTIONS;
+    case 'jee-main-mock-3':
+      return JEE_MOCK_3_QUESTIONS;
+    case 'neet-botany-2024':
+    default:
+      return NEET_BOTANY_QUESTIONS;
+  }
+};
 
 interface ExamContextType {
   activeExam: CbtExamMeta;
@@ -75,8 +92,9 @@ export const ExamProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const startExam = (examId?: string) => {
     const selectedExam = EXAMS_CATALOG.find((e) => e.id === examId) || EXAMS_CATALOG[0];
+    const examQuestions = getQuestionsForExam(selectedExam.id);
     setActiveExam(selectedExam);
-    setQuestions(NEET_BOTANY_QUESTIONS);
+    setQuestions(examQuestions);
     setCurrentIndex(0);
     setAnswers({});
     setMarkedForReview({});
@@ -191,57 +209,39 @@ export const ExamProvider: React.FC<{ children: React.ReactNode }> = ({ children
     let unattemptedCount = 0;
     let sectionAScore = 0;
     let sectionBScore = 0;
-    let secBAttempted = 0;
+    const posMarks = activeExam.markingScheme?.correct ?? 4;
+    const negMarks = Math.abs(activeExam.markingScheme?.incorrect ?? 1);
 
     questions.forEach((q) => {
       const selected = answers[q.id];
       const isSecB = q.section.includes('Section B');
 
-      if (isSecB) {
-        if (selected) {
-          secBAttempted++;
-          if (secBAttempted <= 10) {
-            if (selected.toLowerCase() === q.correctAnswer.toLowerCase()) {
-              totalScore += 4;
-              sectionBScore += 4;
-              correctCount++;
-            } else {
-              totalScore -= 1;
-              sectionBScore -= 1;
-              wrongCount++;
-            }
-          }
+      if (selected) {
+        if (selected.toLowerCase() === q.correctAnswer.toLowerCase()) {
+          totalScore += posMarks;
+          if (isSecB) sectionBScore += posMarks; else sectionAScore += posMarks;
+          correctCount++;
         } else {
-          unattemptedCount++;
+          totalScore -= negMarks;
+          if (isSecB) sectionBScore -= negMarks; else sectionAScore -= negMarks;
+          wrongCount++;
         }
       } else {
-        // Section A
-        if (selected) {
-          if (selected.toLowerCase() === q.correctAnswer.toLowerCase()) {
-            totalScore += 4;
-            sectionAScore += 4;
-            correctCount++;
-          } else {
-            totalScore -= 1;
-            sectionAScore -= 1;
-            wrongCount++;
-          }
-        } else {
-          unattemptedCount++;
-        }
+        unattemptedCount++;
       }
     });
 
     const attemptedCount = correctCount + wrongCount;
     const accuracy = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
-    const maxScore = 200; // 45 * 4 = 180 or 50 questions
+    const maxScore = activeExam.maxMarks || (questions.length * posMarks);
     const percentage = Math.max(0, Math.round((totalScore / maxScore) * 100));
     const percentile = Math.min(99.9, Math.max(10, Math.round((percentage * 0.95 + 15) * 10) / 10));
     const airRankEstimated = Math.max(1, Math.round((100 - percentile) * 230 + 12));
 
+    const defaultRoll = activeExam.stream === 'IIT-JEE' ? 'JEE2026-MOCK-7108' : 'NEET2024-MOCK-0881';
     const result: ExamResultSummary = {
       candidateName: student ? student.fullName : 'Student Candidate',
-      rollNo: student ? student.rollNo : 'NEET2024-MOCK-0881',
+      rollNo: student ? student.rollNo : defaultRoll,
       examTitle: activeExam.title,
       score: totalScore,
       maxScore: maxScore,
