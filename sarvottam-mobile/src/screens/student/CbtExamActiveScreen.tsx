@@ -117,22 +117,42 @@ export const CbtExamActiveScreen: React.FC<CbtExamActiveScreenProps> = ({ onFini
         {optionKeys.map((key) => {
           const optionText = currentQuestion.options[key];
           const isSelected = selectedAnswer === key;
+          const isErrorOption = !optionText || optionText.toLowerCase().includes('unavailable') || optionText.toLowerCase().includes('extraction error');
 
           return (
             <TouchableOpacity
               key={key}
-              style={[styles.optionCard, isSelected && styles.optionCardSelected]}
+              style={[
+                styles.optionCard,
+                isSelected && styles.optionCardSelected,
+                isErrorOption && styles.optionCardError,
+              ]}
               onPress={() => selectOption(key)}
               activeOpacity={0.7}
             >
-              <View style={[styles.radioCircle, isSelected && styles.radioCircleSelected]}>
-                <Text style={[styles.radioLetter, isSelected && styles.radioLetterSelected]}>
+              <View style={[
+                styles.radioCircle,
+                isSelected && styles.radioCircleSelected,
+                isErrorOption && styles.radioCircleError,
+              ]}>
+                <Text style={[
+                  styles.radioLetter,
+                  isSelected && styles.radioLetterSelected,
+                  isErrorOption && styles.radioLetterError,
+                ]}>
                   {key.toUpperCase()}
                 </Text>
               </View>
-              <Text style={[styles.optionText, isSelected && styles.optionTextSelected]}>
-                {optionText}
-              </Text>
+              {isErrorOption ? (
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.optionErrorTitle}>⚠️ Option Text Unavailable</Text>
+                  <Text style={styles.optionErrorSubtitle}>Content could not be extracted from the test paper. Please refer to question sheet.</Text>
+                </View>
+              ) : (
+                <Text style={[styles.optionText, isSelected && styles.optionTextSelected]}>
+                  {optionText}
+                </Text>
+              )}
             </TouchableOpacity>
           );
         })}
@@ -394,6 +414,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(201, 152, 42, 0.08)',
     borderColor: COLORS.goldBright,
   },
+  optionCardError: {
+    backgroundColor: '#fff1f2',
+    borderColor: '#f43f5e',
+  },
   radioCircle: {
     width: 32,
     height: 32,
@@ -405,6 +429,11 @@ const styles = StyleSheet.create({
   radioCircleSelected: {
     backgroundColor: COLORS.goldBright,
   },
+  radioCircleError: {
+    backgroundColor: '#fee2e2',
+    borderWidth: 1,
+    borderColor: '#ef4444',
+  },
   radioLetter: {
     color: '#475569',
     fontSize: 13,
@@ -412,6 +441,9 @@ const styles = StyleSheet.create({
   },
   radioLetterSelected: {
     color: COLORS.navyDeep,
+  },
+  radioLetterError: {
+    color: '#b91c1c',
   },
   optionText: {
     color: '#1e293b',
@@ -423,6 +455,17 @@ const styles = StyleSheet.create({
   optionTextSelected: {
     color: COLORS.navy,
     fontWeight: '700',
+  },
+  optionErrorTitle: {
+    color: '#b91c1c',
+    fontSize: 13,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  optionErrorSubtitle: {
+    color: '#64748b',
+    fontSize: 11.5,
+    lineHeight: 15,
   },
   bottomBar: {
     backgroundColor: '#0e1f3d',

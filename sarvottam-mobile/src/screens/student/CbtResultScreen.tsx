@@ -202,6 +202,8 @@ export const CbtResultScreen: React.FC<CbtResultScreenProps> = ({ onRetake, onHo
                     {(['a', 'b', 'c', 'd'] as const).map((opt) => {
                       const isUserSelected = userAns === opt;
                       const isCorrectAnswer = q.correctAnswer.toLowerCase() === opt;
+                      const optText = q.options[opt];
+                      const isErrorOption = !optText || optText.toLowerCase().includes('unavailable') || optText.toLowerCase().includes('extraction error');
 
                       return (
                         <View
@@ -210,10 +212,15 @@ export const CbtResultScreen: React.FC<CbtResultScreenProps> = ({ onRetake, onHo
                             styles.solOptionRow,
                             isCorrectAnswer && styles.correctOptionRow,
                             isUserSelected && !isCorrectAnswer && styles.wrongOptionRow,
+                            isErrorOption && styles.solErrorOptionRow,
                           ]}
                         >
                           <Text style={styles.solOptLetter}>({opt.toUpperCase()})</Text>
-                          <Text style={styles.solOptText}>{q.options[opt]}</Text>
+                          {isErrorOption ? (
+                            <Text style={styles.solOptErrorText}>⚠️ [Option unavailable - extraction error]</Text>
+                          ) : (
+                            <Text style={styles.solOptText}>{optText}</Text>
+                          )}
                           {isCorrectAnswer && <Text style={styles.checkTag}>✓ Correct</Text>}
                           {isUserSelected && !isCorrectAnswer && <Text style={styles.crossTag}>✗ Your Choice</Text>}
                         </View>
@@ -480,6 +487,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ef4444',
   },
+  solErrorOptionRow: {
+    backgroundColor: '#fff1f2',
+    borderWidth: 1,
+    borderColor: '#f43f5e',
+  },
   solOptLetter: {
     fontSize: 12,
     fontWeight: '800',
@@ -488,6 +500,13 @@ const styles = StyleSheet.create({
   solOptText: {
     fontSize: 12,
     color: '#334155',
+    flex: 1,
+  },
+  solOptErrorText: {
+    fontSize: 11.5,
+    color: '#b91c1c',
+    fontStyle: 'italic',
+    fontWeight: '600',
     flex: 1,
   },
   checkTag: {

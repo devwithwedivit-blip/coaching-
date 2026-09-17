@@ -69,13 +69,21 @@ def run_pipeline_tests():
     print(extracted_text)
     print("----------------------\n")
 
+    # 7. Multi-column and Exponent Normalization Validation
+    exp_test1 = engine._post_process_math_text("K = 1 × 10^{-}4")
+    exp_test2 = engine._post_process_math_text("kJ mol^{-}1")
+    norm_pass1 = (exp_test1 == "K = 1 × 10^-4" or exp_test1 == "K = 1 × 10⁻⁴")
+    norm_pass2 = (exp_test2 == "kJ mol^-1" or exp_test2 == "kJ mol⁻¹")
+
     test_assertions = [
         ("Exponents (x², y³, 10⁻⁶)", any(exp in extracted_text for exp in ['²', '³', '⁵', '⁻⁶', '^'])),
         ("Subscripts (H₂O, AlCl₃, K_b)", any(sub in extracted_text for sub in ['₂', '₃', 'K_b', 'H₂O', 'AlCl₃'])),
         ("Fractions (1 / 10N, a / b)", ('1 / 10N' in extracted_text or 'a / b' in extracted_text or '/' in extracted_text)),
         ("Square Roots (√x, 12√3)", ('√x' in extracted_text or '√3' in extracted_text or '√' in extracted_text)),
         ("Greek Letters (α, β, θ, π, λ, Δ)", all(g in extracted_text for g in ['α', 'β', 'θ', 'π', 'λ', 'Δ'])),
-        ("Inequalities & Symbols (≤, ≥, ±, °, ∫)", all(s in extracted_text for s in ['≤', '≥', '±', '°', '∫']))
+        ("Inequalities & Symbols (≤, ≥, ±, °, ∫)", all(s in extracted_text for s in ['≤', '≥', '±', '°', '∫'])),
+        ("Exponent Normalization ('K = 1 × 10^{-}4' -> 'K = 1 × 10^-4')", norm_pass1),
+        ("Subscript/Unit Normalization ('kJ mol^{-}1' -> 'kJ mol^-1')", norm_pass2)
     ]
 
     all_passed = True
@@ -91,7 +99,7 @@ def run_pipeline_tests():
         except: pass
 
     if all_passed:
-        print("\n🎉 ALL 6 MATHEMATICAL EXTRACTION BENCHMARKS PASSED PERFECTLY!\n")
+        print("\n🎉 ALL MATHEMATICAL EXTRACTION & NORMALIZATION BENCHMARKS PASSED PERFECTLY!\n")
         return True
     else:
         print("\n❌ SOME BENCHMARKS FAILED!\n")

@@ -42,8 +42,8 @@ def parse_neet_options(body_text: str):
     """
     Extracts options a, b, c, d from question body.
     """
-    # Look for [a-d]\. pattern
-    matches = list(re.finditer(r'(?:^|\s|\n)([a-d])[\.\)]\s*', body_text))
+    # Look for a., b., c., d. or (a), (b), (c), (d)
+    matches = list(re.finditer(r'(?:^|\s|\n|\()([a-dA-D])[\.\)]\s*', body_text))
     opt_matches = []
     expected = ['a', 'b', 'c', 'd']
     exp_idx = 0
@@ -61,15 +61,27 @@ def parse_neet_options(body_text: str):
             start = opt_matches[i].end()
             end = opt_matches[i+1].start() if i < 3 else len(body_text)
             opt_val = clean_neet_text(body_text[start:end])
-            opts[expected[i]] = opt_val if opt_val else f"Option ({expected[i].upper()})"
+            opts[expected[i]] = opt_val if opt_val else f"[Option ({expected[i].upper()}) as in paper]"
         return q_text, opts
 
-    # Fallback
+    # Fallback to numerical options (1), (2), (3), (4)
+    num_matches = list(re.finditer(r'(?:^|\s|\n|\()([1-4])[\.\)]\s*', body_text))
+    if len(num_matches) >= 4:
+        q_text = clean_neet_text(body_text[:num_matches[0].start()])
+        opts = {}
+        for i in range(4):
+            start = num_matches[i].end()
+            end = num_matches[i+1].start() if i < 3 else len(body_text)
+            opt_val = clean_neet_text(body_text[start:end])
+            opts[expected[i]] = opt_val if opt_val else f"[Option ({expected[i].upper()}) as in paper]"
+        return q_text, opts
+
+    # Explicit extraction error fallback
     return clean_neet_text(body_text), {
-        "a": "Option (A) as stated in question paper",
-        "b": "Option (B) as stated in question paper",
-        "c": "Option (C) as stated in question paper",
-        "d": "Option (D) as stated in question paper"
+        "a": "[Option A unavailable - extraction error]",
+        "b": "[Option B unavailable - extraction error]",
+        "c": "[Option C unavailable - extraction error]",
+        "d": "[Option D unavailable - extraction error]"
     }
 
 def extract_neet_solutions(full_sol_text: str) -> Dict[int, Dict[str, str]]:

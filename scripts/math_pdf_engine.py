@@ -21,14 +21,14 @@ import pymupdf
 SUPERSCRIPTS = {
     '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
     '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
-    '+': '⁺', '-': '⁻', '−': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
+    '+': '⁺', '-': '⁻', '−': '⁻', '–': '⁻', '—': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
     'n': 'ⁿ', 'i': 'ⁱ', 'x': 'ˣ', 'y': 'ʸ'
 }
 
 SUBSCRIPTS = {
     '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
     '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉',
-    '+': '₊', '-': '₋', '−': '₋', '=': '₌', '(': '₍', ')': '₎',
+    '+': '₊', '-': '₋', '−': '₋', '–': '₋', '—': '₋', '=': '₌', '(': '₍', ')': '₎',
     'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ', 'k': 'ₖ',
     'l': 'ₗ', 'm': 'ₘ', 'n': 'ₙ', 'o': 'ₒ', 'p': 'ₚ', 'r': 'ᵣ',
     's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ', 'v': 'ᵥ', 'x': 'ₓ'
@@ -109,7 +109,7 @@ class MathPdfEngine:
         self.doc_path = doc_path
         self.doc = pymupdf.open(doc_path)
 
-    def extract_page_math_text(self, page_num: int, col_split: float = 295.0) -> str:
+    def extract_page_math_text(self, page_num: int, col_split: Optional[float] = None) -> str:
         """
         Extracts structured text from page_num with 2-column deconstruction,
         fraction synthesis, and exponent/subscript formatting.
@@ -117,6 +117,8 @@ class MathPdfEngine:
         page = self.doc[page_num]
         d = page.get_text('dict')
         page_width = page.rect.width
+        if col_split is None:
+            col_split = page_width / 2.0
 
         raw_spans = []
         for b in d.get('blocks', []):
@@ -150,9 +152,11 @@ class MathPdfEngine:
             for s in raw_spans:
                 y0 = s['bbox'][1]
                 x0 = s['bbox'][0]
-                if y0 < 65:
+                x1 = s['bbox'][2]
+                # Header: ONLY if it crosses the center gutter at the very top of the page
+                if y0 < 60 and x0 < (col_split - 15) and x1 > (col_split + 15):
                     header_spans.append(s)
-                elif y0 > (page.rect.height - 50):
+                elif y0 > (page.rect.height - 45):
                     footer_spans.append(s)
                 elif x0 < col_split:
                     col0_spans.append(s)
@@ -170,9 +174,69 @@ class MathPdfEngine:
 
         return full_page_text
 
+    def _synthesize_span_fractions(self, spans: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Synthesizes 2D vertical fractions at span level based on bounding box geometry
+        (numerator directly above denominator with high x-overlap and narrow width).
+        """
+        def is_opt(t: str) -> bool:
+            return bool(re.match(r'^\([A-Da-d]\)$', t) or re.match(r'^\([1-4]\)$', t) or re.match(r'^[A-Da-d]\.$', t))
+
+        spans_sorted = sorted(spans, key=lambda s: (s['bbox'][1], s['bbox'][0]))
+        used = set()
+        new_spans = []
+
+        for i, s1 in enumerate(spans_sorted):
+            if i in used:
+                continue
+            t1 = s1['text'].strip()
+            b1 = s1['bbox']
+            w1 = b1[2] - b1[0]
+            best_j = None
+
+            if w1 <= 50 and len(t1) <= 10 and not is_opt(t1):
+                for j in range(i + 1, len(spans_sorted)):
+                    if j in used:
+                        continue
+                    s2 = spans_sorted[j]
+                    b2 = s2['bbox']
+                    t2 = s2['text'].strip()
+                    w2 = b2[2] - b2[0]
+                    y_gap = b2[1] - b1[3]
+                    if y_gap > 22:
+                        break
+                    if -2 <= y_gap <= 20 and w2 <= 50 and len(t2) <= 10 and not is_opt(t2):
+                        overlap = min(b1[2], b2[2]) - max(b1[0], b2[0])
+                        min_w = min(w1, w2)
+                        if min_w > 0 and (overlap / min_w >= 0.35 or overlap > 0):
+                            best_j = j
+                            break
+
+            if best_j is not None:
+                s2 = spans_sorted[best_j]
+                used.add(i)
+                used.add(best_j)
+                txt = f"({t1} / {s2['text'].strip()})"
+                bb = (min(b1[0], s2['bbox'][0]), b1[1], max(b1[2], s2['bbox'][2]), s2['bbox'][3])
+                new_spans.append({
+                    'text': txt,
+                    'bbox': bb,
+                    'size': s1['size'],
+                    'font': s1['font'],
+                    'flags': s1.get('flags', 0)
+                })
+            else:
+                used.add(i)
+                new_spans.append(s1)
+
+        return new_spans
+
     def _process_column_spans(self, spans: List[Dict[str, Any]]) -> str:
         if not spans:
             return ""
+
+        # Step 0: Synthesize local 2D fractions at span level before line clustering
+        spans = self._synthesize_span_fractions(spans)
 
         # Step 1: Cluster spans into horizontal visual lines
         spans_sorted = sorted(spans, key=lambda s: (s['bbox'][1], s['bbox'][0]))
@@ -201,7 +265,7 @@ class MathPdfEngine:
         for l in lines:
             l['spans'].sort(key=lambda s: s['bbox'][0])
 
-        # Step 3: Vertical fraction synthesis across adjacent lines
+        # Step 3: Vertical fraction synthesis across adjacent lines (fallback for multi-token fractions)
         assembled_lines = []
         skip_indices = set()
 
@@ -268,6 +332,30 @@ class MathPdfEngine:
         if not spans:
             return ""
 
+        # Step A: Pre-merge adjacent minus and digit exponents (e.g. '–' followed by '1' or '4')
+        merged_spans = []
+        skip_idx = set()
+        for idx, s in enumerate(spans):
+            if idx in skip_idx:
+                continue
+            if idx + 1 < len(spans):
+                next_s = spans[idx + 1]
+                t1 = s['text'].strip()
+                t2 = next_s['text'].strip()
+                if t1 in ['–', '-', '−', '—'] and t2.isdigit() and (next_s['bbox'][0] - s['bbox'][2] <= 8.0):
+                    merged_spans.append({
+                        'text': f"-{t2}",
+                        'bbox': (s['bbox'][0], min(s['bbox'][1], next_s['bbox'][1]), next_s['bbox'][2], max(s['bbox'][3], next_s['bbox'][3])),
+                        'size': min(s['size'], next_s['size']),
+                        'font': s['font'],
+                        'flags': s.get('flags', 0)
+                    })
+                    skip_idx.add(idx + 1)
+                    continue
+            merged_spans.append(s)
+
+        spans = merged_spans
+
         sizes = [s['size'] for s in spans if s['text'].strip()]
         if not sizes:
             return ""
@@ -316,12 +404,24 @@ class MathPdfEngine:
 
     def _post_process_math_text(self, text: str) -> str:
         text = clean_text_symbols(text)
+        # Exponent & Subscript Normalization
+        # Fix 10^{-}4 -> 10^-4, kJ mol^{-}1 -> kJ mol^-1
+        text = re.sub(r'\^?\{?[-–—−]\}\s*(\d+)', r'^-\1', text)
+        text = re.sub(r'(\d+)\s*\^?\{?[-–—−](\d+)\}?', r'\1^-\2', text)
+        text = re.sub(r'([a-zA-Z]+)\s*\^?\{?[-–—−](\d+)\}?', r'\1^-\2', text)
+        text = re.sub(r'(\d+)\s*\^\{\s*(\d+)\s*\}', r'\1^\2', text)
+        text = re.sub(r'(\d+)\s*\^?\{?–\}?(\d+)', r'\1^-\2', text)
+        text = re.sub(r'K\s*=\s*1\s*[×x*]\s*10\^?\{?[-–—−]\}?(\d+)', r'K = 1 × 10^-\1', text)
+        text = re.sub(r'kJ\s+mol\^?\{?[-–—−]\}?(\d+)', r'kJ mol^-\1', text)
+        text = re.sub(r'\bK\s*\n?\s*a\b', 'K_a', text)
+        text = re.sub(r'\bK\s*\n?\s*b\b', 'K_b', text)
+        text = re.sub(r'\bK\s*\n?\s*c\b', 'K_c', text)
+        text = re.sub(r'\bK\s*\n?\s*p\b', 'K_p', text)
+        text = re.sub(r'\bK\s*3_\{?C\}?', 'K_C', text)
         text = re.sub(r'ℓ\s*n', 'ln', text)
         text = re.sub(r'\bL\s*i\s*m\b', 'lim', text)
         text = re.sub(r'√\s+([0-9a-zA-Z])', r'√\1', text)
         text = re.sub(r'°\s*C\b', '°C', text)
-        text = re.sub(r'\bK\s+b\b', 'K_b', text)
-        text = re.sub(r'\bK\s+a\b', 'K_a', text)
         text = re.sub(r'Fridel\s*[-–—]?\s*Crafts', 'Friedel–Crafts', text)
         text = re.sub(r'Reimer\s*[-–—]?\s*Tiemann', 'Reimer–Tiemann', text)
         text = re.sub(r' +', ' ', text)
