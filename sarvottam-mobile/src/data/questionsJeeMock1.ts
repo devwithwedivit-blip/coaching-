@@ -353,7 +353,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "5",
       "b": "7",
       "c": "4",
-      "d": "10"
+      "d": "6"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 1: Using quantitative formulations of Thermodynamics & Kinetic Theory, the calculated integer value is 5.",
@@ -370,7 +370,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "1",
       "b": "3",
       "c": "0",
-      "d": "4"
+      "d": "2"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 2: Using quantitative formulations of Kinematics & Dynamics, the calculated integer value is 1.",
@@ -387,7 +387,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "4",
       "b": "6",
       "c": "3",
-      "d": "8"
+      "d": "5"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 3: Using quantitative formulations of Current Electricity, the calculated integer value is 4.",
@@ -404,7 +404,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "8",
       "b": "10",
       "c": "7",
-      "d": "16"
+      "d": "9"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 4: Using quantitative formulations of Magnetism & Magnetic Effects of Current, the calculated integer value is 8.",
@@ -421,7 +421,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "2",
       "b": "4",
       "c": "1",
-      "d": "4"
+      "d": "3"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 5: Using quantitative formulations of Work, Energy & Momentum, the calculated integer value is 2.",
@@ -778,7 +778,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "3",
       "b": "5",
       "c": "2",
-      "d": "6"
+      "d": "4"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 1: Using quantitative formulations of d- and f-Block Elements, the calculated integer value is 3.",
@@ -795,7 +795,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "2",
       "b": "4",
       "c": "1",
-      "d": "4"
+      "d": "3"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 2: Using quantitative formulations of Biomolecules & Polymers, the calculated integer value is 2.",
@@ -812,7 +812,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "2",
       "b": "4",
       "c": "1",
-      "d": "4"
+      "d": "3"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 3: Using quantitative formulations of Solid State & Surface Chemistry, the calculated integer value is 2.",
@@ -829,7 +829,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "4",
       "b": "6",
       "c": "3",
-      "d": "8"
+      "d": "5"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 4: Using quantitative formulations of General Organic Chemistry (GOC), the calculated integer value is 4.",
@@ -846,7 +846,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "1",
       "b": "3",
       "c": "0",
-      "d": "4"
+      "d": "2"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 5: Using quantitative formulations of Coordination Compounds, the calculated integer value is 1.",
@@ -1203,7 +1203,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "1",
       "b": "3",
       "c": "0",
-      "d": "4"
+      "d": "2"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 1: Using quantitative formulations of Complex Numbers & Quadratic Equations, the calculated integer value is 1.",
@@ -1220,7 +1220,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "8",
       "b": "10",
       "c": "7",
-      "d": "16"
+      "d": "9"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 2: Using quantitative formulations of Permutations & Combinations, the calculated integer value is 8.",
@@ -1237,7 +1237,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "4",
       "b": "6",
       "c": "3",
-      "d": "8"
+      "d": "5"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 3: Using quantitative formulations of Trigonometry & Inverse Trigonometry, the calculated integer value is 4.",
@@ -1254,7 +1254,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "5",
       "b": "7",
       "c": "4",
-      "d": "10"
+      "d": "6"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 4: Using quantitative formulations of Binomial Theorem, the calculated integer value is 5.",
@@ -1271,7 +1271,7 @@ export const JEE_MOCK_1_QUESTIONS: CbtQuestion[] = [
       "a": "84",
       "b": "86",
       "c": "83",
-      "d": "168"
+      "d": "85"
     },
     "correctAnswer": "a",
     "explanation": "Step-by-step numerical solution for question 5: Using quantitative formulations of Vectors & 3D Geometry, the calculated integer value is 84.",

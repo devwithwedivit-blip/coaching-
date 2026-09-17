@@ -148,10 +148,18 @@ def make_numerical_options(correct_val):
     val_str = str(correct_val).strip()
     try:
         val_num = int(val_str)
-        choices = [val_num, val_num + 2, max(0, val_num - 1), val_num * 2 if val_num > 1 else 4]
-        choices = list(dict.fromkeys(choices))
+        seen = {val_num}
+        choices = [val_num]
+        candidates = [val_num + 2, max(0, val_num - 1), val_num + 1, val_num + 3, val_num * 2, val_num + 5, val_num + 7]
+        for c in candidates:
+            if c not in seen:
+                seen.add(c)
+                choices.append(c)
+            if len(choices) == 4:
+                break
         while len(choices) < 4:
-            choices.append(choices[-1] + 3)
+            cand = max(choices) + 1
+            choices.append(cand)
     except ValueError:
         choices = [val_str, "0", "2", "4"]
 
